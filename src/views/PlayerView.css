@@ -372,16 +372,29 @@ body,
   border-radius: 6px;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bannerShake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-3px); }
+  50%  { transform: translateX(3px); }
+  75%  { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
 .hidden-banner {
   position: fixed;
   bottom: 20px;
-  left: 20px;  /* 👈 ahora va a la izquierda */
+  left: 20px;
   background: rgba(0,0,0,0.8);
   color: #fff;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  animation: fadeIn 0.5s ease;
+  animation: fadeIn 0.5s ease, bannerShake 0.3s infinite; /* 👈 animaciones juntas */
 }
 
 .hidden-banner img {
@@ -392,10 +405,6 @@ body,
   border-radius: 8px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 /* Responsive: en pantallas pequeñas hacemos la playlist más estrecha y stack */
 @media (max-width: 900px) {

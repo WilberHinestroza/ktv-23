@@ -245,7 +245,7 @@ export default function PlayerView() {
                     </motion.div>
                     EN VIVO
                 </a>
-                showGlitch
+                
                 {currentSong && (
                     <>
                         <div className="cover-wrapper" style={{ transform: `translateX(${coverGlitchOffset}px)` }}>
