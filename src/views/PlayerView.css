@@ -205,7 +205,7 @@ body,
   transform: translateX(-50%) rotate(-90deg); /* rota 90° para hacerlo vertical */
   transform-origin: bottom center; /* el punto de rotación será la base */
   
-  width: 80px;                   /* largo del slider (ahora será la altura visual) */
+  width: 50px;                   /* largo del slider (ahora será la altura visual) */
   height: 6px;                    /* grosor de la barra */
   padding: 10px;
   appearance: none;
