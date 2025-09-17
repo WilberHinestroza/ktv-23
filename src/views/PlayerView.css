@@ -200,13 +200,13 @@ body,
 
 .volume-slider {
   position: absolute;
-  right: -40px;                  /* mueve la barra a la derecha del botón */
-  bottom: 0;                     /* que salga desde la base del botón */
-  transform: rotate(-90deg);     /* vertical */
-  transform-origin: bottom right;/* punto de rotación en la base derecha */
+  left: 100%;                   /* coloca la barra justo al lado derecho del botón */
+  top: 50%;                     /* alinea verticalmente al centro del botón */
+  transform: translateY(-50%) rotate(-90deg); /* corrige el centrado y rota */
+  transform-origin: center;     /* rotación desde el centro */
 
-  width: 80px;                   /* alto visual del slider */
-  height: 6px;                   /* grosor */
+  width: 70px;                  /* altura visual del slider */
+  height: 6px;                  /* grosor de la barra */
   
   appearance: none;
   background: linear-gradient(90deg, #ffffff, #000000);
@@ -224,7 +224,7 @@ body,
   pointer-events: auto;
 }
 
-/* Estilo del thumb */
+/* Thumb */
 .volume-slider::-webkit-slider-thumb {
   appearance: none;
   width: 12px;
