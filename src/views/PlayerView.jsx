@@ -16,6 +16,7 @@ export default function PlayerView() {
     const [useVideo, setUseVideo] = useState(false);
     const [showScaryVideo, setShowScaryVideo] = useState(false);
     const [hiddenSongs, setHiddenSongs] = useState([]);
+    const [hiddenNow, setHiddenNow] = useState(null);
 
     const [showGlitch, setShowGlitch] = useState(false);
     const [coverGlitchOffset, setCoverGlitchOffset] = useState(0);
@@ -41,6 +42,7 @@ export default function PlayerView() {
         if (hiddenAudioRef.current) {
             hiddenAudioRef.current.pause();
             hiddenAudioRef.current = null;
+            setHiddenNow(null); // 👈 también limpiamos la UI
         }
     }, []);
 
@@ -56,6 +58,7 @@ export default function PlayerView() {
             if (Math.random() < elegido.chance) {
                 if (audioRef.current) audioRef.current.pause();
 
+                setHiddenNow(elegido.song); // 👈 Guardamos el oculto para mostrar en UI
                 const audio = new Audio(elegido.song.src);
                 audio.volume = volume;
                 hiddenAudioRef.current = audio;
@@ -63,6 +66,7 @@ export default function PlayerView() {
                 audio.play();
                 audio.onended = () => {
                     hiddenAudioRef.current = null;
+                    setHiddenNow(null); // 👈 limpiamos la UI
                     setCurrentIndex(prev => (prev + 1) % songs.length);
                 };
                 return;
@@ -85,6 +89,7 @@ export default function PlayerView() {
             if (Math.random() < elegido.chance) {
                 if (audioRef.current) audioRef.current.pause();
 
+                setHiddenNow(elegido.song); // 👈 Guardamos el oculto para mostrar en UI
                 const audio = new Audio(elegido.song.src);
                 audio.volume = volume;
                 hiddenAudioRef.current = audio;
@@ -92,6 +97,7 @@ export default function PlayerView() {
                 audio.play();
                 audio.onended = () => {
                     hiddenAudioRef.current = null;
+                    setHiddenNow(null); // 👈 limpiamos la UI
                     if (isRandom) playRandom();
                     else setCurrentIndex(prev => (prev - 1 + songs.length) % songs.length);
                 };
@@ -167,7 +173,7 @@ export default function PlayerView() {
             stopHiddenAudio();
             setIsPlaying(false);
         } else {
-            audioRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
+            audioRef.current.play().then(() => setIsPlaying(true)).catch(() => { });
         }
     };
 
