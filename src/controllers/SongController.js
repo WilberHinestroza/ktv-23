@@ -2,6 +2,7 @@ import Song from "../models/Song";
 
 export default class SongController {
   static getSongs() {
+    const PUBLIC = process.env.PUBLIC_URL; // raíz de la app
     return [
       new Song(1, "Intro", "Berry", `${PUBLIC}/music/1.wav`, `${PUBLIC}/cover/ktv23-cover.png`, `${PUBLIC}/cover/video.mp4`),
       new Song(2, "Canción 1", "Berry", `${PUBLIC}/music/2.wav`, `${PUBLIC}/cover/ktv23-cover.png`, `${PUBLIC}/cover/video.mp4`),
