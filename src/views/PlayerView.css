@@ -180,18 +180,17 @@ html, body, #root {
 
 .volume-slider {
   position: absolute;
-  left: 50px;           /* distancia desde el borde derecho */
-  top: 50%;              /* centrado vertical */
-  transform: translateY(-50%); /* ajusta para que esté realmente centrado verticalmente */
-  width: 100px;          /* largo de la barra */
-  height: 6px;
+  left: 50px;             /* distancia desde el borde izquierdo o donde quieras */
+  bottom: 40px;           /* distancia desde el botón de volumen */
+  width: 6px;             /* grosor de la barra */
+  height: 100px;          /* largo de la barra */
   appearance: none;
-  background: linear-gradient(90deg, #ffffff, #000000);
+  background: linear-gradient(to top, #ffffff, #000000); /* gradiente vertical */
   border-radius: 6px;
   outline: none;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
   cursor: pointer;
 }
 
