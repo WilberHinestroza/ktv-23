@@ -251,7 +251,7 @@ body,
   cursor: pointer;
 }
 
-
+/*
 .glitch-overlay {
   position: absolute;
   top: 0;
@@ -264,19 +264,19 @@ body,
 }
 
 /* Cada línea del glitch más sutil */
-.glitch-line {
+/*.glitch-line {
   position: absolute;
   left: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
   /* menos visible */
-  mix-blend-mode: overlay;
+  /*mix-blend-mode: overlay;
   pointer-events: none;
   height: 1px;
   /* líneas más finas */
-  opacity: 0.05;
+  /*opacity: 0.05;
   /* más transparente */
-}
+/*}*/
 
 /* --------------------
    PANEL DERECHO (playlist) — MÁS COMPACTO
