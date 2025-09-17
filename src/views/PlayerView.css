@@ -200,13 +200,16 @@ body,
 
 .volume-slider {
   position: absolute;
-  left: 50px;/* distancia desde el borde izquierdo o donde quieras */
-  bottom: 40px;/* distancia desde el botón de volumen */
-  transform: translateX(-50%);/* corrige el centrado horizontal */
-  width: 6px;/* grosor de la barra */
-  height: 60px;/* largo de la barra */
+  left: 50%;                     /* centra horizontalmente */
+  bottom: 40px;                   /* distancia desde el botón */
+  transform: translateX(-50%) rotate(-90deg); /* rota 90° para hacerlo vertical */
+  transform-origin: bottom center; /* el punto de rotación será la base */
+  
+  width: 100px;                   /* largo del slider (ahora será la altura visual) */
+  height: 6px;                    /* grosor de la barra */
+  
   appearance: none;
-  background: linear-gradient(to top, #ffffff, #000000); /* gradiente vertical */
+  background: linear-gradient(90deg, #ffffff, #000000); /* sigue horizontal porque lo rotamos */
   border-radius: 6px;
   outline: none;
   opacity: 0;
@@ -215,14 +218,13 @@ body,
   cursor: pointer;
 }
 
-
-/* Cuando haces hover en el contenedor aparece */
+/* Mostrar al hacer hover */
 .volume-control:hover .volume-slider {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Estilo del "thumb" (bolita que arrastras) */
+/* Estilo del thumb (bolita) */
 .volume-slider::-webkit-slider-thumb {
   appearance: none;
   width: 14px;
@@ -248,6 +250,7 @@ body,
   border: 2px solid #ffffff;
   cursor: pointer;
 }
+
 
 
 .glitch-overlay {
