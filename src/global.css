@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&family=Monoton&family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  background-color: #000; /* fondo negro total */
+  color: white;
+  font-family: 'Tilt Neon', cursive; /* 👈 más legible para textos */
+}
+
+h1, h2, h3, p , div, .live-button {
+  font-family: 'Tilt Neon', cursive; /* 👈 títulos y botón EN VIVO más retro */
+}
+
+/* Si quieres dejar Monoton solo para títulos grandes tipo logo */
+.logo-title {
+  font-family: 'Monoton', cursive;
+  font-size: 2.5rem;
+}
+
+/* Lista completa */
+.song-list {
+  list-style: none; /* quita viñetas */
+  padding: 0;
+  margin: 0;
+  font-family: 'Tilt Neon', cursive; /* 👈 fuente base legible */
+}
+
+/* Cada item */
+.song-list li {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+/* Título de la canción */
+.song-list .mini-title {
+  font-family: 'Tilt Neon', cursive; /* 👈 da el estilo 70s/80s */
+  color: #fff;
+}
+
+/* Artista (más sobrio y legible) */
+.song-list .mini-artist {
+  font-family: 'Poppins', sans-serif;
+  color: #bbb;
+}
