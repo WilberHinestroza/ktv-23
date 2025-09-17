@@ -22,6 +22,8 @@ export default function PlayerView() {
     const glitchTimeout = useRef(null);
 
     const audioRef = useRef(null);
+    const hiddenAudioRef = useRef(null); // 🔹 referencia al audio oculto
+    const isPlayingRef = useRef(isPlaying);
 
     /** 🔹 Función para reproducir canción aleatoria */
     const playRandom = useCallback(() => {
@@ -34,49 +36,62 @@ export default function PlayerView() {
         }
     }, [songs, currentIndex]);
 
-    /** 🔹 Siguiente y anterior canción */
-    const nextSong = useCallback(() => {
-        const currentSong = songs[currentIndex];
+    /** 🔹 Función para parar oculto si existe */
+    const stopHiddenAudio = useCallback(() => {
+        if (hiddenAudioRef.current) {
+            hiddenAudioRef.current.pause();
+            hiddenAudioRef.current = null;
+        }
+    }, []);
 
-        // Buscar ocultos que vayan después de esta canción
+    /** 🔹 Siguiente canción */
+    const nextSong = useCallback(() => {
+        stopHiddenAudio(); // detener oculto si suena
+
+        const currentSong = songs[currentIndex];
         const posiblesOcultos = hiddenSongs.filter(h => h.afterId === currentSong.id);
 
         if (posiblesOcultos.length > 0) {
             const elegido = posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
             if (Math.random() < elegido.chance) {
-                // Reproduce el oculto directo SIN ponerlo en la lista
+                if (audioRef.current) audioRef.current.pause();
+
                 const audio = new Audio(elegido.song.src);
-                audio.volume = volume; // 👈 aquí agregas la línea
+                audio.volume = volume;
+                hiddenAudioRef.current = audio;
+
                 audio.play();
                 audio.onended = () => {
-                    // cuando termine → pasamos al siguiente visible
+                    hiddenAudioRef.current = null;
                     setCurrentIndex(prev => (prev + 1) % songs.length);
                 };
                 return;
             }
         }
 
-        // Si no hay oculto → sigue normal
         if (isRandom) playRandom();
         else setCurrentIndex(prev => (prev + 1) % songs.length);
-    }, [songs, hiddenSongs, currentIndex, isRandom, playRandom]);
+    }, [songs, hiddenSongs, currentIndex, isRandom, playRandom, stopHiddenAudio, volume]);
 
+    /** 🔹 Canción anterior */
     const prevSong = useCallback(() => {
-        const currentSong = songs[currentIndex];
+        stopHiddenAudio(); // detener oculto si suena
 
-        // Buscar ocultos que vayan ANTES de esta canción
+        const currentSong = songs[currentIndex];
         const posiblesOcultos = hiddenSongs.filter(h => h.beforeId === currentSong.id);
 
         if (posiblesOcultos.length > 0) {
-            // Elegir un oculto aleatorio entre los posibles
             const elegido = posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
             if (Math.random() < elegido.chance) {
-                // Reproduce el oculto SIN mostrarlo en la lista
+                if (audioRef.current) audioRef.current.pause();
+
                 const audio = new Audio(elegido.song.src);
-                audio.volume = volume; // 👈 aquí agregas la línea
+                audio.volume = volume;
+                hiddenAudioRef.current = audio;
+
                 audio.play();
                 audio.onended = () => {
-                    // cuando termine → pasamos al anterior visible
+                    hiddenAudioRef.current = null;
                     if (isRandom) playRandom();
                     else setCurrentIndex(prev => (prev - 1 + songs.length) % songs.length);
                 };
@@ -84,26 +99,21 @@ export default function PlayerView() {
             }
         }
 
-        // Si no hay oculto → sigue normal
         if (isRandom) playRandom();
         else setCurrentIndex(prev => (prev - 1 + songs.length) % songs.length);
-    }, [songs, hiddenSongs, currentIndex, isRandom, playRandom]);
+    }, [songs, hiddenSongs, currentIndex, isRandom, playRandom, stopHiddenAudio, volume]);
 
     /** 🔹 Cargar canciones al inicio */
     useEffect(() => {
         const { visibles, ocultas } = SongController.getSongs();
-        setSongs(visibles);       // solo visibles van a la lista
-        setHiddenSongs(ocultas);  // guardamos ocultas en otro estado
+        setSongs(visibles);
+        setHiddenSongs(ocultas);
     }, []);
 
-    const isPlayingRef = useRef(isPlaying);
-
-    // Mantener actualizado el ref cada vez que cambie isPlaying
     useEffect(() => {
         isPlayingRef.current = isPlaying;
     }, [isPlaying]);
 
-    // Efecto para cambiar canción
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio || songs.length === 0) return;
@@ -112,13 +122,11 @@ export default function PlayerView() {
         setUseVideo(Math.random() < 0.15);
         audio.load();
 
-        // usar el ref en lugar de isPlaying
         if (isPlayingRef.current) {
             audio.play().catch(() => setIsPlaying(false));
         }
-    }, [currentIndex, songs]); // ahora ESLint ya no se queja
+    }, [currentIndex, songs]);
 
-    /** 🔹 Eventos de audio (no reinician la canción) */
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio || songs.length === 0) return;
@@ -141,14 +149,13 @@ export default function PlayerView() {
     /** 🔹 Video scary aleatorio */
     useEffect(() => {
         if (useVideo) return;
-
         const interval = setInterval(() => {
             if (Math.random() < 0.1) {
                 setShowScaryVideo(true);
-                const duration = Math.random() * 1000 + 1000; // 1-2 seg
+                const duration = Math.random() * 1000 + 1000;
                 setTimeout(() => setShowScaryVideo(false), duration);
             }
-        }, 60000); // cada 60 seg
+        }, 60000);
         return () => clearInterval(interval);
     }, [useVideo]);
 
@@ -157,9 +164,10 @@ export default function PlayerView() {
         if (!audioRef.current) return;
         if (isPlaying) {
             audioRef.current.pause();
+            stopHiddenAudio();
             setIsPlaying(false);
         } else {
-            audioRef.current.play().then(() => setIsPlaying(true)).catch(() => { });
+            audioRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
         }
     };
 
@@ -169,6 +177,7 @@ export default function PlayerView() {
         const vol = parseFloat(e.target.value);
         setVolume(vol);
         if (audioRef.current) audioRef.current.volume = vol;
+        if (hiddenAudioRef.current) hiddenAudioRef.current.volume = vol;
     };
 
     const handleProgressChange = (e) => {
@@ -184,7 +193,7 @@ export default function PlayerView() {
         return `${minutes}:${seconds}`;
     };
 
-    /** 🔹 Glitch al mover mouse */
+    /** 🔹 Glitch efecto */
     const handleMouseMove = () => {
         setShowGlitch(true);
         if (glitchTimeout.current) clearTimeout(glitchTimeout.current);
@@ -230,7 +239,7 @@ export default function PlayerView() {
                     </motion.div>
                     EN VIVO
                 </a>
-
+                showGlitch
                 {currentSong && (
                     <>
                         <div className="cover-wrapper" style={{ transform: `translateX(${coverGlitchOffset}px)` }}>
@@ -347,6 +356,14 @@ export default function PlayerView() {
             {showGlitch && (
                 <div className="glitch-overlay">
                     {renderGlitches()}
+                </div>
+            )}
+            {/* 👇 Banner de canción oculta */}
+            {hiddenNow && (
+                <div className="hidden-banner">
+                    <h3>{hiddenNow.title}</h3>
+                    <p>{hiddenNow.artist}</p>
+                    <img src={hiddenNow.cover} alt={hiddenNow.title} />
                 </div>
             )}
         </div>
