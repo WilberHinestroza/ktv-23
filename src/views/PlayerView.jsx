@@ -359,17 +359,12 @@ export default function PlayerView() {
                 </ul>
             </div>
 
-            {showGlitch && (
-                <div className="glitch-overlay">
-                    {renderGlitches()}
-                </div>
-            )}
             {/* 👇 Banner de canción oculta */}
             {hiddenNow && (
                 <div className="hidden-banner">
-                    <h3>{hiddenNow.title}</h3>
+                    <h4>{hiddenNow.title}</h4>
                     <p>{hiddenNow.artist}</p>
-                    <img src={hiddenNow.cover} alt={hiddenNow.title} />
+                    {hiddenNow.cover && <img src={hiddenNow.cover} alt={hiddenNow.title} />}
                 </div>
             )}
         </div>

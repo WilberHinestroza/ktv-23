@@ -375,7 +375,7 @@ body,
 .hidden-banner {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;  /* 👈 ahora va a la izquierda */
   background: rgba(0,0,0,0.8);
   color: #fff;
   padding: 15px;
