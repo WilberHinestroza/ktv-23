@@ -3,7 +3,9 @@ import Song from "../models/Song";
 export default class SongController {
   static getSongs() {
     const PUBLIC = process.env.PUBLIC_URL; // raíz de la app
-    return [
+
+    // 🎵 canciones visibles
+     const visibles = [
       new Song(1, "Intro", "Berry", `${PUBLIC}/music/1.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
       new Song(2, "Canción 1", "Berry", `${PUBLIC}/music/2.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
       new Song(3, "Canción 2", "Berry", `${PUBLIC}/music/3.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
@@ -23,5 +25,21 @@ export default class SongController {
       new Song(17, "Canción 15", "Berry", `${PUBLIC}/music/17NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
       new Song(18, "Outro", "Berry", `${PUBLIC}/music/18NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
     ];
+
+    // 🔒 canciones ocultas (con `afterId`)
+    const ocultas = [
+      { 
+        song: new Song(101, "Comercial #3", "Berry", `${PUBLIC}/music/Comercial A.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        afterId: 2,  // suena después de "Canción 1"
+        chance: 0.25 // 25% de probabilidad
+      },
+      { 
+        song: new Song(102, "Comercial #4", "Berry", `${PUBLIC}/music/Comercial C.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        afterId: 4,  // suena después de "Canción 3"
+        chance: 0.25 
+      }
+    ];
+
+    return { visibles, ocultas };
   }
 }

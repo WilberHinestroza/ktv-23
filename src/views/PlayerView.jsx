@@ -15,6 +15,7 @@ export default function PlayerView() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [useVideo, setUseVideo] = useState(false);
     const [showScaryVideo, setShowScaryVideo] = useState(false);
+    const [hiddenSongs, setHiddenSongs] = useState([]);
 
     const [showGlitch, setShowGlitch] = useState(false);
     const [coverGlitchOffset, setCoverGlitchOffset] = useState(0);
@@ -35,18 +36,64 @@ export default function PlayerView() {
 
     /** 🔹 Siguiente y anterior canción */
     const nextSong = useCallback(() => {
+        const currentSong = songs[currentIndex];
+
+        // Buscar ocultos que vayan después de esta canción
+        const posiblesOcultos = hiddenSongs.filter(h => h.afterId === currentSong.id);
+
+        if (posiblesOcultos.length > 0) {
+            const elegido = posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
+            if (Math.random() < elegido.chance) {
+                // Reproduce el oculto directo SIN ponerlo en la lista
+                const audio = new Audio(elegido.song.src);
+                audio.volume = volume; // 👈 aquí agregas la línea
+                audio.play();
+                audio.onended = () => {
+                    // cuando termine → pasamos al siguiente visible
+                    setCurrentIndex(prev => (prev + 1) % songs.length);
+                };
+                return;
+            }
+        }
+
+        // Si no hay oculto → sigue normal
         if (isRandom) playRandom();
         else setCurrentIndex(prev => (prev + 1) % songs.length);
-    }, [isRandom, songs.length, playRandom]);
+    }, [songs, hiddenSongs, currentIndex, isRandom, playRandom]);
 
-    const prevSong = useCallback(() =>
-        setCurrentIndex(prev => (prev - 1 + songs.length) % songs.length),
-        [songs.length]
-    );
+    const prevSong = useCallback(() => {
+        const currentSong = songs[currentIndex];
+
+        // Buscar ocultos que vayan ANTES de esta canción
+        const posiblesOcultos = hiddenSongs.filter(h => h.beforeId === currentSong.id);
+
+        if (posiblesOcultos.length > 0) {
+            // Elegir un oculto aleatorio entre los posibles
+            const elegido = posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
+            if (Math.random() < elegido.chance) {
+                // Reproduce el oculto SIN mostrarlo en la lista
+                const audio = new Audio(elegido.song.src);
+                audio.volume = volume; // 👈 aquí agregas la línea
+                audio.play();
+                audio.onended = () => {
+                    // cuando termine → pasamos al anterior visible
+                    if (isRandom) playRandom();
+                    else setCurrentIndex(prev => (prev - 1 + songs.length) % songs.length);
+                };
+                return;
+            }
+        }
+
+        // Si no hay oculto → sigue normal
+        if (isRandom) playRandom();
+        else setCurrentIndex(prev => (prev - 1 + songs.length) % songs.length);
+    }, [songs, hiddenSongs, currentIndex, isRandom, playRandom]);
 
     /** 🔹 Cargar canciones al inicio */
     useEffect(() => {
-        setSongs(SongController.getSongs());
+        const { visibles, ocultas } = SongController.getSongs();
+        setSongs(visibles);       // solo visibles van a la lista
+        setHiddenSongs(ocultas);  // guardamos ocultas en otro estado
     }, []);
 
     const isPlayingRef = useRef(isPlaying);
