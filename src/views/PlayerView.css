@@ -200,7 +200,7 @@ body,
 
 .volume-slider {
   position: absolute;
-  left: 100%;                   /* coloca la barra justo al lado derecho del botón */
+  left: 80%;                   /* coloca la barra justo al lado derecho del botón */
   top: 50%;                     /* alinea verticalmente al centro del botón */
   transform: translateY(-50%) rotate(-90deg); /* corrige el centrado y rota */
   transform-origin: center;     /* rotación desde el centro */
