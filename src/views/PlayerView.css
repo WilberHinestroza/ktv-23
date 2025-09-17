@@ -200,16 +200,16 @@ body,
 
 .volume-slider {
   position: absolute;
-  left: 50%;                     /* centra horizontalmente */
-  bottom: 40px;                   /* distancia desde el botón */
-  transform: translateX(-50%) rotate(-90deg); /* rota 90° para hacerlo vertical */
-  transform-origin: bottom center; /* el punto de rotación será la base */
-  
-  width: 100px;                   /* largo del slider (ahora será la altura visual) */
-  height: 6px;                    /* grosor de la barra */
+  right: -40px;                  /* mueve la barra a la derecha del botón */
+  bottom: 0;                     /* que salga desde la base del botón */
+  transform: rotate(-90deg);     /* vertical */
+  transform-origin: bottom right;/* punto de rotación en la base derecha */
+
+  width: 80px;                   /* alto visual del slider */
+  height: 6px;                   /* grosor */
   
   appearance: none;
-  background: linear-gradient(90deg, #ffffff, #000000); /* sigue horizontal porque lo rotamos */
+  background: linear-gradient(90deg, #ffffff, #000000);
   border-radius: 6px;
   outline: none;
   opacity: 0;
@@ -224,11 +224,11 @@ body,
   pointer-events: auto;
 }
 
-/* Estilo del thumb (bolita) */
+/* Estilo del thumb */
 .volume-slider::-webkit-slider-thumb {
   appearance: none;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   background: #fff;
   border-radius: 50%;
   border: 2px solid #4d4d4d;
@@ -243,14 +243,13 @@ body,
 
 /* Firefox */
 .volume-slider::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   background: #fff;
   border-radius: 50%;
   border: 2px solid #ffffff;
   cursor: pointer;
 }
-
 
 
 .glitch-overlay {
