@@ -51,7 +51,12 @@ export default function PlayerView() {
         stopHiddenAudio(); // detener oculto si suena
 
         const currentSong = songs[currentIndex];
-        const posiblesOcultos = hiddenSongs.filter(h => h.afterId === currentSong.id);
+        const posiblesOcultos = hiddenSongs.filter(h => {
+            if (h.afterId === currentSong.id) return true; // el caso normal
+            if (h.afterId === 20 && currentSong.id >= 4 && currentSong.id <= 17) return true; // rango especial
+            return false;
+        });
+
 
         if (posiblesOcultos.length > 0) {
             const elegido = posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
@@ -82,7 +87,11 @@ export default function PlayerView() {
         stopHiddenAudio(); // detener oculto si suena
 
         const currentSong = songs[currentIndex];
-        const posiblesOcultos = hiddenSongs.filter(h => h.beforeId === currentSong.id);
+        const posiblesOcultos = hiddenSongs.filter(h => {
+            if (h.afterId === currentSong.id) return true; // el caso normal
+            if (h.afterId === 20 && currentSong.id >= 4 && currentSong.id <= 17) return true; // rango especial
+            return false;
+        });
 
         if (posiblesOcultos.length > 0) {
             const elegido = posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
@@ -245,7 +254,7 @@ export default function PlayerView() {
                     </motion.div>
                     EN VIVO
                 </a>
-                
+
                 {currentSong && (
                     <>
                         <div className="cover-wrapper" style={{ transform: `translateX(${coverGlitchOffset}px)` }}>
