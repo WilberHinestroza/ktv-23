@@ -32,89 +32,89 @@ export default class SongController {
       { 
         song: new Song(101, "Comercial #3", "KeNnygaTV", `${PUBLIC}/music/Comercial A.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
         afterId: 4,  // suena después de "Canción 1"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(102, "Comercial #4", "KeNnygaTV", `${PUBLIC}/music/Comercial B.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
         afterId: 9,  // suena después de "Canción 3"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(103, "Comercial #5", "KeNnygaTV", `${PUBLIC}/music/Comercial C.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
         afterId: 14,  // suena después de "Canción 1"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(116, "Comercial #6", "KeNnygaTV", `${PUBLIC}/music/Comercial D.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
         afterId: 14,  // suena después de "Canción 1"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(104, "Noticia #1", "KeNnygaTV", `${PUBLIC}/music/Noticiero A.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
         afterId: 20,  // suena después de "Canción 3"
-        chance: 0.05 // 5% de probabilidad
+        chance: 0.35 // 25% de probabilidad
       },
       { 
         song: new Song(105, "Noticia #2", "KeNnygaTV", `${PUBLIC}/music/Noticiero B.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
         afterId: 20,  // suena después de "Canción 1"
-        chance: 0.05 // 5% de probabilidad
+        chance: 0.25 // 25% de probabilidad
       },
 //El Director
       { 
         song: new Song(106, "Bienvenido", "El Director", `${PUBLIC}/music/ED1.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 1,  // suena después de "Canción 3"
-        chance: 0.05 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(107, "Intruso", "El Director", `${PUBLIC}/music/ED2".mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 5,  // suena después de "Canción 1"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(108, "Disfrutas?", "El Director", `${PUBLIC}/music/ED3.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 9,  // suena después de "Canción 3"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(109, "Control", "El Director", `${PUBLIC}/music/ED4.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 14,  // suena después de "Canción 1"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(110, "Consecuencias", "El Director", `${PUBLIC}/music/ED5.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 17,  // suena después de "Canción 3"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(116, "El Director", "El Director", `${PUBLIC}/music/ED100.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 30,  // suena después de "Canción 3"
-        chance: 0.20 // 20% de probabilidad
+        chance: 0.25 // 25% de probabilidad
       },
 //Desconocido
       { 
         song: new Song(111, "Hola", "Desconocido", `${PUBLIC}/music/H1.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: 1,  // suena después de "Canción 3"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(112, "Control mental", "Desconocido", `${PUBLIC}/music/H2.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: 3,  // suena después de "Canción 1"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(113, "Estas seguro?", "Desconocido", `${PUBLIC}/music/H3.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: 10,  // suena después de "Canción 3"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(114, "Paranoia", "Desconocido", `${PUBLIC}/music/H4.mp3`, `${PUBLIC}/cover/H.pngp`, null), 
         afterId: 15,  // suena después de "Canción 1"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       },
       { 
         song: new Song(115, "Despedida", "Desconocido", `${PUBLIC}/music/H5.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: 16,  // suena después de "Canción 3"
-        chance: 0.25 // 25% de probabilidad
+        chance: 0.35 // 35% de probabilidad
       }
     ];
 
