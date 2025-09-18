@@ -6,24 +6,24 @@ export default class SongController {
 
     // 🎵 canciones visibles
      const visibles = [
-      new Song(1, "Intro", "Berry", `${PUBLIC}/music/1.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(2, "Canción 1", "Berry", `${PUBLIC}/music/2.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(3, "Canción 2", "Berry", `${PUBLIC}/music/3.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(4, "Canción 3", "Berry", `${PUBLIC}/music/4.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(5, "Canción 4", "Berry", `${PUBLIC}/music/5.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `/cover/video.mp4`),
-      new Song(6, "Canción 5", "Berry", `${PUBLIC}/music/6.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(7, "Comercial #1", "Berry", `${PUBLIC}/music/7.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(8, "Canción 6", "Berry", `${PUBLIC}/music/8.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(9, "Canción 7", "Berry", `${PUBLIC}/music/9.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(10, "Canción 8", "Berry", `${PUBLIC}/music/10NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(11, "Canción 9", "Berry", `${PUBLIC}/music/11NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(12, "Comercial #2", "Berry", `${PUBLIC}/music/12.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(13, "Canción 10", "Berry", `${PUBLIC}/music/13NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(14, "Canción 11", "Berry", `${PUBLIC}/music/14.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(15, "Canción 12", "Berry", `${PUBLIC}/music/15.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(16, "Canción 13", "Berry", `${PUBLIC}/music/16NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(17, "Canción 14", "Berry", `${PUBLIC}/music/17NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(18, "Outro", "Berry", `${PUBLIC}/music/18NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
+      new Song(1, "Intro", "Berry", `${PUBLIC}/music/1.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoA.mp4`),
+      new Song(2, "Canción 1", "Berry", `${PUBLIC}/music/2.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoB.mp4`),
+      new Song(3, "Canción 2", "Berry", `${PUBLIC}/music/3.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoA.mp4`),
+      new Song(4, "Canción 3", "Berry", `${PUBLIC}/music/4.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoB.mp4`),
+      new Song(5, "Canción 4", "Berry", `${PUBLIC}/music/5.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `/cover/videoA.mp4`),
+      new Song(6, "Canción 5", "Berry", `${PUBLIC}/music/6.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoB.mp4`),
+      new Song(7, "Comercial #1", "Berry", `${PUBLIC}/music/7.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoA.mp4`),
+      new Song(8, "Canción 6", "Berry", `${PUBLIC}/music/8.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoB.mp4`),
+      new Song(9, "Canción 7", "Berry", `${PUBLIC}/music/9.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoA.mp4`),
+      new Song(10, "Canción 8", "Berry", `${PUBLIC}/music/10NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoB.mp4`),
+      new Song(11, "Canción 9", "Berry", `${PUBLIC}/music/11NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoA.mp4`),
+      new Song(12, "Comercial #2", "Berry", `${PUBLIC}/music/12.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoB.mp4`),
+      new Song(13, "Canción 10", "Berry", `${PUBLIC}/music/13NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoA.mp4`),
+      new Song(14, "Canción 11", "Berry", `${PUBLIC}/music/14.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoB.mp4`),
+      new Song(15, "Canción 12", "Berry", `${PUBLIC}/music/15.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoA.mp4`),
+      new Song(16, "Canción 13", "Berry", `${PUBLIC}/music/16NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoB.mp4`),
+      new Song(17, "Canción 14", "Berry", `${PUBLIC}/music/17NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoA.mp4`),
+      new Song(18, "Outro", "Berry", `${PUBLIC}/music/18NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/videoB.mp4`),
     ];
 
     // 🔒 canciones ocultas (con `afterId`)
@@ -41,6 +41,11 @@ export default class SongController {
       },
       { 
         song: new Song(103, "Comercial #5", "KeNnygaTV", `${PUBLIC}/music/Comercial C.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        afterId: 14,  // suena después de "Canción 1"
+        chance: 0.25 // 25% de probabilidad
+      },
+      { 
+        song: new Song(116, "Comercial #6", "KeNnygaTV", `${PUBLIC}/music/Comercial D.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
         afterId: 14,  // suena después de "Canción 1"
         chance: 0.25 // 25% de probabilidad
       },
@@ -83,7 +88,7 @@ export default class SongController {
       { 
         song: new Song(116, "El Director", "El Director", `${PUBLIC}/music/ED100.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 30,  // suena después de "Canción 3"
-        chance: 0.50 // 50% de probabilidad
+        chance: 0.40 // 50% de probabilidad
       },
 //Desconocido
       { 
