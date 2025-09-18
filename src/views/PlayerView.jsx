@@ -27,7 +27,7 @@ export default function PlayerView() {
   const [showScaryVideo, setShowScaryVideo] = useState(false);
   const [hiddenSongs, setHiddenSongs] = useState([]);
   const [hiddenNow, setHiddenNow] = useState(null);
-
+  const [lastWasHidden, setLastWasHidden] = useState(false);
   const [coverGlitchOffset, setCoverGlitchOffset] = useState(0);
   const glitchTimeout = useRef(null);
 
@@ -60,14 +60,23 @@ export default function PlayerView() {
     stopHiddenAudio(); // detener oculto si suena
 
     const currentSong = songs[currentIndex];
+
+    // 🔹 Si la anterior fue oculta, saltamos directamente a la siguiente normal
+    if (lastWasHidden) {
+      setLastWasHidden(false); // reseteamos el flag
+      if (isRandom) playRandom();
+      else setCurrentIndex((prev) => (prev + 1) % songs.length);
+      return;
+    }
+
     const posiblesOcultos = hiddenSongs.filter((h) => {
-      if (h.afterId === currentSong.id) return true; // el caso normal
+      if (h.afterId === currentSong.id) return true;
       if (h.afterId === 20 && currentSong.id >= 2 && currentSong.id <= 5)
-        return true; // rango especial
+        return true;
       if (h.afterId === 21 && currentSong.id >= 13 && currentSong.id <= 17)
-        return true; // rango especial
+        return true;
       if (h.afterId === 30 && currentSong.id >= 1 && currentSong.id <= 17)
-        return true; // rango especial
+        return true;
       return false;
     });
 
@@ -77,7 +86,7 @@ export default function PlayerView() {
       if (Math.random() < elegido.chance) {
         if (audioRef.current) audioRef.current.pause();
 
-        setHiddenNow(elegido.song); // 👈 Guardamos el oculto para mostrar en UI
+        setHiddenNow(elegido.song);
         const audio = new Audio(elegido.song.src);
         audio.volume = volume;
         hiddenAudioRef.current = audio;
@@ -85,7 +94,8 @@ export default function PlayerView() {
         audio.play();
         audio.onended = () => {
           hiddenAudioRef.current = null;
-          setHiddenNow(null); // 👈 limpiamos la UI
+          setHiddenNow(null);
+          setLastWasHidden(true); // 👈 marcamos que esta fue oculta
           setCurrentIndex((prev) => (prev + 1) % songs.length);
         };
         return;
@@ -102,21 +112,30 @@ export default function PlayerView() {
     playRandom,
     stopHiddenAudio,
     volume,
+    lastWasHidden,
   ]);
 
   /** 🔹 Canción anterior */
   const prevSong = useCallback(() => {
-    stopHiddenAudio(); // detener oculto si suena
+    stopHiddenAudio();
 
     const currentSong = songs[currentIndex];
+
+    if (lastWasHidden) {
+      setLastWasHidden(false);
+      if (isRandom) playRandom();
+      else setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length);
+      return;
+    }
+
     const posiblesOcultos = hiddenSongs.filter((h) => {
-      if (h.afterId === currentSong.id) return true; // el caso normal
+      if (h.afterId === currentSong.id) return true;
       if (h.afterId === 20 && currentSong.id >= 2 && currentSong.id <= 5)
-        return true; // rango especial
+        return true;
       if (h.afterId === 21 && currentSong.id >= 13 && currentSong.id <= 17)
-        return true; // rango especial
+        return true;
       if (h.afterId === 30 && currentSong.id >= 13 && currentSong.id <= 17)
-        return true; // rango especial
+        return true;
       return false;
     });
 
@@ -126,7 +145,7 @@ export default function PlayerView() {
       if (Math.random() < elegido.chance) {
         if (audioRef.current) audioRef.current.pause();
 
-        setHiddenNow(elegido.song); // 👈 Guardamos el oculto para mostrar en UI
+        setHiddenNow(elegido.song);
         const audio = new Audio(elegido.song.src);
         audio.volume = volume;
         hiddenAudioRef.current = audio;
@@ -134,7 +153,8 @@ export default function PlayerView() {
         audio.play();
         audio.onended = () => {
           hiddenAudioRef.current = null;
-          setHiddenNow(null); // 👈 limpiamos la UI
+          setHiddenNow(null);
+          setLastWasHidden(true); // 👈 marcamos que fue oculta
           if (isRandom) playRandom();
           else
             setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length);
@@ -153,6 +173,7 @@ export default function PlayerView() {
     playRandom,
     stopHiddenAudio,
     volume,
+    lastWasHidden,
   ]);
 
   /** 🔹 Cargar canciones al inicio */

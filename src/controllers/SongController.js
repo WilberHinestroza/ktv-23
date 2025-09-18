@@ -107,7 +107,7 @@ export default class SongController {
         chance: 0.40 // 40% de probabilidad
       },
       { 
-        song: new Song(114, "Paranoia", "Desconocido", `${PUBLIC}/music/H4.mp3`, `${PUBLIC}/cover/H.pngp`, null), 
+        song: new Song(114, "Paranoia", "Desconocido", `${PUBLIC}/music/H4.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: 15,  // suena después de "Canción 1"
         chance: 0.40 // 40% de probabilidad
       },
