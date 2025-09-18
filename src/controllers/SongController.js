@@ -10,7 +10,7 @@ export default class SongController {
       new Song(2, "Canción 1", "Berry", `${PUBLIC}/music/2.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(3, "Canción 2", "Berry", `${PUBLIC}/music/3.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(4, "Canción 3", "Berry", `${PUBLIC}/music/4.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
-      new Song(5, "Canción 4", "Berry", `${PUBLIC}/music/5.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `/cover/VideoA.mp4`),
+      new Song(5, "Canción 4", "Berry", `${PUBLIC}/music/5.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(6, "Canción 5", "Berry", `${PUBLIC}/music/6.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(7, "Comercial #1", "Berry", `${PUBLIC}/music/7.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(8, "Canción 6", "Berry", `${PUBLIC}/music/8.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
