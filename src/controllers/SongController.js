@@ -12,7 +12,7 @@ export default class SongController {
       new Song(4, "Canción 3", "Berry", `${PUBLIC}/music/4.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
       new Song(5, "Canción 4", "Berry", `${PUBLIC}/music/5.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `/cover/video.mp4`),
       new Song(6, "Canción 5", "Berry", `${PUBLIC}/music/6.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
-      new Song(7, "Comercial #2", "Berry", `${PUBLIC}/music/7.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
+      new Song(7, "Comercial #1", "Berry", `${PUBLIC}/music/7.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
       new Song(8, "Canción 6", "Berry", `${PUBLIC}/music/8.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
       new Song(9, "Canción 7", "Berry", `${PUBLIC}/music/9.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
       new Song(10, "Canción 8", "Berry", `${PUBLIC}/music/10NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/video.mp4`),
@@ -56,58 +56,58 @@ export default class SongController {
       },
 //El Director
       { 
-        song: new Song(106, "Bienvenido", "El Director", `${PUBLIC}/music/ED1.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(106, "Bienvenido", "El Director", `${PUBLIC}/music/ED1.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 1,  // suena después de "Canción 3"
         chance: 0.05 // 25% de probabilidad
       },
       { 
-        song: new Song(107, "Intruso", "El Director", `${PUBLIC}/music/ED2".mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(107, "Intruso", "El Director", `${PUBLIC}/music/ED2".mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 5,  // suena después de "Canción 1"
         chance: 0.25 // 25% de probabilidad
       },
       { 
-        song: new Song(108, "Disfrutas?", "El Director", `${PUBLIC}/music/ED3.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(108, "Disfrutas?", "El Director", `${PUBLIC}/music/ED3.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 9,  // suena después de "Canción 3"
         chance: 0.25 // 25% de probabilidad
       },
       { 
-        song: new Song(109, "Control", "El Director", `${PUBLIC}/music/ED4.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(109, "Control", "El Director", `${PUBLIC}/music/ED4.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 14,  // suena después de "Canción 1"
         chance: 0.25 // 25% de probabilidad
       },
       { 
-        song: new Song(110, "Consecuencias", "El Director", `${PUBLIC}/music/ED5.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(110, "Consecuencias", "El Director", `${PUBLIC}/music/ED5.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 17,  // suena después de "Canción 3"
         chance: 0.25 // 25% de probabilidad
       },
       { 
-        song: new Song(110, "Consecuencias", "El Director", `${PUBLIC}/music/ED100.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(116, "El Director", "El Director", `${PUBLIC}/music/ED100.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 30,  // suena después de "Canción 3"
         chance: 0.50 // 50% de probabilidad
       },
 //Desconocido
       { 
-        song: new Song(111, "Hola", "Desconocido", `${PUBLIC}/music/H1.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(111, "Hola", "Desconocido", `${PUBLIC}/music/H1.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: 1,  // suena después de "Canción 3"
         chance: 0.25 // 25% de probabilidad
       },
       { 
-        song: new Song(112, "Control mental", "Desconocido", `${PUBLIC}/music/H2.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(112, "Control mental", "Desconocido", `${PUBLIC}/music/H2.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: 3,  // suena después de "Canción 1"
         chance: 0.25 // 25% de probabilidad
       },
       { 
-        song: new Song(113, "Estas seguro?", "Desconocido", `${PUBLIC}/music/H3.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(113, "Estas seguro?", "Desconocido", `${PUBLIC}/music/H3.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: 10,  // suena después de "Canción 3"
         chance: 0.25 // 25% de probabilidad
       },
       { 
-        song: new Song(114, "Paranoia", "Desconocido", `${PUBLIC}/music/H4.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(114, "Paranoia", "Desconocido", `${PUBLIC}/music/H4.mp3`, `${PUBLIC}/cover/H.pngp`, null), 
         afterId: 15,  // suena después de "Canción 1"
         chance: 0.25 // 25% de probabilidad
       },
       { 
-        song: new Song(115, "Despedida", "Desconocido", `${PUBLIC}/music/H5.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        song: new Song(115, "Despedida", "Desconocido", `${PUBLIC}/music/H5.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: 16,  // suena después de "Canción 3"
         chance: 0.25 // 25% de probabilidad
       }
