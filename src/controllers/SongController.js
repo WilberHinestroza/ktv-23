@@ -88,7 +88,7 @@ export default class SongController {
       { 
         song: new Song(116, "El Director", "El Director", `${PUBLIC}/music/ED100.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 30,  // suena después de "Canción 3"
-        chance: 0.40 // 50% de probabilidad
+        chance: 0.20 // 20% de probabilidad
       },
 //Desconocido
       { 

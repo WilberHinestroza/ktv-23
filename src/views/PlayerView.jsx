@@ -218,24 +218,6 @@ export default function PlayerView() {
         setCoverGlitchOffset(Math.random() * 6 - 3);
     };
 
-    const renderGlitches = () => {
-        const glitches = [];
-        for (let i = 0; i < 5; i++) {
-            glitches.push(
-                <div
-                    key={i}
-                    className="glitch-line"
-                    style={{
-                        top: `${Math.random() * 100}%`,
-                        height: `${Math.random() * 6 + 2}px`,
-                        opacity: Math.random() * 0.1 + 0.2,
-                    }}
-                />
-            );
-        }
-        return glitches;
-    };
-
     const currentSong = songs[currentIndex];
 
     return (
