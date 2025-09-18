@@ -82,7 +82,7 @@ export default class SongController {
       },
       { 
         song: new Song(110, "Consecuencias", "El Director", `${PUBLIC}/music/ED100.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
-        afterId: 20,  // suena después de "Canción 3"
+        afterId: 30,  // suena después de "Canción 3"
         chance: 0.50 // 50% de probabilidad
       },
 //Desconocido

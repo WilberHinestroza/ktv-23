@@ -54,6 +54,7 @@ export default function PlayerView() {
         const posiblesOcultos = hiddenSongs.filter(h => {
             if (h.afterId === currentSong.id) return true; // el caso normal
             if (h.afterId === 20 && currentSong.id >= 4 && currentSong.id <= 17) return true; // rango especial
+            if (h.afterId === 30 && currentSong.id >= 1 && currentSong.id <= 17) return true; // rango especial
             return false;
         });
 
@@ -90,6 +91,7 @@ export default function PlayerView() {
         const posiblesOcultos = hiddenSongs.filter(h => {
             if (h.afterId === currentSong.id) return true; // el caso normal
             if (h.afterId === 20 && currentSong.id >= 4 && currentSong.id <= 17) return true; // rango especial
+            if (h.afterId === 30 && currentSong.id >= 1 && currentSong.id <= 17) return true; // rango especial
             return false;
         });
 
