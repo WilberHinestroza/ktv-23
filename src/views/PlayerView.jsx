@@ -338,14 +338,6 @@ export default function PlayerView() {
             <p className="song-artist">{currentSong.artist}</p>
 
             <div className="controls">
-              <button
-                onClick={toggleRandom}
-                className={`icon-button ${
-                  isRandom ? "random-on" : "random-off"
-                }`}
-              >
-                {isRandom ? <Shuffle size={20} /> : <Repeat size={20} />}
-              </button>
               <button className="icon-button" onClick={prevSong}>
                 <SkipBack size={20} />
               </button>
@@ -361,21 +353,7 @@ export default function PlayerView() {
               </button>
               <button className="icon-button" onClick={nextSong}>
                 <SkipForward size={20} />
-              </button>
-              <div className="volume-control icon-button">
-                <button className="volume-button">
-                  <Volume2 size={20} />
-                  <input
-                    className="volume-slider"
-                    type="range"
-                    min="0"
-                    max="1"
-                    step="0.01"
-                    value={volume}
-                    onChange={handleVolumeChange}
-                  />
-                </button>
-              </div>
+              </button>            
             </div>
 
             <div>
