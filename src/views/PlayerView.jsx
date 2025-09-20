@@ -8,9 +8,6 @@ import {
   Pause,
   SkipForward,
   SkipBack,
-  Shuffle,
-  Repeat,
-  Volume2,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import "./PlayerView.css";
@@ -18,10 +15,8 @@ import "./PlayerView.css";
 export default function PlayerView() {
   const [songs, setSongs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isRandom, setIsRandom] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false);
   const [useVideo, setUseVideo] = useState(false);
   const [showScaryVideo, setShowScaryVideo] = useState(false);
@@ -34,17 +29,6 @@ export default function PlayerView() {
   const audioRef = useRef(null);
   const hiddenAudioRef = useRef(null); // 🔹 referencia al audio oculto
   const isPlayingRef = useRef(isPlaying);
-
-  /** 🔹 Función para reproducir canción aleatoria */
-  const playRandom = useCallback(() => {
-    if (songs.length > 1) {
-      let randomIndex;
-      do {
-        randomIndex = Math.floor(Math.random() * songs.length);
-      } while (randomIndex === currentIndex);
-      setCurrentIndex(randomIndex);
-    }
-  }, [songs, currentIndex]);
 
   /** 🔹 Función para parar oculto si existe */
   const stopHiddenAudio = useCallback(() => {
@@ -64,8 +48,6 @@ export default function PlayerView() {
     // 🔹 Si la anterior fue oculta, saltamos directamente a la siguiente normal
     if (lastWasHidden) {
       setLastWasHidden(false); // reseteamos el flag
-      if (isRandom) playRandom();
-      else setCurrentIndex((prev) => (prev + 1) % songs.length);
       return;
     }
 
@@ -88,7 +70,6 @@ export default function PlayerView() {
 
         setHiddenNow(elegido.song);
         const audio = new Audio(elegido.song.src);
-        audio.volume = volume;
         hiddenAudioRef.current = audio;
 
         audio.play();
@@ -102,16 +83,11 @@ export default function PlayerView() {
       }
     }
 
-    if (isRandom) playRandom();
-    else setCurrentIndex((prev) => (prev + 1) % songs.length);
   }, [
     songs,
     hiddenSongs,
     currentIndex,
-    isRandom,
-    playRandom,
     stopHiddenAudio,
-    volume,
     lastWasHidden,
   ]);
 
@@ -123,8 +99,6 @@ export default function PlayerView() {
 
     if (lastWasHidden) {
       setLastWasHidden(false);
-      if (isRandom) playRandom();
-      else setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length);
       return;
     }
 
@@ -147,7 +121,6 @@ export default function PlayerView() {
 
         setHiddenNow(elegido.song);
         const audio = new Audio(elegido.song.src);
-        audio.volume = volume;
         hiddenAudioRef.current = audio;
 
         audio.play();
@@ -155,24 +128,15 @@ export default function PlayerView() {
           hiddenAudioRef.current = null;
           setHiddenNow(null);
           setLastWasHidden(true); // 👈 marcamos que fue oculta
-          if (isRandom) playRandom();
-          else
-            setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length);
         };
         return;
       }
     }
-
-    if (isRandom) playRandom();
-    else setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length);
   }, [
     songs,
     hiddenSongs,
     currentIndex,
-    isRandom,
-    playRandom,
     stopHiddenAudio,
-    volume,
     lastWasHidden,
   ]);
 
@@ -245,15 +209,6 @@ export default function PlayerView() {
         .then(() => setIsPlaying(true))
         .catch(() => {});
     }
-  };
-
-  const toggleRandom = () => setIsRandom((prev) => !prev);
-
-  const handleVolumeChange = (e) => {
-    const vol = parseFloat(e.target.value);
-    setVolume(vol);
-    if (audioRef.current) audioRef.current.volume = vol;
-    if (hiddenAudioRef.current) hiddenAudioRef.current.volume = vol;
   };
 
   const handleProgressChange = (e) => {
