@@ -41,13 +41,13 @@ export default function PlayerView() {
 
   /** 🔹 Siguiente canción */
   const nextSong = useCallback(() => {
-    stopHiddenAudio(); // detener oculto si suena
+    stopHiddenAudio();
 
     const currentSong = songs[currentIndex];
 
-    // 🔹 Si la anterior fue oculta, saltamos directamente a la siguiente normal
     if (lastWasHidden) {
-      setLastWasHidden(false); // reseteamos el flag
+      setLastWasHidden(false);
+      setCurrentIndex((prev) => (prev + 1) % songs.length); // 👈 AVANZAR NORMAL
       return;
     }
 
@@ -76,20 +76,16 @@ export default function PlayerView() {
         audio.onended = () => {
           hiddenAudioRef.current = null;
           setHiddenNow(null);
-          setLastWasHidden(true); // 👈 marcamos que esta fue oculta
-          setCurrentIndex((prev) => (prev + 1) % songs.length);
+          setLastWasHidden(true);
+          setCurrentIndex((prev) => (prev + 1) % songs.length); // 👈 avanzar después del oculto
         };
         return;
       }
     }
 
-  }, [
-    songs,
-    hiddenSongs,
-    currentIndex,
-    stopHiddenAudio,
-    lastWasHidden,
-  ]);
+    // 👇 si no hubo oculto, avanzamos igual
+    setCurrentIndex((prev) => (prev + 1) % songs.length);
+  }, [songs, hiddenSongs, currentIndex, stopHiddenAudio, lastWasHidden]);
 
   /** 🔹 Canción anterior */
   const prevSong = useCallback(() => {
@@ -99,6 +95,7 @@ export default function PlayerView() {
 
     if (lastWasHidden) {
       setLastWasHidden(false);
+      setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length); // 👈 RETROCEDER NORMAL
       return;
     }
 
@@ -127,18 +124,16 @@ export default function PlayerView() {
         audio.onended = () => {
           hiddenAudioRef.current = null;
           setHiddenNow(null);
-          setLastWasHidden(true); // 👈 marcamos que fue oculta
+          setLastWasHidden(true);
+          setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length); // 👈 retroceder después del oculto
         };
         return;
       }
     }
-  }, [
-    songs,
-    hiddenSongs,
-    currentIndex,
-    stopHiddenAudio,
-    lastWasHidden,
-  ]);
+
+    // 👇 si no hubo oculto, retrocedemos igual
+    setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length);
+  }, [songs, hiddenSongs, currentIndex, stopHiddenAudio, lastWasHidden]);
 
   /** 🔹 Cargar canciones al inicio */
   useEffect(() => {
@@ -308,7 +303,7 @@ export default function PlayerView() {
               </button>
               <button className="icon-button" onClick={nextSong}>
                 <SkipForward size={20} />
-              </button>            
+              </button>
             </div>
 
             <div>
