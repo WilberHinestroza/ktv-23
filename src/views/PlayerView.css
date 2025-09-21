@@ -282,7 +282,6 @@ body,
    PANEL DERECHO (playlist) — MÁS COMPACTO
    -------------------- */
 .playlist-panel {
-  height: 400px;  
   flex: 0 0 300px;
   /* tamaño fijo/compacto para que quepan más items */
   max-width: 340px;
@@ -294,11 +293,6 @@ body,
 
 /* Pequeño título */
 .playlist-title {
-  position: sticky;
-  top: 0;
-  background: #111;      /* 👈 color de fondo para que no se superponga al scroll */
-  padding: 10px;
-  z-index: 10;   
   align-items: center;
   margin: 6px 0 8px;
   color: #e6e6e6;
