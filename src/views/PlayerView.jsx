@@ -51,20 +51,29 @@ export default function PlayerView() {
       return;
     }
 
-    const posiblesOcultos = hiddenSongs.filter((h) => {
-      if (h.afterId === currentSong.id) return true;
+    const posiblesOcultos = hiddenSongs.flatMap((h) => {
+      if (h.afterId === currentSong.id) {
+        // Caso normal → más peso (ej: 3 veces)
+        return [h, h];
+      }
       if (h.afterId === 20 && currentSong.id >= 2 && currentSong.id <= 5)
-        return true;
-      if (h.afterId === 21 && currentSong.id >= 13 && currentSong.id <= 17)
-        return true;
+        return [h];
       if (h.afterId === 30 && currentSong.id >= 1 && currentSong.id <= 17)
-        return true;
-      return false;
+        return [h];
+      return [];
     });
 
     if (posiblesOcultos.length > 0) {
-      const elegido =
-        posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
+      let elegido;
+
+      if (posiblesOcultos.length === 2) {
+        const minutos = new Date().getMinutes();
+        elegido = minutos % 2 === 0 ? posiblesOcultos[0] : posiblesOcultos[1];
+      } else {
+        elegido =
+          posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
+      }
+
       if (Math.random() < elegido.chance) {
         if (audioRef.current) audioRef.current.pause();
 
@@ -77,13 +86,13 @@ export default function PlayerView() {
           hiddenAudioRef.current = null;
           setHiddenNow(null);
           setLastWasHidden(true);
-          setCurrentIndex((prev) => (prev + 1) % songs.length); // 👈 avanzar después del oculto
+          setCurrentIndex((prev) => (prev + 1) % songs.length);
         };
         return;
       }
     }
 
-    // 👇 si no hubo oculto, avanzamos igual
+    // Si no hubo oculto, avanzamos igual
     setCurrentIndex((prev) => (prev + 1) % songs.length);
   }, [songs, hiddenSongs, currentIndex, stopHiddenAudio, lastWasHidden]);
 
@@ -99,20 +108,29 @@ export default function PlayerView() {
       return;
     }
 
-    const posiblesOcultos = hiddenSongs.filter((h) => {
-      if (h.afterId === currentSong.id) return true;
-      if (h.afterId === 20 && currentSong.id >= 2 && currentSong.id <= 5)
-        return true;
-      if (h.afterId === 21 && currentSong.id >= 13 && currentSong.id <= 17)
-        return true;
-      if (h.afterId === 30 && currentSong.id >= 13 && currentSong.id <= 17)
-        return true;
-      return false;
+    const posiblesOcultos = hiddenSongs.flatMap((h) => {
+      if (h.afterId === currentSong.id) {
+        // Caso normal → más peso (ej: 3 veces)
+        return [h, h];
+      }
+      if (h.afterId === 20 && currentSong.id >= 2 && currentSong.id <= 17)
+        return [h];
+      if (h.afterId === 30 && currentSong.id >= 1 && currentSong.id <= 17)
+        return [h];
+      return [];
     });
 
     if (posiblesOcultos.length > 0) {
-      const elegido =
-        posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
+      let elegido;
+
+      if (posiblesOcultos.length === 2) {
+        const minutos = new Date().getMinutes();
+        elegido = minutos % 2 === 0 ? posiblesOcultos[0] : posiblesOcultos[1];
+      } else {
+        elegido =
+          posiblesOcultos[Math.floor(Math.random() * posiblesOcultos.length)];
+      }
+
       if (Math.random() < elegido.chance) {
         if (audioRef.current) audioRef.current.pause();
 
@@ -125,7 +143,7 @@ export default function PlayerView() {
           hiddenAudioRef.current = null;
           setHiddenNow(null);
           setLastWasHidden(true);
-          setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length); // 👈 retroceder después del oculto
+          setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length);
         };
         return;
       }
