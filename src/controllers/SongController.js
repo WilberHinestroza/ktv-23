@@ -116,7 +116,7 @@ export default class SongController {
         chance: 0.30 // 30% de probabilidad
       },
       { 
-        song: new Song(118, "Dentro de ti", "El Director", `${PUBLIC}/music/ED7mp3`, `${PUBLIC}/cover/ED.png`, null), 
+        song: new Song(118, "Dentro de ti", "El Director", `${PUBLIC}/music/ED7.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 9,  // suena después de "Canción 1"
         chance: 0.30 // 30% de probabilidad
       },
