@@ -23,7 +23,7 @@ export default class SongController {
       new Song(15, "Tamagotchi", "Wildberry", `${PUBLIC}/music/15.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(16, "Combo que no se deja", "Wildberry", `${PUBLIC}/music/16.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(17, "Paranoia", "Wildberry", `${PUBLIC}/music/17NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
-      new Song(18, "Outro", "Wildberry", `${PUBLIC}/music/18NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
+      new Song(18, "Outro", "Wildberry", `${PUBLIC}/music/18.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
     ];
 
     // 🔒 canciones ocultas (con `afterId`)
