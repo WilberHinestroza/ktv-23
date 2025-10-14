@@ -452,26 +452,9 @@ export default function PlayerView() {
         📺 Programación
       </button>
 
-      {/* 🔹 Botón lateral tipo pestaña */}
+      {/* Panel deslizante */}
       <motion.div
-        className="schedule-tab"
-        onClick={() => setShowSchedule((s) => !s)}
-        animate={{
-          opacity: [1, 0.6, 1],
-          x: showSchedule ? 240 : 0,
-        }}
-        transition={{
-          duration: 1.2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        📺
-      </motion.div>
-
-      {/* 🔹 Panel deslizante de programación */}
-      <motion.div
-        className={`schedule-panel ${showSchedule ? "open" : ""}`}
+        className="schedule-panel"
         animate={{ x: showSchedule ? 0 : "-100%" }}
         transition={{ type: "spring", stiffness: 60 }}
       >
@@ -484,7 +467,6 @@ export default function PlayerView() {
             ✖
           </button>
         </div>
-
         <ul>
           {tvSchedule.map((item, i) => (
             <li key={i}>
