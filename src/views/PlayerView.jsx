@@ -30,6 +30,37 @@ export default function PlayerView() {
   const hiddenAudioRef = useRef(null); // 🔹 referencia al audio oculto
   const isPlayingRef = useRef(isPlaying);
 
+  // Estado para mostrar / ocultar el panel
+  const [showSchedule, setShowSchedule] = useState(false);
+
+  // Ejemplo de programación (puedes personalizarlo)
+  const tvSchedule = [
+    { time: "00:00", title: "Apertura del Canal" },
+    { time: "00:30", title: "Ruido Blanco" },
+    { time: "01:00", title: "Mensaje del Director" },
+    { time: "02:00", title: "KTV23 en Vivo" },
+    { time: "03:00", title: "Interferencia Visual" },
+  ];
+
+  const [secretMessage, setSecretMessage] = useState("");
+  const secretMessages = [
+    "El director te observa.",
+    "No cambies de canal.",
+    "Ya has estado aquí antes.",
+    "KTV23 nunca se apaga.",
+    "Mira detrás de ti.",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const msg =
+        secretMessages[Math.floor(Math.random() * secretMessages.length)];
+      setSecretMessage(msg);
+      setTimeout(() => setSecretMessage(""), 5000);
+    }, 90000); // cada 90 segundos
+    return () => clearInterval(interval);
+  }, []);
+
   /** 🔹 Función para parar oculto si existe */
   const stopHiddenAudio = useCallback(() => {
     if (hiddenAudioRef.current) {
@@ -341,6 +372,17 @@ export default function PlayerView() {
               />
             </div>
             <audio ref={audioRef} />
+            {secretMessage && (
+              <motion.div
+                className="secret-message"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1 }}
+              >
+                {secretMessage}
+              </motion.div>
+            )}
           </>
         )}
       </div>
@@ -394,6 +436,29 @@ export default function PlayerView() {
           )}
         </div>
       )}
+      {/* Botón para abrir programación */}
+      <button
+        className="schedule-toggle"
+        onClick={() => setShowSchedule((s) => !s)}
+      >
+        📺 Programación
+      </button>
+
+      {/* Panel deslizante */}
+      <motion.div
+        className="schedule-panel"
+        animate={{ x: showSchedule ? 0 : "-100%" }}
+        transition={{ type: "spring", stiffness: 60 }}
+      >
+        <h4 className="schedule-title">Programación del Canal</h4>
+        <ul>
+          {tvSchedule.map((item, i) => (
+            <li key={i}>
+              <strong>{item.time}</strong> — {item.title}
+            </li>
+          ))}
+        </ul>
+      </motion.div>
     </div>
   );
 }
