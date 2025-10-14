@@ -280,16 +280,16 @@ body,
 
 /* --------------------
    PANEL DERECHO (playlist) — MÁS COMPACTO
-   -------------------- */
+   -------------------- 
 .playlist-panel {
   flex: 0 0 300px;
-  /* tamaño fijo/compacto para que quepan más items */
+  /* tamaño fijo/compacto para que quepan más items 
   max-width: 340px;
   background: #151515;
   border-left: 1px solid #242424;
   padding: 12px 12px;
   overflow-y: auto;
-}
+}*/
 
 /* Pequeño título */
 .playlist-title {
