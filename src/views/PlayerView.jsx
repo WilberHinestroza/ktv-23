@@ -3,6 +3,7 @@ import SongController from "../controllers/SongController";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Radio,
+  Files,
   AudioLines,
   Play,
   Pause,
@@ -288,7 +289,18 @@ export default function PlayerView() {
           onClick={() => setShowArchivePrompt(true)}
           className="archive-button"
         >
-          📁 Archivo
+          <motion.div
+            animate={{ scale: [1, 1.3, 1] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginRight: "6px",
+            }}
+          >
+            <Files size={18} color="red" />
+          </motion.div>
+          Archivos
         </button>
         {currentSong && (
           <>

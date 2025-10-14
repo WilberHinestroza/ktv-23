@@ -75,6 +75,10 @@ body,
 
 /* BOTÓN ARCHIVO */
 .archive-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
   display: inline-flex;
   align-items: center;
   gap: 6px;
