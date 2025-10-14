@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import "./PlayerView.css";
 
 export default function PlayerView() {
+  const ARCHIVE_PASSWORD = process.env.REACT_APP_ARCHIVE_PASSWORD || "ktv24";
   const [songs, setSongs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -27,6 +28,8 @@ export default function PlayerView() {
   const [coverGlitchOffset, setCoverGlitchOffset] = useState(0);
   const glitchTimeout = useRef(null);
 
+  const [open, setOpen] = useState(false);
+
   const audioRef = useRef(null);
   const hiddenAudioRef = useRef(null); // 🔹 referencia al audio oculto
   const isPlayingRef = useRef(isPlaying);
@@ -34,15 +37,14 @@ export default function PlayerView() {
   const [showArchivePrompt, setShowArchivePrompt] = useState(false);
   const [accessCode, setAccessCode] = useState("");
   const [accessGranted, setAccessGranted] = useState(false);
-  
 
   const handleArchiveAccess = () => {
-    if (accessCode.trim().toLowerCase() === "ktv23") {
+    if (accessCode === ARCHIVE_PASSWORD) {
       setAccessGranted(true);
       setShowArchivePrompt(false);
+      setAccessCode(""); // ✅ limpiar input
     } else {
-      alert("Código incorrecto. Te estamos observando.");
-      setAccessCode("");
+      alert("Contraseña incorrecta, te estamos observando");
     }
   };
 
@@ -380,6 +382,10 @@ export default function PlayerView() {
                   loop
                   muted
                   className="cover-image"
+                  controls={false}
+                  disablePictureInPicture
+                  playsInline
+                  webkit-playsinline="true"
                 />
               ) : useVideo ? (
                 <video
@@ -388,6 +394,10 @@ export default function PlayerView() {
                   loop
                   muted
                   className="cover-image"
+                  controls={false}
+                  disablePictureInPicture
+                  playsInline
+                  webkit-playsinline="true"
                 />
               ) : (
                 <img
@@ -443,23 +453,15 @@ export default function PlayerView() {
         {/* 🔻 Barra inferior tipo “canal” */}
         <div className="ticker-bar">
           <div className="ticker-text">
-            ⚡ KTV23 · Programación ={" "}
-            {tvSchedule.map((program, index) => (
-              <span key={`tv-${index}`}>
-                {program.url ? (
-                  <a
-                    href={program.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {program.text}
-                  </a>
-                ) : (
-                  <span>{program.text}</span>
-                )}
-                {" · "}
-              </span>
-            ))}
+            {"KTV23 · "}
+            <span
+              className="ticker-program"
+              onClick={() => setOpen(true)}
+              style={{ cursor: "pointer", fontWeight: "bold" }}
+            >
+              Programacion
+            </span>
+            {" ·"}
             {tickerItems.map((item, index) => (
               <span key={`ticker-${index}`}>
                 {item.url ? (
@@ -472,7 +474,6 @@ export default function PlayerView() {
                 {index !== tickerItems.length - 1 && " · "}
               </span>
             ))}
-            ⚡
           </div>
         </div>
       </div>
@@ -516,6 +517,35 @@ export default function PlayerView() {
         </ul>
       </div>
 
+      {/* MODAL */}
+      {open && (
+        <div className="schedule-modal">
+          <div className="schedule-content">
+            <h2>📺 Programación KTV23</h2>
+            <ul>
+              {tvSchedule.map((program, index) => (
+                <li key={index}>
+                  {program.url ? (
+                    <a
+                      href={program.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {program.text}
+                    </a>
+                  ) : (
+                    <span>{program.text}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <button className="close-schedule" onClick={() => setOpen(false)}>
+              ✖ Cerrar
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Banner de canción oculta */}
       {hiddenNow && (
         <div className="hidden-banner">
@@ -541,7 +571,12 @@ export default function PlayerView() {
             />
             <div className="archive-buttons">
               <button onClick={handleArchiveAccess}>Entrar</button>
-              <button onClick={() => setShowArchivePrompt(false)}>
+              <button
+                onClick={() => {
+                  setShowArchivePrompt(false);
+                  setAccessCode(""); // limpiar la contraseña al cerrar
+                }}
+              >
                 Cancelar
               </button>
             </div>

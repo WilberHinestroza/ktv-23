@@ -267,6 +267,120 @@ body,
   }
 }
 
+/* BOTÓN PROGRAMACIÓN */
+.schedule-button {
+  position: absolute; /* relativo al player-panel */
+  bottom: 22px;       /* abajo del panel de reproductor */
+  right: 22px;        /* esquina inferior derecha del panel, no de la pantalla */
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #cccccc;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  animation: flickerWhite 2s infinite alternate; /* mismo parpadeo que EN VIVO */
+}
+
+.schedule-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+}
+
+/* 🔆 Animación de parpadeo estilo CRT (similar a EN VIVO) */
+@keyframes flickerWhite {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ccc;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+    text-shadow: 0 0 4px #aaa;
+  }
+}
+
+/* MODAL */
+.schedule-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.schedule-content {
+  background: #101010;
+  border: 2px solid #fff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  animation: popIn 0.3s ease-in-out;
+}
+
+.schedule-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.schedule-content li {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.close-schedule {
+  margin-top: 15px;
+  background: transparent;
+  border: 2px solid #ff3333;
+  color: #ff3333;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.15s ease-in-out;
+}
+
+.close-schedule:hover {
+  background: #ff3333;
+  color: #000;
+  box-shadow: 0 0 15px #ff3333;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+
+
 
 
 /* Cover */
@@ -682,7 +796,6 @@ body,
   border-radius: 8px;
 }
 
-
 /* Responsive: en pantallas pequeñas hacemos la playlist más estrecha y stack */
 @media (max-width: 900px) {
   .player-layout {
@@ -712,3 +825,4 @@ body,
     width: 92%;
   }
 }
+
