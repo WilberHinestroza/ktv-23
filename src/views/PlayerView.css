@@ -251,119 +251,40 @@ body,
   cursor: pointer;
 }
 
-/*
-.glitch-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* Cada línea del glitch más sutil */
-/*.glitch-line {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.08);
-  /* menos visible */
-  /*mix-blend-mode: overlay;
-  pointer-events: none;
-  height: 1px;
-  /* líneas más finas */
-  /*opacity: 0.05;
-  /* más transparente */
-/*}*/
-
 /* --------------------
    PANEL DERECHO (playlist) — MÁS COMPACTO
    -------------------- */
 .playlist-panel {
   flex: 0 0 300px;
-  /* tamaño fijo/compacto para que quepan más items */
   max-width: 340px;
   background: #151515;
   border-left: 1px solid #242424;
   padding: 12px 12px;
   overflow-y: auto;
-}
-/*
-.playlist-panel {
-  flex: 0 0 300px;
-  max-width: 340px;
-  border-left: 1px solid #242424;
-  position: fixed;
-  top: 0;
-  left: -280px;  escondido
-  width: 260px;
-  height: 100vh;
-  background: rgba(10, 10, 10, 0.95);
-  color: white;
-  border-right: 2px solid #000000;
-  transition: left 0.4s ease;
-  overflow-y: auto;
-  z-index: 50;
-  padding: 12px 12px;
-  padding: 1rem;
-  backdrop-filter: blur(4px);
+  font-size: 13px; /* reduce solo texto general */
+  line-height: 1.3;
 }
 
-/* Pequeño título
+/* Mantiene el tamaño del título */
 .playlist-title {
-  align-items: center;
-  margin: 6px 0 8px;
+  font-size: 16px; /* 👈 igual que antes */
+  font-weight: 700;
+  margin-bottom: 10px;
   color: #e6e6e6;
-  font-size: 14px;
 }
 
-/* Scrollbar discreto 
-.playlist-panel::-webkit-scrollbar {
-  width: 10px;
+/* Canciones */
+.mini-title {
+  font-size: 12.5px; /* más pequeño */
+  font-weight: 600;
+  color: #fff;
 }
 
-.playlist-panel::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 6px;
+.mini-artist {
+  font-size: 11px; /* más pequeño */
+  color: #a7a7a7;
 }
 
-.playlist-panel.open {
-  left: 0;
-}
-
-/* Botón lateral 
-.playlist-toggle {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  background: #ff0044;
-  color: white;
-  padding: 0.6rem 0.4rem;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-  font-size: 1.2rem;
-  z-index: 60;
-  transition: background 0.3s ease;
-}
-
-.playlist-toggle:hover {
-  background: #ff3366;
-}
-
-/* Estética interna 
-.playlist-title {
-  position: sticky;
-  top: 0;
-  background: rgba(10, 10, 10, 0.95);
-  padding-bottom: 0.5rem;
-  font-weight: bold;
-  border-bottom: 1px solid #ff0044;
-  z-index: 10;
-}
-*/
 
 
 
