@@ -76,9 +76,9 @@ body,
 /* BOTÓN ARCHIVO */
 .archive-button {
   position: absolute;
-  top: 10px;
+  top: 18px;
   right: 10px;
-
+  z-index: 100; /* 🔹 asegurar que quede sobre el cover */
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -95,6 +95,13 @@ body,
   box-shadow: 0 0 12px rgba(0, 255, 234, 0.6);
   transition: all 0.15s ease-in-out;
   animation: flickerBlue 2.5s infinite alternate;
+}
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+  .archive-button {
+    z-index: 100; /* mantenerlo visible sobre todo */
+  }
 }
 
 .archive-button:hover {
@@ -118,33 +125,48 @@ body,
 .archive-list {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin: 20px 0 0 0;
 }
 
 .archive-list li {
-  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* para separar icon/texto de posibles botones a la derecha */
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.12s;
+  margin-bottom: 6px; /* separación entre items */
+}
+
+.archive-list li:hover {
+  background: rgba(0, 255, 234, 0.1); /* similar al hover de playlist */
 }
 
 .archive-link {
-  display: inline-block;
-  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espacio entre icono y texto */
+  padding: 6px 12px;
   background: #000;
   border: 2px solid #00ffea;
-  border-radius: 8px;
-  text-decoration: none;
+  border-radius: 6px;
   color: #00ffea;
-  font-weight: bold;
-  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
   box-shadow: 0 0 12px rgba(0, 255, 234, 0.5);
-  text-shadow: 0 0 8px #00ffea;
+  flex: 1; /* ocupa todo el ancho del li */
+  transition: all 0.2s ease-in-out;
 }
 
 .archive-link:hover {
   background: #00ffea;
   color: #000;
   box-shadow: 0 0 25px #00ffea;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
+
 
 .close-archive {
   margin-top: 20px;
@@ -163,6 +185,67 @@ body,
   color: #000;
   box-shadow: 0 0 15px #ff3333;
 }
+
+
+/* 🔻 Barra inferior tipo canal */
+.ticker-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  border-top: 2px solid rgba(170, 170, 170, 0.4);
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 -2px 8px rgba(170, 170, 170, 0.4);
+  z-index: 10;
+}
+
+.ticker-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: tickerMove 50s linear infinite;
+  text-shadow: 0 0 8px #252525;
+}
+
+.ticker-text a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 6px;
+  pointer-events: auto; /* permite clics */
+  cursor: pointer; /* opcional, para que sea evidente que es clicable */
+}
+
+
+
+/* Móviles: ancho máximo 768px */
+@media (max-width: 768px) {
+  .ticker-bar {
+    position: relative; /* ya no fijo */
+    bottom: auto;       /* quitamos bottom */
+    margin-top: 12px;   /* separación del reproductor */
+  }
+
+  .ticker-text {
+    padding-left: 0; /* reiniciamos animación si quieres */
+  }
+}
+
+
+@keyframes tickerMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 
 /* Animaciones de parpadeo */
@@ -581,7 +664,7 @@ body,
 
 .hidden-banner {
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   left: 20px;
   background: rgba(0,0,0,0.8);
   color: #fff;

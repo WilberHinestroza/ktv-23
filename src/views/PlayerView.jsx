@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import SongController from "../controllers/SongController";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -34,16 +34,60 @@ export default function PlayerView() {
   const [showArchivePrompt, setShowArchivePrompt] = useState(false);
   const [accessCode, setAccessCode] = useState("");
   const [accessGranted, setAccessGranted] = useState(false);
+  
 
   const handleArchiveAccess = () => {
     if (accessCode.trim().toLowerCase() === "ktv23") {
       setAccessGranted(true);
       setShowArchivePrompt(false);
     } else {
-      alert("❌ Código incorrecto. El canal te observa.");
+      alert("Código incorrecto. Te estamos observando.");
       setAccessCode("");
     }
   };
+
+  const normalLinks = useMemo(
+    () => [
+      { text: "Mensajes del Director", url: "https://youtu.be/gf_zn_39nfQ" },
+      { text: "Transmisión perdida #1", url: "https://youtu.be/ryq0dus6IkU" },
+      { text: "Grabación inédita", url: "https://youtu.be/1IefJeGjRNk" },
+    ],
+    []
+  );
+
+  const weirdMessages = useMemo(
+    () => [
+      { text: "👁️‍🗨️ ¿Me estás mirando?", url: null },
+      { text: "🕳️ Nada es real aquí...", url: null },
+      { text: "⚡ Señal inestable, continúe viendo...", url: null },
+      {
+        text: "💀 Algunos archivos nunca deberían abrirse...",
+        url: "https://youtu.be/xyz123",
+      },
+      { text: "🔮 El Director sabe que estás aquí...", url: null },
+    ],
+    []
+  );
+
+  const [tickerItems, setTickerItems] = useState(normalLinks);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let items = [...normalLinks];
+
+      if (Math.random() < 0.3) {
+        const randomWeird =
+          weirdMessages[Math.floor(Math.random() * weirdMessages.length)];
+        items.push(randomWeird); // ya trae text y url
+      }
+
+      items = items.sort(() => Math.random() - 0.5);
+
+      setTickerItems(items);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [normalLinks, weirdMessages]);
 
   /** 🔹 Función para parar oculto si existe */
   const stopHiddenAudio = useCallback(() => {
@@ -261,6 +305,27 @@ export default function PlayerView() {
     setCoverGlitchOffset(Math.random() * 6 - 3);
   };
 
+  const tvSchedule = [
+    { text: " 00:00 - Repetición de transmisiones antiguas", url: null },
+    {
+      text: "02:00 - Mensajes del Director nunca emitidos",
+      url: "https://youtu.be/XXXXXXX",
+    },
+    { text: "04:00 - Música retro 80s y 90s", url: null },
+    { text: "06:00 - Noticias KTV23", url: null },
+    {
+      text: "08:00 - Grabaciones inéditas",
+      url: "https://soundcloud.com/XXXXXXX",
+    },
+    { text: "10:00 - Entrevistas misteriosas", url: null },
+    { text: "12:00 - Repetición de transmisiones antiguas", url: null },
+    { text: "14:00 - Videos en vivo", url: "https://youtu.be/YYYYYYY" },
+    { text: "16:00 - Programación especial del Director", url: null },
+    { text: "18:00 - Música retro 80s y 90s", url: null },
+    { text: "20:00 - Grabaciones inéditas", url: null },
+    { text: "22:00 - Señal nocturna continua", url: null },
+  ];
+
   const currentSong = songs[currentIndex];
 
   return (
@@ -298,7 +363,7 @@ export default function PlayerView() {
               marginRight: "6px",
             }}
           >
-            <Files size={18} color="celeste" />
+            <Files size={18} color="cyan" />
           </motion.div>
           Archivos
         </button>
@@ -374,8 +439,44 @@ export default function PlayerView() {
             <audio ref={audioRef} />
           </>
         )}
-      </div>
 
+        {/* 🔻 Barra inferior tipo “canal” */}
+        <div className="ticker-bar">
+          <div className="ticker-text">
+            ⚡ KTV23 · Programación ={" "}
+            {tvSchedule.map((program, index) => (
+              <span key={`tv-${index}`}>
+                {program.url ? (
+                  <a
+                    href={program.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {program.text}
+                  </a>
+                ) : (
+                  <span>{program.text}</span>
+                )}
+                {" · "}
+              </span>
+            ))}
+            {tickerItems.map((item, index) => (
+              <span key={`ticker-${index}`}>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.text}
+                  </a>
+                ) : (
+                  <span>{item.text}</span>
+                )}
+                {index !== tickerItems.length - 1 && " · "}
+              </span>
+            ))}
+            ⚡
+          </div>
+        </div>
+      </div>
+      {/* Playlist */}
       <div className="playlist-panel">
         <h3 className="playlist-title">KTV23 Playlist</h3>
         <ul className="song-list">
@@ -415,7 +516,7 @@ export default function PlayerView() {
         </ul>
       </div>
 
-      {/* 👇 Banner de canción oculta */}
+      {/* Banner de canción oculta */}
       {hiddenNow && (
         <div className="hidden-banner">
           <h4>{hiddenNow.title}</h4>
@@ -429,14 +530,14 @@ export default function PlayerView() {
       {showArchivePrompt && (
         <div className="archive-modal">
           <div className="archive-box">
-            <h3>🗝️ Archivoz del Canal</h3>
+            <h3>Archivos del Canal</h3>
             <p>Ingrese el código de acceso:</p>
             <input
               type="password"
               value={accessCode}
               onChange={(e) => setAccessCode(e.target.value)}
               className="archive-input"
-              placeholder="••••••"
+              placeholder="••••••••••••"
             />
             <div className="archive-buttons">
               <button onClick={handleArchiveAccess}>Entrar</button>
@@ -450,7 +551,9 @@ export default function PlayerView() {
 
       {accessGranted && (
         <div className="archive-content">
-          <h2>📂 Archivos del Canal</h2>
+          <h2>
+            <Files /> Archivos del Canal
+          </h2>
           <p>
             Aquí se guardan las transmisiones perdidas, grabaciones inéditas y
             mensajes del Director nunca emitidos.
@@ -459,7 +562,7 @@ export default function PlayerView() {
           <ul className="archive-list">
             <li>
               <a
-                href="https://youtu.be/XXXXXXXXXXX"
+                href="https://youtu.be/jjG8fzOjwVk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="archive-link"
@@ -469,7 +572,7 @@ export default function PlayerView() {
             </li>
             <li>
               <a
-                href="https://soundcloud.com/XXXXXXXXXXX"
+                href="https://youtu.be/fjCjrngerEM"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="archive-link"
@@ -479,7 +582,7 @@ export default function PlayerView() {
             </li>
             <li>
               <a
-                href="https://ktv23-secretpage.netlify.app/"
+                href="https://youtu.be/zgqxu_FaLVA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="archive-link"
@@ -493,7 +596,7 @@ export default function PlayerView() {
             onClick={() => setAccessGranted(false)}
             className="close-archive"
           >
-            ✖ Cerrar
+            Cerrar
           </button>
         </div>
       )}
