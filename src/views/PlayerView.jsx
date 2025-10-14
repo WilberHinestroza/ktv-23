@@ -429,7 +429,15 @@ export default function PlayerView() {
       {/* 👇 Banner de canción oculta */}
       {hiddenNow && (
         <div className="hidden-banner">
-          <h4>{hiddenNow.title}</h4>
+          <div className="schedule-header">
+            <h4 className="schedule-title">Programación del Canal</h4>
+            <button
+              className="close-schedule"
+              onClick={() => setShowSchedule(false)}
+            >
+              ✖
+            </button>
+          </div>
           <p>{hiddenNow.artist}</p>
           {hiddenNow.cover && (
             <img src={hiddenNow.cover} alt={hiddenNow.title} />
