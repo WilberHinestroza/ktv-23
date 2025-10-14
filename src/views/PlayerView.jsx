@@ -452,13 +452,39 @@ export default function PlayerView() {
         📺 Programación
       </button>
 
-      {/* Panel deslizante */}
+      {/* 🔹 Botón lateral tipo pestaña */}
       <motion.div
-        className="schedule-panel"
+        className="schedule-tab"
+        onClick={() => setShowSchedule((s) => !s)}
+        animate={{
+          opacity: [1, 0.6, 1],
+          x: showSchedule ? 240 : 0,
+        }}
+        transition={{
+          duration: 1.2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        📺
+      </motion.div>
+
+      {/* 🔹 Panel deslizante de programación */}
+      <motion.div
+        className={`schedule-panel ${showSchedule ? "open" : ""}`}
         animate={{ x: showSchedule ? 0 : "-100%" }}
         transition={{ type: "spring", stiffness: 60 }}
       >
-        <h4 className="schedule-title">Programación del Canal</h4>
+        <div className="schedule-header">
+          <h4 className="schedule-title">Programación del Canal</h4>
+          <button
+            className="close-schedule"
+            onClick={() => setShowSchedule(false)}
+          >
+            ✖
+          </button>
+        </div>
+
         <ul>
           {tvSchedule.map((item, i) => (
             <li key={i}>

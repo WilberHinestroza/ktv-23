@@ -372,70 +372,57 @@ body,
   border-radius: 6px;
 }
 
-.schedule-toggle {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 30;
-  background: rgba(255, 0, 0, 0.15);
-  color: white;
-  border: 1px solid red;
-  border-radius: 10px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-family: "Courier New", monospace;
-  backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
-}
-.schedule-toggle:hover {
-  background: rgba(255, 0, 0, 0.35);
-}
-
-.schedule-panel {
+.playlist-panel {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 250px;
-  height: 100%;
-  background: rgba(5, 5, 5, 0.9);
-  color: #ff5555;
-  padding: 20px;
-  border-right: 2px solid red;
-  font-family: "Courier New", monospace;
+  left: -280px; /* escondido */
+  width: 260px;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.95);
+  color: white;
+  border-right: 2px solid #ff0044;
+  transition: left 0.4s ease;
   overflow-y: auto;
-  z-index: 40;
-  box-shadow: 2px 0 10px rgba(255, 0, 0, 0.2);
-}
-.schedule-title {
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  border-bottom: 1px solid #ff3333;
-}
-.schedule-panel li {
-  margin: 8px 0;
-  opacity: 0.8;
-}
-.schedule-panel li:hover {
-  opacity: 1;
-  text-shadow: 0 0 4px #ff3333;
+  z-index: 50;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
 }
 
-.secret-message {
-  color: #ff6666;
-  font-size: 0.9rem;
-  font-family: "Courier New", monospace;
-  text-align: center;
-  margin-top: 8px;
-  animation: flicker 1.5s infinite alternate;
-  user-select: none;
+.playlist-panel.open {
+  left: 0;
 }
 
-@keyframes flicker {
-  0% { opacity: 0.2; text-shadow: 0 0 2px red; }
-  50% { opacity: 1; text-shadow: 0 0 6px red; }
-  100% { opacity: 0.3; text-shadow: 0 0 2px red; }
+/* Botón lateral */
+.playlist-toggle {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background: #ff0044;
+  color: white;
+  padding: 0.6rem 0.4rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 60;
+  transition: background 0.3s ease;
 }
+
+.playlist-toggle:hover {
+  background: #ff3366;
+}
+
+/* Estética interna */
+.playlist-title {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 10, 0.95);
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ff0044;
+  z-index: 10;
+}
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
