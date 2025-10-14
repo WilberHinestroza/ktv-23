@@ -407,36 +407,31 @@ export default function PlayerView() {
         </div>
       )}
 
-      {/* Botón para abrir programación */}
-      <button
-        className="schedule-toggle"
-        onClick={() => setShowSchedule((s) => !s)}
-      >
-        📺 Programación
-      </button>
-
-      {/* Panel deslizante */}
+      {/* Panel + Botón juntos */}
       <motion.div
-        className="schedule-panel"
-        animate={{ x: showSchedule ? 0 : "-100%" }}
+        className="schedule-container"
+        animate={{ x: showSchedule ? 0 : "-220px" }} // 🔹 se mueve todo el bloque
         transition={{ type: "spring", stiffness: 60 }}
       >
-        <div className="schedule-header">
-          <h4 className="schedule-title">Programación del Canal</h4>
-          <button
-            className="close-schedule"
-            onClick={() => setShowSchedule(false)}
-          >
-            ✖
-          </button>
+        <button
+          className="schedule-toggle"
+          onClick={() => setShowSchedule((s) => !s)}
+        >
+          {showSchedule ? "<" : ">"}
+        </button>
+
+        <div className="schedule-panel">
+          <div className="schedule-header">
+            <h4 className="schedule-title">Programación del Canal</h4>
+          </div>
+          <ul>
+            {tvSchedule.map((item, i) => (
+              <li key={i}>
+                <strong>{item.time}</strong> — {item.title}
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul>
-          {tvSchedule.map((item, i) => (
-            <li key={i}>
-              <strong>{item.time}</strong> — {item.title}
-            </li>
-          ))}
-        </ul>
       </motion.div>
     </div>
   );

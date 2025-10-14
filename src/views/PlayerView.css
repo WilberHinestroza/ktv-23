@@ -312,7 +312,7 @@ body,
 
 /* jajajaja */
 
-.schedule-toggle {
+/*.schedule-toggle {
   position: fixed;
   top: 50%;
   left: 0;
@@ -327,7 +327,7 @@ body,
   font-family: "Courier New", monospace;
   backdrop-filter: blur(6px);
   transition: all 0.3s ease;
-}
+}*/
 
 .schedule-toggle:hover {
   background: #ff0044;
@@ -335,7 +335,7 @@ body,
 }
 
 /* PANEL PRINCIPAL */
-.schedule-panel {
+/*.schedule-panel {
   position: fixed;
   top: 0;
   left: 0;
@@ -352,7 +352,7 @@ body,
   backdrop-filter: blur(4px);
   transition: transform 0.4s ease;
   transform: translateX(-100%);
-}
+}*/
 
 /* cuando esté abierta */
 .schedule-panel.open {
@@ -395,6 +395,54 @@ body,
   background: #ff0044;
 }
 
+/*.schedule-toggle {
+  font-size: 20px;
+  font-weight: bold;
+  width: 32px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}*/
+
+.schedule-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100vh;
+  z-index: 40;
+}
+
+.schedule-panel {
+  width: 250px;
+  background: rgba(5, 5, 5, 0.9);
+  color: #ff5555;
+  border-right: 2px solid red;
+  padding: 20px;
+  overflow-y: auto;
+  font-family: "Courier New", monospace;
+}
+
+.schedule-toggle {
+  width: 30px;
+  background: #ff0044;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0 8px 8px 0;
+  transition: background 0.3s ease;
+}
+
+.schedule-toggle:hover {
+  background: #ff3366;
+}
 
 
 
