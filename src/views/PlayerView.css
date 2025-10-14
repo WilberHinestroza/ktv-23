@@ -297,7 +297,7 @@ body,
   border-left: 1px solid #242424;
   position: fixed;
   top: 0;
-  left: -280px; /* escondido */
+  /*left: -280px;  escondido */
   width: 260px;
   height: 100vh;
   background: rgba(10, 10, 10, 0.95);
