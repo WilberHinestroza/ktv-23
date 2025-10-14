@@ -298,7 +298,7 @@ export default function PlayerView() {
               marginRight: "6px",
             }}
           >
-            <Files size={18} color="red" />
+            <Files size={18} color="celeste" />
           </motion.div>
           Archivos
         </button>
@@ -429,7 +429,7 @@ export default function PlayerView() {
       {showArchivePrompt && (
         <div className="archive-modal">
           <div className="archive-box">
-            <h3>🗝️ Archivo del Canal</h3>
+            <h3>🗝️ Archivoz del Canal</h3>
             <p>Ingrese el código de acceso:</p>
             <input
               type="password"
@@ -450,12 +450,51 @@ export default function PlayerView() {
 
       {accessGranted && (
         <div className="archive-content">
-          <h2>📂 Archivo del Canal</h2>
+          <h2>📂 Archivos del Canal</h2>
           <p>
             Aquí se guardan las transmisiones perdidas, grabaciones inéditas y
             mensajes del Director nunca emitidos.
           </p>
-          <button onClick={() => setAccessGranted(false)}>Cerrar</button>
+
+          <ul className="archive-list">
+            <li>
+              <a
+                href="https://youtu.be/XXXXXXXXXXX"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="archive-link"
+              >
+                🎞️ Transmisión perdida #1
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://soundcloud.com/XXXXXXXXXXX"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="archive-link"
+              >
+                🔊 Grabación inédita: “El Director Habla”
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://ktv23-secretpage.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="archive-link"
+              >
+                🕳️ Mensajes del Director
+              </a>
+            </li>
+          </ul>
+
+          <button
+            onClick={() => setAccessGranted(false)}
+            className="close-archive"
+          >
+            ✖ Cerrar
+          </button>
         </div>
       )}
     </div>
