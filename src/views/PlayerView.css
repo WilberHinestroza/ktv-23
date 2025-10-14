@@ -280,36 +280,38 @@ body,
 
 /* --------------------
    PANEL DERECHO (playlist) — MÁS COMPACTO
-   -------------------- 
+   -------------------- */
 .playlist-panel {
   flex: 0 0 300px;
-   tamaño fijo/compacto para que quepan más items 
+  /* tamaño fijo/compacto para que quepan más items */
   max-width: 340px;
   background: #151515;
   border-left: 1px solid #242424;
   padding: 12px 12px;
   overflow-y: auto;
-}*/
-
+}
+/*
 .playlist-panel {
   flex: 0 0 300px;
   max-width: 340px;
+  border-left: 1px solid #242424;
   position: fixed;
   top: 0;
-  right: 0; /* 👈 Ahora está al lado derecho */
-  width: 300px;
+  left: -280px;  escondido
+  width: 260px;
   height: 100vh;
   background: rgba(10, 10, 10, 0.95);
   color: white;
-  border-left: 2px solid #131313;
+  border-right: 2px solid #000000;
+  transition: left 0.4s ease;
   overflow-y: auto;
   z-index: 50;
   padding: 12px 12px;
+  padding: 1rem;
   backdrop-filter: blur(4px);
-  transition: all 0.4s ease;
 }
 
-/* Pequeño título */
+/* Pequeño título
 .playlist-title {
   align-items: center;
   margin: 6px 0 8px;
@@ -317,7 +319,7 @@ body,
   font-size: 14px;
 }
 
-/* Scrollbar discreto */
+/* Scrollbar discreto 
 .playlist-panel::-webkit-scrollbar {
   width: 10px;
 }
@@ -331,7 +333,7 @@ body,
   left: 0;
 }
 
-/* Botón lateral */
+/* Botón lateral 
 .playlist-toggle {
   position: fixed;
   top: 50%;
@@ -351,7 +353,7 @@ body,
   background: #ff3366;
 }
 
-/* Estética interna */
+/* Estética interna 
 .playlist-title {
   position: sticky;
   top: 0;
@@ -361,7 +363,7 @@ body,
   border-bottom: 1px solid #ff0044;
   z-index: 10;
 }
-
+*/
 
 
 
@@ -463,20 +465,6 @@ body,
   border-radius: 8px;
 }
 
-/* 📱 En pantallas pequeñas: mover abajo */
-@media (max-width: 900px) {
-  .playlist-panel {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 260px;
-    border-left: none;
-    border-top: 2px solid #131313;
-    overflow-y: auto;
-  }
-}
 
 /* Responsive: en pantallas pequeñas hacemos la playlist más estrecha y stack */
 @media (max-width: 900px) {
