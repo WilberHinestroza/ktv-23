@@ -310,6 +310,59 @@ body,
 }
 
 
+/* jajajaja */
+
+.schedule-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 30;
+  background: rgba(255, 0, 0, 0.15);
+  color: white;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+.schedule-toggle:hover {
+  background: rgba(255, 0, 0, 0.35);
+}
+
+.schedule-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: rgba(5, 5, 5, 0.9);
+  color: #ff5555;
+  padding: 20px;
+  border-right: 2px solid red;
+  font-family: "Courier New", monospace;
+  overflow-y: auto;
+  z-index: 40;
+  box-shadow: 2px 0 10px rgba(255, 0, 0, 0.2);
+}
+.schedule-title {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ff3333;
+}
+.schedule-panel li {
+  margin: 8px 0;
+  opacity: 0.8;
+}
+.schedule-panel li:hover {
+  opacity: 1;
+  text-shadow: 0 0 4px #ff3333;
+}
+
+
+
 
 .mini-cover {
   width: 40px;
