@@ -44,34 +44,79 @@ body,
   /* 👈 recorta todo lo que se salga del panel */
 }
 
-/* Estilo global de botones EN VIVO */
 .live-button {
   position: absolute;
-  /* 👈 mantiene la posición flotante */
   top: 18px;
-  /* 👈 ajusta distancia desde arriba */
   left: 18px;
-  /* 👈 esquina izquierda */
   z-index: 20;
 
   display: inline-flex;
-  /* 👈 centra icono y texto */
   align-items: center;
   gap: 6px;
 
-  background-color: rgb(255, 255, 255);
-  color: rgb(255, 0, 0);
+  background: #000;
+  color: #ff0000;
+  border: 2px solid #ff0000;
   padding: 8px 15px;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-  transition: transform 0.2s;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 8px #ff0000;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  transition: all 0.15s ease-in-out;
+  animation: flicker 2s infinite alternate;
 }
 
 .live-button:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.9);
 }
+
+/* BOTÓN ARCHIVO */
+.archive-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  background: #000;
+  color: #00ffea;
+  border: 2px solid #00ffea;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 8px #00ffea;
+  box-shadow: 0 0 12px rgba(0, 255, 234, 0.6);
+  transition: all 0.15s ease-in-out;
+  animation: flickerBlue 2.5s infinite alternate;
+}
+
+.archive-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 255, 234, 0.9);
+}
+
+/* Animaciones de parpadeo */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes flickerBlue {
+  0%, 15%, 22%, 30%, 55%, 65%, 100% {
+    opacity: 1;
+  }
+  25%, 45%, 60% {
+    opacity: 0.4;
+  }
+}
+
 
 
 /* Cover */
