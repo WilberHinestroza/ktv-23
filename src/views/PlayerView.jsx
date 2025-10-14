@@ -30,6 +30,20 @@ export default function PlayerView() {
   const hiddenAudioRef = useRef(null); // 🔹 referencia al audio oculto
   const isPlayingRef = useRef(isPlaying);
 
+  const [showArchivePrompt, setShowArchivePrompt] = useState(false);
+  const [accessCode, setAccessCode] = useState("");
+  const [accessGranted, setAccessGranted] = useState(false);
+
+  const handleArchiveAccess = () => {
+    if (accessCode.trim().toLowerCase() === "ktv23") {
+      setAccessGranted(true);
+      setShowArchivePrompt(false);
+    } else {
+      alert("❌ Código incorrecto. El canal te observa.");
+      setAccessCode("");
+    }
+  };
+
   /** 🔹 Función para parar oculto si existe */
   const stopHiddenAudio = useCallback(() => {
     if (hiddenAudioRef.current) {
@@ -270,7 +284,12 @@ export default function PlayerView() {
           </motion.div>
           EN VIVO
         </a>
-
+        <button
+          onClick={() => setShowArchivePrompt(true)}
+          className="archive-button"
+        >
+          📁 Archivo
+        </button>
         {currentSong && (
           <>
             <div
@@ -392,6 +411,39 @@ export default function PlayerView() {
           {hiddenNow.cover && (
             <img src={hiddenNow.cover} alt={hiddenNow.title} />
           )}
+        </div>
+      )}
+
+      {showArchivePrompt && (
+        <div className="archive-modal">
+          <div className="archive-box">
+            <h3>🗝️ Archivo del Canal</h3>
+            <p>Ingrese el código de acceso:</p>
+            <input
+              type="password"
+              value={accessCode}
+              onChange={(e) => setAccessCode(e.target.value)}
+              className="archive-input"
+              placeholder="••••••"
+            />
+            <div className="archive-buttons">
+              <button onClick={handleArchiveAccess}>Entrar</button>
+              <button onClick={() => setShowArchivePrompt(false)}>
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {accessGranted && (
+        <div className="archive-content">
+          <h2>📂 Archivo del Canal</h2>
+          <p>
+            Aquí se guardan las transmisiones perdidas, grabaciones inéditas y
+            mensajes del Director nunca emitidos.
+          </p>
+          <button onClick={() => setAccessGranted(false)}>Cerrar</button>
         </div>
       )}
     </div>
