@@ -280,15 +280,35 @@ body,
 
 /* --------------------
    PANEL DERECHO (playlist) — MÁS COMPACTO
-   -------------------- */
+   -------------------- 
 .playlist-panel {
   flex: 0 0 300px;
-  /* tamaño fijo/compacto para que quepan más items */
+   tamaño fijo/compacto para que quepan más items 
   max-width: 340px;
   background: #151515;
   border-left: 1px solid #242424;
   padding: 12px 12px;
   overflow-y: auto;
+}*/
+
+.playlist-panel {
+  flex: 0 0 300px;
+  max-width: 340px;
+  border-left: 1px solid #242424;
+  position: fixed;
+  top: 0;
+  left: -280px; /* escondido */
+  width: 260px;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.95);
+  color: white;
+  border-right: 2px solid #ff0044;
+  transition: left 0.4s ease;
+  overflow-y: auto;
+  z-index: 50;
+  padding: 12px 12px;
+  /*padding: 1rem;*/
+  backdrop-filter: blur(4px);
 }
 
 /* Pequeño título */
@@ -298,6 +318,54 @@ body,
   color: #e6e6e6;
   font-size: 14px;
 }
+
+/* Scrollbar discreto */
+.playlist-panel::-webkit-scrollbar {
+  width: 10px;
+}
+
+.playlist-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+}
+
+.playlist-panel.open {
+  left: 0;
+}
+
+/* Botón lateral */
+.playlist-toggle {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background: #ff0044;
+  color: white;
+  padding: 0.6rem 0.4rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 60;
+  transition: background 0.3s ease;
+}
+
+.playlist-toggle:hover {
+  background: #ff3366;
+}
+
+/* Estética interna */
+.playlist-title {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 10, 0.95);
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ff0044;
+  z-index: 10;
+}
+
+
+
 
 .mini-cover {
   width: 40px;
@@ -362,66 +430,6 @@ body,
   margin-top: 2px;
 }
 
-/* Scrollbar discreto */
-.playlist-panel::-webkit-scrollbar {
-  width: 10px;
-}
-
-.playlist-panel::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 6px;
-}
-
-.playlist-panel {
-  position: fixed;
-  top: 0;
-  left: -280px; /* escondido */
-  width: 260px;
-  height: 100vh;
-  background: rgba(10, 10, 10, 0.95);
-  color: white;
-  border-right: 2px solid #ff0044;
-  transition: left 0.4s ease;
-  overflow-y: auto;
-  z-index: 50;
-  padding: 1rem;
-  backdrop-filter: blur(4px);
-}
-
-.playlist-panel.open {
-  left: 0;
-}
-
-/* Botón lateral */
-.playlist-toggle {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  background: #ff0044;
-  color: white;
-  padding: 0.6rem 0.4rem;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-  font-size: 1.2rem;
-  z-index: 60;
-  transition: background 0.3s ease;
-}
-
-.playlist-toggle:hover {
-  background: #ff3366;
-}
-
-/* Estética interna */
-.playlist-title {
-  position: sticky;
-  top: 0;
-  background: rgba(10, 10, 10, 0.95);
-  padding-bottom: 0.5rem;
-  font-weight: bold;
-  border-bottom: 1px solid #ff0044;
-  z-index: 10;
-}
 
 
 @keyframes fadeIn {
