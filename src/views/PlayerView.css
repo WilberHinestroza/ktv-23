@@ -275,13 +275,13 @@ body,
 
 /* Canciones */
 .mini-title {
-  font-size: 12.5px; /* más pequeño */
+  font-size: 12px; /* más pequeño */
   font-weight: 600;
   color: #fff;
 }
 
 .mini-artist {
-  font-size: 11px; /* más pequeño */
+  font-size: 10px; /* más pequeño */
   color: #a7a7a7;
 }
 
