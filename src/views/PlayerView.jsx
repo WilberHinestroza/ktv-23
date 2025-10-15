@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import "./PlayerView.css";
 
 export default function PlayerView() {
+  const PUBLIC = process.env.PUBLIC_URL;
   const ARCHIVE_PASSWORD = process.env.REACT_APP_ARCHIVE_PASSWORD || "ktv24";
   const [songs, setSongs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,6 +38,9 @@ export default function PlayerView() {
   const [showArchivePrompt, setShowArchivePrompt] = useState(false);
   const [accessCode, setAccessCode] = useState("");
   const [accessGranted, setAccessGranted] = useState(false);
+
+
+
 
   const handleArchiveAccess = () => {
     if (accessCode === ARCHIVE_PASSWORD) {
@@ -307,8 +311,35 @@ export default function PlayerView() {
     setCoverGlitchOffset(Math.random() * 6 - 3);
   };
 
+  const hiddenImages = [
+    `${PUBLIC}/cover/ktv23-cover.webp`,
+    `${PUBLIC}/cover/ED.png`,
+    `${PUBLIC}/cover/ktv23-cover.webp`,
+    `${PUBLIC}/cover/ED.png`,
+    `${PUBLIC}/cover/ktv23-cover.webp`,
+  ];
+
+  const [position, setPosition] = useState({ top: 50, left: 50 });
+  const [visibleImage, setVisibleImage] = useState(null);
+
+  // Movimiento aleatorio cada 2 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const top = Math.random() * 80 + 10; // evita que se salga de la pantalla
+      const left = Math.random() * 80 + 10;
+      setPosition({ top, left });
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleClick = () => {
+    const randomIndex = Math.floor(Math.random() * hiddenImages.length);
+    setVisibleImage(hiddenImages[randomIndex]);
+  };
+
   const tvSchedule = [
-    { text: " 00:00 - Repetición de transmisiones antiguas", url: null },
+    { text: " 00:00 - Intro", url: null },
     {
       text: "02:00 - Mensajes del Director nunca emitidos",
       url: "https://youtu.be/XXXXXXX",
@@ -325,13 +356,70 @@ export default function PlayerView() {
     { text: "16:00 - Programación especial del Director", url: null },
     { text: "18:00 - Música retro 80s y 90s", url: null },
     { text: "20:00 - Grabaciones inéditas", url: null },
-    { text: "22:00 - Señal nocturna continua", url: null },
+    { text: "23:00 - Outro", url: null },
   ];
 
   const currentSong = songs[currentIndex];
 
   return (
     <div className="player-layout" onMouseMove={handleMouseMove}>
+      {/* Botón invisible */}
+      <button
+        onClick={handleClick}
+        style={{
+          position: "fixed",
+          top: `${position.top}%`,
+          left: `${position.left}%`,
+          width: "100px", // más grande
+          height: "100px", // más grande
+          opacity: 0, // visible para probar
+          background: "red", // color visible
+          borderRadius: "20%", // circular
+          zIndex: 999,
+          cursor: "pointer",
+          border: "none",
+          fontWeight: "bold",
+          fontSize: "14px",
+          color: "#fff",
+        }}
+      />
+
+      {/* Imagen oculta que aparece al hacer clic */}
+      {visibleImage && (
+        <div
+          onClick={() => setVisibleImage(null)} // clic fuera cierra
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            background: "rgba(0,0,0,0.8)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1000,
+            animation: "fadeIn 0.3s ease",
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ textAlign: "center" }}
+          >
+            <img
+              src={visibleImage}
+              alt="Oculta"
+              style={{
+                maxWidth: "80vw",
+                maxHeight: "80vh",
+                borderRadius: "12px",
+                boxShadow: "0 0 20px rgba(255,255,255,0.5)",
+              }}
+            />
+          </div>
+        </div>
+      )}
+
       <div className="player-panel">
         <a
           className="live-button live-button-left"
@@ -519,29 +607,30 @@ export default function PlayerView() {
 
       {/* MODAL */}
       {open && (
-        <div className="schedule-modal">
-          <div className="schedule-content">
-            <h2>📺 Programación KTV23</h2>
-            <ul>
+        <div
+          className="schedule-modal"
+          onClick={() => setOpen(false)} // clic fuera cierra el modal
+        >
+          <div
+            className="schedule-content"
+            onClick={(e) => e.stopPropagation()} // evita que clic dentro cierre
+          >
+            <h2>Programación KTV23</h2>
+            <ul className="schedule-content-ul">
               {tvSchedule.map((program, index) => (
-                <li key={index}>
-                  {program.url ? (
-                    <a
-                      href={program.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {program.text}
-                    </a>
-                  ) : (
-                    <span>{program.text}</span>
-                  )}
+                <li
+                  key={index}
+                  onClick={() => {
+                    if (program.url) {
+                      window.open(program.url, "_blank");
+                    }
+                  }}
+                  className={program.url ? "clickable-item" : ""}
+                >
+                  {program.text}
                 </li>
               ))}
             </ul>
-            <button className="close-schedule" onClick={() => setOpen(false)}>
-              ✖ Cerrar
-            </button>
           </div>
         </div>
       )}
@@ -558,8 +647,17 @@ export default function PlayerView() {
       )}
 
       {showArchivePrompt && (
-        <div className="archive-modal">
-          <div className="archive-box">
+        <div
+          className="archive-modal"
+          onClick={() => {
+            setShowArchivePrompt(false);
+            setAccessCode(""); // limpiar al cerrar
+          }}
+        >
+          <div
+            className="archive-box"
+            onClick={(e) => e.stopPropagation()} // evita que clic dentro cierre
+          >
             <h3>Archivos del Canal</h3>
             <p>Ingrese el código de acceso:</p>
             <input
@@ -574,7 +672,7 @@ export default function PlayerView() {
               <button
                 onClick={() => {
                   setShowArchivePrompt(false);
-                  setAccessCode(""); // limpiar la contraseña al cerrar
+                  setAccessCode(""); // limpiar al cerrar
                 }}
               >
                 Cancelar
@@ -585,54 +683,62 @@ export default function PlayerView() {
       )}
 
       {accessGranted && (
-        <div className="archive-content">
-          <h2>
-            <Files /> Archivos del Canal
-          </h2>
-          <p>
-            Aquí se guardan las transmisiones perdidas, grabaciones inéditas y
-            mensajes del Director nunca emitidos.
-          </p>
-
-          <ul className="archive-list">
-            <li>
-              <a
-                href="https://youtu.be/jjG8fzOjwVk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="archive-link"
-              >
-                🎞️ Transmisión perdida #1
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://youtu.be/fjCjrngerEM"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="archive-link"
-              >
-                🔊 Grabación inédita: “El Director Habla”
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://youtu.be/zgqxu_FaLVA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="archive-link"
-              >
-                🕳️ Mensajes del Director
-              </a>
-            </li>
-          </ul>
-
-          <button
-            onClick={() => setAccessGranted(false)}
-            className="close-archive"
+        <div
+          className="archive-modal"
+          onClick={() => setAccessGranted(false)} // clic en el fondo cierra
+        >
+          <div
+            className="archive-content"
+            onClick={(e) => e.stopPropagation()} // evita que clic dentro cierre
           >
-            Cerrar
-          </button>
+            <h2>
+              <Files /> Archivos del Canal
+            </h2>
+            <p>
+              Aquí se guardan las transmisiones perdidas, grabaciones inéditas y
+              mensajes del Director nunca emitidos.
+            </p>
+
+            <ul className="archive-list">
+              <li>
+                <a
+                  href="https://youtu.be/jjG8fzOjwVk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="archive-link"
+                >
+                  🎞️ Transmisión perdida #1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://youtu.be/fjCjrngerEM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="archive-link"
+                >
+                  🔊 Grabación inédita: “El Director Habla”
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://youtu.be/zgqxu_FaLVA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="archive-link"
+                >
+                  🕳️ Mensajes del Director
+                </a>
+              </li>
+            </ul>
+
+            <button
+              onClick={() => setAccessGranted(false)}
+              className="close-archive"
+            >
+              Cerrar
+            </button>
+          </div>
         </div>
       )}
     </div>

@@ -338,6 +338,8 @@ body,
 }
 
 .schedule-content ul {
+  pointer-events: auto; /* permite clics */
+  cursor: pointer; /* opcional, para que sea evidente que es clicable */
   list-style: none;
   padding: 0;
   margin: 15px 0;
@@ -345,9 +347,33 @@ body,
 }
 
 .schedule-content li {
+  pointer-events: auto; /* permite clics */
+  cursor: pointer; /* opcional, para que sea evidente que es clicable */
   margin: 6px 0;
   font-size: 0.95rem;
 }
+
+.schedule-content li.clickable-item {
+  cursor: pointer;
+  color: #fff;           /* igual que los que no tienen link */
+  text-decoration: none;  /* nada de subrayado */
+}
+
+.schedule-content li.clickable-item:hover {
+  background: rgba(255, 255, 255, 0.05); /* solo un pequeño hover opcional */
+}
+
+@keyframes rotateButton {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* si quieres aplicar la rotación al botón */
+button.invisible-rotating {
+  animation: rotateButton 3s linear infinite;
+}
+
 
 .close-schedule {
   margin-top: 15px;
@@ -377,8 +403,6 @@ body,
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
-
-
 
 
 
