@@ -16,7 +16,7 @@ export default class SongController {
       new Song(8, "Komo2", "Wildberry", `${PUBLIC}/music/8.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(9, "24/7", "Wildberry", `${PUBLIC}/music/9.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(10, "Lo nuestro", "Wildberry", `${PUBLIC}/music/10NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
-      new Song(11, "Delirante", "Wildberry", `${PUBLIC}/music/11NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
+      new Song(11, "Delirante", "Wildberry", `${PUBLIC}/music/11.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(12, "Comercial #2", "Wildberry", `${PUBLIC}/music/12.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(13, "Trance", "Wildberry", `${PUBLIC}/music/13.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(14, "Brou", "Wildberry", `${PUBLIC}/music/14.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
