@@ -21,39 +21,48 @@ export default class SongController {
     `${PUBLIC}/music/Noticieros/Noticiero C.mp3`,
     `${PUBLIC}/music/Noticieros/Noticiero DN.mp3`,
     `${PUBLIC}/music/Noticieros/Jingle A.mp3`,
-    `${PUBLIC}/music/Noticieros/Jingle BN.mp3`,
+    `${PUBLIC}/music/Noticieros/Jingle BN.mp3`
+  ];
+
+  const img = [
+    `${PUBLIC}/cover/ktv23-cover.webpp`,
+    `${PUBLIC}/cover/ktv23-cover2.webp`,
+    `${PUBLIC}/cover/ktv23-cover3.webp`
+
   ];
 
   // Luego elige uno al azar:
   const randomInfomercial = infomerciales[Math.floor(Math.random() * infomerciales.length)];
   const randomNoticieros = noticieros[Math.floor(Math.random() * noticieros.length)];
+  const randomImg = img[Math.floor(Math.random() * img.length)];
+
 
   // Y ahora define tu lista normalmente:
   const visibles = [
-    new Song(1, "Intro", "Wildberry", `${PUBLIC}/music/Canciones/1.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(2, "KeNny gaLindo", "Wildberry", `${PUBLIC}/music/Canciones/2.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
-    new Song(3, "Sigiloso", "Wildberry", `${PUBLIC}/music/Canciones/3.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(4, "Gotdamn", "Wildberry", `${PUBLIC}/music/Canciones/4.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
-    new Song(5, "Damisela", "Wildberry", `${PUBLIC}/music/Canciones/5.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(6, "Todos juzgan", "Wildberry", `${PUBLIC}/music/Canciones/6.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
+    new Song(1, "Intro", "Wildberry", `${PUBLIC}/music/Canciones/1.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(2, "KeNny gaLindo", "Wildberry", `${PUBLIC}/music/Canciones/2.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(3, "Sigiloso", "Wildberry", `${PUBLIC}/music/Canciones/3.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(4, "Gotdamn", "Wildberry", `${PUBLIC}/music/Canciones/4.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(5, "Damisela", "Wildberry", `${PUBLIC}/music/Canciones/5.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(6, "Todos juzgan", "Wildberry", `${PUBLIC}/music/Canciones/6.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     
     // Aquí reemplazamos Infomerciales por uno aleatorio:
-    new Song(7, "Noticiero KTV", "Wildberry", randomNoticieros, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(7, "Noticiero KTV", "Wildberry", randomNoticieros, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     
-    new Song(8, "Komo2", "Wildberry", `${PUBLIC}/music/Canciones/8.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
-    new Song(9, "24/7", "Wildberry", `${PUBLIC}/music/Canciones/9.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(10, "Lo nuestro", "Wildberry", `${PUBLIC}/music/Canciones/10NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
-    new Song(11, "Delirante", "Wildberry", `${PUBLIC}/music/Canciones/11.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(8, "Komo2", "Wildberry", `${PUBLIC}/music/Canciones/8.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(9, "24/7", "Wildberry", `${PUBLIC}/music/Canciones/9.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(10, "Lo nuestro", "Wildberry", `${PUBLIC}/music/Canciones/10NN.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(11, "Delirante", "Wildberry", `${PUBLIC}/music/Canciones/11.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     
     // Aquí reemplazamos Infomerciales por uno aleatorio:
-    new Song(12, "Infomerciales", "Wildberry", randomInfomercial, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
+    new Song(12, "Infomerciales", "Wildberry", randomInfomercial, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
 
-    new Song(13, "Trance", "Wildberry", `${PUBLIC}/music/Canciones/13.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(14, "Brou", "Wildberry", `${PUBLIC}/music/Canciones/14.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
-    new Song(15, "Tamagotchi", "Wildberry", `${PUBLIC}/music/Canciones/15.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(16, "CQNSD", "Wildberry", `${PUBLIC}/music/Canciones/16.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
-    new Song(17, "Paranoia", "Wildberry", `${PUBLIC}/music/Canciones/17NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(18, "Outro", "Wildberry", `${PUBLIC}/music/Canciones/18.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
+    new Song(13, "Trance", "Wildberry", `${PUBLIC}/music/Canciones/13.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(14, "Brou", "Wildberry", `${PUBLIC}/music/Canciones/14.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(15, "Tamagotchi", "Wildberry", `${PUBLIC}/music/Canciones/15.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(16, "CQNSD", "Wildberry", `${PUBLIC}/music/Canciones/16.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(17, "Paranoia", "Wildberry", `${PUBLIC}/music/Canciones/17NN.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(18, "Outro", "Wildberry", `${PUBLIC}/music/Canciones/18.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
   ];
 
     // 🔒 canciones ocultas (con `afterId`)

@@ -39,9 +39,6 @@ export default function PlayerView() {
   const [accessCode, setAccessCode] = useState("");
   const [accessGranted, setAccessGranted] = useState(false);
 
-
-
-
   const handleArchiveAccess = () => {
     if (accessCode === ARCHIVE_PASSWORD) {
       setAccessGranted(true);
@@ -339,24 +336,27 @@ export default function PlayerView() {
   };
 
   const tvSchedule = [
-    { text: " 00:00 - Intro", url: null },
-    {
-      text: "02:00 - Mensajes del Director nunca emitidos",
-      url: "https://youtu.be/XXXXXXX",
-    },
-    { text: "04:00 - Música retro 80s y 90s", url: null },
-    { text: "06:00 - Noticias KTV23", url: null },
-    {
-      text: "08:00 - Grabaciones inéditas",
-      url: "https://soundcloud.com/XXXXXXX",
-    },
-    { text: "10:00 - Entrevistas misteriosas", url: null },
-    { text: "12:00 - Repetición de transmisiones antiguas", url: null },
-    { text: "14:00 - Videos en vivo", url: "https://youtu.be/YYYYYYY" },
-    { text: "16:00 - Programación especial del Director", url: null },
-    { text: "18:00 - Música retro 80s y 90s", url: null },
-    { text: "20:00 - Grabaciones inéditas", url: null },
-    { text: "23:00 - Outro", url: null },
+    { text: " ESTA MAÑANA ", url: null },
+    { text: "00:00 am - Intro", url: null },
+    { text: "05:00 am - KeNny gaLindo", url: null },
+    { text: "06:00 am - Sigiloso", url: null },
+    { text: "08:00 am - Gotdamn", url: null },
+    { text: "10:00 am - Damisela", url: null },
+    { text: "11:00 am - Todos juzgan", url: null },
+    { text: " ESTA TARDE ", url: null },
+    { text: "12:00 - Noticiero KTV", url: null },
+    { text: "13:30 - Komo2", url: null },
+    { text: "15:00 - 24/7", url: null },
+    { text: "16:00 - Lo nuestro", url: null },
+    { text: "16:30 - Delirante", url: null },
+    { text: "17:00 - Outro", url: null },
+    { text: " ESTA NOCHE ", url: null },
+    { text: "18:00 - 24/7", url: null },
+    { text: "19:30 - Lo nuestro", url: null },
+    { text: "20:00 - Delirante", url: null },
+    { text: "22:00 - Outro", url: null },
+    { text: "22:30 - 24/7", url: null },
+    { text: "23:30 - Lo nuestro", url: null },
   ];
 
   const currentSong = songs[currentIndex];
