@@ -25,7 +25,7 @@ export default class SongController {
   ];
 
   const img = [
-    `${PUBLIC}/cover/ktv23-cover.webpp`,
+    `${PUBLIC}/cover/ktv23-cover.webp`,
     `${PUBLIC}/cover/ktv23-cover2.webp`,
     `${PUBLIC}/cover/ktv23-cover3.webp`
 
