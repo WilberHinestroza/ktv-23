@@ -12,12 +12,12 @@ export default class SongController {
       new Song(4, "Gotdamn", "Wildberry", `${PUBLIC}/music/4.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(5, "Damisela", "Wildberry", `${PUBLIC}/music/5.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(6, "Todos juzgan", "Wildberry", `${PUBLIC}/music/6.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
-      new Song(7, "Comercial #1", "Wildberry", `${PUBLIC}/music/7.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
+      new Song(7, "Noticiero KTV", "Wildberry", `${PUBLIC}/music/7.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(8, "Komo2", "Wildberry", `${PUBLIC}/music/8.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(9, "24/7", "Wildberry", `${PUBLIC}/music/9.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(10, "Lo nuestro", "Wildberry", `${PUBLIC}/music/10NN.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(11, "Delirante", "Wildberry", `${PUBLIC}/music/11.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
-      new Song(12, "Comercial #2", "Wildberry", `${PUBLIC}/music/12.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
+      new Song(12, "Infomercial", "Wildberry", `${PUBLIC}/music/12.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(13, "Trance", "Wildberry", `${PUBLIC}/music/13.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
       new Song(14, "Brou", "Wildberry", `${PUBLIC}/music/14.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoB.mp4`),
       new Song(15, "Tamagotchi", "Wildberry", `${PUBLIC}/music/15.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, `${PUBLIC}/cover/VideoA.mp4`),
@@ -60,8 +60,8 @@ export default class SongController {
         chance: 0.20 // 20% de probabilidad
       },
       { 
-        song: new Song(107, "Noticiero KTV23", "KeNnygaTV", `${PUBLIC}/music/Noticiero C.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
-        afterId: 12,  // suena después de "Comercial #2"
+        song: new Song(107, "Noticiero KTV23", "KeNnygaTV", `${PUBLIC}/music/Comercial E.mp3`, `${PUBLIC}/cover/ktv23-cover.webp`, null), 
+        afterId: 14,  // suena después de "Comercial #2"
         chance: 0.30 // 30% de probabilidad
       },
       { 
