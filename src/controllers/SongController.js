@@ -7,12 +7,12 @@ export default class SongController {
     // 🎵 canciones visibles
      // Primero define los 6 infomerciales posibles:
   const infomerciales = [
-    `${PUBLIC}/music/Infomerciales/infomercial A.mp3`,
-    `${PUBLIC}/music/Infomerciales/infomercial B.mp3`,
-    `${PUBLIC}/music/Infomerciales/infomercial C.mp3`,
-    `${PUBLIC}/music/Infomerciales/infomercial D.mp3`,
-    `${PUBLIC}/music/Infomerciales/infomercial E.mp3`,
-    `${PUBLIC}/music/Infomerciales/infomercial F.mp3`
+    `${PUBLIC}/music/Infomerciales/Infomercial A.mp3`,
+    `${PUBLIC}/music/Infomerciales/Infomercial B.mp3`,
+    `${PUBLIC}/music/Infomerciales/Infomercial C.mp3`,
+    `${PUBLIC}/music/Infomerciales/Infomercial D.mp3`,
+    `${PUBLIC}/music/Infomerciales/Infomercial E.mp3`,
+    `${PUBLIC}/music/Infomerciales/Infomercial F.mp3`
   ];
 
   const noticieros = [
