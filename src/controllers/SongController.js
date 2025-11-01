@@ -61,7 +61,7 @@ export default class SongController {
     new Song(14, "Brou", "Wildberry", `${PUBLIC}/music/Canciones/14.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(15, "Tamagotchi", "Wildberry", `${PUBLIC}/music/Canciones/15.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(16, "CQNSD", "Wildberry", `${PUBLIC}/music/Canciones/16.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(17, "Paranoia", "Wildberry", `${PUBLIC}/music/Canciones/17.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(17, "Paranoide", "Wildberry", `${PUBLIC}/music/Canciones/17.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(18, "Outro", "Wildberry", `${PUBLIC}/music/Canciones/18.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
   ];
 
