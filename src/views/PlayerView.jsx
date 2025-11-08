@@ -15,7 +15,7 @@ import "./PlayerView.css";
 
 export default function PlayerView() {
   const PUBLIC = process.env.PUBLIC_URL;
-  const ARCHIVE_PASSWORD = process.env.REACT_APP_ARCHIVE_PASSWORD || "ktv24";
+  const ARCHIVE_PASSWORD = process.env.REACT_APP_ARCHIVE_PASSWORD || "conectateKTV23";
   const [songs, setSongs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -43,7 +43,7 @@ export default function PlayerView() {
     if (accessCode === ARCHIVE_PASSWORD) {
       setAccessGranted(true);
       setShowArchivePrompt(false);
-      setAccessCode(""); // ✅ limpiar input
+      setAccessCode(""); // limpiar input
     } else {
       alert("Contraseña incorrecta, te estamos observando");
     }
@@ -60,14 +60,12 @@ export default function PlayerView() {
 
   const weirdMessages = useMemo(
     () => [
-      { text: "👁️‍🗨️ ¿Me estás mirando?", url: null },
-      { text: "🕳️ Nada es real aquí...", url: null },
-      { text: "⚡ Señal inestable, continúe viendo...", url: null },
-      {
-        text: "💀 Algunos archivos nunca deberían abrirse...",
-        url: "https://youtu.be/xyz123",
-      },
-      { text: "🔮 El Director sabe que estás aquí...", url: null },
+      //estas seguro que estas bien?
+      { text: "EEUS SGEB TUEI ARSE SOTN SQA?", url: "https://youtu.be/xyz123" }, 
+      //Bienaventurados los que no cambian el canal, porque de ellos será la transmisión eterna 
+      { text: "BSAAS OILNS NEOP EE N SLOR T AQCR A E VUAR LR EE MU A NNNB E T A TOID RX UCAE AX RANE NX AME L SX DBLL M XOIC OIX", url: null }, 
+      // hijo mio, vuelve a mi y obedeceme
+      { text: "SIRQ NRO, EFVOV Z NR B OYVEVXVNV", url: null }, 
     ],
     []
   );
@@ -338,25 +336,25 @@ export default function PlayerView() {
   const tvSchedule = [
     { text: "====== ESTA MAÑANA ======", url: null },
     { text: "00:00 am - Intro", url: null },
-    { text: "05:00 am - KeNny gaLindo", url: null },
-    { text: "06:00 am - Sigiloso", url: null },
-    { text: "08:00 am - Gotdamn", url: null },
-    { text: "10:00 am - Damisela", url: null },
-    { text: "11:00 am - Todos juzgan", url: null },
+    { text: "02:00 am - KeNny gaLindo", url: null },
+    { text: "04:00 am - Sigiloso", url: null },
+    { text: "06:00 am - Gotdamn", url: null },
+    { text: "08:30 am - Damisela", url: null },
+    { text: "10:45 am - Todos juzgan", url: null },
     { text: "====== ESTA TARDE ======", url: null },
     { text: "12:00 - Noticiero KTV", url: null },
     { text: "13:30 - Komo2", url: null },
     { text: "15:00 - 24/7", url: null },
     { text: "16:00 - Lo nuestro", url: null },
     { text: "16:30 - Delirante", url: null },
-    { text: "17:00 - Outro", url: null },
+    { text: "17:00 - Infomerciales", url: null },
     { text: "====== ESTA NOCHE ======", url: null },
-    { text: "18:00 - 24/7", url: null },
-    { text: "19:30 - Lo nuestro", url: null },
-    { text: "20:00 - Delirante", url: null },
-    { text: "22:00 - Outro", url: null },
-    { text: "22:30 - 24/7", url: null },
-    { text: "23:30 - Lo nuestro", url: null },
+    { text: "18:00 - Trance", url: null },
+    { text: "19:30 - Brou", url: null },
+    { text: "20:00 - Tamagotchi", url: null },
+    { text: "22:00 - CQNSD", url: null },
+    { text: "22:30 - Paranoia", url: null },
+    { text: "23:30 - Outro", url: null },
   ];
 
   const currentSong = songs[currentIndex];
