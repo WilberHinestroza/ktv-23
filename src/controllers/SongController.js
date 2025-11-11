@@ -10,18 +10,14 @@ export default class SongController {
     `${PUBLIC}/music/Infomerciales/Infomercial A.mp3`,
     `${PUBLIC}/music/Infomerciales/Infomercial B.mp3`,
     `${PUBLIC}/music/Infomerciales/Infomercial C.mp3`,
-    `${PUBLIC}/music/Infomerciales/Infomercial D.mp3`,
-    `${PUBLIC}/music/Infomerciales/Infomercial E.mp3`,
-    `${PUBLIC}/music/Infomerciales/Infomercial F.mp3`
+    `${PUBLIC}/music/Infomerciales/Infomercial D.mp3`
   ];
 
   const noticieros = [
     `${PUBLIC}/music/Noticieros/Noticiero A.mp3`,
     `${PUBLIC}/music/Noticieros/Noticiero B.mp3`,
     `${PUBLIC}/music/Noticieros/Noticiero C.mp3`,
-    `${PUBLIC}/music/Noticieros/Noticiero DN.mp3`,
-    `${PUBLIC}/music/Noticieros/Jingle A.mp3`,
-    `${PUBLIC}/music/Noticieros/Jingle BN.mp3`
+    `${PUBLIC}/music/Noticieros/Jingle A.mp3`
   ];
 
   const img = [
