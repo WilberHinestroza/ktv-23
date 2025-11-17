@@ -47,7 +47,7 @@ export default class SongController {
     
     new Song(8, "Komo2", "Wildberry", `${PUBLIC}/music/Canciones/8.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(9, "24/7", "Wildberry", `${PUBLIC}/music/Canciones/9.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(10, "Lo nuestro", "Wildberry", `${PUBLIC}/music/Canciones/10NN.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(10, "Lo nuestro", "Wildberry", `${PUBLIC}/music/Canciones/10.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(11, "Delirante", "Wildberry", `${PUBLIC}/music/Canciones/11.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     
     // Aquí reemplazamos Infomerciales por uno aleatorio:
