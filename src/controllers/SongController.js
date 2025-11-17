@@ -95,6 +95,11 @@ export default class SongController {
         chance: 0.05 // 5% de probabilidad
       },
       { 
+        song: new Song(116, "Hijo mio", "El Director", `${PUBLIC}/music/ED/ED101.mp3`, `${PUBLIC}/cover/ED.png`, null), 
+        afterId: 30,  // suena después de "1 al 17"
+        chance: 0.05 // 5% de probabilidad
+      },
+      { 
         song: new Song(117, "A que le temes?", "El Director", `${PUBLIC}/music/ED/ED6.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 5,  // suena después de "Canción 3"
         chance: 0.30 // 30% de probabilidad
