@@ -35,36 +35,43 @@ export default class SongController {
 
   // Y ahora define tu lista normalmente:
   const visibles = [
-    new Song(1, "Intro", "Wildberry", `${PUBLIC}/music/Canciones/1.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(2, "KeNny gaLindo", "Wildberry", `${PUBLIC}/music/Canciones/2.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(3, "Sigiloso", "Wildberry", `${PUBLIC}/music/Canciones/3.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(4, "Gotdamn", "Wildberry", `${PUBLIC}/music/Canciones/4.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(5, "Damisela", "Wildberry", `${PUBLIC}/music/Canciones/5.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(6, "Todos juzgan", "Wildberry", `${PUBLIC}/music/Canciones/6.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    
-    // Aquí reemplazamos Infomerciales por uno aleatorio:
-    new Song(7, "Noticiero KTV", "Wildberry", randomNoticieros, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    
-    new Song(8, "Komo2", "Wildberry", `${PUBLIC}/music/Canciones/8.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(9, "24/7", "Wildberry", `${PUBLIC}/music/Canciones/9.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(10, "Lo nuestro", "Wildberry", `${PUBLIC}/music/Canciones/10.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(11, "Delirante", "Wildberry", `${PUBLIC}/music/Canciones/11.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    
-    // Aquí reemplazamos Infomerciales por uno aleatorio:
-    new Song(12, "Infomercial", "Wildberry", randomInfomercial, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(1, "Intro", "Wildberry", `${PUBLIC}/music/Canciones/00.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(2, "KeNny gaLindo", "Wildberry", `${PUBLIC}/music/Canciones/01.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(3, "Sigiloso", "Wildberry", `${PUBLIC}/music/Canciones/02.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(4, "Gotdamn", "Wildberry", `${PUBLIC}/music/Canciones/03.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(5, "24/7", "Wildberry", `${PUBLIC}/music/Canciones/04.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
 
-    new Song(13, "Trance", "Wildberry", `${PUBLIC}/music/Canciones/13.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(14, "Brou", "Wildberry", `${PUBLIC}/music/Canciones/14.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(15, "Tamagotchi", "Wildberry", `${PUBLIC}/music/Canciones/15.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(16, "CQNSD", "Wildberry", `${PUBLIC}/music/Canciones/16.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(17, "Paranoia", "Wildberry", `${PUBLIC}/music/Canciones/17.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(18, "Outro", "Wildberry", `${PUBLIC}/music/Canciones/18.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    // Aquí reemplazamos Infomerciales por uno aleatorio:
+    new Song(6, "Noticiero KTV", "Wildberry", randomNoticieros, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+
+    new Song(7, "Damisela", "Wildberry", `${PUBLIC}/music/Canciones/05.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(8, "Komo2", "Wildberry", `${PUBLIC}/music/Canciones/06.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(9, "Baby", "Wildberry", `${PUBLIC}/music/Canciones/07.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    
+    // Aquí reemplazamos Infomerciales por uno aleatorio:
+    new Song(10, "Infomercial", "Wildberry", randomInfomercial, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    
+    new Song(11, "Brou", "Wildberry", `${PUBLIC}/music/Canciones/08.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(12, "Lo nuestro", "Wildberry", `${PUBLIC}/music/Canciones/09.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(13, "CQNSD", "Wildberry", `${PUBLIC}/music/Canciones/10.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(14, "Delirante", "Wildberry", `${PUBLIC}/music/Canciones/11.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(15, "Todos juzgan", "Wildberry", `${PUBLIC}/music/Canciones/12.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    
+    // Aquí reemplazamos Infomerciales por uno aleatorio:
+    new Song(16, "Infomercial", "Wildberry", randomInfomercial, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+
+    new Song(17, "Trance", "Wildberry", `${PUBLIC}/music/Canciones/13.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(18, "Tamagotchi", "Wildberry", `${PUBLIC}/music/Canciones/14.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),   
+    new Song(19, "Paranoia", "Wildberry", `${PUBLIC}/music/Canciones/15.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(20, "Viches", "Wildberry", `${PUBLIC}/music/Canciones/16.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+
+    new Song(18, "Outro", "Wildberry", `${PUBLIC}/music/Canciones/17.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
   ];
 
     // 🔒 canciones ocultas (con `afterId`)
     const ocultas = [
 //El Director
-      { 
+      /*{ 
         song: new Song(111, "Bienvenido", "El Director", `${PUBLIC}/music/ED/ED1.mp3`, `${PUBLIC}/cover/ED.png`, null), 
         afterId: 1,  // suena después de "Intro"
         chance: 0.50 // 50% de probabilidad
@@ -169,8 +176,9 @@ export default class SongController {
         song: new Song(130, "????", "Desconocido", `${PUBLIC}/music/H/H10.mp3`, `${PUBLIC}/cover/H.png`, null), 
         afterId: null,  // suena después de "Canción 3"
         chance: 0.30 // 30% de probabilidad
-      }
+      }*/
     ];
+
     return { visibles, ocultas };
   }
 }

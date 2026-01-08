@@ -539,7 +539,7 @@ export default function PlayerView() {
         {/* 🔻 Barra inferior tipo “canal” */}
         <div className="ticker-bar">
           <div className="ticker-text">
-            {"KTV23 · "}
+            {"KeNnyga Radio 112.3 FM · "}
             <span
               className="ticker-program"
               onClick={() => setOpen(true)}
@@ -565,7 +565,7 @@ export default function PlayerView() {
       </div>
       {/* Playlist */}
       <div className="playlist-panel">
-        <h3 className="playlist-title">KTV23 Playlist</h3>
+        <h3 className="playlist-title">KeNnyga Radio 112.3 FM</h3>
         <ul className="song-list">
           {songs.map((song, index) => (
             <li
@@ -613,7 +613,7 @@ export default function PlayerView() {
             className="schedule-content"
             onClick={(e) => e.stopPropagation()} // evita que clic dentro cierre
           >
-            <h2>Programación KTV23</h2>
+            <h2>Programación KeNnyga Radio</h2>
             <ul className="schedule-content-ul">
               {tvSchedule.map((program, index) => (
                 <li
