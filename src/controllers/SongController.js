@@ -6,7 +6,7 @@ export default class SongController {
 
     // 🎵 canciones visibles
      // Primero define los 6 infomerciales posibles:
-  const infomerciales = [
+  /*const infomerciales = [
     `${PUBLIC}/music/Infomerciales/Infomercial A.mp3`,
     `${PUBLIC}/music/Infomerciales/Infomercial B.mp3`,
     `${PUBLIC}/music/Infomerciales/Infomercial C.mp3`,
@@ -18,7 +18,7 @@ export default class SongController {
     `${PUBLIC}/music/Noticieros/Noticiero B.mp3`,
     `${PUBLIC}/music/Noticieros/Noticiero C.mp3`,
     `${PUBLIC}/music/Noticieros/Jingle A.mp3`
-  ];
+  ];*/
 
   const img = [
     `${PUBLIC}/cover/ktv23-cover.webp`,
@@ -28,8 +28,8 @@ export default class SongController {
   ];
 
   // Luego elige uno al azar:
-  const randomInfomercial = infomerciales[Math.floor(Math.random() * infomerciales.length)];
-  const randomNoticieros = noticieros[Math.floor(Math.random() * noticieros.length)];
+  //const randomInfomercial = infomerciales[Math.floor(Math.random() * infomerciales.length)];
+  //const randomNoticieros = noticieros[Math.floor(Math.random() * noticieros.length)];
   const randomImg = img[Math.floor(Math.random() * img.length)];
 
 
@@ -42,7 +42,7 @@ export default class SongController {
     new Song(5, "24/7", "Wildberry", `${PUBLIC}/music/Canciones/04.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
 
     // Aquí reemplazamos Infomerciales por uno aleatorio:
-    new Song(6, "Llamada", "Wildberry", `${PUBLIC}/music/Interludios/Llamadas.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(6, "Llamada", "Wildberry", `${PUBLIC}/music/Interludios/Llamada.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
 
     new Song(7, "Damisela", "Wildberry", `${PUBLIC}/music/Canciones/05.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(8, "Komo2", "Wildberry", `${PUBLIC}/music/Canciones/06.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
