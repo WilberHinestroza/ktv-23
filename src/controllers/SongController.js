@@ -42,14 +42,14 @@ export default class SongController {
     new Song(5, "24/7", "Wildberry", `${PUBLIC}/music/Canciones/04.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
 
     // Aquí reemplazamos Infomerciales por uno aleatorio:
-    new Song(6, "Noticiero KTV", "Wildberry", randomNoticieros, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(6, "Llamada", "Wildberry", `${PUBLIC}/music/Interludios/Llamadas.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
 
     new Song(7, "Damisela", "Wildberry", `${PUBLIC}/music/Canciones/05.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(8, "Komo2", "Wildberry", `${PUBLIC}/music/Canciones/06.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(9, "Baby", "Wildberry", `${PUBLIC}/music/Canciones/07.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     
     // Aquí reemplazamos Infomerciales por uno aleatorio:
-    new Song(10, "Infomercial", "Wildberry", randomInfomercial, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(6, "Micro On", "Wildberry", `${PUBLIC}/music/Interludios/Micro on.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     
     new Song(11, "Brou", "Wildberry", `${PUBLIC}/music/Canciones/08.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(12, "Lo nuestro", "Wildberry", `${PUBLIC}/music/Canciones/09.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
@@ -58,7 +58,7 @@ export default class SongController {
     new Song(15, "Todos juzgan", "Wildberry", `${PUBLIC}/music/Canciones/12.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     
     // Aquí reemplazamos Infomerciales por uno aleatorio:
-    new Song(16, "Infomercial", "Wildberry", randomInfomercial, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(6, "Burry Malta", "Wildberry", `${PUBLIC}/music/Interludios/Burry Malta.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
 
     new Song(17, "Trance", "Wildberry", `${PUBLIC}/music/Canciones/13.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(18, "Tamagotchi", "Wildberry", `${PUBLIC}/music/Canciones/14.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),   
