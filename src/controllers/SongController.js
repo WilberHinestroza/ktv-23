@@ -52,7 +52,7 @@ export default class SongController {
     new Song(10, "Micro On", "Wildberry", `${PUBLIC}/music/Interludios/Micro on.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     
     new Song(11, "Brou", "Wildberry", `${PUBLIC}/music/Canciones/08.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
-    new Song(12, "BlackMaN", "Wildberry x HD Beatz", `${PUBLIC}/music/Canciones/09.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
+    new Song(12, "BlackMaN", "Wildberry x HD On The Beat", `${PUBLIC}/music/Canciones/09.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(13, "Lo nuestro", "Wildberry", `${PUBLIC}/music/Canciones/10.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(14, "CQNSD", "Wildberry", `${PUBLIC}/music/Canciones/11.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
     new Song(15, "Delirante", "Wildberry", `${PUBLIC}/music/Canciones/12.mp3`, randomImg, `${PUBLIC}/cover/VideoA.mp4`),
