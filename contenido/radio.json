@@ -340,7 +340,16 @@
       "descripcion": "Mezcla aleatoria para trasnochar.",
       "desde": "00:00",
       "hasta": "06:00",
-      "orden": "mezcla"
+      "orden": "mezcla",
+      "intro": {
+        "archivo": "locutor/programa-madrugada-raul-4064f440fa.mp3",
+        "texto": "Son pasadas las doce. Arranca Madrugada KeNnyga: mezcla aleatoria para los que no duermen.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Son pasadas las doce. Arranca Madrugada Keniga: mezcla aleatoria para los que no duermen.",
+        "duracion": 8.072,
+        "titulo": "Madrugada KeNnyga"
+      }
     },
     {
       "id": "album-completo",
@@ -351,7 +360,16 @@
       "albumes": [
         "kng"
       ],
-      "orden": "lista"
+      "orden": "lista",
+      "intro": {
+        "archivo": "locutor/programa-album-completo-raul-19ccc49b49.mp3",
+        "texto": "Ahora, el álbum completo. KeNnyga Radio 112.3 FM, de principio a fin.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Ahora, el álbum completo. Keniga Radio ciento doce punto tres efe eme, de principio a fin.",
+        "duracion": 8.751,
+        "titulo": "El álbum completo"
+      }
     },
     {
       "id": "ktv23-estreno",
@@ -362,7 +380,109 @@
       "albumes": [
         "ktv23"
       ],
-      "orden": "lista"
+      "orden": "lista",
+      "intro": {
+        "archivo": "locutor/programa-ktv23-estreno-sabina-b23706be22.mp3",
+        "texto": "Llegó la hora del estreno. KTV23, el álbum nuevo, completo y en orden.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Llegó la hora del estreno. Ka Te Ve Veintitrés, el álbum nuevo, completo y en orden.",
+        "duracion": 7.001,
+        "titulo": "Estreno: KTV23"
+      }
+    },
+    {
+      "id": "manana-chill",
+      "titulo": "Mañana Chill",
+      "descripcion": "Para arrancar suave: lo más relajado y lo que te pone a pensar.",
+      "desde": "10:00",
+      "hasta": "12:00",
+      "temas": [
+        "Chill",
+        "Reflexión"
+      ],
+      "orden": "mezcla",
+      "intro": {
+        "archivo": "locutor/programa-manana-chill-sabina-09808272e3.mp3",
+        "texto": "Buenos días. Esto es Mañana Chill en KeNnyga Radio. Sin afán, música para ir arrancando.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Buenos días. Esto es Mañana Chill en Keniga Radio. Sin afán, música para ir arrancando.",
+        "duracion": 8.098,
+        "titulo": "Mañana Chill"
+      }
+    },
+    {
+      "id": "hora-malandreo",
+      "titulo": "La Hora del Malandreo",
+      "descripcion": "Calle, flow y flexeo.",
+      "desde": "14:00",
+      "hasta": "16:00",
+      "temas": [
+        "Malandreo",
+        "Flexeo"
+      ],
+      "orden": "mezcla",
+      "intro": {
+        "archivo": "locutor/programa-hora-malandreo-raul-42b8959c3a.mp3",
+        "texto": "Atención, que empieza La Hora del Malandreo. Calle, flow y flexeo. Sube eso.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "duracion": 8.934,
+        "titulo": "La Hora del Malandreo"
+      }
+    },
+    {
+      "id": "noches-de-amor",
+      "titulo": "Noches de Amor",
+      "descripcion": "Para los enamorados y los que ya no lo están.",
+      "desde": "22:00",
+      "hasta": "00:00",
+      "dias": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "temas": [
+        "Amor",
+        "Desamor"
+      ],
+      "orden": "mezcla",
+      "intro": {
+        "archivo": "locutor/programa-noches-de-amor-sabina-f4bef90d97.mp3",
+        "texto": "Bienvenidos a Noches de Amor. Para los enamorados, y para los que ya no lo están.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "duracion": 6.478,
+        "titulo": "Noches de Amor"
+      }
+    },
+    {
+      "id": "fiesta-kennyga",
+      "titulo": "Fiesta KeNnyga",
+      "descripcion": "Viernes y sábado: fiesta y perreo hasta la madrugada.",
+      "desde": "22:00",
+      "hasta": "00:00",
+      "dias": [
+        5,
+        6
+      ],
+      "temas": [
+        "Fiesta",
+        "Perreo"
+      ],
+      "orden": "mezcla",
+      "intro": {
+        "archivo": "locutor/programa-fiesta-kennyga-raul-bc863d81a6.mp3",
+        "texto": "Es fin de semana y esto es Fiesta KeNnyga. Fiesta y perreo hasta la madrugada.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Es fin de semana y esto es Fiesta Keniga. Fiesta y perreo hasta la madrugada.",
+        "duracion": 6.844,
+        "titulo": "Fiesta KeNnyga"
+      }
     }
   ],
   "locutor": {
