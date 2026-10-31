@@ -940,7 +940,201 @@
     },
     "presentaciones": {
       "probabilidad": 0.35
-    }
+    },
+    "horas": [
+      {
+        "archivo": "locutor/hora-sabina-21d541ab04.mp3",
+        "texto": "Son las 12 de la medianoche en KeNnyga Radio, ciento doce punto tres.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Son las doce de la medianoche en Keniga Radio, ciento doce punto tres.",
+        "duracion": 5.381
+      },
+      {
+        "archivo": "locutor/hora-sabina-7ee268b236.mp3",
+        "texto": "Atención: es la una de la madrugada. Sigues en KeNnyga Radio.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Atención: es la una de la madrugada. Sigues en Keniga Radio.",
+        "duracion": 5.616
+      },
+      {
+        "archivo": "locutor/hora-raul-69b432d3d5.mp3",
+        "texto": "Son las 2 en punto, de la madrugada. Esto es KeNnyga Radio y aquí no se apaga nada.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Son las dos en punto, de la madrugada. Esto es Keniga Radio y aquí no se apaga nada.",
+        "duracion": 7.654
+      },
+      {
+        "archivo": "locutor/hora-sabina-e6b518a24b.mp3",
+        "texto": "KeNnyga Radio te da la hora: son las 3 de la madrugada.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Keniga Radio te da la hora: son las tres de la madrugada.",
+        "duracion": 4.284
+      },
+      {
+        "archivo": "locutor/hora-raul-35131f3273.mp3",
+        "texto": "Son las 4 de la madrugada en KeNnyga Radio, ciento doce punto tres.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Son las cuatro de la madrugada en Keniga Radio, ciento doce punto tres.",
+        "duracion": 5.904
+      },
+      {
+        "archivo": "locutor/hora-sabina-6aeac05041.mp3",
+        "texto": "Atención: son las 5 de la madrugada. Sigues en KeNnyga Radio.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Atención: son las cinco de la madrugada. Sigues en Keniga Radio.",
+        "duracion": 5.799
+      },
+      {
+        "archivo": "locutor/hora-sabina-1f785f5fa9.mp3",
+        "texto": "Son las 6 en punto, de la mañana. Esto es KeNnyga Radio y aquí no se apaga nada.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Son las seis en punto, de la mañana. Esto es Keniga Radio y aquí no se apaga nada.",
+        "duracion": 6.844
+      },
+      {
+        "archivo": "locutor/hora-raul-eb57d09cda.mp3",
+        "texto": "KeNnyga Radio te da la hora: son las 7 de la mañana.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Keniga Radio te da la hora: son las siete de la mañana.",
+        "duracion": 4.807
+      },
+      {
+        "archivo": "locutor/hora-raul-fee7c1d9c6.mp3",
+        "texto": "Son las 8 de la mañana en KeNnyga Radio, ciento doce punto tres.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Son las ocho de la mañana en Keniga Radio, ciento doce punto tres.",
+        "duracion": 5.616
+      },
+      {
+        "archivo": "locutor/hora-raul-de74d5bfe4.mp3",
+        "texto": "Atención: son las 9 de la mañana. Sigues en KeNnyga Radio.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Atención: son las nueve de la mañana. Sigues en Keniga Radio.",
+        "duracion": 6.374
+      },
+      {
+        "archivo": "locutor/hora-raul-61db3f70dc.mp3",
+        "texto": "Son las 10 en punto, de la mañana. Esto es KeNnyga Radio y aquí no se apaga nada.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Son las diez en punto, de la mañana. Esto es Keniga Radio y aquí no se apaga nada.",
+        "duracion": 7.523
+      },
+      {
+        "archivo": "locutor/hora-raul-261fb69d82.mp3",
+        "texto": "KeNnyga Radio te da la hora: son las 11 de la mañana.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Keniga Radio te da la hora: son las once de la mañana.",
+        "duracion": 4.833
+      },
+      {
+        "archivo": "locutor/hora-sabina-cb04d0bdb5.mp3",
+        "texto": "Son las 12 del mediodía en KeNnyga Radio, ciento doce punto tres.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Son las doce del mediodía en Keniga Radio, ciento doce punto tres.",
+        "duracion": 5.224
+      },
+      {
+        "archivo": "locutor/hora-raul-0957d4a4f6.mp3",
+        "texto": "Atención: es la una de la tarde. Sigues en KeNnyga Radio.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Atención: es la una de la tarde. Sigues en Keniga Radio.",
+        "duracion": 6.034
+      },
+      {
+        "archivo": "locutor/hora-raul-dd9c6bd471.mp3",
+        "texto": "Son las 2 en punto, de la tarde. Esto es KeNnyga Radio y aquí no se apaga nada.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Son las dos en punto, de la tarde. Esto es Keniga Radio y aquí no se apaga nada.",
+        "duracion": 7.497
+      },
+      {
+        "archivo": "locutor/hora-sabina-c26e34b13c.mp3",
+        "texto": "KeNnyga Radio te da la hora: son las 3 de la tarde.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Keniga Radio te da la hora: son las tres de la tarde.",
+        "duracion": 4.075
+      },
+      {
+        "archivo": "locutor/hora-sabina-b13c67a24b.mp3",
+        "texto": "Son las 4 de la tarde en KeNnyga Radio, ciento doce punto tres.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Son las cuatro de la tarde en Keniga Radio, ciento doce punto tres.",
+        "duracion": 5.146
+      },
+      {
+        "archivo": "locutor/hora-sabina-f9c224cfbe.mp3",
+        "texto": "Atención: son las 5 de la tarde. Sigues en KeNnyga Radio.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Atención: son las cinco de la tarde. Sigues en Keniga Radio.",
+        "duracion": 5.616
+      },
+      {
+        "archivo": "locutor/hora-sabina-dce761aaff.mp3",
+        "texto": "Son las 6 en punto, de la tarde. Esto es KeNnyga Radio y aquí no se apaga nada.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Son las seis en punto, de la tarde. Esto es Keniga Radio y aquí no se apaga nada.",
+        "duracion": 6.766
+      },
+      {
+        "archivo": "locutor/hora-raul-2cd83a11d2.mp3",
+        "texto": "KeNnyga Radio te da la hora: son las 7 de la noche.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Keniga Radio te da la hora: son las siete de la noche.",
+        "duracion": 4.702
+      },
+      {
+        "archivo": "locutor/hora-raul-eeaa642143.mp3",
+        "texto": "Son las 8 de la noche en KeNnyga Radio, ciento doce punto tres.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Son las ocho de la noche en Keniga Radio, ciento doce punto tres.",
+        "duracion": 5.512
+      },
+      {
+        "archivo": "locutor/hora-raul-1352118864.mp3",
+        "texto": "Atención: son las 9 de la noche. Sigues en KeNnyga Radio.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Atención: son las nueve de la noche. Sigues en Keniga Radio.",
+        "duracion": 6.243
+      },
+      {
+        "archivo": "locutor/hora-sabina-d87aed040c.mp3",
+        "texto": "Son las 10 en punto, de la noche. Esto es KeNnyga Radio y aquí no se apaga nada.",
+        "voz": "sabina",
+        "locutor": "Sabina",
+        "dicho": "Son las diez en punto, de la noche. Esto es Keniga Radio y aquí no se apaga nada.",
+        "duracion": 6.766
+      },
+      {
+        "archivo": "locutor/hora-raul-caff2b37eb.mp3",
+        "texto": "KeNnyga Radio te da la hora: son las 11 de la noche.",
+        "voz": "raul",
+        "locutor": "Raúl",
+        "dicho": "Keniga Radio te da la hora: son las once de la noche.",
+        "duracion": 4.702
+      }
+    ]
   },
   "canciones": [
     {
@@ -951,6 +1145,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/01-kennygatv.mp3",
       "duracion": 47.491,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-41-sabina-628e33f908.mp3",
@@ -968,9 +1165,6 @@
           "dicho": "Seguimos con KenigaTV. Disfrútala.",
           "duracion": 4.415
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -981,6 +1175,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/02-kenny-galindo.mp3",
       "duracion": 180.323,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-42-raul-c347392a9a.mp3",
@@ -997,9 +1194,6 @@
           "dicho": "Ahora, KeNny gaLindo. Wildberry On, en Keniga Radio.",
           "duracion": 5.433
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -1010,6 +1204,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/03-sigiloso.mp3",
       "duracion": 190.145,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-43-raul-b2b8e8e551.mp3",
@@ -1026,9 +1223,6 @@
           "locutor": "Raúl",
           "duracion": 3.056
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -1039,6 +1233,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/04-gotdamn.mp3",
       "duracion": 237.662,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-44-raul-e37827a282.mp3",
@@ -1055,9 +1252,6 @@
           "dicho": "Ahora, Gotdamn. Wildberry On, en Keniga Radio.",
           "duracion": 6.008
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -1068,6 +1262,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/05-damisela.mp3",
       "duracion": 148.14,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-45-raul-f5ad32b124.mp3",
@@ -1084,9 +1281,6 @@
           "dicho": "Ahora, Damisela. Wildberry On, en Keniga Radio.",
           "duracion": 5.381
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -1097,6 +1291,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/06-todos-juzgan.mp3",
       "duracion": 189.701,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-46-raul-0ffaa1d7df.mp3",
@@ -1113,9 +1310,6 @@
           "dicho": "Ahora, Todos juzgan. Wildberry On, en Keniga Radio.",
           "duracion": 5.512
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -1153,6 +1347,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/08-komo2.mp3",
       "duracion": 157.362,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-48-sabina-7200d569ef.mp3",
@@ -1169,9 +1366,6 @@
           "locutor": "Raúl",
           "duracion": 3.109
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -1182,6 +1376,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/09-24-7.mp3",
       "duracion": 197.277,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-49-raul-2da86453d2.mp3",
@@ -1199,9 +1396,6 @@
           "dicho": "Seguimos con veinticuatro-siete. Disfrútala.",
           "duracion": 5.277
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -1212,6 +1406,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/10-lo-nuestro.mp3",
       "duracion": 145.398,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-50-sabina-39ffde55cc.mp3",
@@ -1228,9 +1425,6 @@
           "locutor": "Raúl",
           "duracion": 3.056
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -1241,6 +1435,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/11-delirante.mp3",
       "duracion": 200.542,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-51-raul-857ae100ba.mp3",
@@ -1257,9 +1454,6 @@
           "locutor": "Sabina",
           "duracion": 2.743
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -1296,6 +1490,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/13-trance.mp3",
       "duracion": 157.858,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-53-raul-385069af53.mp3",
@@ -1311,9 +1508,6 @@
           "locutor": "Sabina",
           "duracion": 2.638
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -1324,6 +1518,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/14-brou.mp3",
       "duracion": 138.449,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-54-sabina-975d55c692.mp3",
@@ -1340,9 +1537,6 @@
           "dicho": "Ahora, Brou. Wildberry On, en Keniga Radio.",
           "duracion": 4.989
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -1353,6 +1547,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/15-tamagotchi.mp3",
       "duracion": 184.973,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-55-raul-6f1f0bc432.mp3",
@@ -1369,9 +1566,6 @@
           "locutor": "Raúl",
           "duracion": 4.754
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -1382,6 +1576,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/16-combo-que-no-se-deja.mp3",
       "duracion": 229.851,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-56-sabina-8e35f04638.mp3",
@@ -1397,9 +1594,6 @@
           "locutor": "Raúl",
           "duracion": 4.415
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -1410,6 +1604,9 @@
       "album": "ktv23",
       "archivo": "music/KTV23/17-paranoide.mp3",
       "duracion": 237.949,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-57-sabina-f6d2ab39df.mp3",
@@ -1426,9 +1623,6 @@
           "dicho": "Del álbum Ka Te Ve Veintitrés, esto es Paranoide.",
           "duracion": 4.18
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -1465,6 +1659,9 @@
       "album": "bananero",
       "archivo": "music/sencillos/bananero.mp3",
       "duracion": 181.656,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-63-sabina-2144fadd92.mp3",
@@ -1482,9 +1679,6 @@
           "dicho": "Seguimos con Bananero. Disfrútala.",
           "duracion": 4.624
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -1495,6 +1689,9 @@
       "album": "moneymaker",
       "archivo": "music/sencillos/moneymaker.mp3",
       "duracion": 183.197,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-62-sabina-72cfea3377.mp3",
@@ -1510,9 +1707,6 @@
           "locutor": "Sabina",
           "duracion": 3.709
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -1523,6 +1717,9 @@
       "album": "montuna",
       "archivo": "music/sencillos/montuna.mp3",
       "duracion": 235.154,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-61-raul-c4fb201f75.mp3",
@@ -1539,9 +1736,6 @@
           "locutor": "Sabina",
           "duracion": 4.049
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -1579,6 +1773,9 @@
       "album": "kng",
       "archivo": "music/Canciones/01.mp3",
       "duracion": 171.938,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-2-sabina-6dff24eb2a.mp3",
@@ -1596,9 +1793,6 @@
           "dicho": "Del álbum Keniga Radio ciento doce punto tres efe eme, esto es KeNny gaLindo.",
           "duracion": 5.721
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -1609,6 +1803,9 @@
       "album": "kng",
       "archivo": "music/Canciones/02.mp3",
       "duracion": 174.393,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-3-sabina-908accf5f6.mp3",
@@ -1626,9 +1823,6 @@
           "dicho": "Suena Sigiloso, del álbum Keniga Radio ciento doce punto tres efe eme.",
           "duracion": 5.616
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -1639,6 +1833,9 @@
       "album": "kng",
       "archivo": "music/Canciones/03.mp3",
       "duracion": 233.822,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-4-raul-336832b3eb.mp3",
@@ -1656,9 +1853,6 @@
           "dicho": "Seguimos con Gotdamn. Disfrútala.",
           "duracion": 4.598
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -1669,6 +1863,9 @@
       "album": "kng",
       "archivo": "music/Canciones/04.mp3",
       "duracion": 187.847,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-5-sabina-8651c6bcdb.mp3",
@@ -1686,9 +1883,6 @@
           "dicho": "Del álbum Keniga Radio ciento doce punto tres efe eme, esto es veinticuatro siete.",
           "duracion": 6.087
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -1725,6 +1919,9 @@
       "album": "kng",
       "archivo": "music/Canciones/05.mp3",
       "duracion": 130.873,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-7-raul-f5ad32b124.mp3",
@@ -1740,9 +1937,6 @@
           "locutor": "Raúl",
           "duracion": 4.702
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -1753,6 +1947,9 @@
       "album": "kng",
       "archivo": "music/Canciones/06.mp3",
       "duracion": 149.159,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-8-sabina-14dcb90d33.mp3",
@@ -1768,9 +1965,6 @@
           "locutor": "Raúl",
           "duracion": 3.109
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -1781,6 +1975,9 @@
       "album": "kng",
       "archivo": "music/Canciones/07.mp3",
       "duracion": 169.378,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-9-sabina-6da2939532.mp3",
@@ -1797,9 +1994,6 @@
           "dicho": "Suena Baby, del álbum Keniga Radio ciento doce punto tres efe eme.",
           "duracion": 5.303
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -1836,6 +2030,9 @@
       "album": "kng",
       "archivo": "music/Canciones/08.mp3",
       "duracion": 134.113,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-11-raul-6b4b78ddad.mp3",
@@ -1852,9 +2049,6 @@
           "locutor": "Raúl",
           "duracion": 2.664
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -1865,6 +2059,9 @@
       "album": "kng",
       "archivo": "music/Canciones/09.mp3",
       "duracion": 190.276,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-12-raul-998ce842b3.mp3",
@@ -1880,9 +2077,6 @@
           "locutor": "Raúl",
           "duracion": 3.004
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -1893,6 +2087,9 @@
       "album": "kng",
       "archivo": "music/Canciones/10.mp3",
       "duracion": 107.781,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-13-raul-df6b660f6a.mp3",
@@ -1909,9 +2106,6 @@
           "locutor": "Raúl",
           "duracion": 4.075
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -1922,6 +2116,9 @@
       "album": "kng",
       "archivo": "music/Canciones/11.mp3",
       "duracion": 187.141,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-14-sabina-755538b887.mp3",
@@ -1938,9 +2135,6 @@
           "dicho": "Ahora, CQNSD. Wildberry On, en Keniga Radio.",
           "duracion": 6.687
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -1951,6 +2145,9 @@
       "album": "kng",
       "archivo": "music/Canciones/12.mp3",
       "duracion": 172.539,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-15-sabina-857ae100ba.mp3",
@@ -1967,9 +2164,6 @@
           "locutor": "Raúl",
           "duracion": 4.702
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -1980,6 +2174,9 @@
       "album": "kng",
       "archivo": "music/Canciones/13.mp3",
       "duracion": 168.124,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-16-sabina-c4ad1eae29.mp3",
@@ -1996,9 +2193,6 @@
           "locutor": "Sabina",
           "duracion": 3.997
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -2035,6 +2229,9 @@
       "album": "kng",
       "archivo": "music/Canciones/14.mp3",
       "duracion": 142.785,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-18-raul-4e9271ea0c.mp3",
@@ -2051,9 +2248,6 @@
           "locutor": "Raúl",
           "duracion": 3.762
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -2064,6 +2258,9 @@
       "album": "kng",
       "archivo": "music/Canciones/15.mp3",
       "duracion": 161.123,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-19-raul-e8eb8af9a4.mp3",
@@ -2080,9 +2277,6 @@
           "dicho": "Ahora, Tamagotchi. Wildberry On, en Keniga Radio.",
           "duracion": 6.191
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -2093,6 +2287,9 @@
       "album": "kng",
       "archivo": "music/Canciones/16.mp3",
       "duracion": 131.135,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-20-raul-433d82b597.mp3",
@@ -2109,9 +2306,6 @@
           "locutor": "Raúl",
           "duracion": 3.866
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -2122,6 +2316,9 @@
       "album": "kng",
       "archivo": "music/Canciones/17.mp3",
       "duracion": 109.74,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-21-sabina-796ebf7e80.mp3",
@@ -2138,9 +2335,6 @@
           "dicho": "Ahora, Viches. Wildberry On, en Keniga Radio.",
           "duracion": 5.982
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -2178,6 +2372,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/negro-visajoso.mp3",
       "duracion": 127.451,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1001-sabina-eba1f68437.mp3",
@@ -2193,9 +2390,6 @@
           "locutor": "Sabina",
           "duracion": 4.232
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -2206,6 +2400,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/joker.mp3",
       "duracion": 137.038,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1002-raul-104a532e2c.mp3",
@@ -2222,9 +2419,6 @@
           "locutor": "Raúl",
           "duracion": 4.232
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -2235,6 +2429,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/como-nosotros.mp3",
       "duracion": 150.622,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1003-sabina-a9d969cb3a.mp3",
@@ -2251,9 +2448,6 @@
           "locutor": "Raúl",
           "duracion": 4.232
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -2264,6 +2458,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/si-yo-soy-un-g.mp3",
       "duracion": 140.408,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1004-raul-abd0572015.mp3",
@@ -2280,9 +2477,6 @@
           "locutor": "Raúl",
           "duracion": 3.448
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -2293,6 +2487,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/kitty.mp3",
       "duracion": 147.122,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1005-raul-fa0cdc52b6.mp3",
@@ -2310,9 +2507,6 @@
           "dicho": "Ahora, Kitty. Wildberry On, en Keniga Radio.",
           "duracion": 5.094
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -2323,6 +2517,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/natural.mp3",
       "duracion": 202.005,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1006-raul-88e6bb0f50.mp3",
@@ -2338,9 +2535,6 @@
           "locutor": "Raúl",
           "duracion": 3.814
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -2351,6 +2545,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/corazon.mp3",
       "duracion": 221.414,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1007-sabina-22b67eb028.mp3",
@@ -2368,9 +2565,6 @@
           "dicho": "Esta salió en dos mil veinticinco. Corazón, de Wildberry On.",
           "duracion": 6.635
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -2381,6 +2575,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/cash.mp3",
       "duracion": 292.101,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1008-raul-3f8bfd52d4.mp3",
@@ -2397,9 +2594,6 @@
           "dicho": "Ahora, Cash. Wildberry On, en Keniga Radio.",
           "duracion": 5.825
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -2410,6 +2604,10 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/sera.mp3",
       "duracion": 155.768,
+      "temas": [
+        "Desamor",
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1009-sabina-ddd45be7f7.mp3",
@@ -2425,10 +2623,6 @@
           "locutor": "Raúl",
           "duracion": 3.605
         }
-      ],
-      "temas": [
-        "Desamor",
-        "Reflexión"
       ]
     },
     {
@@ -2439,6 +2633,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/pausa.mp3",
       "duracion": 173.427,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1010-sabina-d319bd8fef.mp3",
@@ -2455,9 +2652,6 @@
           "locutor": "Sabina",
           "duracion": 3.422
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -2468,6 +2662,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/confieso.mp3",
       "duracion": 157.91,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1011-raul-81971d77ea.mp3",
@@ -2485,9 +2682,6 @@
           "dicho": "Esta salió en dos mil veinticinco. Confieso, de Wildberry On.",
           "duracion": 6.713
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -2498,6 +2692,9 @@
       "album": "negro-visajoso",
       "archivo": "music/negro-visajoso/showman.mp3",
       "duracion": 217.731,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1012-sabina-f51e95558d.mp3",
@@ -2514,9 +2711,6 @@
           "dicho": "Suena Showman, del álbum Negro Visajoso.",
           "duracion": 4.18
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -2527,6 +2721,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/berry.mp3",
       "duracion": 120.033,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1101-sabina-30330e2616.mp3",
@@ -2544,9 +2741,6 @@
           "dicho": "Una de mis favoritas. Berry.",
           "duracion": 4.101
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -2557,6 +2751,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/traveler.mp3",
       "duracion": 173.636,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1102-sabina-9bb1275557.mp3",
@@ -2574,9 +2771,6 @@
           "dicho": "Esta salió en dos mil veinticuatro. Traveler, de Wildberry On.",
           "duracion": 6.426
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -2587,6 +2781,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/ninfa.mp3",
       "duracion": 146.991,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1103-sabina-610aba7da4.mp3",
@@ -2604,9 +2801,6 @@
           "dicho": "Seguimos con Ninfa. Disfrútala.",
           "duracion": 3.944
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -2617,6 +2811,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/chocolatozo.mp3",
       "duracion": 162.142,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1104-sabina-0762c75aef.mp3",
@@ -2634,9 +2831,6 @@
           "dicho": "Del álbum ELULTIMO23, esto es Chocolatozo.",
           "duracion": 4.833
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -2647,6 +2841,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/notengoenemigos.mp3",
       "duracion": 149.551,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1105-raul-6566ed63cb.mp3",
@@ -2664,9 +2861,6 @@
           "dicho": "Una de mis favoritas. Notengoenemigos.",
           "duracion": 4.389
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -2677,6 +2871,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/terko.mp3",
       "duracion": 112.927,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1106-sabina-836172bcd8.mp3",
@@ -2694,9 +2891,6 @@
           "dicho": "Seguimos con Terko. Disfrútala.",
           "duracion": 3.944
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -2707,6 +2901,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/quekierez.mp3",
       "duracion": 128.026,
+      "temas": [
+        "Desamor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1107-sabina-4a3d32a4e4.mp3",
@@ -2724,9 +2921,6 @@
           "dicho": "Esta salió en dos mil veinticuatro. Quekierez, de Wildberry On.",
           "duracion": 5.773
         }
-      ],
-      "temas": [
-        "Desamor"
       ]
     },
     {
@@ -2737,6 +2931,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/chicoconsuerte.mp3",
       "duracion": 171.703,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1108-raul-32222aa33e.mp3",
@@ -2754,9 +2951,6 @@
           "dicho": "Ahora, Chicoconsuerte. Wildberry On, en Keniga Radio.",
           "duracion": 6.504
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -2767,6 +2961,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/besto.mp3",
       "duracion": 136.647,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1109-sabina-dbf044fa5c.mp3",
@@ -2784,9 +2981,6 @@
           "dicho": "Esta salió en dos mil veinticuatro. Besto, de Wildberry On.",
           "duracion": 6.322
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -2797,6 +2991,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/musa.mp3",
       "duracion": 97.411,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1110-sabina-08ca2c556e.mp3",
@@ -2814,9 +3011,6 @@
           "dicho": "Suena Musa, del álbum ELULTIMO23.",
           "duracion": 3.997
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -2827,6 +3021,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/hablan.mp3",
       "duracion": 157.649,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1111-raul-04bf42e83e.mp3",
@@ -2844,9 +3041,6 @@
           "dicho": "Una de mis favoritas. Hablan.",
           "duracion": 4.18
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -2857,6 +3051,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/nodramarmx.mp3",
       "duracion": 182.439,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1112-raul-6e6aec31ec.mp3",
@@ -2874,9 +3071,6 @@
           "dicho": "Ahora, Nodramarmx. Wildberry On, en Keniga Radio.",
           "duracion": 5.538
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -2887,6 +3081,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/kanon.mp3",
       "duracion": 155.089,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1113-sabina-5a7c2d504e.mp3",
@@ -2904,9 +3101,6 @@
           "dicho": "Del álbum ELULTIMO23, esto es Kanon.",
           "duracion": 4.441
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -2917,6 +3111,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/kaoz.mp3",
       "duracion": 107.703,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1114-raul-929da50a67.mp3",
@@ -2934,9 +3131,6 @@
           "dicho": "Suena Kaoz, del álbum ELULTIMO23.",
           "duracion": 4.336
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -2947,6 +3141,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/ando.mp3",
       "duracion": 97.75,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1115-raul-9dff8eb5db.mp3",
@@ -2964,9 +3161,6 @@
           "dicho": "Sube el volumen para esta: Ando.",
           "duracion": 3.553
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -2977,6 +3171,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/klk.mp3",
       "duracion": 178.782,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1116-sabina-6e7fbac8d4.mp3",
@@ -2993,9 +3190,6 @@
           "dicho": "Esta salió en dos mil veinticuatro. KLK, de Wildberry On.",
           "duracion": 6.635
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -3006,6 +3200,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/algomefalla.mp3",
       "duracion": 141.061,
+      "temas": [
+        "Desamor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1117-raul-56a541da51.mp3",
@@ -3023,9 +3220,6 @@
           "dicho": "Suena Algomefalla, del álbum ELULTIMO23.",
           "duracion": 4.336
         }
-      ],
-      "temas": [
-        "Desamor"
       ]
     },
     {
@@ -3036,6 +3230,9 @@
       "album": "elultimo23",
       "archivo": "music/elultimo23/loencontre.mp3",
       "duracion": 124.63,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1118-sabina-dcf3513529.mp3",
@@ -3053,9 +3250,6 @@
           "dicho": "Sube el volumen para esta: Loencontre.",
           "duracion": 3.944
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -3066,6 +3260,9 @@
       "album": "negro-mate",
       "archivo": "music/sencillos/negro-mate.mp3",
       "duracion": 196.049,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1701-raul-15c856bd5d.mp3",
@@ -3081,9 +3278,6 @@
           "locutor": "Raúl",
           "duracion": 3.918
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -3094,6 +3288,9 @@
       "album": "nomolestar",
       "archivo": "music/sencillos/nomolestar.mp3",
       "duracion": 192.758,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1702-raul-3b3c6587e9.mp3",
@@ -3111,9 +3308,6 @@
           "dicho": "Lo que viene ahora es Nomolestar.",
           "duracion": 2.847
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -3124,6 +3318,9 @@
       "album": "thinki",
       "archivo": "music/sencillos/thinki.mp3",
       "duracion": 124.082,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1703-raul-7b78646b4e.mp3",
@@ -3141,9 +3338,6 @@
           "dicho": "Ahora, Thinki. Wildberry On, en Keniga Radio.",
           "duracion": 5.956
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -3154,6 +3348,9 @@
       "album": "thoseboyz",
       "archivo": "music/thoseboyz/thoseboyz-ii.mp3",
       "duracion": 144.144,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1501-sabina-237333aa2d.mp3",
@@ -3170,9 +3367,6 @@
           "dicho": "Ahora, ThoseBoyz II. Wildberry On, en Keniga Radio.",
           "duracion": 5.695
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -3183,6 +3377,9 @@
       "album": "thoseboyz",
       "archivo": "music/thoseboyz/ittaketime.mp3",
       "duracion": 187.298,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1502-raul-e26a68dfe8.mp3",
@@ -3200,9 +3397,6 @@
           "dicho": "Ahora, ItTakeTime. Wildberry On, en Keniga Radio.",
           "duracion": 5.59
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -3213,6 +3407,9 @@
       "album": "thoseboyz",
       "archivo": "music/thoseboyz/trankilo.mp3",
       "duracion": 89.731,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1503-sabina-b553284b2f.mp3",
@@ -3228,9 +3425,6 @@
           "locutor": "Raúl",
           "duracion": 4.676
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -3241,6 +3435,9 @@
       "album": "thoseboyz",
       "archivo": "music/thoseboyz/100-100.mp3",
       "duracion": 172.016,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1504-raul-6e0d1e9b89.mp3",
@@ -3258,9 +3455,6 @@
           "dicho": "Sube el volumen para esta: cien de cien.",
           "duracion": 3.709
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -3271,6 +3465,9 @@
       "album": "missing-ep",
       "archivo": "music/missing-ep/missing.mp3",
       "duracion": 157.336,
+      "temas": [
+        "Desamor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1601-raul-16c6e4c771.mp3",
@@ -3287,9 +3484,6 @@
           "locutor": "Raúl",
           "duracion": 3.657
         }
-      ],
-      "temas": [
-        "Desamor"
       ]
     },
     {
@@ -3300,6 +3494,9 @@
       "album": "missing-ep",
       "archivo": "music/missing-ep/nosignal.mp3",
       "duracion": 144.144,
+      "temas": [
+        "Desamor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1602-sabina-916efdbfad.mp3",
@@ -3317,9 +3514,6 @@
           "dicho": "Esta salió en dos mil veintitrés. NoSignal, de Wildberry On.",
           "duracion": 6.609
         }
-      ],
-      "temas": [
-        "Desamor"
       ]
     },
     {
@@ -3330,6 +3524,9 @@
       "album": "missing-ep",
       "archivo": "music/missing-ep/noname.mp3",
       "duracion": 186.462,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1603-sabina-b79e25e606.mp3",
@@ -3346,9 +3543,6 @@
           "locutor": "Sabina",
           "duracion": 3.762
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -3359,6 +3553,9 @@
       "album": "missing-ep",
       "archivo": "music/missing-ep/anocheciendo.mp3",
       "duracion": 82.965,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1604-raul-b829439fd1.mp3",
@@ -3374,9 +3571,6 @@
           "locutor": "Sabina",
           "duracion": 3.762
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -3387,6 +3581,9 @@
       "album": "missing-ep",
       "archivo": "music/missing-ep/richkidz.mp3",
       "duracion": 171.154,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1605-raul-2b38b32a26.mp3",
@@ -3402,9 +3599,6 @@
           "locutor": "Raúl",
           "duracion": 3.762
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -3415,6 +3609,9 @@
       "album": "missing-ep",
       "archivo": "music/missing-ep/idhi.mp3",
       "duracion": 173.714,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1606-sabina-710fd1652f.mp3",
@@ -3432,9 +3629,6 @@
           "dicho": "Sube el volumen para esta: Idhi.",
           "duracion": 3.5
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -3445,6 +3639,9 @@
       "album": "missing-ep",
       "archivo": "music/missing-ep/espero.mp3",
       "duracion": 190.459,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1607-raul-282083af9d.mp3",
@@ -3461,9 +3658,6 @@
           "locutor": "Raúl",
           "duracion": 4.232
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -3474,6 +3668,9 @@
       "album": "missing-ep",
       "archivo": "music/missing-ep/rela.mp3",
       "duracion": 144.483,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1608-raul-d9ba0536c7.mp3",
@@ -3490,9 +3687,6 @@
           "dicho": "Esta salió en dos mil veintitrés. Rela, de Wildberry On.",
           "duracion": 5.512
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -3503,6 +3697,9 @@
       "album": "momantai",
       "archivo": "music/sencillos/momantai.mp3",
       "duracion": 172.251,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1704-sabina-ebd4b1c056.mp3",
@@ -3520,9 +3717,6 @@
           "dicho": "Sube el volumen para esta: Momantai.",
           "duracion": 3.579
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -3533,6 +3727,9 @@
       "album": "you-know-me",
       "archivo": "music/sencillos/you-know-me.mp3",
       "duracion": 155.402,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1705-raul-c9ea665b57.mp3",
@@ -3550,9 +3747,6 @@
           "dicho": "Lo que viene ahora es YOU Know ME.",
           "duracion": 3.03
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -3563,6 +3757,9 @@
       "album": "no-drama",
       "archivo": "music/sencillos/no-drama.mp3",
       "duracion": 180.663,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1706-raul-a0773e1e72.mp3",
@@ -3580,9 +3777,6 @@
           "dicho": "Sube el volumen para esta: NO Drama.",
           "duracion": 3.788
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -3593,6 +3787,9 @@
       "album": "73",
       "archivo": "music/sencillos/73.mp3",
       "duracion": 153.078,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1707-sabina-398423f727.mp3",
@@ -3610,9 +3807,6 @@
           "dicho": "Ahora, setenta y tres. Wildberry On, en Keniga Radio.",
           "duracion": 6.609
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -3623,6 +3817,10 @@
       "album": "pa-adulterio",
       "archivo": "music/sencillos/pa-adulterio.mp3",
       "duracion": 182.073,
+      "temas": [
+        "Desamor",
+        "Perreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1708-raul-4a2a2f2ae8.mp3",
@@ -3639,10 +3837,6 @@
           "dicho": "Esta salió en dos mil veintitrés. Pa´ Adulterio, de Wildberry On.",
           "duracion": 6.766
         }
-      ],
-      "temas": [
-        "Desamor",
-        "Perreo"
       ]
     },
     {
@@ -3653,6 +3847,9 @@
       "album": "devilmaycry",
       "archivo": "music/sencillos/devilmaycry.mp3",
       "duracion": 162.299,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1709-raul-7dabf6e3c7.mp3",
@@ -3668,9 +3865,6 @@
           "locutor": "Sabina",
           "duracion": 4.624
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -3681,6 +3875,9 @@
       "album": "hyperlove",
       "archivo": "music/sencillos/hyperlove.mp3",
       "duracion": 154.932,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1710-raul-6151f313bf.mp3",
@@ -3697,9 +3894,6 @@
           "dicho": "Esta salió en dos mil veintitrés. HyperLove, de Wildberry On.",
           "duracion": 6.426
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -3710,6 +3904,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/tfs2k22.mp3",
       "duracion": 109.531,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1201-raul-bade8ceca5.mp3",
@@ -3726,9 +3923,6 @@
           "dicho": "Ahora, TFS2k22. Wildberry On, en Keniga Radio.",
           "duracion": 6.139
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -3739,6 +3933,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/idooo.mp3",
       "duracion": 101.381,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1202-raul-0d7c0e41c6.mp3",
@@ -3754,9 +3951,6 @@
           "locutor": "Raúl",
           "duracion": 5.016
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -3767,6 +3961,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/flexeo.mp3",
       "duracion": 153.287,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1203-raul-2b2a381580.mp3",
@@ -3783,9 +3980,6 @@
           "locutor": "Raúl",
           "duracion": 3.03
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -3796,6 +3990,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/sobad.mp3",
       "duracion": 110.028,
+      "temas": [
+        "Desamor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1204-sabina-06a42918d0.mp3",
@@ -3811,9 +4008,6 @@
           "locutor": "Sabina",
           "duracion": 4.624
         }
-      ],
-      "temas": [
-        "Desamor"
       ]
     },
     {
@@ -3824,6 +4018,10 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/bailar.mp3",
       "duracion": 120.033,
+      "temas": [
+        "Fiesta",
+        "Perreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1205-raul-1cbb61438f.mp3",
@@ -3841,10 +4039,6 @@
           "dicho": "Esta salió en dos mil veintidós. Bailar, de Wildberry On.",
           "duracion": 5.59
         }
-      ],
-      "temas": [
-        "Fiesta",
-        "Perreo"
       ]
     },
     {
@@ -3855,6 +4049,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/ilya.mp3",
       "duracion": 130.926,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1206-sabina-dc8e75c9d0.mp3",
@@ -3872,9 +4069,6 @@
           "dicho": "Seguimos con Ilya. Disfrútala.",
           "duracion": 3.866
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -3885,6 +4079,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/aquella-noche.mp3",
       "duracion": 197.016,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1207-sabina-7532897841.mp3",
@@ -3901,9 +4098,6 @@
           "dicho": "Ahora, Aquella Noche. Wildberry On, en Keniga Radio.",
           "duracion": 5.486
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -3914,6 +4108,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/badman.mp3",
       "duracion": 154.802,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1208-sabina-b6aab83f31.mp3",
@@ -3929,9 +4126,6 @@
           "locutor": "Sabina",
           "duracion": 4.65
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -3942,6 +4136,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/m-a-l-a.mp3",
       "duracion": 148.219,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1209-raul-dcd4d4222f.mp3",
@@ -3959,9 +4156,6 @@
           "dicho": "Ahora, Mala. Wildberry On, en Keniga Radio.",
           "duracion": 5.068
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -3972,6 +4166,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/sola.mp3",
       "duracion": 178.39,
+      "temas": [
+        "Desamor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1210-sabina-bbd69e2fdd.mp3",
@@ -3988,9 +4185,6 @@
           "locutor": "Raúl",
           "duracion": 3.631
         }
-      ],
-      "temas": [
-        "Desamor"
       ]
     },
     {
@@ -4001,6 +4195,10 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/chocolisto.mp3",
       "duracion": 156.891,
+      "temas": [
+        "Fiesta",
+        "Perreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1211-sabina-57e21e1baa.mp3",
@@ -4017,10 +4215,6 @@
           "dicho": "Esta salió en dos mil veintidós. Chocolisto, de Wildberry On.",
           "duracion": 6.661
         }
-      ],
-      "temas": [
-        "Fiesta",
-        "Perreo"
       ]
     },
     {
@@ -4031,6 +4225,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/sxrry-vs-sxrryn-t.mp3",
       "duracion": 178.547,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1212-raul-362c455b2e.mp3",
@@ -4046,9 +4243,6 @@
           "locutor": "Sabina",
           "duracion": 7.262
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -4059,6 +4253,10 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/senorita.mp3",
       "duracion": 147.775,
+      "temas": [
+        "Amor",
+        "Perreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1213-sabina-b30bc22155.mp3",
@@ -4075,10 +4273,6 @@
           "dicho": "Ahora, Señorita. Wildberry On, en Keniga Radio.",
           "duracion": 5.381
         }
-      ],
-      "temas": [
-        "Amor",
-        "Perreo"
       ]
     },
     {
@@ -4089,6 +4283,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/suaverifico.mp3",
       "duracion": 149.159,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1214-raul-3a477ba509.mp3",
@@ -4104,9 +4301,6 @@
           "locutor": "Sabina",
           "duracion": 4.258
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -4117,6 +4311,9 @@
       "album": "tfs2k22",
       "archivo": "music/tfs2k22/chillywilly.mp3",
       "duracion": 105.091,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1215-raul-014a1b860a.mp3",
@@ -4132,9 +4329,6 @@
           "locutor": "Raúl",
           "duracion": 3.918
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -4145,6 +4339,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/frezko.mp3",
       "duracion": 173.61,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1301-sabina-b3885a7a4f.mp3",
@@ -4160,9 +4357,6 @@
           "locutor": "Raúl",
           "duracion": 4.441
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -4173,6 +4367,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/thoseboyz.mp3",
       "duracion": 127.504,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1302-raul-baba8be760.mp3",
@@ -4188,9 +4385,6 @@
           "locutor": "Sabina",
           "duracion": 2.9
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -4201,6 +4395,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/3b.mp3",
       "duracion": 203.468,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1303-raul-d17d92e10f.mp3",
@@ -4218,9 +4415,6 @@
           "dicho": "Ahora, tres be. Wildberry On, en Keniga Radio.",
           "duracion": 5.198
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -4231,6 +4425,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/yasuke.mp3",
       "duracion": 116.062,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1304-raul-c59e737a8a.mp3",
@@ -4247,9 +4444,6 @@
           "locutor": "Raúl",
           "duracion": 4.284
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -4260,6 +4454,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/lowfi-prt2.mp3",
       "duracion": 152.268,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1305-sabina-316a383000.mp3",
@@ -4277,9 +4474,6 @@
           "dicho": "Sube el volumen para esta: Lo fai parte dos.",
           "duracion": 4.284
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -4290,6 +4484,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/lowfi-prt3.mp3",
       "duracion": 160.47,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1306-raul-2b36766463.mp3",
@@ -4307,9 +4504,6 @@
           "dicho": "Ahora, Lo fai parte tres. Wildberry On, en Keniga Radio.",
           "duracion": 7.001
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -4320,6 +4514,10 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/candela.mp3",
       "duracion": 230.975,
+      "temas": [
+        "Fiesta",
+        "Perreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1307-raul-291fdd78c3.mp3",
@@ -4337,10 +4535,6 @@
           "dicho": "Esta salió en dos mil veintidós. Candela, de Wildberry On.",
           "duracion": 5.642
         }
-      ],
-      "temas": [
-        "Fiesta",
-        "Perreo"
       ]
     },
     {
@@ -4351,6 +4545,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/atlanta.mp3",
       "duracion": 139.337,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1308-sabina-e5b5344ee6.mp3",
@@ -4367,9 +4564,6 @@
           "locutor": "Sabina",
           "duracion": 4.075
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -4380,6 +4574,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/neotokyo.mp3",
       "duracion": 156.865,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1309-sabina-a80a72f241.mp3",
@@ -4395,9 +4592,6 @@
           "locutor": "Raúl",
           "duracion": 3.892
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -4408,6 +4602,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/algare.mp3",
       "duracion": 199.367,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1310-raul-565ff02bbd.mp3",
@@ -4423,9 +4620,6 @@
           "locutor": "Raúl",
           "duracion": 4.206
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -4436,6 +4630,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/saturao.mp3",
       "duracion": 126.145,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1311-raul-9d8ff07bab.mp3",
@@ -4451,9 +4648,6 @@
           "locutor": "Sabina",
           "duracion": 3.866
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -4464,6 +4658,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/dicen.mp3",
       "duracion": 206.89,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1312-raul-38ad07b785.mp3",
@@ -4479,9 +4676,6 @@
           "locutor": "Sabina",
           "duracion": 3.657
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -4492,6 +4686,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/verano.mp3",
       "duracion": 144.222,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1313-sabina-67a37c948c.mp3",
@@ -4507,9 +4704,6 @@
           "locutor": "Raúl",
           "duracion": 4.467
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -4520,6 +4714,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/me-gusta-una-chica-remix.mp3",
       "duracion": 216.686,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1314-raul-0baeb845ff.mp3",
@@ -4535,9 +4732,6 @@
           "locutor": "Sabina",
           "duracion": 4.101
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -4548,6 +4742,9 @@
       "album": "frezko-gold",
       "archivo": "music/frezko-gold/vetero.mp3",
       "duracion": 129.855,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1315-raul-bee9976ff6.mp3",
@@ -4563,9 +4760,6 @@
           "locutor": "Sabina",
           "duracion": 2.586
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -4576,6 +4770,9 @@
       "album": "money",
       "archivo": "music/sencillos/money.mp3",
       "duracion": 155.899,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1711-raul-0290223209.mp3",
@@ -4591,9 +4788,6 @@
           "locutor": "Sabina",
           "duracion": 3.997
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -4604,6 +4798,9 @@
       "album": "rocky",
       "archivo": "music/sencillos/rocky.mp3",
       "duracion": 184.842,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1712-raul-a878e88a84.mp3",
@@ -4620,9 +4817,6 @@
           "dicho": "Ahora, Rocky. Wildberry On, en Keniga Radio.",
           "duracion": 5.12
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -4633,6 +4827,9 @@
       "album": "relajao",
       "archivo": "music/sencillos/relajao.mp3",
       "duracion": 148.872,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1713-sabina-d19b18ed81.mp3",
@@ -4648,9 +4845,6 @@
           "locutor": "Sabina",
           "duracion": 3.788
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -4661,6 +4855,9 @@
       "album": "ninja",
       "archivo": "music/sencillos/ninja.mp3",
       "duracion": 120.869,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1714-raul-401b7072dc.mp3",
@@ -4678,9 +4875,6 @@
           "dicho": "Una de mis favoritas. Ninja.",
           "duracion": 4.153
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -4691,6 +4885,9 @@
       "album": "3t",
       "archivo": "music/sencillos/3t.mp3",
       "duracion": 225.306,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1715-raul-ae1b27fa67.mp3",
@@ -4707,9 +4904,6 @@
           "dicho": "Esta salió en dos mil veintidós. 3T, de Wildberry On.",
           "duracion": 6.4
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -4720,6 +4914,10 @@
       "album": "ella-tiene-un-flow",
       "archivo": "music/sencillos/ella-tiene-un-flow.mp3",
       "duracion": 199.027,
+      "temas": [
+        "Amor",
+        "Perreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1716-sabina-9315f5b755.mp3",
@@ -4735,10 +4933,6 @@
           "locutor": "Sabina",
           "duracion": 3.944
         }
-      ],
-      "temas": [
-        "Amor",
-        "Perreo"
       ]
     },
     {
@@ -4749,6 +4943,9 @@
       "album": "disko",
       "archivo": "music/sencillos/disko.mp3",
       "duracion": 150.909,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1717-sabina-ab6f30509c.mp3",
@@ -4766,9 +4963,6 @@
           "dicho": "Seguimos con Disko. Disfrútala.",
           "duracion": 3.944
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -4779,6 +4973,9 @@
       "album": "hi-fi",
       "archivo": "music/sencillos/hi-fi.mp3",
       "duracion": 113.998,
+      "temas": [
+        "Fiesta"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1718-sabina-3eb1a8d177.mp3",
@@ -4795,9 +4992,6 @@
           "dicho": "Esta salió en dos mil veintidós. Hi Fi, de Wildberry On.",
           "duracion": 5.747
         }
-      ],
-      "temas": [
-        "Fiesta"
       ]
     },
     {
@@ -4835,6 +5029,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/wonderboy.mp3",
       "duracion": 150.491,
+      "temas": [
+        "Flexeo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1402-raul-25ae694e94.mp3",
@@ -4852,9 +5049,6 @@
           "dicho": "Ahora, Wonderboy. Wildberry On, en Keniga Radio.",
           "duracion": 6.243
         }
-      ],
-      "temas": [
-        "Flexeo"
       ]
     },
     {
@@ -4865,6 +5059,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/walking-on-da-street.mp3",
       "duracion": 189.309,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1403-sabina-965e1e5136.mp3",
@@ -4881,9 +5078,6 @@
           "locutor": "Raúl",
           "duracion": 5.277
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -4894,6 +5088,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/traveling.mp3",
       "duracion": 165.669,
+      "temas": [
+        "Reflexión"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1404-raul-8ac64bcc88.mp3",
@@ -4910,9 +5107,6 @@
           "dicho": "Esta salió en dos mil veintiuno. Traveling, de Wildberry On.",
           "duracion": 6.4
         }
-      ],
-      "temas": [
-        "Reflexión"
       ]
     },
     {
@@ -4923,6 +5117,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/arigatou.mp3",
       "duracion": 181.577,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1405-raul-3e4183d4a4.mp3",
@@ -4938,9 +5135,6 @@
           "locutor": "Raúl",
           "duracion": 4.728
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -4951,6 +5145,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/bastard.mp3",
       "duracion": 171.729,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1406-sabina-2dd14a3680.mp3",
@@ -4967,9 +5164,6 @@
           "locutor": "Sabina",
           "duracion": 4.075
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -4980,6 +5174,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/drill-urvbv.mp3",
       "duracion": 142.184,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1407-sabina-965b4e0496.mp3",
@@ -4995,9 +5192,6 @@
           "locutor": "Sabina",
           "duracion": 2.847
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -5008,6 +5202,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/i-do.mp3",
       "duracion": 147.618,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1408-sabina-e963b66488.mp3",
@@ -5023,9 +5220,6 @@
           "locutor": "Sabina",
           "duracion": 3.213
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -5036,6 +5230,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/killer.mp3",
       "duracion": 147.696,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1409-raul-f1d6936015.mp3",
@@ -5052,9 +5249,6 @@
           "dicho": "Esta salió en dos mil veintiuno. Killer, de Wildberry On.",
           "duracion": 6.139
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -5065,6 +5259,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/me-gusta-una-chica.mp3",
       "duracion": 151.641,
+      "temas": [
+        "Amor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1410-raul-0d81efa996.mp3",
@@ -5081,9 +5278,6 @@
           "dicho": "Del álbum te be dos a, esto es Me Gusta Una Chica.",
           "duracion": 4.206
         }
-      ],
-      "temas": [
-        "Amor"
       ]
     },
     {
@@ -5094,6 +5288,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/kuro.mp3",
       "duracion": 160.052,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1411-raul-89b156e2ce.mp3",
@@ -5110,9 +5307,6 @@
           "locutor": "Raúl",
           "duracion": 3.605
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -5123,6 +5317,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/berr-s-wave.mp3",
       "duracion": 157.675,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1412-raul-9ade9d8ff2.mp3",
@@ -5139,9 +5336,6 @@
           "dicho": "Del álbum te be dos a, esto es Berr's Wave.",
           "duracion": 4.101
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -5152,6 +5346,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/vietnam.mp3",
       "duracion": 157.858,
+      "temas": [
+        "Malandreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1413-raul-9895164bdb.mp3",
@@ -5168,9 +5365,6 @@
           "locutor": "Sabina",
           "duracion": 3.762
         }
-      ],
-      "temas": [
-        "Malandreo"
       ]
     },
     {
@@ -5181,6 +5375,9 @@
       "album": "tb2a",
       "archivo": "music/tb2a/elesede.mp3",
       "duracion": 215.04,
+      "temas": [
+        "Chill"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1414-raul-42b5143287.mp3",
@@ -5197,9 +5394,6 @@
           "dicho": "Suena Elesede, del álbum te be dos a.",
           "duracion": 3.579
         }
-      ],
-      "temas": [
-        "Chill"
       ]
     },
     {
@@ -5210,6 +5404,10 @@
       "album": "wave-girl",
       "archivo": "music/sencillos/wave-girl.mp3",
       "duracion": 150.047,
+      "temas": [
+        "Amor",
+        "Perreo"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1719-raul-af473b8565.mp3",
@@ -5225,10 +5423,6 @@
           "locutor": "Raúl",
           "duracion": 3.135
         }
-      ],
-      "temas": [
-        "Amor",
-        "Perreo"
       ]
     },
     {
@@ -5239,6 +5433,9 @@
       "album": "flow-masoquista",
       "archivo": "music/sencillos/flow-masoquista.mp3",
       "duracion": 177.11,
+      "temas": [
+        "Desamor"
+      ],
       "presentaciones": [
         {
           "archivo": "locutor/presenta-1720-raul-91aa645c42.mp3",
@@ -5255,9 +5452,6 @@
           "dicho": "Esta salió en dos mil veintiuno. Flow Masoquista, de Wildberry On.",
           "duracion": 6.139
         }
-      ],
-      "temas": [
-        "Desamor"
       ]
     }
   ],

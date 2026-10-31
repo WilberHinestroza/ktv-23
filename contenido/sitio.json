@@ -3,9 +3,32 @@
   "marca": "KeNnyga Radio 112.3 FM",
   "eslogan": "Más que un canal, la señal que te conecta.",
   "secciones": [
-    { "id": "radio", "titulo": "Radio", "tipo": "radio" },
-    { "id": "musica", "titulo": "Música", "tipo": "discografia" },
-    { "id": "proyectos", "titulo": "Proyectos", "tipo": "tarjetas", "archivo": "proyectos.json" },
-    { "id": "sobre-mi", "titulo": "Sobre mí", "tipo": "perfil", "archivo": "perfil.json" }
+    {
+      "id": "radio",
+      "titulo": "Radio",
+      "tipo": "radio"
+    },
+    {
+      "id": "musica",
+      "titulo": "Música",
+      "tipo": "discografia"
+    },
+    {
+      "id": "juego",
+      "titulo": "Juego",
+      "tipo": "juego"
+    },
+    {
+      "id": "proyectos",
+      "titulo": "Proyectos",
+      "tipo": "tarjetas",
+      "archivo": "proyectos.json"
+    },
+    {
+      "id": "sobre-mi",
+      "titulo": "Sobre mí",
+      "tipo": "perfil",
+      "archivo": "perfil.json"
+    }
   ]
 }
