@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AudioLines, Files, Mic, Play, Radio, Square, Volume2, VolumeX } from "lucide-react";
+import { AudioLines, Files, Mic, Play, Radio, Share2, Square, Volume2, VolumeX } from "lucide-react";
 import { useRadio } from "../radio/RadioContext";
 import { ruta } from "../contenido";
 
@@ -9,6 +9,38 @@ const formatoTiempo = (seg) => {
 };
 const formatoHora = (ms) =>
   new Date(ms).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+// Un programa empieza cuando termina la canción anterior (18:01, 22:03…): se muestra su hora redonda
+const CUARTO = 15 * 60000;
+const horaPrograma = (ms) => formatoHora(Math.round(ms / CUARTO) * CUARTO);
+
+function Compartir({ cancion, radio }) {
+  const [copiado, setCopiado] = useState(false);
+  const compartir = async () => {
+    const url = `${window.location.origin}${window.location.pathname}#/radio`;
+    const texto = `Estoy escuchando ${cancion.titulo} en ${radio.nombre}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: radio.nombre, text: texto, url });
+      } catch {
+        // la persona canceló
+      }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(`${texto} ${url}`);
+      setCopiado(true);
+      setTimeout(() => setCopiado(false), 2000);
+    } catch {
+      // sin permiso para copiar
+    }
+  };
+  return (
+    <button className="boton-compartir" onClick={compartir} title="Compartir lo que suena">
+      <Share2 size={18} />
+      <span>{copiado ? "¡Enlace copiado!" : "Compartir"}</span>
+    </button>
+  );
+}
 
 const TEXTO_ESTADO = {
   apagado: "Toca para escuchar lo que está sonando ahora",
@@ -93,9 +125,11 @@ export default function RadioPagina() {
               max="1"
               step="0.01"
               value={volumen}
+              style={{ "--lleno": `${volumen * 100}%` }}
               onChange={(e) => setVolumen(parseFloat(e.target.value))}
             />
           </label>
+          <Compartir cancion={cancion} radio={radio} />
         </div>
         <p className={`estado estado-${estado}`} aria-live="polite">
           {TEXTO_ESTADO[estado]}
@@ -181,9 +215,9 @@ function Programacion() {
           {parrilla(8).map(({ programa, inicioMs, finMs }, i) => (
             <li key={`${programa.id}-${inicioMs}`} className={i === 0 ? "ahora" : ""}>
               <span className="hora">
-                {formatoHora(inicioMs)}
+                {horaPrograma(inicioMs)}
                 <br />
-                {formatoHora(finMs)}
+                {horaPrograma(finMs)}
               </span>
               <span className="prog-meta">
                 <strong>{programa.titulo}</strong>

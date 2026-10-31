@@ -128,7 +128,21 @@ img { max-width: 100%; display: block; }
 .boton-sintonizar:hover { transform: scale(1.04); }
 .boton-sintonizar.encendido { background: var(--panel-2); color: var(--texto); border: 1px solid var(--borde); animation: none; }
 .volumen { display: inline-flex; align-items: center; gap: 8px; color: var(--texto-suave); }
-.volumen input { width: 110px; accent-color: var(--rojo); }
+/* Barra de volumen dibujada a mano: algunos navegadores (Opera GX) ignoran accent-color */
+.volumen input {
+  -webkit-appearance: none; appearance: none; width: 110px; height: 6px; border-radius: 99px; cursor: pointer;
+  background: linear-gradient(90deg, var(--rojo) var(--lleno, 80%), #3a3a3f var(--lleno, 80%));
+}
+.volumen input::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--texto); border: none;
+}
+.volumen input::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--texto); border: none; }
+.volumen input::-moz-range-track { background: transparent; }
+.boton-compartir {
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 999px; cursor: pointer;
+  background: transparent; color: var(--texto-suave); border: 1px solid var(--borde); font: inherit; font-size: 0.85rem;
+}
+.boton-compartir:hover { color: var(--texto); border-color: var(--texto-suave); }
 .estado { margin: 14px 0 0; font-size: 0.85rem; color: var(--texto-suave); min-height: 1.3em; }
 .estado-sonando { color: var(--cian); }
 .estado-sin-senal { color: var(--rojo); }

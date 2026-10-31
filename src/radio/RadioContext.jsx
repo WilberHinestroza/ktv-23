@@ -261,6 +261,12 @@ export function RadioProvider({ children }) {
   const prog = progRef.current;
   const enVivo = prog ? prog.enVivo(ahora) : null;
 
+  // La pestaña muestra lo que suena mientras escuchas
+  useEffect(() => {
+    if (!radio) return;
+    document.title = sintonizado && enVivo ? `▶ ${enVivo.cancion.titulo} · ${radio.nombre}` : radio.nombre;
+  }, [sintonizado, enVivo?.cancion.id, radio]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Controles del sistema (pantalla de bloqueo, audífonos)
   useEffect(() => {
     if (!("mediaSession" in navigator) || !enVivo) return;
