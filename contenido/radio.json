@@ -3454,8 +3454,26 @@
       "titulo": "ILYA",
       "artista": "Wildberry On",
       "album": "tfs2k22",
-      "archivo": null,
-      "duracion": null
+      "archivo": "music/tfs2k22/ilya.mp3",
+      "duracion": 130.926,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1206-sabina-dc8e75c9d0.mp3",
+          "texto": "Esta salió en 2022. ILYA, de Wildberry On.",
+          "voz": "sabina",
+          "locutor": "Sabina",
+          "dicho": "Esta salió en dos mil veintidós. Ilya, de Wildberry On.",
+          "duracion": 5.512
+        },
+        {
+          "archivo": "locutor/presenta-1206-sabina-c1f02edfc4.mp3",
+          "texto": "Seguimos con ILYA. Disfrútala.",
+          "voz": "sabina",
+          "locutor": "Sabina",
+          "dicho": "Seguimos con Ilya. Disfrútala.",
+          "duracion": 3.866
+        }
+      ]
     },
     {
       "id": 1207,
@@ -3489,8 +3507,24 @@
       "titulo": "BadMan",
       "artista": "Wildberry On",
       "album": "tfs2k22",
-      "archivo": null,
-      "duracion": null
+      "archivo": "music/tfs2k22/badman.mp3",
+      "duracion": 154.802,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1208-sabina-b6aab83f31.mp3",
+          "texto": "Del álbum TFS2k22, esto es BadMan.",
+          "voz": "sabina",
+          "locutor": "Sabina",
+          "duracion": 4.676
+        },
+        {
+          "archivo": "locutor/presenta-1208-sabina-51bb0e2a0a.mp3",
+          "texto": "Suena BadMan, del álbum TFS2k22.",
+          "voz": "sabina",
+          "locutor": "Sabina",
+          "duracion": 4.65
+        }
+      ]
     },
     {
       "id": 1209,
