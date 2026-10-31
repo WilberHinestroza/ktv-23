@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { ruta } from "../contenido";
+import { FavoritasDeLaGente } from "../envivo/Comunidad";
 
 const anioDe = (a) => (a.fecha || (a.anio ? String(a.anio) : "")).slice(0, 4);
 const fechaOrden = (a) => a.fecha || (a.anio ? `${a.anio}-06-30` : "9999");
@@ -156,6 +157,7 @@ export function Numeros({ albumes, canciones }) {
           <h3 className="mini-titulo">Colaboraciones</h3>
           <Barras datos={colaboradores.slice(0, 8).map((c) => [c.nombre, c.n])} />
         </section>
+        <FavoritasDeLaGente canciones={canciones} />
         <section>
           <h3 className="mini-titulo">Récords</h3>
           <ul className="records">

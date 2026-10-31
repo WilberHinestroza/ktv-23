@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { RadioProvider } from "./radio/RadioContext";
+import { EnVivoProvider } from "./envivo/EnVivo";
 import { useContenido } from "./contenido";
 import MiniRadio from "./components/MiniRadio";
 import RadioPagina from "./pages/RadioPagina";
@@ -52,6 +53,7 @@ export default function App() {
 
   return (
     <RadioProvider>
+      <EnVivoProvider>
       <header className="encabezado">
         <a className="logo" href="#/">
           <span className="logo-punto" aria-hidden="true" />
@@ -87,6 +89,7 @@ export default function App() {
       <Atajos />
       <Ambiente />
       <Temporada />
+      </EnVivoProvider>
     </RadioProvider>
   );
 }

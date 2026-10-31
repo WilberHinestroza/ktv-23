@@ -1,0 +1,113 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "oyentes": {
+      ".read": true,
+      "$uid": {
+        ".write": "auth != null && auth.uid === $uid",
+        ".validate": "newData.hasChildren(['sintonizado', 'desde']) && newData.child('sintonizado').isBoolean() && newData.child('desde').isNumber()",
+        "sintonizado": { ".validate": true },
+        "desde": { ".validate": true },
+        "$otro": { ".validate": false }
+      }
+    },
+
+    "reacciones": {
+      ".read": true,
+      "$uid": {
+        ".write": "auth != null && auth.uid === $uid",
+        ".validate": "newData.hasChildren(['emoji', 't']) && newData.child('emoji').isString() && newData.child('emoji').val().matches(/^(fuego|corazon|risa|manos|calavera)$/) && newData.child('t').val() === now && (!data.exists() || data.child('t').val() < now - 1200)",
+        "emoji": { ".validate": true },
+        "t": { ".validate": true },
+        "$otro": { ".validate": false }
+      }
+    },
+
+    "chat": {
+      ".read": true,
+      ".indexOn": ["t"],
+      "$id": {
+        ".write": "auth != null && !data.exists()",
+        ".validate": "newData.hasChildren(['uid', 'nombre', 'texto', 't']) && newData.child('uid').val() === auth.uid && newData.child('t').val() === now && newData.parent().parent().child('limites/chat/' + auth.uid).val() === now && (!root.child('limites/chat/' + auth.uid).exists() || root.child('limites/chat/' + auth.uid).val() < now - 3000)",
+        "uid": { ".validate": true },
+        "t": { ".validate": true },
+        "nombre": { ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 24" },
+        "texto": { ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 200" },
+        "$otro": { ".validate": false }
+      }
+    },
+
+    "muro": {
+      ".read": true,
+      ".indexOn": ["t"],
+      "$id": {
+        ".write": "auth != null && !data.exists()",
+        ".validate": "newData.hasChildren(['uid', 'para', 'msg', 't']) && newData.child('uid').val() === auth.uid && newData.child('t').val() === now && newData.parent().parent().child('limites/muro/' + auth.uid).val() === now && (!root.child('limites/muro/' + auth.uid).exists() || root.child('limites/muro/' + auth.uid).val() < now - 60000)",
+        "uid": { ".validate": true },
+        "t": { ".validate": true },
+        "para": { ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 40" },
+        "de": { ".validate": "newData.isString() && newData.val().length <= 40" },
+        "msg": { ".validate": "newData.isString() && newData.val().length <= 160" },
+        "cancion": { ".validate": "newData.isString() && newData.val().length <= 80" },
+        "$otro": { ".validate": false }
+      }
+    },
+
+    "mensajes": {
+      "$id": {
+        ".write": "auth != null && !data.exists()",
+        ".validate": "newData.hasChildren(['uid', 'nombre', 'texto', 't']) && newData.child('uid').val() === auth.uid && newData.child('t').val() === now && newData.parent().parent().child('limites/mensajes/' + auth.uid).val() === now && (!root.child('limites/mensajes/' + auth.uid).exists() || root.child('limites/mensajes/' + auth.uid).val() < now - 300000)",
+        "uid": { ".validate": true },
+        "t": { ".validate": true },
+        "nombre": { ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 60" },
+        "contacto": { ".validate": "newData.isString() && newData.val().length <= 100" },
+        "texto": { ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 1000" },
+        "$otro": { ".validate": false }
+      }
+    },
+
+    "limites": {
+      "$tipo": {
+        "$uid": {
+          ".write": "auth != null && auth.uid === $uid && $tipo.matches(/^(chat|muro|mensajes)$/)",
+          ".validate": "newData.val() === now"
+        }
+      }
+    },
+
+    "pedidos": {
+      ".read": true,
+      "$semana": {
+        ".validate": "$semana.matches(/^[0-9]{4}-[0-9]{2}$/)",
+        "$cancion": {
+          ".validate": "$cancion.matches(/^[0-9]{1,6}$/)",
+          "$uid": {
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.val() === true"
+          }
+        }
+      }
+    },
+
+    "favoritas": {
+      ".read": true,
+      "$cancion": {
+        ".validate": "$cancion.matches(/^[0-9]{1,6}$/)",
+        "$uid": {
+          ".write": "auth != null && auth.uid === $uid",
+          ".validate": "newData.val() === true"
+        }
+      }
+    },
+
+    "visitas": {
+      ".read": true,
+      "total": {
+        ".write": "auth != null",
+        ".validate": "newData.isNumber() && newData.val() === (data.exists() ? data.val() : 0) + 1"
+      }
+    }
+  }
+}

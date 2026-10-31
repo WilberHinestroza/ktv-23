@@ -1,6 +1,6 @@
 # Ideas para la página
 
-> Pendientes que necesitan algo de ti: **oyentes en vivo, pedidos, chat, reacciones, muro y ranking** necesitan una base de datos gratis (Firebase o Supabase, con tu cuenta); **contacto** necesita una cuenta en Formspree; **analítica** una cuenta (ej. GoatCounter); **calidad baja** duplicaría el peso del repo; **letras e historias** necesitan que escribas el contenido (`letra` e `historia` en cada canción de radio.json).
+> Las funciones en vivo (oyentes, reacciones, chat, pedidos, muro, ranking, contacto, visitas) ya están hechas: se encienden al pegar la configuración de Firebase en `envivo.json` (ver README). Pendientes que necesitan algo de ti: **analítica** una cuenta (ej. GoatCounter); **calidad baja** duplicaría el peso del repo; **letras e historias** necesitan que escribas el contenido (`letra` e `historia` en cada canción de radio.json).
 
 ✅ = ya está hecho · ⭐ = recomendado para lo siguiente · Las demás quedan para decidir juntos.
 
@@ -25,12 +25,12 @@
 ## Comunidad (sin servidor o con uno gratis)
 
 - ✅ **Dedicatorias**: creas un enlace con un mensaje; quien lo abre ve la carta y escucha lo que suena.
-- ⭐ **Oyentes en vivo**: "23 personas escuchando ahora" (necesita un servicio gratis tipo Firebase o Supabase).
-- ⭐ **Pedidos de canciones**: la gente vota y la más pedida suena en un bloque "Los más pedidos" (necesita base de datos).
-- **Chat en vivo** al lado de la radio.
-- **Reacciones en vivo** (🔥❤️😂) que flotan sobre la portada para todos los que escuchan.
-- **Muro de dedicatorias** público.
-- **Ranking semanal** de las canciones más guardadas como favoritas.
+- ✅ **Oyentes en vivo**: "23 personas escuchando ahora" (necesita un servicio gratis tipo Firebase o Supabase).
+- ✅ **Pedidos de canciones**: la gente vota y ve el ranking semanal (no cambia la programación, para que siga igual para todos).
+- ✅ **Chat en vivo** al lado de la radio.
+- ✅ **Reacciones en vivo** (🔥❤️😂) que flotan sobre la portada para todos los que escuchan.
+- ✅ **Muro de dedicatorias** público.
+- ✅ **Ranking** de las canciones más guardadas como favoritas.
 
 ## Juegos y secretos
 
@@ -65,7 +65,7 @@
 - ✅ **Proyectos con capturas, demo en vivo y repositorio** (cargados de GitHub automáticamente).
 - ✅ **Terminal de mentira** en "Sobre mí" donde escribes comandos (`help`, `whoami`, `ls proyectos`).
 - **Tu stack** con íconos.
-- **Formulario de contacto** (Formspree, gratis).
+- ✅ **Formulario de contacto** (con Firebase; solo tú lees los mensajes).
 - **Bitácora** de cómo haces tu música y tus programas.
 
 ## Técnico
@@ -74,6 +74,6 @@
 - ✅ **Ambiente según la hora**: morado de madrugada, dorado en la mañana, rojo en la tarde, rosado de noche.
 - **Funciona sin internet** lo ya visitado (service worker).
 - **Vista previa bonita** al compartir enlaces en WhatsApp (imagen por canción).
-- **Analítica sencilla** sin cookies (cuánta gente entra y desde dónde).
+- ✅ **Contador de visitas** (con Firebase). Analítica de procedencia sigue pendiente.
 - **Modo claro** opcional.
 - ✅ **Pruebas automáticas** del motor de la radio (que todos oigan lo mismo).

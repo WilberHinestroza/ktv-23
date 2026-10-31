@@ -1,0 +1,13 @@
+{
+  "_ayuda": "Funciones en vivo (oyentes, reacciones, chat, pedidos, muro, contacto). Pega aquí la configuración web de Firebase y pon activo en true. Las reglas de seguridad están en database.rules.json.",
+  "activo": false,
+  "firebase": {
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": "",
+    "appId": ""
+  }
+}

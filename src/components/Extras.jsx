@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Bell, Heart, Keyboard, Mail, Moon, SlidersHorizontal, X } from "lucide-react";
 import { useRadio } from "../radio/RadioContext";
+import { useEnVivo } from "../envivo/EnVivo";
 
 // ---------- Visualizador: barras que bailan con la música ----------
 // Lee el analizador de audio si existe; si no (iPhone, o antes de sintonizar), se mueve solo.
@@ -168,6 +169,9 @@ export function Dedicar({ cancion }) {
   const [abierto, setAbierto] = useState(false);
   const [datos, setDatos] = useState({ para: "", de: "", msg: "" });
   const [copiado, setCopiado] = useState(false);
+  const envivo = useEnVivo();
+  const [alMuro, setAlMuro] = useState(true);
+  const [avisoMuro, setAvisoMuro] = useState("");
 
   const enlace = () => {
     const p = new URLSearchParams();
@@ -181,6 +185,13 @@ export function Dedicar({ cancion }) {
     const url = enlace();
     const texto = `💌 ${datos.de.trim() || "Alguien"} te dedicó ${radio.nombre}`;
     desbloquear("cartero");
+    if (envivo.disponible && alMuro) {
+      const tema = cancion && !cancion.esLocutor && !cancion.oculta ? cancion.titulo.slice(0, 80) : "";
+      envivo
+        .publicar("muro", { para: datos.para.trim(), de: datos.de.trim(), msg: datos.msg.trim(), ...(tema && { cancion: tema }) })
+        .then(() => setAvisoMuro("Publicada en el muro 💌"))
+        .catch(() => setAvisoMuro("No se pudo publicar en el muro (espera un minuto entre dedicatorias)."));
+    }
     if (navigator.share) {
       try {
         await navigator.share({ title: radio.nombre, text: texto, url });
@@ -220,6 +231,13 @@ export function Dedicar({ cancion }) {
             <small className="contador">
               {datos.msg.length}/{LIMITE_MENSAJE}
             </small>
+            {envivo.disponible && (
+              <label className="interruptor">
+                <input type="checkbox" checked={alMuro} onChange={(e) => setAlMuro(e.target.checked)} /> Publicarla también en el muro
+                público
+              </label>
+            )}
+            {avisoMuro && <small>{avisoMuro}</small>}
             <div className="modal-botones">
               <button type="submit">{copiado ? "¡Enlace copiado!" : "Crear enlace"}</button>
               <button type="button" onClick={() => setAbierto(false)}>

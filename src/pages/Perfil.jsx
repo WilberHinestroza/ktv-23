@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { ruta, useContenido } from "../contenido";
 import Terminal from "../components/Terminal";
+import { Contacto } from "../envivo/Comunidad";
 
 export default function Perfil({ seccion }) {
   const { datos, error } = useContenido(seccion.archivo);
@@ -35,6 +36,7 @@ export default function Perfil({ seccion }) {
         </div>
         <h2 className="subtitulo-seccion">Terminal</h2>
         <Terminal perfil={datos} />
+        <Contacto />
       </div>
     </section>
   );

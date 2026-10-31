@@ -6,6 +6,8 @@ import { Ajustes, BotonFavorito, Dedicar, Temporizador, Visualizador } from "../
 import Letra from "../components/Letra";
 import ModoTV from "../components/ModoTV";
 import { CuandoSuena, MiRadio, YaSono } from "../components/PanelesRadio";
+import { useEnVivo } from "../envivo/EnVivo";
+import { Comunidad, ContadorOyentes, Reacciones, Visitas } from "../envivo/Comunidad";
 
 const formatoTiempo = (seg) => {
   if (!Number.isFinite(seg) || seg < 0) return "0:00";
@@ -79,7 +81,7 @@ export default function RadioPagina() {
         </div>
 
         <p className="programa-actual">
-          <span className="en-vivo-chip">AL AIRE</span> {programa.titulo}
+          <span className="en-vivo-chip">AL AIRE</span> {programa.titulo} <ContadorOyentes />
         </p>
 
         <Portada src={portada} videoGlitch={radio.videoGlitch} titulo={cancion.titulo} />
@@ -154,6 +156,7 @@ export default function RadioPagina() {
             <span>Modo TV</span>
           </button>
         </div>
+        <Reacciones />
         {tv && <ModoTV cerrar={cerrarTv} />}
         <p className={`estado estado-${estado}`} aria-live="polite">
           {TEXTO_ESTADO[estado]}
@@ -184,6 +187,7 @@ export default function RadioPagina() {
 
 function Programacion() {
   const { radio, proximas, parrilla, sintonizado } = useRadio();
+  const { disponible } = useEnVivo();
   const [vista, setVista] = useState("canciones");
   const pestanas = [
     ["canciones", "Siguientes"],
@@ -191,6 +195,7 @@ function Programacion() {
     ["parrilla", "Programas"],
     ["buscar", "¿Cuándo?"],
     ["mia", "Mi radio"],
+    ...(disponible ? [["comunidad", "Comunidad"]] : []),
   ];
 
   return (
@@ -214,6 +219,7 @@ function Programacion() {
       {vista === "antes" && <YaSono />}
       {vista === "buscar" && <CuandoSuena />}
       {vista === "mia" && <MiRadio />}
+      {vista === "comunidad" && <Comunidad />}
       {vista === "canciones" && (
         <ol>
           {proximas(12).map(({ cancion, inicioMs, programa }, i, lista) => (
@@ -259,7 +265,7 @@ function Programacion() {
           ))}
         </ol>
       )}
-      <p className="programacion-nota">Todos escuchan lo mismo al mismo tiempo.</p>
+      <p className="programacion-nota">Todos escuchan lo mismo al mismo tiempo.<Visitas /></p>
     </aside>
   );
 }

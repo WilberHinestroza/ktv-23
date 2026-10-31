@@ -328,3 +328,45 @@ body.modo-interferencia .scanlines { background: repeating-linear-gradient(0deg,
 .repo-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-size: 0.78rem !important; flex: 0 !important; }
 .repo-meta span { display: inline-flex; align-items: center; gap: 4px; }
 .repo-lenguaje::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--acento-1); }
+
+/* ===== En vivo: oyentes, reacciones, comunidad ===== */
+.contador-oyentes { display: inline-flex; align-items: center; gap: 4px; margin-left: 8px; font-size: 0.72rem; color: var(--texto-suave); vertical-align: middle; }
+.reacciones { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
+.reacciones button { font-size: 1.25rem; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--borde, #333); background: var(--panel-2); cursor: pointer; transition: transform 0.12s; }
+.reacciones button:hover:not(:disabled) { transform: scale(1.15); }
+.reacciones button:active { transform: scale(0.9); }
+.reacciones button:disabled { opacity: 0.5; cursor: default; }
+.flotantes { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 3; }
+.flotantes span { position: absolute; bottom: 12%; font-size: 2rem; animation: subir-emoji 3.4s ease-out forwards; }
+@keyframes subir-emoji {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  12% { opacity: 1; transform: translateY(-20px) scale(1.1); }
+  100% { transform: translateY(-340px) scale(1); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .flotantes span { animation-duration: 1.5s; } }
+
+.comunidad .chips-temas { margin-bottom: 8px; }
+.chat-mensajes { max-height: 340px; overflow-y: auto; display: grid; gap: 6px; padding-right: 4px; }
+.programacion .chat-mensajes li { display: block; padding: 8px 10px; border-radius: 12px; background: var(--fondo); }
+.programacion .chat-mensajes li.mio { background: var(--panel-2); }
+.chat-mensajes li strong { font-size: 0.82rem; }
+.chat-mensajes li small { color: var(--texto-suave); font-size: 0.7rem; }
+.chat-mensajes li p { margin: 2px 0 0; font-size: 0.9rem; overflow-wrap: anywhere; }
+.chat-form { display: grid; gap: 6px; margin-top: 8px; }
+.chat-fila { display: flex; gap: 6px; }
+.chat-form input, .contacto input, .contacto textarea {
+  flex: 1; min-width: 0; padding: 9px 12px; border-radius: 10px; border: 1px solid var(--borde, #333);
+  background: var(--fondo); color: var(--texto); font: inherit; font-size: 0.9rem;
+}
+.chat-fila button { width: 40px; border-radius: 10px; border: 0; background: var(--texto); color: #000; cursor: pointer; display: grid; place-items: center; }
+.boton-icono.activo { color: var(--acento-1); border-color: var(--acento-1); }
+.pedidos .buscador { margin-top: 10px; }
+.programacion .muro-carta { display: grid; gap: 4px; padding: 10px 12px; border-radius: 12px; background: var(--fondo); margin-bottom: 6px; }
+.muro-carta p { margin: 0; font-style: italic; overflow-wrap: anywhere; }
+.muro-carta small, .muro-para { font-size: 0.78rem; color: var(--texto-suave); }
+.muro-para strong { color: var(--texto); }
+
+.contacto { margin-top: 28px; }
+.contacto form { display: grid; gap: 8px; max-width: 520px; }
+.contacto textarea { resize: vertical; }
+.contacto-listo { color: var(--acento-1); }

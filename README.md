@@ -23,6 +23,7 @@ Todo está en `public/contenido/`. No hace falta tocar código.
 | `radio.json` | Canciones, ocultas, ticker, archivos secretos |
 | `proyectos.json` | Tarjetas de proyectos |
 | `perfil.json` | Sección "Sobre mí" |
+| `envivo.json` | Funciones en vivo con Firebase (ver abajo) |
 
 ### Agregar una canción
 
@@ -129,6 +130,28 @@ Se guarda solo en el navegador de quien escucha (nada va a un servidor):
 
 También: **ecualizador** y **solo música** (botón Sonido), **modo TV** a pantalla completa, el locutor dice la **hora exacta**
 (`horaExacta` en las plantillas), y **sorpresas por fecha** (Halloween, Navidad…; para probar: `?temporada=navidad`).
+
+### En vivo y comunidad (Firebase, gratis)
+
+Con Firebase activo aparecen: **oyentes en vivo** ("👥 N escuchando"), **reacciones** (🔥❤️😂🙌💀 que todos ven
+flotar), la pestaña **Comunidad** (chat, **pedidos** de la semana y **muro** de dedicatorias), el ranking
+**Las favoritas de la gente** (Música → Números), el **formulario de contacto** (Sobre mí) y el **contador de visitas**.
+Sin configurar, la página funciona igual y nada de esto se ve.
+
+1. En https://console.firebase.google.com crea un proyecto.
+2. *Authentication* → *Sign-in method* → activa **Anónimo**.
+3. *Realtime Database* → *Crear base de datos* → modo bloqueado. En la pestaña **Reglas** pega el contenido de
+   `database.rules.json` y publica (son las que evitan spam y protegen los mensajes de contacto).
+4. Configuración del proyecto → *Tus apps* → **Web** (`</>`) → copia el bloque `firebaseConfig`.
+5. Pégalo en `public/contenido/envivo.json` dentro de `firebase` y pon `"activo": true`. Publica.
+
+La configuración web de Firebase es pública por diseño; lo que protege los datos son las reglas.
+
+- Los **mensajes de contacto** solo los ves tú: Realtime Database → `mensajes`.
+- Para borrar algo del chat o del muro, bórralo en la consola (`chat` o `muro`).
+- **Los más pedidos** es un ranking: no cambia la programación, que sigue siendo la misma para todos.
+- Para probar en local sin cuenta: `npx firebase-tools emulators:start --only auth,database --project demo-kennyga`
+  y en envivo.json `"emulador": true` con `databaseURL` `http://127.0.0.1:9000?ns=demo-kennyga-default-rtdb`.
 
 ### Canciones, letras y lanzamientos
 
