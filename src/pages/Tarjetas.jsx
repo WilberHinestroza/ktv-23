@@ -1,6 +1,98 @@
-import { useState } from "react";
-import { ExternalLink } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ExternalLink, GitFork, Star } from "lucide-react";
 import { ruta, useContenido } from "../contenido";
+
+// Repos públicos de GitHub (se guardan en la sesión para no pedirlos cada vez: GitHub limita a 60 por hora)
+function useRepos(usuario) {
+  const [repos, setRepos] = useState(null);
+  useEffect(() => {
+    if (!usuario) return;
+    const clave = `repos-${usuario}`;
+    try {
+      const guardado = JSON.parse(sessionStorage.getItem(clave));
+      if (guardado) return setRepos(guardado);
+    } catch {}
+    let vivo = true;
+    fetch(`https://api.github.com/users/${encodeURIComponent(usuario)}/repos?sort=updated&per_page=100`)
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((lista) => {
+        const limpios = lista
+          .filter((x) => !x.fork && !x.archived)
+          .map(({ name, description, html_url, homepage, language, stargazers_count, forks_count, pushed_at }) => ({
+            name,
+            description,
+            html_url,
+            homepage,
+            language,
+            stargazers_count,
+            forks_count,
+            pushed_at,
+          }));
+        try {
+          sessionStorage.setItem(clave, JSON.stringify(limpios));
+        } catch {}
+        if (vivo) setRepos(limpios);
+      })
+      .catch(() => vivo && setRepos([]));
+    return () => {
+      vivo = false;
+    };
+  }, [usuario]);
+  return repos;
+}
+
+function MasEnGitHub({ usuario, items }) {
+  const repos = useRepos(usuario);
+  if (!usuario) return null;
+  const yaListados = new Set(
+    items.flatMap((i) => (i.enlaces || []).map((l) => l.url.toLowerCase().replace(/\/$/, "")))
+  );
+  const otros = (repos || []).filter((r) => !yaListados.has(r.html_url.toLowerCase()));
+  if (repos && !otros.length) return null;
+  return (
+    <>
+      <h2 className="subtitulo-seccion">Más en GitHub</h2>
+      {!repos ? (
+        <p className="intro">Cargando repositorios…</p>
+      ) : (
+        <div className="rejilla repos">
+          {otros.map((r) => (
+            <article key={r.name} className="tarjeta repo">
+              <div className="tarjeta-cuerpo">
+                <h2>{r.name}</h2>
+                <p>{r.description || "Sin descripción."}</p>
+                <p className="repo-meta">
+                  {r.language && <span className="repo-lenguaje">{r.language}</span>}
+                  {r.stargazers_count > 0 && (
+                    <span>
+                      <Star size={13} /> {r.stargazers_count}
+                    </span>
+                  )}
+                  {r.forks_count > 0 && (
+                    <span>
+                      <GitFork size={13} /> {r.forks_count}
+                    </span>
+                  )}
+                  <span>Actualizado {new Date(r.pushed_at).toLocaleDateString("es", { month: "short", year: "numeric" })}</span>
+                </p>
+                <div className="tarjeta-enlaces">
+                  <a href={r.html_url} target="_blank" rel="noopener noreferrer">
+                    Código <ExternalLink size={14} />
+                  </a>
+                  {r.homepage && (
+                    <a href={r.homepage} target="_blank" rel="noopener noreferrer">
+                      Demo <ExternalLink size={14} />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
 
 // Página de tarjetas genérica: sirve para proyectos, videos, publicaciones, etc.
 export default function Tarjetas({ seccion }) {
@@ -59,6 +151,7 @@ export default function Tarjetas({ seccion }) {
           </article>
         ))}
       </div>
+      <MasEnGitHub usuario={datos.github} items={datos.items} />
     </section>
   );
 }

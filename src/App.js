@@ -6,7 +6,9 @@ import RadioPagina from "./pages/RadioPagina";
 import Tarjetas from "./pages/Tarjetas";
 import Perfil from "./pages/Perfil";
 import Discografia from "./pages/Discografia";
-import { Ambiente, Atajos, DedicatoriaRecibida, Notificacion } from "./components/Extras";
+import { AlbumPagina, CancionPagina } from "./pages/Detalle";
+import Juego from "./pages/Juego";
+import { Ambiente, Atajos, DedicatoriaRecibida, Notificacion, Temporada } from "./components/Extras";
 
 // Tipos de sección que se pueden usar en public/contenido/sitio.json
 const PAGINAS = {
@@ -14,6 +16,7 @@ const PAGINAS = {
   discografia: Discografia,
   tarjetas: Tarjetas,
   perfil: Perfil,
+  juego: Juego,
 };
 
 function useHash() {
@@ -38,7 +41,13 @@ export default function App() {
   if (error) return <p className="aviso">{error}</p>;
   if (!sitio) return <div className="cargando">Sintonizando…</div>;
 
-  const seccion = sitio.secciones.find((s) => s.id === hash) || sitio.secciones[0];
+  // Páginas de detalle: #/cancion/<id> y #/album/<id> (se ven dentro de la sección Música)
+  const [ruta, idDetalle] = hash.split("/");
+  const Detalle = idDetalle && { cancion: CancionPagina, album: AlbumPagina }[ruta];
+  const seccion =
+    sitio.secciones.find((s) => s.id === (Detalle ? "musica" : hash)) ||
+    (Detalle && sitio.secciones.find((s) => s.tipo === "discografia")) ||
+    sitio.secciones[0];
   const Pagina = PAGINAS[seccion.tipo];
 
   return (
@@ -63,7 +72,9 @@ export default function App() {
       </header>
 
       <main className={`pagina pagina-${seccion.tipo}`}>
-        {Pagina ? (
+        {Detalle ? (
+          <Detalle id={decodeURIComponent(idDetalle)} />
+        ) : Pagina ? (
           <Pagina seccion={seccion} sitio={sitio} />
         ) : (
           <p className="aviso">Tipo de sección desconocido: "{seccion.tipo}"</p>
@@ -75,6 +86,7 @@ export default function App() {
       <DedicatoriaRecibida />
       <Atajos />
       <Ambiente />
+      <Temporada />
     </RadioProvider>
   );
 }

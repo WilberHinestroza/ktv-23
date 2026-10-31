@@ -89,17 +89,46 @@ Se genera desde `scripts/locutor-plantillas.json`: edita los textos allá y corr
 | `locutor/cuna-sabina-0d5a78a05f.mp3` | Aquí no hay comerciales. Solo música. KeNnyga Radio. | hay audio |
 | `locutor/cuna-sabina-fe49d47bcb.mp3` | Si alguien te pregunta qué estás escuchando, dile: KeNnyga Radio. | hay audio |
 
+## Hora exacta (al empezar cada hora)
+
+| Archivo | Texto | Estado |
+| --- | --- | --- |
+| `locutor/hora-sabina-21d541ab04.mp3` | Son las 12 de la medianoche en KeNnyga Radio, ciento doce punto tres. | hay audio |
+| `locutor/hora-sabina-7ee268b236.mp3` | Atención: es la una de la madrugada. Sigues en KeNnyga Radio. | hay audio |
+| `locutor/hora-raul-69b432d3d5.mp3` | Son las 2 en punto, de la madrugada. Esto es KeNnyga Radio y aquí no se apaga nada. | hay audio |
+| `locutor/hora-sabina-e6b518a24b.mp3` | KeNnyga Radio te da la hora: son las 3 de la madrugada. | hay audio |
+| `locutor/hora-raul-35131f3273.mp3` | Son las 4 de la madrugada en KeNnyga Radio, ciento doce punto tres. | hay audio |
+| `locutor/hora-sabina-6aeac05041.mp3` | Atención: son las 5 de la madrugada. Sigues en KeNnyga Radio. | hay audio |
+| `locutor/hora-sabina-1f785f5fa9.mp3` | Son las 6 en punto, de la mañana. Esto es KeNnyga Radio y aquí no se apaga nada. | hay audio |
+| `locutor/hora-raul-eb57d09cda.mp3` | KeNnyga Radio te da la hora: son las 7 de la mañana. | hay audio |
+| `locutor/hora-raul-fee7c1d9c6.mp3` | Son las 8 de la mañana en KeNnyga Radio, ciento doce punto tres. | hay audio |
+| `locutor/hora-raul-de74d5bfe4.mp3` | Atención: son las 9 de la mañana. Sigues en KeNnyga Radio. | hay audio |
+| `locutor/hora-raul-61db3f70dc.mp3` | Son las 10 en punto, de la mañana. Esto es KeNnyga Radio y aquí no se apaga nada. | hay audio |
+| `locutor/hora-raul-261fb69d82.mp3` | KeNnyga Radio te da la hora: son las 11 de la mañana. | hay audio |
+| `locutor/hora-sabina-cb04d0bdb5.mp3` | Son las 12 del mediodía en KeNnyga Radio, ciento doce punto tres. | hay audio |
+| `locutor/hora-raul-0957d4a4f6.mp3` | Atención: es la una de la tarde. Sigues en KeNnyga Radio. | hay audio |
+| `locutor/hora-raul-dd9c6bd471.mp3` | Son las 2 en punto, de la tarde. Esto es KeNnyga Radio y aquí no se apaga nada. | hay audio |
+| `locutor/hora-sabina-c26e34b13c.mp3` | KeNnyga Radio te da la hora: son las 3 de la tarde. | hay audio |
+| `locutor/hora-sabina-b13c67a24b.mp3` | Son las 4 de la tarde en KeNnyga Radio, ciento doce punto tres. | hay audio |
+| `locutor/hora-sabina-f9c224cfbe.mp3` | Atención: son las 5 de la tarde. Sigues en KeNnyga Radio. | hay audio |
+| `locutor/hora-sabina-dce761aaff.mp3` | Son las 6 en punto, de la tarde. Esto es KeNnyga Radio y aquí no se apaga nada. | hay audio |
+| `locutor/hora-raul-2cd83a11d2.mp3` | KeNnyga Radio te da la hora: son las 7 de la noche. | hay audio |
+| `locutor/hora-raul-eeaa642143.mp3` | Son las 8 de la noche en KeNnyga Radio, ciento doce punto tres. | hay audio |
+| `locutor/hora-raul-1352118864.mp3` | Atención: son las 9 de la noche. Sigues en KeNnyga Radio. | hay audio |
+| `locutor/hora-sabina-d87aed040c.mp3` | Son las 10 en punto, de la noche. Esto es KeNnyga Radio y aquí no se apaga nada. | hay audio |
+| `locutor/hora-raul-caff2b37eb.mp3` | KeNnyga Radio te da la hora: son las 11 de la noche. | hay audio |
+
 ## Intros de programas
 
 | Archivo | Texto | Estado |
 | --- | --- | --- |
-| `locutor/programa-madrugada-raul-4064f440fa.mp3` | Son pasadas las doce. Arranca Madrugada KeNnyga: mezcla aleatoria para los que no duermen. | falta |
-| `locutor/programa-album-completo-raul-19ccc49b49.mp3` | Ahora, el álbum completo. KeNnyga Radio 112.3 FM, de principio a fin. | falta |
-| `locutor/programa-ktv23-estreno-sabina-b23706be22.mp3` | Llegó la hora del estreno. KTV23, el álbum nuevo, completo y en orden. | falta |
-| `locutor/programa-manana-chill-sabina-09808272e3.mp3` | Buenos días. Esto es Mañana Chill en KeNnyga Radio. Sin afán, música para ir arrancando. | falta |
-| `locutor/programa-hora-malandreo-raul-42b8959c3a.mp3` | Atención, que empieza La Hora del Malandreo. Calle, flow y flexeo. Sube eso. | falta |
-| `locutor/programa-noches-de-amor-sabina-f4bef90d97.mp3` | Bienvenidos a Noches de Amor. Para los enamorados, y para los que ya no lo están. | falta |
-| `locutor/programa-fiesta-kennyga-raul-bc863d81a6.mp3` | Es fin de semana y esto es Fiesta KeNnyga. Fiesta y perreo hasta la madrugada. | falta |
+| `locutor/programa-madrugada-raul-4064f440fa.mp3` | Son pasadas las doce. Arranca Madrugada KeNnyga: mezcla aleatoria para los que no duermen. | hay audio |
+| `locutor/programa-album-completo-raul-19ccc49b49.mp3` | Ahora, el álbum completo. KeNnyga Radio 112.3 FM, de principio a fin. | hay audio |
+| `locutor/programa-ktv23-estreno-sabina-b23706be22.mp3` | Llegó la hora del estreno. KTV23, el álbum nuevo, completo y en orden. | hay audio |
+| `locutor/programa-manana-chill-sabina-09808272e3.mp3` | Buenos días. Esto es Mañana Chill en KeNnyga Radio. Sin afán, música para ir arrancando. | hay audio |
+| `locutor/programa-hora-malandreo-raul-42b8959c3a.mp3` | Atención, que empieza La Hora del Malandreo. Calle, flow y flexeo. Sube eso. | hay audio |
+| `locutor/programa-noches-de-amor-sabina-f4bef90d97.mp3` | Bienvenidos a Noches de Amor. Para los enamorados, y para los que ya no lo están. | hay audio |
+| `locutor/programa-fiesta-kennyga-raul-bc863d81a6.mp3` | Es fin de semana y esto es Fiesta KeNnyga. Fiesta y perreo hasta la madrugada. | hay audio |
 
 ## Presentaciones de canciones
 

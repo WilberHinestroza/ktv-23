@@ -27,7 +27,7 @@ const normalizar = (t) =>
     .toLowerCase();
 
 // La agenda (próxima vez que suena cada canción) se recalcula una vez por minuto
-function useAgenda() {
+export function useAgenda() {
   const { agenda, ahora, radio } = useRadio();
   const minuto = Math.floor(ahora / 60000);
   return useMemo(() => agenda(8), [minuto, radio]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -44,7 +44,13 @@ function Fila({ cancion, detalle, acciones }) {
         <img className="prog-portada" src={ruta(cancion.portada)} alt="" loading="lazy" />
       )}
       <span className="prog-meta">
-        <strong>{cancion.titulo}</strong>
+        {cancion.esLocutor || cancion.esIntro || cancion.oculta ? (
+          <strong>{cancion.titulo}</strong>
+        ) : (
+          <a className="enlace-cancion" href={`#/cancion/${cancion.id}`}>
+            <strong>{cancion.titulo}</strong>
+          </a>
+        )}
         <small>{detalle}</small>
       </span>
       {acciones}

@@ -55,6 +55,7 @@ if (existsSync(PLANTILLAS)) {
   (viejo.cunas?.archivos || []).forEach(recordar);
   radio.canciones.forEach((c) => (c.presentaciones || []).forEach(recordar));
   (radio.programas || []).forEach((p) => recordar(p.intro));
+  (viejo.horas || []).forEach(recordar);
 
   // Varias voces: cada frase la dice una, elegida siempre igual según el texto
   const voces = pl.voces || {};
@@ -115,6 +116,22 @@ if (existsSync(PLANTILLAS)) {
     else if (p.intro?.archivo?.startsWith("locutor/")) delete p.intro;
   }
 
+  // Hora exacta: una frase por hora (0 a 23), dicha en la hora de quien escucha
+  const plantillaHora = pl.horaExacta?.plantillas || [];
+  const momentoDe = (h) => (h < 6 ? "de la madrugada" : h < 12 ? "de la mañana" : h < 19 ? "de la tarde" : "de la noche");
+  const horas = plantillaHora.length
+    ? Array.from({ length: 24 }, (_, h) => {
+        const h12 = h % 12 || 12;
+        const plantilla = plantillaHora[h % plantillaHora.length];
+        const sonLas = h12 === 1 ? "Es la" : "Son las";
+        const texto = plantilla
+          .replace("{son las}", plantilla.startsWith("{son las}") ? sonLas : sonLas.toLowerCase())
+          .replace("{hora}", h12 === 1 ? "una" : String(h12))
+          .replace("{momento}", h === 0 ? "de la medianoche" : h === 12 ? "del mediodía" : momentoDe(h));
+        return clip("hora", texto);
+      })
+    : [];
+
   radio.locutor = {
     activo: viejo.activo ?? true,
     nombre: idsVoz.length ? idsVoz.map((v) => voces[v].nombre).join(" y ") : viejo.nombre || "Wildberry",
@@ -129,6 +146,7 @@ if (existsSync(PLANTILLAS)) {
       archivos: (pl.cunas?.textos || []).map((e) => clip("cuna", e)),
     },
     presentaciones: { probabilidad: pres.probabilidad ?? 0.35 },
+    horas,
   };
   writeFileSync(RADIO, JSON.stringify(radio, null, 2) + "\n");
 }
@@ -139,6 +157,7 @@ const grupos = [
   ...Object.entries(loc.saludos || {}).map(([momento, clips]) => [`Saludo · ${momento}`, clips]),
   [`Compañía (cada ${loc.compania?.cadaMinutos || 20} min)`, loc.compania?.archivos || []],
   [`Cuñas (cada ${loc.cunas?.cadaCanciones || 4} canciones)`, loc.cunas?.archivos || []],
+  ["Hora exacta (al empezar cada hora)", loc.horas || []],
   ["Intros de programas", (radio.programas || []).map((p) => p.intro).filter((i) => i?.archivo?.startsWith("locutor/"))],
   ["Presentaciones de canciones", radio.canciones.flatMap((c) => c.presentaciones || [])],
 ].filter(([, clips]) => clips.length);

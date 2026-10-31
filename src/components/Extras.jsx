@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { Bell, Heart, Keyboard, Mail, Moon, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Bell, Heart, Keyboard, Mail, Moon, SlidersHorizontal, X } from "lucide-react";
 import { useRadio } from "../radio/RadioContext";
 
 // ---------- Visualizador: barras que bailan con la música ----------
@@ -38,8 +38,7 @@ export function Visualizador() {
         );
       }
       const graves = valores.slice(0, 6).reduce((a, b) => a + b, 0) / 6;
-      const portada = document.querySelector(".portada");
-      if (portada) portada.style.setProperty("--graves", graves.toFixed(3));
+      document.querySelectorAll(".portada").forEach((p) => p.style.setProperty("--graves", graves.toFixed(3)));
 
       const hueco = ancho / barras;
       const degradado = ctx.createLinearGradient(0, alto, 0, 0);
@@ -400,4 +399,159 @@ export function Ambiente() {
     return () => clearInterval(id);
   }, []);
   return null;
+}
+
+// ---------- Ajustes de sonido: ecualizador y modo sin locutor ----------
+const BANDAS = [
+  ["graves", "Graves"],
+  ["medios", "Medios"],
+  ["agudos", "Agudos"],
+];
+const PRESETS = {
+  Normal: { graves: 0, medios: 0, agudos: 0 },
+  "Más bajo": { graves: 7, medios: 0, agudos: 1 },
+  Voces: { graves: -2, medios: 4, agudos: 2 },
+  Noche: { graves: 3, medios: -1, agudos: -4 },
+};
+
+export function Ajustes() {
+  const { ecualizador, setEcualizador, ecualizadorDisponible, sinLocutor, setSinLocutor } = useRadio();
+  const [abierto, setAbierto] = useState(false);
+  return (
+    <>
+      <button className="boton-compartir" onClick={() => setAbierto(true)} title="Ecualizador y más">
+        <SlidersHorizontal size={16} />
+        <span>Sonido</span>
+      </button>
+      {abierto && (
+        <div className="modal" onClick={() => setAbierto(false)}>
+          <div className="modal-caja ajustes" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            <h3>
+              <SlidersHorizontal /> Sonido
+            </h3>
+            {ecualizadorDisponible ? (
+              <>
+                <div className="presets">
+                  {Object.entries(PRESETS).map(([nombre, v]) => (
+                    <button
+                      key={nombre}
+                      className={BANDAS.every(([b]) => ecualizador[b] === v[b]) ? "chip activo" : "chip"}
+                      onClick={() => BANDAS.forEach(([b]) => setEcualizador(b, v[b]))}
+                    >
+                      {nombre}
+                    </button>
+                  ))}
+                </div>
+                <div className="bandas">
+                  {BANDAS.map(([banda, texto]) => (
+                    <label key={banda}>
+                      <span>{texto}</span>
+                      <input
+                        type="range"
+                        min="-12"
+                        max="12"
+                        step="1"
+                        value={ecualizador[banda]}
+                        style={{ "--lleno": `${((ecualizador[banda] + 12) / 24) * 100}%` }}
+                        onChange={(e) => setEcualizador(banda, Number(e.target.value))}
+                      />
+                      <small>
+                        {ecualizador[banda] > 0 ? "+" : ""}
+                        {ecualizador[banda]} dB
+                      </small>
+                    </label>
+                  ))}
+                </div>
+                <p>El ecualizador se aplica cuando sintonizas.</p>
+              </>
+            ) : (
+              <p>El ecualizador no está disponible en iPhone/iPad.</p>
+            )}
+            <label className="interruptor">
+              <input type="checkbox" checked={sinLocutor} onChange={(e) => setSinLocutor(e.target.checked)} />
+              <span>Solo música (sin locutor)</span>
+            </label>
+            <p>Silencia las cuñas, presentaciones y saludos. La música sigue sincronizada con todos.</p>
+            <div className="modal-botones">
+              <button onClick={() => setAbierto(false)}>Listo</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+// ---------- Sorpresas por fecha ----------
+// Cambian los colores y caen cositas por la pantalla. Para probar: ?temporada=navidad en la dirección.
+const TEMPORADAS = {
+  halloween: { emojis: ["🎃", "👻", "🦇", "🕸️"], texto: "Feliz Halloween desde KeNnyga Radio 🎃" },
+  navidad: { emojis: ["❄️", "🎄", "✨", "🎁"], texto: "Feliz Navidad desde KeNnyga Radio 🎄" },
+  "ano-nuevo": { emojis: ["🎆", "🥂", "✨", "🎉"], texto: "¡Feliz año nuevo! 🎆" },
+  amor: { emojis: ["💜", "💌", "🌹", "✨"], texto: "Feliz día del amor y la amistad 💜" },
+};
+
+export function temporadaDe(fecha = new Date()) {
+  const forzada = new URLSearchParams(window.location.search).get("temporada");
+  if (forzada && TEMPORADAS[forzada]) return forzada;
+  const m = fecha.getMonth() + 1;
+  const d = fecha.getDate();
+  if ((m === 10 && d >= 25) || (m === 11 && d <= 2)) return "halloween";
+  if (m === 12 && d >= 15 && d <= 30) return "navidad";
+  if ((m === 12 && d === 31) || (m === 1 && d <= 2)) return "ano-nuevo";
+  if (m === 9 && d >= 14 && d <= 21) return "amor"; // amor y amistad en Colombia (septiembre)
+  return null;
+}
+
+export function Temporada() {
+  const { sintonizado, desbloquear, notificar } = useRadio();
+  const [temporada] = useState(temporadaDe);
+  useEffect(() => {
+    if (!temporada) return;
+    document.documentElement.dataset.temporada = temporada;
+    let yaVisto = true;
+    try {
+      yaVisto = sessionStorage.getItem("temporada-vista");
+      sessionStorage.setItem("temporada-vista", "1");
+    } catch {}
+    if (!yaVisto) {
+      setTimeout(() => notificar({ icono: TEMPORADAS[temporada].emojis[0], texto: TEMPORADAS[temporada].texto }), 1500);
+    }
+    return () => delete document.documentElement.dataset.temporada;
+  }, [temporada, notificar]);
+  useEffect(() => {
+    if (temporada && sintonizado) desbloquear("temporada");
+  }, [temporada, sintonizado, desbloquear]);
+
+  const piezas = useMemo(
+    () =>
+      temporada
+        ? Array.from({ length: 14 }, (_, i) => ({
+            emoji: TEMPORADAS[temporada].emojis[i % TEMPORADAS[temporada].emojis.length],
+            izquierda: Math.random() * 100,
+            demora: Math.random() * 18,
+            duracion: 14 + Math.random() * 12,
+            tamano: 14 + Math.random() * 16,
+          }))
+        : [],
+    [temporada]
+  );
+  if (!temporada) return null;
+  return (
+    <div className="temporada-capa" aria-hidden="true">
+      {piezas.map((p, i) => (
+        <span
+          key={i}
+          style={{
+            left: `${p.izquierda}%`,
+            animationDelay: `-${p.demora}s`,
+            animationDuration: `${p.duracion}s`,
+            fontSize: `${p.tamano}px`,
+          }}
+        >
+          {p.emoji}
+        </span>
+      ))}
+    </div>
+  );
 }

@@ -2,11 +2,23 @@ import { Play, Square } from "lucide-react";
 import { useRadio } from "../radio/RadioContext";
 import { ruta } from "../contenido";
 import { BotonFavorito } from "./Extras";
+import { useAgenda } from "./PanelesRadio";
 
 // Barra fija abajo que mantiene la radio a mano en las demás secciones.
 export default function MiniRadio() {
-  const { radio, enVivo, ahora, sintonizado, sintonizar, apagar, hablando } = useRadio();
+  const { radio, enVivo, ahora, sintonizado, sintonizar, apagar, hablando, avisos, canciones } = useRadio();
+  const agenda = useAgenda();
   if (!radio || !enVivo) return null;
+
+  // La canción con aviso (🔔) que suena más pronto, si falta menos de una hora
+  const pendiente = avisos
+    .map((id) => ({ id, t: agenda.get(id) }))
+    .filter((x) => x.t > ahora && x.t - ahora < 3600000)
+    .sort((a, b) => a.t - b.t)[0];
+  const faltan = pendiente && {
+    titulo: canciones.find((c) => c.id === pendiente.id)?.titulo,
+    min: Math.max(1, Math.round((pendiente.t - ahora) / 60000)),
+  };
 
   const { cancion, inicioMs, finMs } = enVivo;
   const avance = Math.min(100, ((ahora - inicioMs) / (finMs - inicioMs)) * 100);
@@ -19,7 +31,11 @@ export default function MiniRadio() {
         <span className="en-vivo-chip">EN VIVO</span>
         <strong>{cancion.oculta ? "▒▒▒▒▒" : cancion.titulo}</strong>
         <span className="mini-artista">
-          {hablando ? `🎙 ${hablando.nombre || "Locutor"} te está hablando…` : cancion.artista}
+          {hablando
+            ? `🎙 ${hablando.nombre || "Locutor"} te está hablando…`
+            : faltan
+            ? `🔔 ${faltan.titulo} en ${faltan.min} min`
+            : cancion.artista}
         </span>
       </a>
       <BotonFavorito cancion={cancion} chico />

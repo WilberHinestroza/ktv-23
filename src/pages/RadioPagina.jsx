@@ -1,8 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { AudioLines, Files, Mic, Play, Radio, Share2, Square, Volume2, VolumeX } from "lucide-react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { AudioLines, Files, Maximize2, Mic, Play, Radio, Share2, Square, Volume2, VolumeX } from "lucide-react";
 import { useRadio } from "../radio/RadioContext";
 import { ruta } from "../contenido";
-import { BotonFavorito, Dedicar, Temporizador, Visualizador } from "../components/Extras";
+import { Ajustes, BotonFavorito, Dedicar, Temporizador, Visualizador } from "../components/Extras";
+import Letra from "../components/Letra";
+import ModoTV from "../components/ModoTV";
 import { CuandoSuena, MiRadio, YaSono } from "../components/PanelesRadio";
 
 const formatoTiempo = (seg) => {
@@ -54,6 +56,8 @@ const TEXTO_ESTADO = {
 export default function RadioPagina() {
   const r = useRadio();
   const { radio, enVivo, ahora, sintonizado, estado, sintonizar, apagar, volumen, setVolumen } = r;
+  const [tv, setTv] = useState(false);
+  const cerrarTv = useCallback(() => setTv(false), []);
 
   if (r.error) return <p className="aviso">{r.error}</p>;
   if (!radio || !enVivo) return <div className="cargando">Sintonizando…</div>;
@@ -80,13 +84,19 @@ export default function RadioPagina() {
 
         <Portada src={portada} videoGlitch={radio.videoGlitch} titulo={cancion.titulo} />
 
-        <h1 className="cancion-titulo">{cancion.titulo}</h1>
+        <h1 className="cancion-titulo">
+          {cancion.esLocutor || cancion.esIntro || cancion.oculta ? (
+            cancion.titulo
+          ) : (
+            <a href={`#/cancion/${cancion.id}`}>{cancion.titulo}</a>
+          )}
+        </h1>
         <p className="cancion-artista">
           {cancion.artista}
           {album && !cancion.esIntro && (
             <>
               {" · "}
-              <a href="#/musica" className="enlace-album">
+              <a href={`#/album/${album.id}`} className="enlace-album">
                 {album.titulo}
               </a>
               {album.fecha || album.anio ? ` (${(album.fecha || String(album.anio)).slice(0, 4)})` : ""}
@@ -94,6 +104,7 @@ export default function RadioPagina() {
           )}
         </p>
         {cancion.genero && <span className="chip-genero">{cancion.genero}</span>}
+        {cancion.letra && <Letra archivo={cancion.letra} segundo={transcurrido} compacta />}
 
         <div
           className="progreso"
@@ -137,7 +148,13 @@ export default function RadioPagina() {
           <Compartir cancion={cancion} radio={radio} />
           <Dedicar cancion={cancion} />
           <Temporizador />
+          <Ajustes />
+          <button className="boton-compartir" onClick={() => setTv(true)} title="Pantalla completa">
+            <Maximize2 size={16} />
+            <span>Modo TV</span>
+          </button>
         </div>
+        {tv && <ModoTV cerrar={cerrarTv} />}
         <p className={`estado estado-${estado}`} aria-live="polite">
           {TEXTO_ESTADO[estado]}
         </p>

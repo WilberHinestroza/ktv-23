@@ -59,6 +59,11 @@ export function RadioProvider({ children }) {
   // Volumen de la música. Con el analizador del visualizador conectado, Chrome ignora
   // audio.volume, así que el volumen pasa por un nodo de ganancia.
   const gananciaRef = useRef(null);
+  const filtrosRef = useRef(null); // ecualizador: { graves, medios, agudos }
+  const [ecualizador, setEcualizadorState] = useState(() => leer("radio-ecualizador", { graves: 0, medios: 0, agudos: 0 }));
+  const ecualizadorRef = useRef(ecualizador);
+  const [sinLocutor, setSinLocutorState] = useState(() => leer("radio-sin-locutor", false));
+  const sinLocutorRef = useRef(sinLocutor);
   const volumenMusica = useCallback((v) => {
     if (gananciaRef.current) gananciaRef.current.gain.value = v;
     else if (audioRef.current) audioRef.current.volume = v;
@@ -213,7 +218,7 @@ export function RadioProvider({ children }) {
     const audio = audioRef.current;
     const hoy = new Date().getDay(); // algunos clips solo suenan ciertos días (0 = domingo)
     const disponibles = (clips || []).filter((c) => c.duracion > 0 && (!c.dias || c.dias.includes(hoy)));
-    if (!loc?.activo || !voz || !audio || !disponibles.length || !voz.paused) return;
+    if (!loc?.activo || sinLocutorRef.current || !voz || !audio || !disponibles.length || !voz.paused) return;
     // No hablar encima de una cuña o presentación que ya está sonando para todos
     if (progRef.current?.enVivo().cancion.esLocutor) return;
     const clip = disponibles[Math.floor(Math.random() * disponibles.length)];
@@ -251,6 +256,20 @@ export function RadioProvider({ children }) {
     return () => clearInterval(id);
   }, [sintonizado, radio, hablar]);
 
+  // Hora exacta: al empezar cada hora (la de quien escucha), el locutor la dice.
+  const horaDichaRef = useRef(null);
+  useEffect(() => {
+    const horas = radio?.locutor?.horas;
+    if (!sintonizado || !horas?.length) return;
+    const id = setInterval(() => {
+      const d = new Date();
+      if (d.getMinutes() !== 0 || horaDichaRef.current === d.getHours()) return;
+      horaDichaRef.current = d.getHours();
+      hablar([horas[d.getHours()]].filter(Boolean));
+    }, 15000);
+    return () => clearInterval(id);
+  }, [sintonizado, radio, hablar]);
+
   // El visualizador lee la música con un analizador. Se crea dentro del clic de sintonizar
   // porque el navegador solo deja arrancar el audio con un gesto de quien escucha.
   const prepararAnalizador = useCallback(() => {
@@ -268,7 +287,21 @@ export function RadioProvider({ children }) {
         const ganancia = ctx.createGain();
         ganancia.gain.value = audio.volume;
         audio.volume = 1;
-        fuente.connect(analizador);
+        // Ecualizador de 3 bandas antes del analizador
+        const filtro = (tipo, frecuencia) => {
+          const f = ctx.createBiquadFilter();
+          f.type = tipo;
+          f.frequency.value = frecuencia;
+          return f;
+        };
+        const filtros = { graves: filtro("lowshelf", 150), medios: filtro("peaking", 1200), agudos: filtro("highshelf", 6000) };
+        filtros.medios.Q.value = 0.8;
+        for (const [banda, f] of Object.entries(filtros)) f.gain.value = ecualizadorRef.current[banda] || 0;
+        filtrosRef.current = filtros;
+        fuente.connect(filtros.graves);
+        filtros.graves.connect(filtros.medios);
+        filtros.medios.connect(filtros.agudos);
+        filtros.agudos.connect(analizador);
         analizador.connect(ganancia);
         ganancia.connect(ctx.destination);
         gananciaRef.current = ganancia;
@@ -383,8 +416,32 @@ export function RadioProvider({ children }) {
     [desbloquear, volumenMusica]
   );
 
+  const setEcualizador = useCallback((banda, db) => {
+    const nuevo = { ...ecualizadorRef.current, [banda]: db };
+    ecualizadorRef.current = nuevo;
+    guardar("radio-ecualizador", nuevo);
+    setEcualizadorState(nuevo);
+    const f = filtrosRef.current?.[banda];
+    if (f) f.gain.setTargetAtTime(db, f.context.currentTime, 0.05);
+  }, []);
+
+  const setSinLocutor = useCallback(
+    (valor) => {
+      sinLocutorRef.current = valor;
+      guardar("radio-sin-locutor", valor);
+      setSinLocutorState(valor);
+      if (valor && vozRef.current && !vozRef.current.paused) {
+        vozRef.current.pause();
+        setHablando(null);
+        volumenMusica(volumenRef.current);
+      }
+    },
+    [volumenMusica]
+  );
+
   // Cada medio segundo: tiempo escuchado y temporizador para dormir
   const ultimoGuardadoRef = useRef(0);
+  const calladoRef = useRef(false);
   useEffect(() => {
     if (apagarEn) {
       const restante = apagarEn - ahora;
@@ -395,6 +452,16 @@ export function RadioProvider({ children }) {
       } else if (restante < FUNDIDO_SUENO && audio && vozRef.current?.paused) {
         volumenMusica(volumenRef.current * (restante / FUNDIDO_SUENO));
       }
+    }
+    // Modo sin locutor: las cuñas y presentaciones (que suenan para todos) se silencian aquí
+    const actual = progRef.current?.enVivo(ahora)?.cancion;
+    const callar = sinLocutorRef.current && actual?.esLocutor;
+    if (callar) {
+      calladoRef.current = true;
+      volumenMusica(0);
+    } else if (!callar && calladoRef.current) {
+      calladoRef.current = false;
+      volumenMusica(volumenRef.current);
     }
     if (estadoRef.current !== "sonando") return;
     const e = escuchaRef.current;
@@ -500,6 +567,11 @@ export function RadioProvider({ children }) {
     cerrarNotificacion: () => setNotificacion(null),
     apagarEn,
     programarApagado,
+    ecualizador,
+    setEcualizador,
+    ecualizadorDisponible: !esIOS(),
+    sinLocutor,
+    setSinLocutor,
   };
 
   return <RadioContext.Provider value={valor}>{children}</RadioContext.Provider>;

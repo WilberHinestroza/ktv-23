@@ -127,6 +127,18 @@ Se guarda solo en el navegador de quien escucha (nada va a un servidor):
 - **Temporizador para dormir**, **atajos de teclado** (`?` muestra la lista) y **dedicatorias**: un enlace
   `#/radio?para=…&de=…&msg=…` que al abrirse muestra la carta.
 
+También: **ecualizador** y **solo música** (botón Sonido), **modo TV** a pantalla completa, el locutor dice la **hora exacta**
+(`horaExacta` en las plantillas), y **sorpresas por fecha** (Halloween, Navidad…; para probar: `?temporada=navidad`).
+
+### Canciones, letras y lanzamientos
+
+- Cada canción tiene su página (`#/cancion/<id>`) y cada álbum la suya (`#/album/<id>`).
+- `"letra": "letras/archivo.lrc"` en una canción muestra la letra; en formato .lrc (`[01:23.45] frase`) sigue a la canción en vivo.
+- `"historia": "…"` en una canción agrega el bloque "Detrás de la canción".
+- `"proximoLanzamiento": { "titulo": "…", "fecha": "2026-12-01T00:00:00-05:00", "portada": "…", "enlace": "…" }` en radio.json muestra una cuenta regresiva en Música.
+- En `proyectos.json`, `"github": "usuario"` agrega solos los repos que no estén en las tarjetas.
+- `npm test` revisa el motor de la radio (que todos oigan lo mismo, sin huecos, etc.).
+
 Más ideas, hechas y pendientes, en [IDEAS.md](IDEAS.md).
 
 ### Agregar una sección nueva

@@ -24,6 +24,7 @@ const clipsLocutor = [
   ...Object.values(loc.saludos || {}).flat(),
   ...(loc.compania?.archivos || []),
   ...(loc.cunas?.archivos || []),
+  ...(loc.horas || []),
   ...radio.canciones.flatMap((c) => c.presentaciones || (c.presentacion ? [c.presentacion] : [])),
 ];
 const lista = [...radio.canciones, ...(radio.ocultas || []), ...intros, ...clipsLocutor];
