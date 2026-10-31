@@ -1,0 +1,110 @@
+{
+  "_ayuda": "Textos del locutor. Edita aquí y corre: npm run locutor -- --voz. Comodines en presentaciones: {titulo} {album} {tipo} {anio} {artista}. En saludos, una frase puede ser {\"texto\": \"...\", \"dias\": [5]} (0 = domingo ... 6 = sábado) para que solo suene ese día.",
+
+  "pronunciar": {
+    "112.3 FM": "ciento doce punto tres efe eme",
+    "112.3": "ciento doce punto tres",
+    "KTV23": "Ka Te Ve Veintitrés",
+    "KNG": "Ka Ene Ge",
+    "feat.": "con",
+    "24/7": "veinticuatro siete",
+    "KeNnyga": "Keniga",
+    "TB2A": "te be dos a",
+    "Tb2a": "te be dos a",
+    "<3": "Corazón",
+    "100/100": "cien de cien",
+    "M.A.L.A": "Mala",
+    "LowFi prt2": "Lo fai parte dos",
+    "LowFi prt3": "Lo fai parte tres",
+    "3B": "tres be"
+  },
+
+  "saludos": {
+    "madrugada": [
+      "Todavía despierto, eh. Bienvenido a KeNnyga Radio, 112.3. A esta hora la señal llega más clara.",
+      "Madrugada en KeNnyga Radio. Aquí no se apaga nada. Quédate, que esto apenas empieza.",
+      "Las luces apagadas y la radio prendida. Así es como se escucha esto. Bienvenido.",
+      "Si estás despierto a esta hora, es por algo. Ponte cómodo, estás en KeNnyga Radio.",
+      { "texto": "Madrugada de sábado. Los que no duermen saben dónde encontrarnos. KeNnyga Radio.", "dias": [6] },
+      { "texto": "Domingo de madrugada y tú aquí. Eso es lealtad. Bienvenido a la frecuencia.", "dias": [0] }
+    ],
+    "manana": [
+      "Buenos días. Estás sintonizando KeNnyga Radio, 112.3. Arrancamos el día con lo mejor de Wildberry.",
+      "Buen día, bienvenido a la frecuencia. Sube el volumen que la mañana está buena.",
+      "Buenos días. Antes del café, primero la radio. KeNnyga Radio, al aire.",
+      "Qué buena forma de empezar el día. Bienvenido a KeNnyga Radio.",
+      { "texto": "Lunes, pero con buena música. Buenos días, estás en KeNnyga Radio.", "dias": [1] },
+      { "texto": "Viernes por la mañana. Ya casi. Buenos días desde KeNnyga Radio.", "dias": [5] },
+      { "texto": "Domingo por la mañana. Sin afán. Bienvenido a KeNnyga Radio.", "dias": [0] }
+    ],
+    "tarde": [
+      "Buenas tardes. Llegaste a KeNnyga Radio, 112.3. Acomódate, que la tarde la ponemos nosotros.",
+      "Qué hubo, buenas tardes. Estás en la señal que te conecta. KeNnyga Radio.",
+      "Buenas tardes. La tarde se hace corta con buena música. Bienvenido.",
+      "Llegaste en buen momento. Esto es KeNnyga Radio, y la tarde apenas se calienta.",
+      { "texto": "Viernes en la tarde. Ya sabes lo que eso significa. Bienvenido a KeNnyga Radio.", "dias": [5] },
+      { "texto": "Sábado en la tarde, y la radio sonando. Bienvenido a KeNnyga Radio.", "dias": [6] }
+    ],
+    "noche": [
+      "Buenas noches. KeNnyga Radio, 112.3, sigue al aire. Bienvenido a la noche.",
+      "La noche es nuestra. Estás escuchando KeNnyga Radio con Wildberry.",
+      "Buenas noches. Apaga lo demás y deja la radio. Estás en KeNnyga Radio.",
+      "Ya es de noche, y aquí la música no descansa. Bienvenido.",
+      { "texto": "Viernes en la noche. Sube eso. Estás en KeNnyga Radio.", "dias": [5] },
+      { "texto": "Sábado en la noche. La fiesta también está aquí. KeNnyga Radio, 112.3.", "dias": [6] },
+      { "texto": "Domingo en la noche. Para cerrar la semana, buena música. Bienvenido.", "dias": [0] }
+    ],
+    "regreso": [
+      "Mira quién volvió. Bienvenido otra vez a KeNnyga Radio. Te estábamos esperando.",
+      "De vuelta en la frecuencia. Ya sabes cómo es: aquí la señal nunca se corta.",
+      "Otra vez por aquí. Eso quiere decir que te gustó. Bienvenido de vuelta.",
+      "Volviste. La radio siguió sonando mientras no estabas. Ponte al día.",
+      "Qué bueno verte otra vez. Bueno, escucharte. Bienvenido a KeNnyga Radio.",
+      "Ya eres de la casa. Bienvenido de nuevo a la frecuencia."
+    ]
+  },
+
+  "compania": [
+    "Sigues aquí. Eso me gusta. KeNnyga Radio, 112.3.",
+    "Llevas un buen rato con nosotros. No cambies de canal, que lo que viene está mejor.",
+    "Si sigues escuchando es porque esto te está sonando bien. Gracias por quedarte.",
+    "Un saludo para ti, que sigues aquí. La radio es mejor acompañado.",
+    "Ya llevamos un rato juntos. Si te gusta lo que suena, compártelo con alguien.",
+    "Todavía aquí. Me gusta tu estilo. Seguimos.",
+    "Pequeña pausa para decirte gracias por escuchar. Ahora sí, seguimos con la música.",
+    "No te vayas, que lo mejor siempre llega cuando uno se va.",
+    "Si estás trabajando, estudiando o simplemente pasando el rato, aquí estamos contigo.",
+    "Esta señal es para ti. Sigue sintonizado."
+  ],
+
+  "cunas": {
+    "cadaCanciones": 4,
+    "textos": [
+      "KeNnyga Radio, 112.3. Más que un canal, la señal que te conecta.",
+      "Estás escuchando KeNnyga Radio. Música de Wildberry, las veinticuatro horas.",
+      "112.3. KeNnyga Radio. No toques ese dial.",
+      "Esto es KeNnyga Radio. Si te gusta lo que suena, búscalo como Wildberry On en tu plataforma favorita.",
+      "KeNnyga Radio. La frecuencia que nunca se apaga.",
+      "Sintonizaste bien. Esto es KeNnyga Radio, 112.3.",
+      "Wildberry On, en KeNnyga Radio. Todo el día, toda la noche.",
+      "Desde la frecuencia 112.3, esto es KeNnyga Radio.",
+      "Aquí no hay comerciales. Solo música. KeNnyga Radio.",
+      "Si alguien te pregunta qué estás escuchando, dile: KeNnyga Radio."
+    ]
+  },
+
+  "presentaciones": {
+    "probabilidad": 0.35,
+    "porCancion": 2,
+    "plantillas": [
+      "Lo que viene ahora es {titulo}.",
+      "Suena {titulo}, de {tipo} {album}.",
+      "Ahora, {titulo}. {artista}, en KeNnyga Radio.",
+      "Sube el volumen para esta: {titulo}.",
+      "De {tipo} {album}, esto es {titulo}.",
+      "Una de mis favoritas. {titulo}.",
+      "Seguimos con {titulo}. Disfrútala.",
+      "Esta salió en {anio}. {titulo}, de {artista}."
+    ]
+  }
+}

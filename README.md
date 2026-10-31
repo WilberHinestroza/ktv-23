@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# KeNnyga Radio 112.3 FM · Wildberry
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Página personal: radio en vivo con mi música, proyectos de programación y más.
+Publicada en https://WilberHinestroza.github.io/ktv-23
 
-## Available Scripts
+## Cómo funciona la radio
 
-In the project directory, you can run:
+No hay servidor. Cada visitante calcula qué suena usando la hora actual,
+los programas y la duración de cada canción. Por eso todos escuchan lo
+mismo en el mismo segundo, y si entras a mitad de una canción, la oyes desde ahí.
 
-### `npm start`
+- No se puede adelantar ni retroceder: es una radio.
+- "Apagar" y volver a "Sintonizar" te pone otra vez en lo que suena en vivo.
+- Si un archivo falla, muestra "Señal perdida" y vuelve con la siguiente canción.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Cómo editar el contenido
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Todo está en `public/contenido/`. No hace falta tocar código.
 
-### `npm test`
+| Archivo | Qué controla |
+| --- | --- |
+| `sitio.json` | Nombre, menú y secciones |
+| `radio.json` | Canciones, ocultas, ticker, archivos secretos |
+| `proyectos.json` | Tarjetas de proyectos |
+| `perfil.json` | Sección "Sobre mí" |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Agregar una canción
 
-### `npm run build`
+1. Copia el `.mp3` a `public/music/...`
+2. Agrega una entrada en `canciones` de `radio.json` (sin `duracion`, se calcula sola):
+   ```json
+   { "id": 23, "titulo": "Nueva", "artista": "Wildberry", "album": "kennyga", "archivo": "music/Canciones/19.mp3" }
+   ```
+3. Publica (ver abajo). El script `npm run duraciones` revisa que el archivo exista
+   **con las mismas mayúsculas** (GitHub Pages las distingue) y guarda la duración.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Álbumes y géneros
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+En `albumes` de `radio.json`:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```json
+{ "id": "nocturno", "titulo": "Nocturno", "artista": "Wildberry", "anio": 2026,
+  "genero": "Trap", "portada": "cover/nocturno.webp", "descripcion": "Opcional" }
+```
 
-### `npm run eject`
+Cada canción dice a qué álbum pertenece con `"album": "nocturno"`. La portada y el
+género salen del álbum, pero una canción puede tener su propio `"genero"` o `"portada"`.
+Los álbumes aparecen solos en la sección **Música**.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Programas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+En `programas` de `radio.json`. Las horas están en `zonaHoraria` (Colombia, `-05:00`);
+cada visitante las ve convertidas a su hora.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```json
+{
+  "id": "trap-nocturno",
+  "titulo": "Trap Nocturno",
+  "descripcion": "Lo más oscuro del catálogo",
+  "desde": "22:00", "hasta": "02:00",
+  "dias": [5, 6],
+  "generos": ["Trap"],
+  "orden": "mezcla",
+  "intro": { "archivo": "music/Programas/trap-nocturno.mp3" }
+}
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `dias` (opcional): 0 = domingo … 6 = sábado. Sin `dias`, es todos los días.
+- Qué suena: `albumes`, `generos` o una lista exacta de ids en `canciones`. Sin nada, suena todo.
+- `orden`: `"lista"` (en orden) o `"mezcla"` (aleatorio, pero igual para todos).
+- `intro` (opcional): un audio que suena al empezar el programa (jingle o locutor).
+- Las horas sin programa usan `programaGeneral`.
+- Cuando un programa termina, la canción que suena acaba completa y luego empieza el siguiente.
+- `npm run duraciones` avisa si un programa menciona un álbum, género o canción que no existe.
 
-## Learn More
+### Canciones ocultas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+En `radio.json`, pon `"ocultasActivas": true`. Cada oculta tiene `despuesDe`
+(ids tras los que puede sonar) y `probabilidad` (0 a 1). Todos los oyentes ven
+las mismas apariciones.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Locutor
 
-### Code Splitting
+Se configura en la sección `locutor` de `radio.json` (`"activo": false` lo apaga). Hay dos tipos de clips:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Para todos (en la programación):** `cunas` suenan cada `cadaCanciones` canciones, y una
+  canción puede tener `"presentacion": { "archivo": "...", "texto": "..." }`, que suena justo antes de ella.
+  Todos los oyentes los escuchan al mismo tiempo.
+- **Para cada visitante:** al sintonizar, el locutor saluda según la hora de quien escucha
+  (`saludos.madrugada`, `manana`, `tarde`, `noche`) o con `saludos.regreso` si ya había entrado
+  antes. Mientras siga escuchando, cada `compania.cadaMinutos` le dice algo de `compania.archivos`.
+  Mientras habla, la música baja a `musicaAlHablar` (0.25 = 25 %).
 
-### Analyzing the Bundle Size
+Los textos salen de `scripts/locutor-plantillas.json` (no edites los del locutor en `radio.json`
+a mano: se regeneran). Ahí están los saludos, la compañía, las cuñas, las plantillas para
+presentar canciones (`{titulo}`, `{album}`, `{tipo}`, `{anio}`, `{artista}`) y `pronunciar`,
+para decir bien nombres como KTV23.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Tu voz clonada se genera en tu PC con [Chatterbox](https://github.com/resemble-ai/chatterbox)
+(gratis, licencia MIT). Vive en la carpeta `../voz` (fuera del repo):
+`voz/.venv` es el entorno de Python y `voz/muestras/voz.wav` tu grabación de referencia.
 
-### Making a Progressive Web App
+```bash
+npm run locutor -- --voz       # crea con tu voz los audios que falten (≈1 min por frase en procesador)
+npm run locutor -- --limpiar   # borra audios que ya no se usan
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Cada audio se llama según su texto: si cambias una frase o agregas canciones, solo se generan las nuevas.
+`npm run locutor -- --demo` usa la voz de Windows en vez de la tuya, para probar rápido.
 
-### Advanced Configuration
+### Agregar una sección nueva
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Añade una entrada en `sitio.json` y crea su archivo. Tipos disponibles:
 
-### Deployment
+- `tarjetas`: lista de tarjetas con imagen, texto, etiquetas y enlaces (como `proyectos.json`)
+- `perfil`: foto, bio, habilidades y enlaces (como `perfil.json`)
+- `radio`: el reproductor
+- `discografia`: álbumes y canciones de `radio.json`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Ejemplo, una sección de videos:
 
-### `npm run build` fails to minify
+```json
+{ "id": "videos", "titulo": "Videos", "tipo": "tarjetas", "archivo": "videos.json" }
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Comandos
+
+```bash
+npm install        # una vez
+npm start          # ver en local: http://localhost:3000/ktv-23
+npm run locutor    # guion del locutor (LOCUTOR-GUION.md)
+npm run deploy     # calcular duraciones, compilar y publicar en GitHub Pages
+```

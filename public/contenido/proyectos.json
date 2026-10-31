@@ -1,0 +1,59 @@
+{
+  "titulo": "Proyectos de programación",
+  "intro": "Cosas que he construido: juegos, apps web, herramientas y pruebas técnicas.",
+  "items": [
+    {
+      "titulo": "KeNnyga Radio",
+      "descripcion": "Esta misma página: una radio en línea sincronizada donde todos escuchan lo mismo al mismo tiempo.",
+      "etiquetas": ["React", "Audio", "GitHub Pages"],
+      "imagen": "cover/ktv23-cover.webp",
+      "enlaces": [
+        { "texto": "Código", "url": "https://github.com/WilberHinestroza/ktv-23" }
+      ]
+    },
+    {
+      "titulo": "StreamClipper",
+      "descripcion": "Descripción pendiente: edita este texto en public/contenido/proyectos.json.",
+      "etiquetas": ["Python"],
+      "enlaces": [
+        { "texto": "Código", "url": "https://github.com/WilberHinestroza/streamclipper" }
+      ]
+    },
+    {
+      "titulo": "Orderflow",
+      "descripcion": "Prueba técnica. Descripción pendiente.",
+      "etiquetas": ["C#", ".NET"],
+      "enlaces": [
+        { "texto": "Código", "url": "https://github.com/WilberHinestroza/Orderflow_PruebaTecnica" }
+      ]
+    },
+    {
+      "titulo": "Football Career",
+      "descripcion": "Juego en Godot. Descripción pendiente.",
+      "etiquetas": ["Godot", "Juego"],
+      "enlaces": []
+    },
+    {
+      "titulo": "Solitario Pixel Art",
+      "descripcion": "Solitario con estética pixel art hecho en Godot. Descripción pendiente.",
+      "etiquetas": ["Godot", "Juego", "Pixel art"],
+      "enlaces": []
+    },
+    {
+      "titulo": "PayrollKonecta",
+      "descripcion": "Sistema de nómina. Descripción pendiente.",
+      "etiquetas": ["Java"],
+      "enlaces": [
+        { "texto": "Código", "url": "https://github.com/WilberHinestroza/PayrollKonecta" }
+      ]
+    },
+    {
+      "titulo": "CrudKonectaPT",
+      "descripcion": "CRUD web. Descripción pendiente.",
+      "etiquetas": ["JavaScript"],
+      "enlaces": [
+        { "texto": "Código", "url": "https://github.com/WilberHinestroza/CrudKonectaPT" }
+      ]
+    }
+  ]
+}

@@ -8,8 +8,6 @@
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.3.8",
-    "framer-motion": "^12.23.12",
     "lucide-react": "^0.544.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -17,10 +15,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "duraciones": "node scripts/duraciones.mjs",
+    "locutor": "node scripts/locutor.mjs",
     "start": "react-scripts start",
+    "prebuild": "npm run duraciones",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "music-metadata": "^11.16.1"
   }
 }
