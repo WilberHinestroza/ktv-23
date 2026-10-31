@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ktv-23/static/css/main.a34c0016.css",
-    "main.js": "/ktv-23/static/js/main.d5b74243.js",
+    "main.css": "/ktv-23/static/css/main.7e32cd91.css",
+    "main.js": "/ktv-23/static/js/main.b773f3e3.js",
     "static/js/64.e25c5ea4.chunk.js": "/ktv-23/static/js/64.e25c5ea4.chunk.js",
     "static/js/898.0a11f1d0.chunk.js": "/ktv-23/static/js/898.0a11f1d0.chunk.js",
     "static/js/611.29d57f17.chunk.js": "/ktv-23/static/js/611.29d57f17.chunk.js",
     "static/js/150.35686d43.chunk.js": "/ktv-23/static/js/150.35686d43.chunk.js",
     "index.html": "/ktv-23/index.html",
-    "main.a34c0016.css.map": "/ktv-23/static/css/main.a34c0016.css.map",
-    "main.d5b74243.js.map": "/ktv-23/static/js/main.d5b74243.js.map",
+    "main.7e32cd91.css.map": "/ktv-23/static/css/main.7e32cd91.css.map",
+    "main.b773f3e3.js.map": "/ktv-23/static/js/main.b773f3e3.js.map",
     "64.e25c5ea4.chunk.js.map": "/ktv-23/static/js/64.e25c5ea4.chunk.js.map",
     "898.0a11f1d0.chunk.js.map": "/ktv-23/static/js/898.0a11f1d0.chunk.js.map",
     "611.29d57f17.chunk.js.map": "/ktv-23/static/js/611.29d57f17.chunk.js.map",
     "150.35686d43.chunk.js.map": "/ktv-23/static/js/150.35686d43.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a34c0016.css",
-    "static/js/main.d5b74243.js"
+    "static/css/main.7e32cd91.css",
+    "static/js/main.b773f3e3.js"
   ]
 }
