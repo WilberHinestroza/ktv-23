@@ -118,6 +118,17 @@ También se puede usar tu voz clonada con [Chatterbox](https://github.com/resemb
 (gratis, licencia MIT, ≈1 min por frase en procesador) con `npm run locutor -- --voz`. Vive en
 `../voz` (fuera del repo): `voz/.venv` es el entorno de Python y `voz/muestras/voz.wav` la grabación de referencia.
 
+### Lo de cada oyente
+
+Se guarda solo en el navegador de quien escucha (nada va a un servidor):
+
+- **Favoritas** (❤) y **avisos** (🔔 "avísame cuando suene"), con la próxima hora al aire en la pestaña **¿Cuándo?**
+- **Mi radio**: tiempo escuchado, canciones oídas y **logros** (están en `src/radio/oyente.js`).
+- **Temporizador para dormir**, **atajos de teclado** (`?` muestra la lista) y **dedicatorias**: un enlace
+  `#/radio?para=…&de=…&msg=…` que al abrirse muestra la carta.
+
+Más ideas, hechas y pendientes, en [IDEAS.md](IDEAS.md).
+
 ### Agregar una sección nueva
 
 Añade una entrada en `sitio.json` y crea su archivo. Tipos disponibles:

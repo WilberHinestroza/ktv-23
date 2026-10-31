@@ -286,12 +286,61 @@ export function crearProgramacion(radio) {
     return salida;
   }
 
+  // Lo que ya sonó antes de `ahoraMs`, del más reciente al más viejo.
+  function anteriores(ahoraMs = Date.now(), cantidad = 10) {
+    let { s, b, i } = ubicar(ahoraMs);
+    const salida = [];
+    while (salida.length < cantidad) {
+      i -= 1;
+      if (i < 0) {
+        b -= 1;
+        if (b < 0) {
+          s -= 1;
+          b = semana(s).length - 1;
+        }
+        i = semana(s)[b].items.length - 1;
+      }
+      const bloque = semana(s)[b];
+      const item = bloque.items[i];
+      salida.push({ cancion: item.cancion, inicioMs: aUTC(item.inicio), finMs: aUTC(item.fin), programa: bloque.programa });
+    }
+    return salida;
+  }
+
+  // Próxima vez que suena cada canción en los siguientes `dias`: Map id → inicio (UTC).
+  // Si está sonando ahora, cuenta su inicio actual.
+  function agenda(desdeMs = Date.now(), dias = 8) {
+    const limite = desdeMs + dias * DIA + desfase;
+    let { s, b, i } = ubicar(desdeMs);
+    const mapa = new Map();
+    for (;;) {
+      const bloques = semana(s);
+      const bloque = bloques[b];
+      const item = bloque.items[i];
+      if (item.inicio > limite) break;
+      const c = item.cancion;
+      if (!c.esLocutor && !c.esIntro && !c.oculta && !mapa.has(c.id)) mapa.set(c.id, aUTC(item.inicio));
+      i += 1;
+      if (i >= bloque.items.length) {
+        i = 0;
+        b += 1;
+        if (b >= bloques.length) {
+          b = 0;
+          s += 1;
+        }
+      }
+    }
+    return mapa;
+  }
+
   return {
     canciones,
     albumes: radio.albumes || [],
     duracionCiclo: canciones.reduce((t, c) => t + c.duracion, 0),
     enVivo: (ahoraMs = Date.now()) => proximas(ahoraMs, 1)[0],
     proximas,
+    anteriores,
+    agenda,
     parrilla,
   };
 }

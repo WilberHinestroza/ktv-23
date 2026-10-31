@@ -6,6 +6,7 @@ import RadioPagina from "./pages/RadioPagina";
 import Tarjetas from "./pages/Tarjetas";
 import Perfil from "./pages/Perfil";
 import Discografia from "./pages/Discografia";
+import { Ambiente, Atajos, DedicatoriaRecibida, Notificacion } from "./components/Extras";
 
 // Tipos de sección que se pueden usar en public/contenido/sitio.json
 const PAGINAS = {
@@ -16,7 +17,8 @@ const PAGINAS = {
 };
 
 function useHash() {
-  const leer = () => window.location.hash.replace(/^#\/?/, "");
+  // "#/radio?para=…" → "radio" (lo que va después de ? son datos, como una dedicatoria)
+  const leer = () => window.location.hash.replace(/^#\/?/, "").split("?")[0];
   const [hash, setHash] = useState(leer);
   useEffect(() => {
     const alCambiar = () => {
@@ -69,6 +71,10 @@ export default function App() {
       </main>
 
       {seccion.tipo !== "radio" && <MiniRadio />}
+      <Notificacion />
+      <DedicatoriaRecibida />
+      <Atajos />
+      <Ambiente />
     </RadioProvider>
   );
 }

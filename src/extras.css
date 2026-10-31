@@ -1,0 +1,144 @@
+/* Estilos de lo nuevo: ambiente por hora, visualizador, favoritos, dedicatorias, logros… */
+
+/* ===== Ambiente según la hora de quien visita ===== */
+:root { --acento-1: #ff2d3b; --acento-2: #ff9a3b; --brillo: rgba(255, 45, 59, 0.12); }
+:root[data-momento="madrugada"] { --acento-1: #7c4dff; --acento-2: #00ffea; --brillo: rgba(124, 77, 255, 0.16); }
+:root[data-momento="manana"] { --acento-1: #ff9a3b; --acento-2: #ffd23b; --brillo: rgba(255, 170, 59, 0.13); }
+:root[data-momento="noche"] { --acento-1: #ff2d3b; --acento-2: #ff3bb0; --brillo: rgba(255, 45, 140, 0.13); }
+.reproductor {
+  isolation: isolate;
+  background: radial-gradient(circle at 50% 35%, var(--brillo), transparent 60%);
+}
+.progreso-relleno, .mini-barra { background: linear-gradient(90deg, var(--acento-1), var(--acento-2)); }
+
+/* ===== Visualizador ===== */
+.visualizador {
+  position: absolute; left: 0; right: 0; bottom: 32px; height: 150px; width: 100%;
+  z-index: -1; pointer-events: none; opacity: 0.55;
+  -webkit-mask-image: linear-gradient(to top, #000 30%, transparent);
+  mask-image: linear-gradient(to top, #000 30%, transparent);
+}
+.portada {
+  scale: calc(1 + var(--graves, 0) * 0.035);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.14), 0 0 calc(10px + var(--graves, 0) * 70px) var(--acento-1), 0 0 0 1px var(--borde);
+}
+
+/* ===== Botones nuevos del reproductor ===== */
+.controles-extra { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; justify-content: center; }
+.boton-icono {
+  display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; cursor: pointer;
+  background: transparent; color: var(--texto-suave); border: 1px solid var(--borde); flex-shrink: 0;
+  transition: color 0.15s, border-color 0.15s, transform 0.15s;
+}
+.boton-icono:hover { color: var(--texto); border-color: var(--texto-suave); }
+.boton-icono:active { transform: scale(0.88); }
+.boton-icono.chico { width: 30px; height: 30px; border-color: transparent; }
+.boton-icono.activo-rojo { color: var(--rojo); border-color: var(--rojo); }
+.boton-icono.chico.activo-rojo { border-color: transparent; }
+.activo-cian { color: var(--cian) !important; border-color: var(--cian) !important; }
+.boton-icono.chico.activo-cian { border-color: transparent !important; }
+.mini-radio .boton-icono { width: 34px; height: 34px; }
+
+.temporizador { position: relative; }
+.menu-flotante {
+  position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); z-index: 20;
+  display: grid; gap: 4px; min-width: 170px; padding: 10px; border-radius: 12px;
+  background: #121214; border: 1px solid var(--borde); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: aparecer 0.15s ease;
+}
+.menu-flotante p { margin: 0 0 4px; font-size: 0.78rem; color: var(--texto-suave); }
+.menu-flotante button {
+  background: var(--panel-2); border: 1px solid transparent; color: var(--texto); border-radius: 8px;
+  padding: 6px 10px; cursor: pointer; font-size: 0.85rem;
+}
+.menu-flotante button:hover:not(:disabled) { border-color: var(--cian); }
+.menu-flotante button:disabled { opacity: 0.4; cursor: not-allowed; }
+.menu-flotante small { color: var(--texto-suave); font-size: 0.72rem; }
+
+/* ===== Dedicatorias ===== */
+.dedicatoria-caja { display: grid; gap: 10px; text-align: left; }
+.dedicatoria-caja h3 { margin: 0; }
+.dedicatoria-caja p { margin: 0; font-size: 0.88rem; }
+.modal-caja textarea {
+  width: 100%; padding: 10px; border-radius: 8px; resize: vertical; font: inherit; font-family: var(--fuente-texto);
+  background: #151515; color: var(--texto); border: 1px solid var(--rojo);
+}
+.dedicatoria-caja input { text-align: left; font-family: var(--fuente-texto); }
+.contador { text-align: right; color: var(--texto-suave); font-size: 0.72rem; margin-top: -6px; }
+.dedicatoria-recibida { border-color: var(--acento-2); }
+.dedicatoria-recibida .sobre { font-size: 3rem; animation: flotar 2.4s ease-in-out infinite; }
+.dedicatoria-recibida blockquote {
+  margin: 12px 0; padding: 12px 16px; border-left: 3px solid var(--acento-1); text-align: left;
+  font-family: var(--fuente-titulo); font-size: 1.25rem; color: var(--texto); background: rgba(255, 255, 255, 0.03);
+  border-radius: 0 10px 10px 0; overflow-wrap: anywhere;
+}
+
+/* ===== Avisos en pantalla ===== */
+.notificacion {
+  position: fixed; top: 76px; right: 16px; z-index: 120; max-width: min(380px, calc(100vw - 32px));
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 14px;
+  background: rgba(18, 18, 20, 0.95); border: 1px solid var(--acento-1); backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--brillo); font-size: 0.9rem;
+  animation: entrar 0.35s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+.notificacion-icono { font-size: 1.4rem; }
+.notificacion button {
+  background: var(--texto); color: #000; border: none; border-radius: 999px; padding: 5px 12px; cursor: pointer; font-weight: 600;
+}
+.notificacion .cerrar { background: transparent; color: var(--texto-suave); padding: 4px; display: grid; place-items: center; }
+
+/* ===== Atajos ===== */
+.lista-atajos { display: grid; gap: 8px; margin: 16px 0; text-align: left; font-family: var(--fuente-texto); }
+.lista-atajos div { display: flex; align-items: center; gap: 12px; }
+.lista-atajos dt { width: 90px; text-align: right; }
+.lista-atajos dd { margin: 0; color: var(--texto-suave); font-size: 0.9rem; }
+kbd {
+  display: inline-block; padding: 2px 8px; border-radius: 6px; font-family: ui-monospace, monospace; font-size: 0.8rem;
+  background: var(--panel-2); border: 1px solid var(--borde); border-bottom-width: 3px; color: var(--texto);
+}
+
+/* El código secreto */
+body.modo-interferencia #root { animation: interferencia 0.45s steps(2) infinite; }
+body.modo-interferencia .portada img { filter: invert(1) hue-rotate(180deg) contrast(1.4); }
+body.modo-interferencia .scanlines { background: repeating-linear-gradient(0deg, rgba(0, 255, 234, 0.25) 0 2px, transparent 2px 4px); }
+
+/* ===== Pestañas nuevas de la programación ===== */
+.pestanas { overflow-x: auto; scrollbar-width: none; }
+.pestanas::-webkit-scrollbar { display: none; }
+.pestanas button { white-space: nowrap; padding: 6px 8px; flex: 1 0 auto; }
+.programacion li .boton-icono.chico { margin-left: auto; }
+.programacion li .boton-icono.chico + .boton-icono.chico { margin-left: 0; }
+.buscador {
+  display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px;
+  background: var(--fondo); border: 1px solid var(--borde); color: var(--texto-suave);
+}
+.buscador:focus-within { border-color: var(--cian); }
+.buscador input { flex: 1; min-width: 0; background: none; border: none; outline: none; color: var(--texto); font: inherit; font-size: 0.9rem; }
+.chips-temas { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.chips-temas .chip { padding: 3px 10px; font-size: 0.75rem; }
+.programacion li.vacio { color: var(--texto-suave); font-size: 0.85rem; }
+.estadisticas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
+.estadisticas div {
+  display: flex; flex-direction: column; align-items: center; padding: 10px 6px; border-radius: 12px;
+  background: var(--fondo); border: 1px solid var(--borde); text-align: center;
+}
+.estadisticas strong { font-family: var(--fuente-tech); font-size: 0.95rem; color: var(--cian); }
+.estadisticas small { color: var(--texto-suave); font-size: 0.7rem; }
+.mini-titulo { font-family: var(--fuente-tech); font-size: 0.8rem; letter-spacing: 0.08em; margin: 18px 0 6px; }
+.logros { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.logros li { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border-radius: 10px; opacity: 0.45; background: var(--fondo); }
+.logros li.ok { opacity: 1; border: 1px solid rgba(0, 255, 234, 0.25); }
+.logro-icono { font-size: 1.3rem; width: 28px; text-align: center; }
+.logros strong { display: block; font-size: 0.85rem; }
+.logros small { color: var(--texto-suave); font-size: 0.72rem; }
+
+@keyframes flotar { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-8px) rotate(4deg); } }
+@keyframes entrar { from { opacity: 0; transform: translateY(-14px) scale(0.95); } to { opacity: 1; transform: none; } }
+@keyframes interferencia {
+  0% { filter: hue-rotate(0deg); transform: translate(0); }
+  50% { filter: hue-rotate(90deg) saturate(2); transform: translate(-3px, 1px) skewX(1deg); }
+  100% { filter: hue-rotate(200deg); transform: translate(2px, -1px); }
+}
+@media (max-width: 640px) {
+  .notificacion { top: auto; bottom: 86px; left: 16px; right: 16px; max-width: none; }
+}

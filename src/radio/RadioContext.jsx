@@ -1,11 +1,17 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 import { crearProgramacion } from "./programacion";
 import { cargarJSON, ruta } from "../contenido";
+import { guardar, leer, LOGROS } from "./oyente";
 
 const RadioContext = createContext(null);
 export const useRadio = () => useContext(RadioContext);
 
 const DESFASE_MAX = 2.5; // segundos de diferencia tolerados antes de corregir
+const FUNDIDO_SUENO = 30000; // el temporizador baja el volumen poco a poco los últimos 30 s
+
+// En iPhone/iPad el analizador de audio corta el sonido con la pantalla bloqueada: ahí no se usa
+const esIOS = () =>
+  /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
 function leerVolumen() {
   try {
@@ -37,6 +43,26 @@ export function RadioProvider({ children }) {
   const [versionNueva, setVersionNueva] = useState(false);
   const datosRef = useRef(null); // radio.json cargado, para saber si cambió
   const sincronizarRef = useRef(null);
+
+  // Lo personal de cada oyente (solo en su navegador)
+  const [favoritos, setFavoritos] = useState(() => leer("radio-favoritos", []));
+  const [avisos, setAvisos] = useState(() => leer("radio-avisos", []));
+  const [logros, setLogros] = useState(() => leer("radio-logros", {}));
+  const escuchaRef = useRef(leer("radio-escucha", { segundos: 0, canciones: [] }));
+  const [escucha, setEscucha] = useState(escuchaRef.current);
+  const [notificacion, setNotificacion] = useState(null); // { icono, texto, accion? }
+  const [apagarEn, setApagarEn] = useState(null); // temporizador para dormir (ms)
+  const analizadorRef = useRef(null);
+  const estadoRef = useRef("apagado");
+  estadoRef.current = estado;
+
+  // Volumen de la música. Con el analizador del visualizador conectado, Chrome ignora
+  // audio.volume, así que el volumen pasa por un nodo de ganancia.
+  const gananciaRef = useRef(null);
+  const volumenMusica = useCallback((v) => {
+    if (gananciaRef.current) gananciaRef.current.gain.value = v;
+    else if (audioRef.current) audioRef.current.volume = v;
+  }, []);
 
   // Cargar la programación
   useEffect(() => {
@@ -155,7 +181,7 @@ export function RadioProvider({ children }) {
     const voz = new Audio();
     vozRef.current = voz;
     const alCallar = () => {
-      audio.volume = volumenRef.current; // la música vuelve a su volumen
+      volumenMusica(volumenRef.current); // la música vuelve a su volumen
       setHablando(null);
     };
     voz.addEventListener("ended", alCallar);
@@ -171,7 +197,7 @@ export function RadioProvider({ children }) {
       audio.removeEventListener("ended", alTerminar);
       audio.removeEventListener("error", alFallar);
     };
-  }, [sincronizar]);
+  }, [sincronizar, volumenMusica]);
 
   // Revisión periódica: corrige desfases (pestaña en segundo plano, red lenta, etc.)
   useEffect(() => {
@@ -191,15 +217,15 @@ export function RadioProvider({ children }) {
     // No hablar encima de una cuña o presentación que ya está sonando para todos
     if (progRef.current?.enVivo().cancion.esLocutor) return;
     const clip = disponibles[Math.floor(Math.random() * disponibles.length)];
-    audio.volume = volumenRef.current * (loc.musicaAlHablar ?? 0.25);
+    volumenMusica(volumenRef.current * (loc.musicaAlHablar ?? 0.25));
     voz.volume = volumenRef.current;
     voz.src = ruta(clip.archivo);
     setHablando({ texto: clip.texto || "…", nombre: clip.locutor || loc.nombre });
     voz.play().catch(() => {
-      audio.volume = volumenRef.current;
+      volumenMusica(volumenRef.current);
       setHablando(null);
     });
-  }, []);
+  }, [volumenMusica]);
 
   // Saludo según la hora de quien escucha, o "bienvenido de vuelta" si ya vino antes.
   const saludar = useCallback(() => {
@@ -225,24 +251,56 @@ export function RadioProvider({ children }) {
     return () => clearInterval(id);
   }, [sintonizado, radio, hablar]);
 
+  // El visualizador lee la música con un analizador. Se crea dentro del clic de sintonizar
+  // porque el navegador solo deja arrancar el audio con un gesto de quien escucha.
+  const prepararAnalizador = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio || esIOS()) return;
+    try {
+      if (!analizadorRef.current) {
+        const Contexto = window.AudioContext || window.webkitAudioContext;
+        if (!Contexto) return;
+        const ctx = new Contexto();
+        const fuente = ctx.createMediaElementSource(audio);
+        const analizador = ctx.createAnalyser();
+        analizador.fftSize = 256;
+        analizador.smoothingTimeConstant = 0.8;
+        const ganancia = ctx.createGain();
+        ganancia.gain.value = audio.volume;
+        audio.volume = 1;
+        fuente.connect(analizador);
+        analizador.connect(ganancia);
+        ganancia.connect(ctx.destination);
+        gananciaRef.current = ganancia;
+        analizadorRef.current = analizador;
+      }
+      if (analizadorRef.current.context.state === "suspended") analizadorRef.current.context.resume();
+    } catch {
+      // sin analizador: el visualizador se mueve solo
+    }
+  }, []);
+
   const sintonizar = useCallback(() => {
     sintonizadoRef.current = true;
     setSintonizado(true);
+    prepararAnalizador();
     sincronizar();
     saludar(); // dentro del mismo clic, para que el navegador deje sonar la voz
-  }, [sincronizar, saludar]);
+  }, [sincronizar, saludar, prepararAnalizador]);
 
   const apagar = useCallback(() => {
     sintonizadoRef.current = false;
     setSintonizado(false);
     setEstado("apagado");
+    setApagarEn(null);
     audioRef.current?.pause();
+    volumenMusica(volumenRef.current);
     if (vozRef.current && !vozRef.current.paused) {
       vozRef.current.pause();
-      if (audioRef.current) audioRef.current.volume = volumenRef.current;
+      volumenMusica(volumenRef.current);
       setHablando(null);
     }
-  }, []);
+  }, [volumenMusica]);
 
   const setVolumen = useCallback((v) => {
     setVolumenState(v);
@@ -251,15 +309,143 @@ export function RadioProvider({ children }) {
     const hablandoAhora = voz && !voz.paused;
     if (voz) voz.volume = v;
     if (audioRef.current) {
-      audioRef.current.volume = hablandoAhora ? v * (radioRef.current?.locutor?.musicaAlHablar ?? 0.25) : v;
+      volumenMusica(hablandoAhora ? v * (radioRef.current?.locutor?.musicaAlHablar ?? 0.25) : v);
     }
     try {
       localStorage.setItem("radio-volumen", String(v));
     } catch {}
+  }, [volumenMusica]);
+
+  // ---- Lo personal: avisos en pantalla, logros, favoritos, recordatorios, temporizador ----
+
+  const notificar = useCallback((n) => setNotificacion({ ...n, id: Date.now() }), []);
+  useEffect(() => {
+    if (!notificacion) return;
+    const id = setTimeout(() => setNotificacion(null), notificacion.accion ? 12000 : 6000);
+    return () => clearTimeout(id);
+  }, [notificacion]);
+
+  const logrosRef = useRef(logros);
+  const desbloquear = useCallback(
+    (id) => {
+      if (logrosRef.current[id]) return;
+      const logro = LOGROS.find((l) => l.id === id);
+      if (!logro) return;
+      logrosRef.current = { ...logrosRef.current, [id]: Date.now() };
+      guardar("radio-logros", logrosRef.current);
+      setLogros(logrosRef.current);
+      notificar({ icono: logro.icono, texto: `Logro desbloqueado: ${logro.titulo}` });
+    },
+    [notificar]
+  );
+
+  const favoritosRef = useRef(favoritos);
+  const alternarFavorito = useCallback(
+    (id) => {
+      const lista = favoritosRef.current;
+      const nueva = lista.includes(id) ? lista.filter((x) => x !== id) : [...lista, id];
+      favoritosRef.current = nueva;
+      guardar("radio-favoritos", nueva);
+      setFavoritos(nueva);
+      if (nueva.length >= 5) desbloquear("fan");
+    },
+    [desbloquear]
+  );
+
+  const avisosRef = useRef(avisos);
+  const cambiarAvisos = useCallback((nueva) => {
+    avisosRef.current = nueva;
+    guardar("radio-avisos", nueva);
+    setAvisos(nueva);
   }, []);
+  const alternarAviso = useCallback(
+    (id) => {
+      // Pedir permiso para avisar con la pestaña en segundo plano (si lo niega, igual avisa en la página)
+      if ("Notification" in window && Notification.permission === "default") {
+        Notification.requestPermission().catch(() => {});
+      }
+      const lista = avisosRef.current;
+      cambiarAvisos(lista.includes(id) ? lista.filter((x) => x !== id) : [...lista, id]);
+    },
+    [cambiarAvisos]
+  );
+
+  const programarApagado = useCallback(
+    (minutos) => {
+      if (!minutos) {
+        setApagarEn(null);
+        volumenMusica(volumenRef.current);
+        return;
+      }
+      setApagarEn(Date.now() + minutos * 60000);
+      desbloquear("dormilon");
+    },
+    [desbloquear, volumenMusica]
+  );
+
+  // Cada medio segundo: tiempo escuchado y temporizador para dormir
+  const ultimoGuardadoRef = useRef(0);
+  useEffect(() => {
+    if (apagarEn) {
+      const restante = apagarEn - ahora;
+      const audio = audioRef.current;
+      if (restante <= 0) {
+        apagar();
+        notificar({ icono: "🌙", texto: "Buenas noches. La radio se apagó con el temporizador." });
+      } else if (restante < FUNDIDO_SUENO && audio && vozRef.current?.paused) {
+        volumenMusica(volumenRef.current * (restante / FUNDIDO_SUENO));
+      }
+    }
+    if (estadoRef.current !== "sonando") return;
+    const e = escuchaRef.current;
+    e.segundos += 0.5;
+    if (ahora - ultimoGuardadoRef.current > 10000) {
+      ultimoGuardadoRef.current = ahora;
+      guardar("radio-escucha", e);
+      setEscucha({ ...e });
+      if (e.segundos >= 1800) desbloquear("media-hora");
+      if (e.segundos >= 3600) desbloquear("hora");
+      if (e.segundos >= 36000) desbloquear("diez-horas");
+      const hora = new Date(ahora).getHours();
+      if (hora < 5) desbloquear("buho");
+      else if (hora < 8) desbloquear("madrugador");
+    }
+  }, [ahora]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const prog = progRef.current;
   const enVivo = prog ? prog.enVivo(ahora) : null;
+  const enVivoId = enVivo?.cancion.id;
+
+  // Cuando empieza una canción: contarla como oída y avisar si alguien pidió que le avisaran
+  useEffect(() => {
+    if (!enVivo) return;
+    const { cancion } = enVivo;
+    if (sintonizado) {
+      desbloquear("primera");
+      if (cancion.oculta) desbloquear("senal");
+      if (!cancion.esLocutor && !cancion.esIntro && !cancion.oculta) {
+        const e = escuchaRef.current;
+        if (!e.canciones.includes(cancion.id)) {
+          e.canciones = [...e.canciones, cancion.id];
+          guardar("radio-escucha", e);
+          setEscucha({ ...e });
+          if (e.canciones.length >= 25) desbloquear("coleccionista");
+          if (e.canciones.length >= 75) desbloquear("enciclopedia");
+        }
+      }
+    }
+    if (avisosRef.current.includes(cancion.id)) {
+      cambiarAvisos(avisosRef.current.filter((x) => x !== cancion.id));
+      notificar({ icono: "🔔", texto: `¡Está sonando ${cancion.titulo}!`, accion: sintonizado ? null : "sintonizar" });
+      if (document.visibilityState !== "visible" && "Notification" in window && Notification.permission === "granted") {
+        try {
+          new Notification(`Sonando ahora: ${cancion.titulo}`, { body: radioRef.current?.nombre, icon: ruta(cancion.portada) });
+        } catch {
+          // algunos celulares solo permiten notificaciones desde un service worker
+        }
+      }
+    }
+  }, [enVivoId, sintonizado]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // La pestaña muestra lo que suena mientras escuchas
   useEffect(() => {
@@ -299,6 +485,21 @@ export function RadioProvider({ children }) {
     setVolumen,
     hablando,
     versionNueva,
+    anteriores: (cantidad) => (prog ? prog.anteriores(ahora, cantidad) : []),
+    agenda: (dias) => (prog ? prog.agenda(ahora, dias) : new Map()),
+    obtenerAnalizador: () => analizadorRef.current,
+    favoritos,
+    alternarFavorito,
+    avisos,
+    alternarAviso,
+    logros,
+    desbloquear,
+    escucha,
+    notificacion,
+    notificar,
+    cerrarNotificacion: () => setNotificacion(null),
+    apagarEn,
+    programarApagado,
   };
 
   return <RadioContext.Provider value={valor}>{children}</RadioContext.Provider>;

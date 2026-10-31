@@ -1,6 +1,7 @@
 import { Play, Square } from "lucide-react";
 import { useRadio } from "../radio/RadioContext";
 import { ruta } from "../contenido";
+import { BotonFavorito } from "./Extras";
 
 // Barra fija abajo que mantiene la radio a mano en las demás secciones.
 export default function MiniRadio() {
@@ -21,6 +22,7 @@ export default function MiniRadio() {
           {hablando ? `🎙 ${hablando.nombre || "Locutor"} te está hablando…` : cancion.artista}
         </span>
       </a>
+      <BotonFavorito cancion={cancion} chico />
       <button
         className="boton-redondo"
         onClick={sintonizado ? apagar : sintonizar}

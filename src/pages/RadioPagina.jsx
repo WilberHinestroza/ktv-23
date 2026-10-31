@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { AudioLines, Files, Mic, Play, Radio, Share2, Square, Volume2, VolumeX } from "lucide-react";
 import { useRadio } from "../radio/RadioContext";
 import { ruta } from "../contenido";
+import { BotonFavorito, Dedicar, Temporizador, Visualizador } from "../components/Extras";
+import { CuandoSuena, MiRadio, YaSono } from "../components/PanelesRadio";
 
 const formatoTiempo = (seg) => {
   if (!Number.isFinite(seg) || seg < 0) return "0:00";
@@ -129,7 +131,12 @@ export default function RadioPagina() {
               onChange={(e) => setVolumen(parseFloat(e.target.value))}
             />
           </label>
+          <BotonFavorito cancion={cancion} />
+        </div>
+        <div className="controles-extra">
           <Compartir cancion={cancion} radio={radio} />
+          <Dedicar cancion={cancion} />
+          <Temporizador />
         </div>
         <p className={`estado estado-${estado}`} aria-live="polite">
           {TEXTO_ESTADO[estado]}
@@ -148,6 +155,7 @@ export default function RadioPagina() {
           </p>
         )}
 
+        <Visualizador />
         <Ticker radio={radio} />
       </section>
 
@@ -160,31 +168,36 @@ export default function RadioPagina() {
 function Programacion() {
   const { radio, proximas, parrilla, sintonizado } = useRadio();
   const [vista, setVista] = useState("canciones");
+  const pestanas = [
+    ["canciones", "Siguientes"],
+    ["antes", "Ya sonó"],
+    ["parrilla", "Programas"],
+    ["buscar", "¿Cuándo?"],
+    ["mia", "Mi radio"],
+  ];
 
   return (
     <aside className="programacion">
       <h2>Programación</h2>
       <p className="programacion-sub">{radio.nombre} · en tu hora local</p>
       <div className="pestanas" role="tablist">
-        <button
-          role="tab"
-          aria-selected={vista === "canciones"}
-          className={vista === "canciones" ? "activo" : ""}
-          onClick={() => setVista("canciones")}
-        >
-          Siguientes
-        </button>
-        <button
-          role="tab"
-          aria-selected={vista === "parrilla"}
-          className={vista === "parrilla" ? "activo" : ""}
-          onClick={() => setVista("parrilla")}
-        >
-          Programas
-        </button>
+        {pestanas.map(([id, texto]) => (
+          <button
+            key={id}
+            role="tab"
+            aria-selected={vista === id}
+            className={vista === id ? "activo" : ""}
+            onClick={() => setVista(id)}
+          >
+            {texto}
+          </button>
+        ))}
       </div>
 
-      {vista === "canciones" ? (
+      {vista === "antes" && <YaSono />}
+      {vista === "buscar" && <CuandoSuena />}
+      {vista === "mia" && <MiRadio />}
+      {vista === "canciones" && (
         <ol>
           {proximas(12).map(({ cancion, inicioMs, programa }, i, lista) => (
             <li
@@ -210,7 +223,8 @@ function Programacion() {
             </li>
           ))}
         </ol>
-      ) : (
+      )}
+      {vista === "parrilla" && (
         <ol className="parrilla">
           {parrilla(8).map(({ programa, inicioMs, finMs }, i) => (
             <li key={`${programa.id}-${inicioMs}`} className={i === 0 ? "ahora" : ""}>
@@ -269,6 +283,8 @@ function Portada({ src, videoGlitch, titulo }) {
 }
 
 function Ticker({ radio }) {
+  const { parrilla } = useRadio();
+  const siguiente = parrilla(2)[1];
   const [items, setItems] = useState(radio.ticker || []);
 
   useEffect(() => {
@@ -287,6 +303,7 @@ function Ticker({ radio }) {
     <div className="ticker" aria-label="Noticias del canal">
       <div className="ticker-texto">
         {radio.nombre}
+        {siguiente && ` · Próximo programa: ${siguiente.programa.titulo} a las ${horaPrograma(siguiente.inicioMs)}`}
         {items.map((it, i) => (
           <span key={i}>
             {" · "}
@@ -386,6 +403,7 @@ function Archivos({ datos }) {
 function BotonEscondido({ imagenes }) {
   const [pos, setPos] = useState({ top: 50, left: 50 });
   const [imagen, setImagen] = useState(null);
+  const { desbloquear } = useRadio();
   const lista = useMemo(() => imagenes || [], [imagenes]);
 
   useEffect(() => {
@@ -399,7 +417,10 @@ function BotonEscondido({ imagenes }) {
       <button
         className="boton-escondido"
         style={{ top: `${pos.top}%`, left: `${pos.left}%` }}
-        onClick={() => setImagen(lista[Math.floor(Math.random() * lista.length)])}
+        onClick={() => {
+          setImagen(lista[Math.floor(Math.random() * lista.length)]);
+          desbloquear("detective");
+        }}
         tabIndex={-1}
         aria-hidden="true"
       />
