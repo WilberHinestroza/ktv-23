@@ -1,0 +1,4270 @@
+{
+  "nombre": "KeNnyga Radio 112.3 FM",
+  "zonaHoraria": "-05:00",
+  "portada": "cover/ktv23-cover.webp",
+  "videoGlitch": "cover/Rold/VideoA.mp4",
+  "enVivoUrl": "https://youtu.be/0oYSh7HUDng",
+  "albumes": [
+    {
+      "id": "ktv23",
+      "titulo": "KTV23",
+      "tipo": "Álbum",
+      "artista": "Wildberry On",
+      "fecha": null,
+      "genero": "",
+      "portada": "cover/ktv23-album.webp"
+    },
+    {
+      "id": "bananero",
+      "titulo": "BANANERO",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "fecha": "2026-07-19",
+      "genero": "",
+      "portada": "https://i.scdn.co/image/ab67616d0000b273cf5b871d8cc86b60cf75f904",
+      "spotify": "https://open.spotify.com/album/7sWTwOQ4A9KE3qMmFGXUa7",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_kRR4mwMWK9w25KYTPNa47yuZwRdfWgkoQ"
+    },
+    {
+      "id": "moneymaker",
+      "titulo": "MoneyMaker",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "fecha": "2026-05-19",
+      "genero": "",
+      "portada": "https://i.scdn.co/image/ab67616d0000b273278952300df0cd0294f821ef",
+      "spotify": "https://open.spotify.com/album/7oFPmmr22O11OVshhAnPl6",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_llAbUGN1qEJoUnzv8g8Fb9sNjWNllSsPE"
+    },
+    {
+      "id": "montuna",
+      "titulo": "Montuna",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On, Zhecho, Prisma G",
+      "fecha": "2026-02-13",
+      "genero": "",
+      "portada": "https://i.scdn.co/image/ab67616d0000b27355ada29e5db85c2d42a7445e",
+      "spotify": "https://open.spotify.com/album/2NpymWFYIxewa1t3ga7SI7"
+    },
+    {
+      "id": "kng",
+      "titulo": "KeNnyga Radio 112.3 FM",
+      "tipo": "Álbum",
+      "artista": "Wildberry On",
+      "fecha": "2026-01-25",
+      "genero": "",
+      "portada": "cover/ktv23-cover.webp",
+      "spotify": "https://open.spotify.com/album/7p5AlP8kjE07bsEWWINCpS",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_n-2d0Vv0Z0IRR3yBY_x4nzVJuL0yPvPuQ"
+    },
+    {
+      "id": "negro-visajoso",
+      "titulo": "NEGRO VISAJOSO",
+      "tipo": "Álbum",
+      "artista": "Wildberry On",
+      "anio": 2025,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/0oYSh7HUDng/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_m7QY8ZL_vX0fhBF7yL5nVyh9HFxhEdJHo"
+    },
+    {
+      "id": "elultimo23",
+      "titulo": "ELULTIMO23",
+      "tipo": "Álbum",
+      "artista": "Wildberry On",
+      "anio": 2024,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/YCCiYJIU2Xo/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mLDKNRG4bH8Fln61nztr5I1dSqtxc_zdc"
+    },
+    {
+      "id": "negro-mate",
+      "titulo": "Negro Mate",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2024,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/xhV6bnXQg6A/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_nrtqbLJgbd-1hTpAmTX5rbX6ODNQaGnPQ"
+    },
+    {
+      "id": "nomolestar",
+      "titulo": "NOMOLESTAR",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2024,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/M6DimrITASo/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mocZ9LBduAY9Nt4ZV_JormOd7Wwg6MkDE"
+    },
+    {
+      "id": "thinki",
+      "titulo": "THINKI",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2024,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/kbkfh3vbRLc/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mUaLYI-4VpwVk3dhavkcDBYWuWs_j7ZVk"
+    },
+    {
+      "id": "thoseboyz",
+      "titulo": "ThoseBoyz",
+      "tipo": "EP",
+      "artista": "Wildberry On",
+      "anio": 2023,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/sUh4n0v_iTo/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_kjucsKkbCrUiqcNHa-3DfdbVL2sK8VwlM"
+    },
+    {
+      "id": "missing-ep",
+      "titulo": "Missing EP",
+      "tipo": "EP",
+      "artista": "Wildberry On",
+      "anio": 2023,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/LXAJYJF78VY/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_l7nSL-vmRUifUdRxbukORaibVVOpuvebA"
+    },
+    {
+      "id": "momantai",
+      "titulo": "MOMANTAI",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2023,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/cKuqrsVEfBQ/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_l_86iptnGsQv0x2CxY7GnoRO4AUOz7sn4"
+    },
+    {
+      "id": "you-know-me",
+      "titulo": "YOU KNOW ME",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2023,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/GrktJiqvq5c/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_kTsvnm3LCSJbyp0A_fFu01By9BLxqboG4"
+    },
+    {
+      "id": "no-drama",
+      "titulo": "NO DRAMA",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2023,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/-L6muF4UNPw/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lZXQ_kSm2C23c1IQJKnuq0jRl2ATHt2Pg"
+    },
+    {
+      "id": "73",
+      "titulo": "73",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2023,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/2NB7fQQyjmE/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_miGASxTXtO2DoVn9pLsEa58sacAeh-RdI"
+    },
+    {
+      "id": "pa-adulterio",
+      "titulo": "Pa´ Adulterio",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2023,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/TopZ3J12jA4/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lVtm22QeqEJOo0-W54ZksnFuhgYBX7A5s"
+    },
+    {
+      "id": "devilmaycry",
+      "titulo": "DevilMayCry",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2023,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/oDnBLN1Bnus/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mX0Xw12zwEhzasmTERl26WiQ5c6ZOevFI"
+    },
+    {
+      "id": "hyperlove",
+      "titulo": "HyperLove",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2023,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/-d6bcRz3wnc/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_loxKFSm66u7RjIG02WdoJrxoNf7ZOUgmw"
+    },
+    {
+      "id": "tfs2k22",
+      "titulo": "TFS2k22",
+      "tipo": "Álbum",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/0XAbRyIHSxs/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lGN889UlLfz29H-9na2mXSasqaFhTkZQM"
+    },
+    {
+      "id": "frezko-gold",
+      "titulo": "FrezKo Gold",
+      "tipo": "Álbum",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/3LQisVrDnbc/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lMsXYo8icPa6u9rLHe1Rl9nTSSq6kP3xg"
+    },
+    {
+      "id": "money",
+      "titulo": "Money",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/zpaEJBBQp9k/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_nitscZCxTzkRjGuKHnML4Dk4whbk_3SmQ"
+    },
+    {
+      "id": "rocky",
+      "titulo": "Rocky",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/428VLfajf-s/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_ntT6NagXe9TOewXZK9iZfvA9pT85X-OKk"
+    },
+    {
+      "id": "relajao",
+      "titulo": "Relajao",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/ra6gGCAqI2E/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_nZv7Rqy56h3VP54zuNMcfpO8IhB6Zm9UA"
+    },
+    {
+      "id": "ninja",
+      "titulo": "NINJA",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/0QnhIxI-wKQ/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_nzHCuPlWKK-ZMefVI5FQK66JLUGtYa6g8"
+    },
+    {
+      "id": "3t",
+      "titulo": "3T",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/-tDz9BT8d44/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mJDB90VS6OnaY0It_ZHtRXxtMYbYX6peQ"
+    },
+    {
+      "id": "ella-tiene-un-flow",
+      "titulo": "Ella Tiene un Flow",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/WSXYSqiTa_0/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_kCiAv9gz8Prhx9pa_qeLCEZ1H1mGCG_14"
+    },
+    {
+      "id": "disko",
+      "titulo": "DISKO",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/0fia2xIFolg/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_n_M6UzMROlYdAv6Giks55cigJtWCX-gBU"
+    },
+    {
+      "id": "hi-fi",
+      "titulo": "Hi Fi",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2022,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/c3k-ox3EPFA/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mNFoD3wERKZ5ZYFzRiKISim81uw5wEohQ"
+    },
+    {
+      "id": "tb2a",
+      "titulo": "TB2A",
+      "tipo": "Álbum",
+      "artista": "Wildberry On",
+      "anio": 2021,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/TNyRlQv7bgI/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mQnZlMsanspR2GX2LGhxQ6Wmx3PjmsqwU"
+    },
+    {
+      "id": "wave-girl",
+      "titulo": "Wave Girl",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2021,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/gdmOIqXCz2M/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_l2-Nyg9gJ1FKICcRs5ZuRLyRd-3IV5Vh8"
+    },
+    {
+      "id": "flow-masoquista",
+      "titulo": "Flow Masoquista",
+      "tipo": "Sencillo",
+      "artista": "Wildberry On",
+      "anio": 2021,
+      "genero": "",
+      "portada": "https://i.ytimg.com/vi/1YAcljkAoG8/hqdefault.jpg",
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mVzPFX_f1J1p1Ro44VkNhp5JneG4vH_Fs"
+    }
+  ],
+  "programaGeneral": {
+    "titulo": "Programación general",
+    "descripcion": "Todas las canciones, en orden.",
+    "orden": "lista"
+  },
+  "programas": [
+    {
+      "id": "madrugada",
+      "titulo": "Madrugada KeNnyga",
+      "descripcion": "Mezcla aleatoria para trasnochar.",
+      "desde": "00:00",
+      "hasta": "06:00",
+      "orden": "mezcla"
+    },
+    {
+      "id": "album-completo",
+      "titulo": "El álbum completo",
+      "descripcion": "KeNnyga Radio 112.3 FM de principio a fin.",
+      "desde": "20:00",
+      "hasta": "22:00",
+      "albumes": [
+        "kng"
+      ],
+      "orden": "lista"
+    },
+    {
+      "id": "ktv23-estreno",
+      "titulo": "Estreno: KTV23",
+      "descripcion": "El nuevo álbum, completo.",
+      "desde": "18:00",
+      "hasta": "20:00",
+      "albumes": [
+        "ktv23"
+      ],
+      "orden": "lista"
+    }
+  ],
+  "locutor": {
+    "activo": true,
+    "nombre": "Wildberry",
+    "musicaAlHablar": 0.25,
+    "saludos": {
+      "madrugada": [
+        {
+          "archivo": "locutor/saludo-madrugada-ea6d71b78b.mp3",
+          "texto": "Todavía despierto, eh. Bienvenido a KeNnyga Radio, 112.3. A esta hora la señal llega más clara.",
+          "dicho": "Todavía despierto, eh. Bienvenido a Keniga Radio, ciento doce punto tres. A esta hora la señal llega más clara.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-madrugada-33736046f4.mp3",
+          "texto": "Madrugada en KeNnyga Radio. Aquí no se apaga nada. Quédate, que esto apenas empieza.",
+          "dicho": "Madrugada en Keniga Radio. Aquí no se apaga nada. Quédate, que esto apenas empieza.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-madrugada-66e1bbf7b6.mp3",
+          "texto": "Las luces apagadas y la radio prendida. Así es como se escucha esto. Bienvenido.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-madrugada-1a54d92b65.mp3",
+          "texto": "Si estás despierto a esta hora, es por algo. Ponte cómodo, estás en KeNnyga Radio.",
+          "dicho": "Si estás despierto a esta hora, es por algo. Ponte cómodo, estás en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-madrugada-a28dc43517.mp3",
+          "texto": "Madrugada de sábado. Los que no duermen saben dónde encontrarnos. KeNnyga Radio.",
+          "dicho": "Madrugada de sábado. Los que no duermen saben dónde encontrarnos. Keniga Radio.",
+          "dias": [
+            6
+          ],
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-madrugada-87a5a3fa31.mp3",
+          "texto": "Domingo de madrugada y tú aquí. Eso es lealtad. Bienvenido a la frecuencia.",
+          "dias": [
+            0
+          ],
+          "duracion": null
+        }
+      ],
+      "manana": [
+        {
+          "archivo": "locutor/saludo-manana-6614ad07de.mp3",
+          "texto": "Buenos días. Estás sintonizando KeNnyga Radio, 112.3. Arrancamos el día con lo mejor de Wildberry.",
+          "dicho": "Buenos días. Estás sintonizando Keniga Radio, ciento doce punto tres. Arrancamos el día con lo mejor de Wildberry.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-manana-78004ea4bc.mp3",
+          "texto": "Buen día, bienvenido a la frecuencia. Sube el volumen que la mañana está buena.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-manana-0a8e500421.mp3",
+          "texto": "Buenos días. Antes del café, primero la radio. KeNnyga Radio, al aire.",
+          "dicho": "Buenos días. Antes del café, primero la radio. Keniga Radio, al aire.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-manana-4225a21137.mp3",
+          "texto": "Qué buena forma de empezar el día. Bienvenido a KeNnyga Radio.",
+          "dicho": "Qué buena forma de empezar el día. Bienvenido a Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-manana-5a4bd0fa14.mp3",
+          "texto": "Lunes, pero con buena música. Buenos días, estás en KeNnyga Radio.",
+          "dicho": "Lunes, pero con buena música. Buenos días, estás en Keniga Radio.",
+          "dias": [
+            1
+          ],
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-manana-6ee18071d0.mp3",
+          "texto": "Viernes por la mañana. Ya casi. Buenos días desde KeNnyga Radio.",
+          "dicho": "Viernes por la mañana. Ya casi. Buenos días desde Keniga Radio.",
+          "dias": [
+            5
+          ],
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-manana-54ccefc4bf.mp3",
+          "texto": "Domingo por la mañana. Sin afán. Bienvenido a KeNnyga Radio.",
+          "dicho": "Domingo por la mañana. Sin afán. Bienvenido a Keniga Radio.",
+          "dias": [
+            0
+          ],
+          "duracion": null
+        }
+      ],
+      "tarde": [
+        {
+          "archivo": "locutor/saludo-tarde-4a42be1ca5.mp3",
+          "texto": "Buenas tardes. Llegaste a KeNnyga Radio, 112.3. Acomódate, que la tarde la ponemos nosotros.",
+          "dicho": "Buenas tardes. Llegaste a Keniga Radio, ciento doce punto tres. Acomódate, que la tarde la ponemos nosotros.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-tarde-32370e0b16.mp3",
+          "texto": "Qué hubo, buenas tardes. Estás en la señal que te conecta. KeNnyga Radio.",
+          "dicho": "Qué hubo, buenas tardes. Estás en la señal que te conecta. Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-tarde-fdb8e64c5b.mp3",
+          "texto": "Buenas tardes. La tarde se hace corta con buena música. Bienvenido.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-tarde-9fe6835467.mp3",
+          "texto": "Llegaste en buen momento. Esto es KeNnyga Radio, y la tarde apenas se calienta.",
+          "dicho": "Llegaste en buen momento. Esto es Keniga Radio, y la tarde apenas se calienta.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-tarde-ef13d9e7ec.mp3",
+          "texto": "Viernes en la tarde. Ya sabes lo que eso significa. Bienvenido a KeNnyga Radio.",
+          "dicho": "Viernes en la tarde. Ya sabes lo que eso significa. Bienvenido a Keniga Radio.",
+          "dias": [
+            5
+          ],
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-tarde-0ac0f6fda6.mp3",
+          "texto": "Sábado en la tarde, y la radio sonando. Bienvenido a KeNnyga Radio.",
+          "dicho": "Sábado en la tarde, y la radio sonando. Bienvenido a Keniga Radio.",
+          "dias": [
+            6
+          ],
+          "duracion": null
+        }
+      ],
+      "noche": [
+        {
+          "archivo": "locutor/saludo-noche-37b77bd1dd.mp3",
+          "texto": "Buenas noches. KeNnyga Radio, 112.3, sigue al aire. Bienvenido a la noche.",
+          "dicho": "Buenas noches. Keniga Radio, ciento doce punto tres, sigue al aire. Bienvenido a la noche.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-noche-1aab0a04a2.mp3",
+          "texto": "La noche es nuestra. Estás escuchando KeNnyga Radio con Wildberry.",
+          "dicho": "La noche es nuestra. Estás escuchando Keniga Radio con Wildberry.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-noche-9e91949393.mp3",
+          "texto": "Buenas noches. Apaga lo demás y deja la radio. Estás en KeNnyga Radio.",
+          "dicho": "Buenas noches. Apaga lo demás y deja la radio. Estás en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-noche-553cbb29f5.mp3",
+          "texto": "Ya es de noche, y aquí la música no descansa. Bienvenido.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-noche-c086f6e667.mp3",
+          "texto": "Viernes en la noche. Sube eso. Estás en KeNnyga Radio.",
+          "dicho": "Viernes en la noche. Sube eso. Estás en Keniga Radio.",
+          "dias": [
+            5
+          ],
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-noche-e3c41f19f9.mp3",
+          "texto": "Sábado en la noche. La fiesta también está aquí. KeNnyga Radio, 112.3.",
+          "dicho": "Sábado en la noche. La fiesta también está aquí. Keniga Radio, ciento doce punto tres.",
+          "dias": [
+            6
+          ],
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-noche-81822ce65e.mp3",
+          "texto": "Domingo en la noche. Para cerrar la semana, buena música. Bienvenido.",
+          "dias": [
+            0
+          ],
+          "duracion": null
+        }
+      ],
+      "regreso": [
+        {
+          "archivo": "locutor/saludo-regreso-bfd3bb2c9f.mp3",
+          "texto": "Mira quién volvió. Bienvenido otra vez a KeNnyga Radio. Te estábamos esperando.",
+          "dicho": "Mira quién volvió. Bienvenido otra vez a Keniga Radio. Te estábamos esperando.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-regreso-3ae5c09648.mp3",
+          "texto": "De vuelta en la frecuencia. Ya sabes cómo es: aquí la señal nunca se corta.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-regreso-d85cc0d615.mp3",
+          "texto": "Otra vez por aquí. Eso quiere decir que te gustó. Bienvenido de vuelta.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-regreso-293aba9313.mp3",
+          "texto": "Volviste. La radio siguió sonando mientras no estabas. Ponte al día.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-regreso-8f2515fab6.mp3",
+          "texto": "Qué bueno verte otra vez. Bueno, escucharte. Bienvenido a KeNnyga Radio.",
+          "dicho": "Qué bueno verte otra vez. Bueno, escucharte. Bienvenido a Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/saludo-regreso-273585249b.mp3",
+          "texto": "Ya eres de la casa. Bienvenido de nuevo a la frecuencia.",
+          "duracion": null
+        }
+      ]
+    },
+    "compania": {
+      "cadaMinutos": 20,
+      "archivos": [
+        {
+          "archivo": "locutor/compania-0bb16161cc.mp3",
+          "texto": "Sigues aquí. Eso me gusta. KeNnyga Radio, 112.3.",
+          "dicho": "Sigues aquí. Eso me gusta. Keniga Radio, ciento doce punto tres.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/compania-98446a0ae7.mp3",
+          "texto": "Llevas un buen rato con nosotros. No cambies de canal, que lo que viene está mejor.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/compania-e080fa9968.mp3",
+          "texto": "Si sigues escuchando es porque esto te está sonando bien. Gracias por quedarte.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/compania-8524d82b6b.mp3",
+          "texto": "Un saludo para ti, que sigues aquí. La radio es mejor acompañado.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/compania-0c3be51412.mp3",
+          "texto": "Ya llevamos un rato juntos. Si te gusta lo que suena, compártelo con alguien.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/compania-41cc27110d.mp3",
+          "texto": "Todavía aquí. Me gusta tu estilo. Seguimos.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/compania-4772470137.mp3",
+          "texto": "Pequeña pausa para decirte gracias por escuchar. Ahora sí, seguimos con la música.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/compania-8bb34e6dcf.mp3",
+          "texto": "No te vayas, que lo mejor siempre llega cuando uno se va.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/compania-2ca38f33ca.mp3",
+          "texto": "Si estás trabajando, estudiando o simplemente pasando el rato, aquí estamos contigo.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/compania-51a51d0734.mp3",
+          "texto": "Esta señal es para ti. Sigue sintonizado.",
+          "duracion": null
+        }
+      ]
+    },
+    "cunas": {
+      "cadaCanciones": 4,
+      "archivos": [
+        {
+          "archivo": "locutor/cuna-026b6bd708.mp3",
+          "texto": "KeNnyga Radio, 112.3. Más que un canal, la señal que te conecta.",
+          "dicho": "Keniga Radio, ciento doce punto tres. Más que un canal, la señal que te conecta.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/cuna-b64c99a802.mp3",
+          "texto": "Estás escuchando KeNnyga Radio. Música de Wildberry, las veinticuatro horas.",
+          "dicho": "Estás escuchando Keniga Radio. Música de Wildberry, las veinticuatro horas.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/cuna-8f2e9ce561.mp3",
+          "texto": "112.3. KeNnyga Radio. No toques ese dial.",
+          "dicho": "ciento doce punto tres. Keniga Radio. No toques ese dial.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/cuna-b31cc4ce95.mp3",
+          "texto": "Esto es KeNnyga Radio. Si te gusta lo que suena, búscalo como Wildberry On en tu plataforma favorita.",
+          "dicho": "Esto es Keniga Radio. Si te gusta lo que suena, búscalo como Wildberry On en tu plataforma favorita.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/cuna-fa20f043a8.mp3",
+          "texto": "KeNnyga Radio. La frecuencia que nunca se apaga.",
+          "dicho": "Keniga Radio. La frecuencia que nunca se apaga.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/cuna-fe916d045d.mp3",
+          "texto": "Sintonizaste bien. Esto es KeNnyga Radio, 112.3.",
+          "dicho": "Sintonizaste bien. Esto es Keniga Radio, ciento doce punto tres.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/cuna-321a88e7a3.mp3",
+          "texto": "Wildberry On, en KeNnyga Radio. Todo el día, toda la noche.",
+          "dicho": "Wildberry On, en Keniga Radio. Todo el día, toda la noche.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/cuna-78409e98ec.mp3",
+          "texto": "Desde la frecuencia 112.3, esto es KeNnyga Radio.",
+          "dicho": "Desde la frecuencia ciento doce punto tres, esto es Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/cuna-0d5a78a05f.mp3",
+          "texto": "Aquí no hay comerciales. Solo música. KeNnyga Radio.",
+          "dicho": "Aquí no hay comerciales. Solo música. Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/cuna-fe49d47bcb.mp3",
+          "texto": "Si alguien te pregunta qué estás escuchando, dile: KeNnyga Radio.",
+          "dicho": "Si alguien te pregunta qué estás escuchando, dile: Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    "presentaciones": {
+      "probabilidad": 0.35
+    }
+  },
+  "canciones": [
+    {
+      "id": 41,
+      "pista": 1,
+      "titulo": "KeNnygaTV",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/01-kennygatv.mp3",
+      "duracion": 47.491,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-41-628e33f908.mp3",
+          "texto": "Lo que viene ahora es KeNnygaTV.",
+          "dicho": "Lo que viene ahora es KenigaTV.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-41-e071566f29.mp3",
+          "texto": "Seguimos con KeNnygaTV. Disfrútala.",
+          "dicho": "Seguimos con KenigaTV. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "pista": 2,
+      "titulo": "KeNny gaLindo",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/02-kenny-galindo.mp3",
+      "duracion": 180.323,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-42-c347392a9a.mp3",
+          "texto": "Seguimos con KeNny gaLindo. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-42-6dff24eb2a.mp3",
+          "texto": "Ahora, KeNny gaLindo. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, KeNny gaLindo. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "pista": 3,
+      "titulo": "Sigiloso",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/03-sigiloso.mp3",
+      "duracion": 190.145,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-43-b2b8e8e551.mp3",
+          "texto": "Suena Sigiloso, del álbum KTV23.",
+          "dicho": "Suena Sigiloso, del álbum Ka Te Ve Veintitrés.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-43-db3263e790.mp3",
+          "texto": "Lo que viene ahora es Sigiloso.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "pista": 4,
+      "titulo": "Gotdamn",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/04-gotdamn.mp3",
+      "duracion": 237.662,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-44-e37827a282.mp3",
+          "texto": "Lo que viene ahora es Gotdamn.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-44-c1b70364b7.mp3",
+          "texto": "Ahora, Gotdamn. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Gotdamn. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "pista": 5,
+      "titulo": "Damisela",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/05-damisela.mp3",
+      "duracion": 148.14,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-45-f5ad32b124.mp3",
+          "texto": "Lo que viene ahora es Damisela.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-45-bb5cd55bb4.mp3",
+          "texto": "Ahora, Damisela. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Damisela. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "pista": 6,
+      "titulo": "Todos juzgan",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/06-todos-juzgan.mp3",
+      "duracion": 189.701,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-46-0ffaa1d7df.mp3",
+          "texto": "Seguimos con Todos juzgan. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-46-9a862fab2f.mp3",
+          "texto": "Ahora, Todos juzgan. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Todos juzgan. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "pista": 7,
+      "titulo": "Noticiero KTV",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/07-noticiero-ktv.mp3",
+      "duracion": 39.105,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-47-84e730fe6d.mp3",
+          "texto": "Suena Noticiero KTV, del álbum KTV23.",
+          "dicho": "Suena Noticiero KTV, del álbum Ka Te Ve Veintitrés.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-47-961418d830.mp3",
+          "texto": "Del álbum KTV23, esto es Noticiero KTV.",
+          "dicho": "Del álbum Ka Te Ve Veintitrés, esto es Noticiero KTV.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "pista": 8,
+      "titulo": "Komo2",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/08-komo2.mp3",
+      "duracion": 157.362,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-48-7200d569ef.mp3",
+          "texto": "Del álbum KTV23, esto es Komo2.",
+          "dicho": "Del álbum Ka Te Ve Veintitrés, esto es Komo2.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-48-0f32438fce.mp3",
+          "texto": "Lo que viene ahora es Komo2.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "pista": 9,
+      "titulo": "24-7",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/09-24-7.mp3",
+      "duracion": 197.277,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-49-2da86453d2.mp3",
+          "texto": "Suena 24-7, del álbum KTV23.",
+          "dicho": "Suena veinticuatro-siete, del álbum Ka Te Ve Veintitrés.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-49-350abe87fd.mp3",
+          "texto": "Seguimos con 24-7. Disfrútala.",
+          "dicho": "Seguimos con veinticuatro-siete. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "pista": 10,
+      "titulo": "Lo nuestro",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/10-lo-nuestro.mp3",
+      "duracion": 145.398,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-50-39ffde55cc.mp3",
+          "texto": "Suena Lo nuestro, del álbum KTV23.",
+          "dicho": "Suena Lo nuestro, del álbum Ka Te Ve Veintitrés.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-50-94545a6619.mp3",
+          "texto": "Lo que viene ahora es Lo nuestro.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "pista": 11,
+      "titulo": "Delirante",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/11-delirante.mp3",
+      "duracion": 200.542,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-51-857ae100ba.mp3",
+          "texto": "Ahora, Delirante. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Delirante. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-51-eb3a427eb0.mp3",
+          "texto": "Lo que viene ahora es Delirante.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "pista": 12,
+      "titulo": "Infomercial",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/12-infomercial.mp3",
+      "duracion": 31.556,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-52-7a533b72fa.mp3",
+          "texto": "Ahora, Infomercial. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Infomercial. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-52-e1bf59711b.mp3",
+          "texto": "Seguimos con Infomercial. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "pista": 13,
+      "titulo": "Trance",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/13-trance.mp3",
+      "duracion": 157.858,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-53-385069af53.mp3",
+          "texto": "Sube el volumen para esta: Trance.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-53-6b2b888c00.mp3",
+          "texto": "Lo que viene ahora es Trance.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "pista": 14,
+      "titulo": "Brou",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/14-brou.mp3",
+      "duracion": 138.449,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-54-975d55c692.mp3",
+          "texto": "Una de mis favoritas. Brou.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-54-8fec1bdfbb.mp3",
+          "texto": "Ahora, Brou. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Brou. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "pista": 15,
+      "titulo": "Tamagotchi",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/15-tamagotchi.mp3",
+      "duracion": 184.973,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-55-6f1f0bc432.mp3",
+          "texto": "Suena Tamagotchi, del álbum KTV23.",
+          "dicho": "Suena Tamagotchi, del álbum Ka Te Ve Veintitrés.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-55-f0bbbab4ba.mp3",
+          "texto": "Seguimos con Tamagotchi. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "pista": 16,
+      "titulo": "Combo que no se deja",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/16-combo-que-no-se-deja.mp3",
+      "duracion": 229.851,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-56-8e35f04638.mp3",
+          "texto": "Una de mis favoritas. Combo que no se deja.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-56-362a60cf4c.mp3",
+          "texto": "Sube el volumen para esta: Combo que no se deja.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "pista": 17,
+      "titulo": "Paranoide",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/17-paranoide.mp3",
+      "duracion": 237.949,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-57-f6d2ab39df.mp3",
+          "texto": "Sube el volumen para esta: Paranoide.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-57-d46512283b.mp3",
+          "texto": "Del álbum KTV23, esto es Paranoide.",
+          "dicho": "Del álbum Ka Te Ve Veintitrés, esto es Paranoide.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "pista": 18,
+      "titulo": "Outro",
+      "artista": "Wildberry On",
+      "album": "ktv23",
+      "archivo": "music/KTV23/18-outro.mp3",
+      "duracion": 20.689,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-58-5bb799e568.mp3",
+          "texto": "Lo que viene ahora es Outro.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-58-44bd253cbd.mp3",
+          "texto": "Del álbum KTV23, esto es Outro.",
+          "dicho": "Del álbum Ka Te Ve Veintitrés, esto es Outro.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "pista": 1,
+      "titulo": "BANANERO",
+      "artista": "Wildberry On",
+      "album": "bananero",
+      "archivo": "music/sencillos/bananero.mp3",
+      "duracion": 181.656,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-63-2144fadd92.mp3",
+          "texto": "Sube el volumen para esta: BANANERO.",
+          "dicho": "Sube el volumen para esta: Bananero.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-63-bc9c9b3000.mp3",
+          "texto": "Seguimos con BANANERO. Disfrútala.",
+          "dicho": "Seguimos con Bananero. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "pista": 1,
+      "titulo": "MoneyMaker",
+      "artista": "Wildberry On",
+      "album": "moneymaker",
+      "archivo": "music/sencillos/moneymaker.mp3",
+      "duracion": 183.197,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-62-72cfea3377.mp3",
+          "texto": "Una de mis favoritas. MoneyMaker.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-62-2c0bd9ae8f.mp3",
+          "texto": "Sube el volumen para esta: MoneyMaker.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "pista": 1,
+      "titulo": "Montuna",
+      "artista": "Wildberry On, Zhecho, Prisma G",
+      "album": "montuna",
+      "archivo": "music/sencillos/montuna.mp3",
+      "duracion": 235.154,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-61-c4fb201f75.mp3",
+          "texto": "Esta salió en 2026. Montuna, de Wildberry On, Zhecho, Prisma G.",
+          "dicho": "Esta salió en dos mil veintiséis. Montuna, de Wildberry On, Zhecho, Prisma G.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-61-40bc12b73d.mp3",
+          "texto": "Seguimos con Montuna. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "pista": 1,
+      "titulo": "Bienvenido a KNG (Intro)",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/00.mp3",
+      "duracion": 46.759,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1-2fbc6389b6.mp3",
+          "texto": "Esta salió en 2026. Bienvenido a KNG, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintiséis. Bienvenido a Ka Ene Ge, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1-4dc58f5eee.mp3",
+          "texto": "Una de mis favoritas. Bienvenido a KNG.",
+          "dicho": "Una de mis favoritas. Bienvenido a Ka Ene Ge.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "pista": 2,
+      "titulo": "KeNny gaLindo",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/01.mp3",
+      "duracion": 171.938,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-2-6dff24eb2a.mp3",
+          "texto": "Ahora, KeNny gaLindo. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, KeNny gaLindo. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-2-ff89b6c23d.mp3",
+          "texto": "Del álbum KeNnyga Radio 112.3 FM, esto es KeNny gaLindo.",
+          "dicho": "Del álbum Keniga Radio ciento doce punto tres efe eme, esto es KeNny gaLindo.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "pista": 3,
+      "titulo": "Sigiloso",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/02.mp3",
+      "duracion": 174.393,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-3-908accf5f6.mp3",
+          "texto": "Ahora, Sigiloso. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Sigiloso. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-3-2f114b0adf.mp3",
+          "texto": "Suena Sigiloso, del álbum KeNnyga Radio 112.3 FM.",
+          "dicho": "Suena Sigiloso, del álbum Keniga Radio ciento doce punto tres efe eme.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "pista": 4,
+      "titulo": "GOTDAMN",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/03.mp3",
+      "duracion": 233.822,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-4-336832b3eb.mp3",
+          "texto": "Sube el volumen para esta: GOTDAMN.",
+          "dicho": "Sube el volumen para esta: Gotdamn.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-4-677dc21e57.mp3",
+          "texto": "Seguimos con GOTDAMN. Disfrútala.",
+          "dicho": "Seguimos con Gotdamn. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "pista": 5,
+      "titulo": "24/7",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/04.mp3",
+      "duracion": 187.847,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-5-8651c6bcdb.mp3",
+          "texto": "Seguimos con 24/7. Disfrútala.",
+          "dicho": "Seguimos con veinticuatro siete. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-5-de57e4b062.mp3",
+          "texto": "Del álbum KeNnyga Radio 112.3 FM, esto es 24/7.",
+          "dicho": "Del álbum Keniga Radio ciento doce punto tres efe eme, esto es veinticuatro siete.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "pista": 6,
+      "titulo": "Llamadas (Interludio)",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Interludios/LLamada.mp3",
+      "duracion": 52.376,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-6-ecf1e22c74.mp3",
+          "texto": "Ahora, Llamadas. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Llamadas. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-6-8c17bc2fc0.mp3",
+          "texto": "Sube el volumen para esta: Llamadas.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "pista": 7,
+      "titulo": "Damisela",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/05.mp3",
+      "duracion": 130.873,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-7-f5ad32b124.mp3",
+          "texto": "Lo que viene ahora es Damisela.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-7-0ea6c391d4.mp3",
+          "texto": "Seguimos con Damisela. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "pista": 8,
+      "titulo": "Komo2",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/06.mp3",
+      "duracion": 149.159,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-8-14dcb90d33.mp3",
+          "texto": "Sube el volumen para esta: Komo2.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-8-0f32438fce.mp3",
+          "texto": "Lo que viene ahora es Komo2.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "pista": 9,
+      "titulo": "Baby",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/07.mp3",
+      "duracion": 169.378,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-9-6da2939532.mp3",
+          "texto": "Lo que viene ahora es Baby.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-9-0ca9f40d55.mp3",
+          "texto": "Suena Baby, del álbum KeNnyga Radio 112.3 FM.",
+          "dicho": "Suena Baby, del álbum Keniga Radio ciento doce punto tres efe eme.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "pista": 10,
+      "titulo": "Micro On (Interludio)",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Interludios/Micro on.mp3",
+      "duracion": 55.719,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-10-59fb8e81a6.mp3",
+          "texto": "Una de mis favoritas. Micro On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-10-fb9d47478d.mp3",
+          "texto": "Suena Micro On, del álbum KeNnyga Radio 112.3 FM.",
+          "dicho": "Suena Micro On, del álbum Keniga Radio ciento doce punto tres efe eme.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "pista": 11,
+      "titulo": "Brou",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/08.mp3",
+      "duracion": 134.113,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-11-6b4b78ddad.mp3",
+          "texto": "Del álbum KeNnyga Radio 112.3 FM, esto es Brou.",
+          "dicho": "Del álbum Keniga Radio ciento doce punto tres efe eme, esto es Brou.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-11-901d6d922d.mp3",
+          "texto": "Lo que viene ahora es Brou.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "pista": 12,
+      "titulo": "BlackMan (feat. HD On The Beat)",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/09.mp3",
+      "duracion": 190.276,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-12-998ce842b3.mp3",
+          "texto": "Sube el volumen para esta: BlackMan.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-12-fc4e131e31.mp3",
+          "texto": "Lo que viene ahora es BlackMan.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "pista": 13,
+      "titulo": "Cosa Nostra",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/10.mp3",
+      "duracion": 107.781,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-13-df6b660f6a.mp3",
+          "texto": "Suena Cosa Nostra, del álbum KeNnyga Radio 112.3 FM.",
+          "dicho": "Suena Cosa Nostra, del álbum Keniga Radio ciento doce punto tres efe eme.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-13-68b63d6e64.mp3",
+          "texto": "Sube el volumen para esta: Cosa Nostra.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "pista": 14,
+      "titulo": "CQNSD",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/11.mp3",
+      "duracion": 187.141,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-14-755538b887.mp3",
+          "texto": "Una de mis favoritas. CQNSD.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-14-19f6f8c9e7.mp3",
+          "texto": "Ahora, CQNSD. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, CQNSD. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "pista": 15,
+      "titulo": "Delirante",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/12.mp3",
+      "duracion": 172.539,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-15-857ae100ba.mp3",
+          "texto": "Ahora, Delirante. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Delirante. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-15-77db8ed2e5.mp3",
+          "texto": "Seguimos con Delirante. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "pista": 16,
+      "titulo": "Todos Juzgan",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/13.mp3",
+      "duracion": 168.124,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-16-c4ad1eae29.mp3",
+          "texto": "Del álbum KeNnyga Radio 112.3 FM, esto es Todos Juzgan.",
+          "dicho": "Del álbum Keniga Radio ciento doce punto tres efe eme, esto es Todos Juzgan.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-16-80f4f91649.mp3",
+          "texto": "Una de mis favoritas. Todos Juzgan.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "pista": 17,
+      "titulo": "Burry Malta (Interludio)",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Interludios/Burry Malta.mp3",
+      "duracion": 58.122,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-17-7a01e3d654.mp3",
+          "texto": "Lo que viene ahora es Burry Malta.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-17-ff5d505810.mp3",
+          "texto": "Esta salió en 2026. Burry Malta, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintiséis. Burry Malta, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "pista": 18,
+      "titulo": "Trance",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/14.mp3",
+      "duracion": 142.785,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-18-4e9271ea0c.mp3",
+          "texto": "Esta salió en 2026. Trance, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintiséis. Trance, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-18-385069af53.mp3",
+          "texto": "Sube el volumen para esta: Trance.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "pista": 19,
+      "titulo": "Tamagotchi",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/15.mp3",
+      "duracion": 161.123,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-19-e8eb8af9a4.mp3",
+          "texto": "Lo que viene ahora es Tamagotchi.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-19-d32847257c.mp3",
+          "texto": "Ahora, Tamagotchi. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Tamagotchi. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "pista": 20,
+      "titulo": "Paranoia",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/16.mp3",
+      "duracion": 131.135,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-20-433d82b597.mp3",
+          "texto": "Del álbum KeNnyga Radio 112.3 FM, esto es Paranoia.",
+          "dicho": "Del álbum Keniga Radio ciento doce punto tres efe eme, esto es Paranoia.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-20-948f1ef5a9.mp3",
+          "texto": "Sube el volumen para esta: Paranoia.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "pista": 21,
+      "titulo": "Viches",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/17.mp3",
+      "duracion": 109.74,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-21-796ebf7e80.mp3",
+          "texto": "Seguimos con Viches. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-21-12819d5a5c.mp3",
+          "texto": "Ahora, Viches. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Viches. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "pista": 22,
+      "titulo": "Chao con Adios (Outro)",
+      "artista": "Wildberry On",
+      "album": "kng",
+      "archivo": "music/Canciones/18.mp3",
+      "duracion": 41.822,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-22-9354707e95.mp3",
+          "texto": "Del álbum KeNnyga Radio 112.3 FM, esto es Chao con Adios.",
+          "dicho": "Del álbum Keniga Radio ciento doce punto tres efe eme, esto es Chao con Adios.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-22-87ae6f0836.mp3",
+          "texto": "Ahora, Chao con Adios. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Chao con Adios. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "pista": 1,
+      "titulo": "Negro Visajoso",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/negro-visajoso.mp3",
+      "duracion": 127.451,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1001-eba1f68437.mp3",
+          "texto": "Sube el volumen para esta: Negro Visajoso.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1001-ef620fd465.mp3",
+          "texto": "Una de mis favoritas. Negro Visajoso.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "pista": 2,
+      "titulo": "Joker (feat. Z SLAYER)",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/joker.mp3",
+      "duracion": 137.038,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1002-104a532e2c.mp3",
+          "texto": "Suena Joker, del álbum NEGRO VISAJOSO.",
+          "dicho": "Suena Joker, del álbum Negro Visajoso.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1002-71d11a27bb.mp3",
+          "texto": "Una de mis favoritas. Joker.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1003,
+      "pista": 3,
+      "titulo": "Como nosotros",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/como-nosotros.mp3",
+      "duracion": 150.622,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1003-a9d969cb3a.mp3",
+          "texto": "Ahora, Como nosotros. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Como nosotros. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1003-eb3d59ad6a.mp3",
+          "texto": "Sube el volumen para esta: Como nosotros.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1004,
+      "pista": 4,
+      "titulo": "Si yo soy un G",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/si-yo-soy-un-g.mp3",
+      "duracion": 140.408,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1004-abd0572015.mp3",
+          "texto": "Del álbum NEGRO VISAJOSO, esto es Si yo soy un G.",
+          "dicho": "Del álbum Negro Visajoso, esto es Si yo soy un G.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1004-3e549041c0.mp3",
+          "texto": "Lo que viene ahora es Si yo soy un G.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1005,
+      "pista": 5,
+      "titulo": "Kitty (feat. Prisma G)",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/kitty.mp3",
+      "duracion": 147.122,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1005-fa0cdc52b6.mp3",
+          "texto": "Del álbum NEGRO VISAJOSO, esto es Kitty.",
+          "dicho": "Del álbum Negro Visajoso, esto es Kitty.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1005-d749d4fed5.mp3",
+          "texto": "Ahora, Kitty. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Kitty. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1006,
+      "pista": 6,
+      "titulo": "Natural (feat. Z SLAYER)",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/natural.mp3",
+      "duracion": 202.005,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1006-88e6bb0f50.mp3",
+          "texto": "Una de mis favoritas. Natural.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1006-b3dccdb86c.mp3",
+          "texto": "Sube el volumen para esta: Natural.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1007,
+      "pista": 7,
+      "titulo": "<3",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/corazon.mp3",
+      "duracion": 221.414,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1007-22b67eb028.mp3",
+          "texto": "Lo que viene ahora es <3.",
+          "dicho": "Lo que viene ahora es Corazón.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1007-2379f944c2.mp3",
+          "texto": "Esta salió en 2025. <3, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticinco. Corazón, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1008,
+      "pista": 8,
+      "titulo": "Cash (feat. Z SLAYER)",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/cash.mp3",
+      "duracion": 292.101,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1008-3f8bfd52d4.mp3",
+          "texto": "Lo que viene ahora es Cash.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1008-808f6de3d4.mp3",
+          "texto": "Ahora, Cash. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Cash. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1009,
+      "pista": 9,
+      "titulo": "Será?",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/sera.mp3",
+      "duracion": 155.768,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1009-ddd45be7f7.mp3",
+          "texto": "Una de mis favoritas. Será?",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1009-0d8af3f0bd.mp3",
+          "texto": "Sube el volumen para esta: Será?",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1010,
+      "pista": 10,
+      "titulo": "Pausa",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/pausa.mp3",
+      "duracion": 173.427,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1010-d319bd8fef.mp3",
+          "texto": "Del álbum NEGRO VISAJOSO, esto es Pausa.",
+          "dicho": "Del álbum Negro Visajoso, esto es Pausa.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1010-28dc8990bb.mp3",
+          "texto": "Sube el volumen para esta: Pausa.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1011,
+      "pista": 11,
+      "titulo": "Confieso",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/confieso.mp3",
+      "duracion": 157.91,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1011-81971d77ea.mp3",
+          "texto": "Ahora, Confieso. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Confieso. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1011-a7e26c5b8d.mp3",
+          "texto": "Esta salió en 2025. Confieso, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticinco. Confieso, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1012,
+      "pista": 12,
+      "titulo": "Showman",
+      "artista": "Wildberry On",
+      "album": "negro-visajoso",
+      "archivo": "music/negro-visajoso/showman.mp3",
+      "duracion": 217.731,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1012-f51e95558d.mp3",
+          "texto": "Una de mis favoritas. Showman.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1012-4a3fe0312e.mp3",
+          "texto": "Suena Showman, del álbum NEGRO VISAJOSO.",
+          "dicho": "Suena Showman, del álbum Negro Visajoso.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1101,
+      "pista": 1,
+      "titulo": "BERRY",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/berry.mp3",
+      "duracion": 120.033,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1101-30330e2616.mp3",
+          "texto": "Del álbum ELULTIMO23, esto es BERRY.",
+          "dicho": "Del álbum ELULTIMO23, esto es Berry.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1101-99456c9f76.mp3",
+          "texto": "Una de mis favoritas. BERRY.",
+          "dicho": "Una de mis favoritas. Berry.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1102,
+      "pista": 2,
+      "titulo": "TRAVELER",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/traveler.mp3",
+      "duracion": 173.636,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1102-9bb1275557.mp3",
+          "texto": "Ahora, TRAVELER. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Traveler. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1102-db0a7ceca5.mp3",
+          "texto": "Esta salió en 2024. TRAVELER, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticuatro. Traveler, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1103,
+      "pista": 3,
+      "titulo": "NINFA",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/ninfa.mp3",
+      "duracion": 146.991,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1103-610aba7da4.mp3",
+          "texto": "Esta salió en 2024. NINFA, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticuatro. Ninfa, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1103-386659b196.mp3",
+          "texto": "Seguimos con NINFA. Disfrútala.",
+          "dicho": "Seguimos con Ninfa. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1104,
+      "pista": 4,
+      "titulo": "CHOCOLATOZO",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/chocolatozo.mp3",
+      "duracion": 162.142,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1104-0762c75aef.mp3",
+          "texto": "Lo que viene ahora es CHOCOLATOZO.",
+          "dicho": "Lo que viene ahora es Chocolatozo.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1104-2df43783ef.mp3",
+          "texto": "Del álbum ELULTIMO23, esto es CHOCOLATOZO.",
+          "dicho": "Del álbum ELULTIMO23, esto es Chocolatozo.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1105,
+      "pista": 5,
+      "titulo": "NOTENGOENEMIGOS",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/notengoenemigos.mp3",
+      "duracion": 149.551,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1105-6566ed63cb.mp3",
+          "texto": "Del álbum ELULTIMO23, esto es NOTENGOENEMIGOS.",
+          "dicho": "Del álbum ELULTIMO23, esto es Notengoenemigos.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1105-6da03ea3e0.mp3",
+          "texto": "Una de mis favoritas. NOTENGOENEMIGOS.",
+          "dicho": "Una de mis favoritas. Notengoenemigos.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1106,
+      "pista": 6,
+      "titulo": "TERKO",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/terko.mp3",
+      "duracion": 112.927,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1106-836172bcd8.mp3",
+          "texto": "Sube el volumen para esta: TERKO.",
+          "dicho": "Sube el volumen para esta: Terko.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1106-37bdce3bdb.mp3",
+          "texto": "Seguimos con TERKO. Disfrútala.",
+          "dicho": "Seguimos con Terko. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1107,
+      "pista": 7,
+      "titulo": "QUEKIEREZ",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/quekierez.mp3",
+      "duracion": 128.026,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1107-4a3d32a4e4.mp3",
+          "texto": "Suena QUEKIEREZ, del álbum ELULTIMO23.",
+          "dicho": "Suena Quekierez, del álbum ELULTIMO23.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1107-8d5377ccd6.mp3",
+          "texto": "Esta salió en 2024. QUEKIEREZ, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticuatro. Quekierez, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1108,
+      "pista": 8,
+      "titulo": "CHICOCONSUERTE",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/chicoconsuerte.mp3",
+      "duracion": 171.703,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1108-32222aa33e.mp3",
+          "texto": "Esta salió en 2024. CHICOCONSUERTE, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticuatro. Chicoconsuerte, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1108-c08acef0de.mp3",
+          "texto": "Ahora, CHICOCONSUERTE. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Chicoconsuerte. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1109,
+      "pista": 9,
+      "titulo": "BESTO",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/besto.mp3",
+      "duracion": 136.647,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1109-dbf044fa5c.mp3",
+          "texto": "Una de mis favoritas. BESTO.",
+          "dicho": "Una de mis favoritas. Besto.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1109-d70e6348ad.mp3",
+          "texto": "Esta salió en 2024. BESTO, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticuatro. Besto, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1110,
+      "pista": 10,
+      "titulo": "MUSA",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/musa.mp3",
+      "duracion": 97.411,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1110-08ca2c556e.mp3",
+          "texto": "Una de mis favoritas. MUSA.",
+          "dicho": "Una de mis favoritas. Musa.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1110-2b4e392a3b.mp3",
+          "texto": "Suena MUSA, del álbum ELULTIMO23.",
+          "dicho": "Suena Musa, del álbum ELULTIMO23.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1111,
+      "pista": 11,
+      "titulo": "HABLAN",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/hablan.mp3",
+      "duracion": 157.649,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1111-04bf42e83e.mp3",
+          "texto": "Ahora, HABLAN. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Hablan. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1111-bebeccd821.mp3",
+          "texto": "Una de mis favoritas. HABLAN.",
+          "dicho": "Una de mis favoritas. Hablan.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1112,
+      "pista": 12,
+      "titulo": "NODRAMARMX",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/nodramarmx.mp3",
+      "duracion": 182.439,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1112-6e6aec31ec.mp3",
+          "texto": "Una de mis favoritas. NODRAMARMX.",
+          "dicho": "Una de mis favoritas. Nodramarmx.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1112-74688c10d5.mp3",
+          "texto": "Ahora, NODRAMARMX. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Nodramarmx. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1113,
+      "pista": 13,
+      "titulo": "KANON",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/kanon.mp3",
+      "duracion": 155.089,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1113-5a7c2d504e.mp3",
+          "texto": "Sube el volumen para esta: KANON.",
+          "dicho": "Sube el volumen para esta: Kanon.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1113-175ad68c73.mp3",
+          "texto": "Del álbum ELULTIMO23, esto es KANON.",
+          "dicho": "Del álbum ELULTIMO23, esto es Kanon.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1114,
+      "pista": 14,
+      "titulo": "KAOZ",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/kaoz.mp3",
+      "duracion": 107.703,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1114-929da50a67.mp3",
+          "texto": "Ahora, KAOZ. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Kaoz. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1114-956fcd1e5c.mp3",
+          "texto": "Suena KAOZ, del álbum ELULTIMO23.",
+          "dicho": "Suena Kaoz, del álbum ELULTIMO23.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1115,
+      "pista": 15,
+      "titulo": "ANDO",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/ando.mp3",
+      "duracion": 97.75,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1115-9dff8eb5db.mp3",
+          "texto": "Esta salió en 2024. ANDO, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticuatro. Ando, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1115-5ea9cea52b.mp3",
+          "texto": "Sube el volumen para esta: ANDO.",
+          "dicho": "Sube el volumen para esta: Ando.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1116,
+      "pista": 16,
+      "titulo": "KLK",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/klk.mp3",
+      "duracion": 178.782,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1116-6e7fbac8d4.mp3",
+          "texto": "Seguimos con KLK. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1116-f4a473086c.mp3",
+          "texto": "Esta salió en 2024. KLK, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticuatro. KLK, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1117,
+      "pista": 17,
+      "titulo": "ALGOMEFALLA",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/algomefalla.mp3",
+      "duracion": 141.061,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1117-56a541da51.mp3",
+          "texto": "Esta salió en 2024. ALGOMEFALLA, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veinticuatro. Algomefalla, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1117-bcf3308418.mp3",
+          "texto": "Suena ALGOMEFALLA, del álbum ELULTIMO23.",
+          "dicho": "Suena Algomefalla, del álbum ELULTIMO23.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1118,
+      "pista": 18,
+      "titulo": "LOENCONTRE",
+      "artista": "Wildberry On",
+      "album": "elultimo23",
+      "archivo": "music/elultimo23/loencontre.mp3",
+      "duracion": 124.63,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1118-dcf3513529.mp3",
+          "texto": "Del álbum ELULTIMO23, esto es LOENCONTRE.",
+          "dicho": "Del álbum ELULTIMO23, esto es Loencontre.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1118-e14514b6a0.mp3",
+          "texto": "Sube el volumen para esta: LOENCONTRE.",
+          "dicho": "Sube el volumen para esta: Loencontre.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1701,
+      "pista": 1,
+      "titulo": "Negro Mate",
+      "artista": "Wildberry On",
+      "album": "negro-mate",
+      "archivo": "music/sencillos/negro-mate.mp3",
+      "duracion": 196.049,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1701-15c856bd5d.mp3",
+          "texto": "Una de mis favoritas. Negro Mate.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1701-6489cda63a.mp3",
+          "texto": "Sube el volumen para esta: Negro Mate.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1702,
+      "pista": 1,
+      "titulo": "NOMOLESTAR",
+      "artista": "Wildberry On",
+      "album": "nomolestar",
+      "archivo": "music/sencillos/nomolestar.mp3",
+      "duracion": 192.758,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1702-3b3c6587e9.mp3",
+          "texto": "Ahora, NOMOLESTAR. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Nomolestar. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1702-378abe8812.mp3",
+          "texto": "Lo que viene ahora es NOMOLESTAR.",
+          "dicho": "Lo que viene ahora es Nomolestar.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1703,
+      "pista": 1,
+      "titulo": "THINKI",
+      "artista": "Wildberry On",
+      "album": "thinki",
+      "archivo": "music/sencillos/thinki.mp3",
+      "duracion": 124.082,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1703-7b78646b4e.mp3",
+          "texto": "Sube el volumen para esta: THINKI.",
+          "dicho": "Sube el volumen para esta: Thinki.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1703-28b606829d.mp3",
+          "texto": "Ahora, THINKI. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Thinki. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1501,
+      "pista": 1,
+      "titulo": "ThoseBoyz II",
+      "artista": "Wildberry On",
+      "album": "thoseboyz",
+      "archivo": "music/thoseboyz/thoseboyz-ii.mp3",
+      "duracion": 144.144,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1501-237333aa2d.mp3",
+          "texto": "Lo que viene ahora es ThoseBoyz II.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1501-cbc9b0ec53.mp3",
+          "texto": "Ahora, ThoseBoyz II. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, ThoseBoyz II. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1502,
+      "pista": 2,
+      "titulo": "ItTakeTime",
+      "artista": "Wildberry On",
+      "album": "thoseboyz",
+      "archivo": "music/thoseboyz/ittaketime.mp3",
+      "duracion": 187.298,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1502-e26a68dfe8.mp3",
+          "texto": "Esta salió en 2023. ItTakeTime, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintitrés. ItTakeTime, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1502-55fdb4178a.mp3",
+          "texto": "Ahora, ItTakeTime. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, ItTakeTime. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1503,
+      "pista": 3,
+      "titulo": "TranKilo",
+      "artista": "Wildberry On",
+      "album": "thoseboyz",
+      "archivo": "music/thoseboyz/trankilo.mp3",
+      "duracion": 89.731,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1503-b553284b2f.mp3",
+          "texto": "Una de mis favoritas. TranKilo.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1503-2ae85c0be4.mp3",
+          "texto": "Seguimos con TranKilo. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1504,
+      "pista": 4,
+      "titulo": "100/100",
+      "artista": "Wildberry On",
+      "album": "thoseboyz",
+      "archivo": "music/thoseboyz/100-100.mp3",
+      "duracion": 172.016,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1504-6e0d1e9b89.mp3",
+          "texto": "Ahora, 100/100. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, cien de cien. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1504-b5fbcd30a1.mp3",
+          "texto": "Sube el volumen para esta: 100/100.",
+          "dicho": "Sube el volumen para esta: cien de cien.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1601,
+      "pista": 1,
+      "titulo": "Missing",
+      "artista": "Wildberry On",
+      "album": "missing-ep",
+      "archivo": "music/missing-ep/missing.mp3",
+      "duracion": 157.336,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1601-16c6e4c771.mp3",
+          "texto": "Ahora, Missing. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Missing. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1601-acf641264e.mp3",
+          "texto": "Del EP Missing, esto es Missing.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1602,
+      "pista": 2,
+      "titulo": "NoSignal",
+      "artista": "Wildberry On",
+      "album": "missing-ep",
+      "archivo": "music/missing-ep/nosignal.mp3",
+      "duracion": 144.144,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1602-916efdbfad.mp3",
+          "texto": "Ahora, NoSignal. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, NoSignal. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1602-c2fac147e8.mp3",
+          "texto": "Esta salió en 2023. NoSignal, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintitrés. NoSignal, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1603,
+      "pista": 3,
+      "titulo": "NoName (Cap3)",
+      "artista": "Wildberry On",
+      "album": "missing-ep",
+      "archivo": "music/missing-ep/noname.mp3",
+      "duracion": 186.462,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1603-b79e25e606.mp3",
+          "texto": "Ahora, NoName. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, NoName. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1603-35078070ad.mp3",
+          "texto": "Una de mis favoritas. NoName.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1604,
+      "pista": 4,
+      "titulo": "Anocheciendo (Interludio)",
+      "artista": "Wildberry On",
+      "album": "missing-ep",
+      "archivo": "music/missing-ep/anocheciendo.mp3",
+      "duracion": 82.965,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1604-b829439fd1.mp3",
+          "texto": "Seguimos con Anocheciendo. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1604-f0294fa953.mp3",
+          "texto": "Sube el volumen para esta: Anocheciendo.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1605,
+      "pista": 5,
+      "titulo": "RichKidz (feat. Z Slayer)",
+      "artista": "Wildberry On",
+      "album": "missing-ep",
+      "archivo": "music/missing-ep/richkidz.mp3",
+      "duracion": 171.154,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1605-2b38b32a26.mp3",
+          "texto": "Seguimos con RichKidz. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1605-e8c48cf9ff.mp3",
+          "texto": "Suena RichKidz, del EP Missing.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1606,
+      "pista": 6,
+      "titulo": "IDHI",
+      "artista": "Wildberry On",
+      "album": "missing-ep",
+      "archivo": "music/missing-ep/idhi.mp3",
+      "duracion": 173.714,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1606-710fd1652f.mp3",
+          "texto": "Seguimos con IDHI. Disfrútala.",
+          "dicho": "Seguimos con Idhi. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1606-936e7b5a6c.mp3",
+          "texto": "Sube el volumen para esta: IDHI.",
+          "dicho": "Sube el volumen para esta: Idhi.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1607,
+      "pista": 7,
+      "titulo": "Espero",
+      "artista": "Wildberry On",
+      "album": "missing-ep",
+      "archivo": "music/missing-ep/espero.mp3",
+      "duracion": 190.459,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1607-282083af9d.mp3",
+          "texto": "Esta salió en 2023. Espero, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintitrés. Espero, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1607-a8a1386d01.mp3",
+          "texto": "Una de mis favoritas. Espero.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1608,
+      "pista": 8,
+      "titulo": "Rela",
+      "artista": "Wildberry On",
+      "album": "missing-ep",
+      "archivo": "music/missing-ep/rela.mp3",
+      "duracion": 144.483,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1608-d9ba0536c7.mp3",
+          "texto": "Lo que viene ahora es Rela.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1608-9e57cafd50.mp3",
+          "texto": "Esta salió en 2023. Rela, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintitrés. Rela, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1704,
+      "pista": 1,
+      "titulo": "MOMANTAI",
+      "artista": "Wildberry On",
+      "album": "momantai",
+      "archivo": "music/sencillos/momantai.mp3",
+      "duracion": 172.251,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1704-ebd4b1c056.mp3",
+          "texto": "Ahora, MOMANTAI. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Momantai. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1704-c78fc5d69c.mp3",
+          "texto": "Sube el volumen para esta: MOMANTAI.",
+          "dicho": "Sube el volumen para esta: Momantai.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1705,
+      "pista": 1,
+      "titulo": "YOU KNOW ME",
+      "artista": "Wildberry On",
+      "album": "you-know-me",
+      "archivo": "music/sencillos/you-know-me.mp3",
+      "duracion": 155.402,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1705-c9ea665b57.mp3",
+          "texto": "Esta salió en 2023. YOU KNOW ME, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintitrés. YOU Know ME, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1705-b4b804e3e9.mp3",
+          "texto": "Lo que viene ahora es YOU KNOW ME.",
+          "dicho": "Lo que viene ahora es YOU Know ME.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1706,
+      "pista": 1,
+      "titulo": "NO DRAMA",
+      "artista": "Wildberry On",
+      "album": "no-drama",
+      "archivo": "music/sencillos/no-drama.mp3",
+      "duracion": 180.663,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1706-a0773e1e72.mp3",
+          "texto": "Seguimos con NO DRAMA. Disfrútala.",
+          "dicho": "Seguimos con NO Drama. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1706-36dbec11a4.mp3",
+          "texto": "Sube el volumen para esta: NO DRAMA.",
+          "dicho": "Sube el volumen para esta: NO Drama.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1707,
+      "pista": 1,
+      "titulo": "73",
+      "artista": "Wildberry On",
+      "album": "73",
+      "archivo": "music/sencillos/73.mp3",
+      "duracion": 153.078,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1707-398423f727.mp3",
+          "texto": "Una de mis favoritas. 73.",
+          "dicho": "Una de mis favoritas. setenta y tres.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1707-d5a37f10bf.mp3",
+          "texto": "Ahora, 73. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, setenta y tres. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1708,
+      "pista": 1,
+      "titulo": "Pa´ Adulterio (feat. RULZ & Z Slayer)",
+      "artista": "Wildberry On",
+      "album": "pa-adulterio",
+      "archivo": "music/sencillos/pa-adulterio.mp3",
+      "duracion": 182.073,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1708-4a2a2f2ae8.mp3",
+          "texto": "Lo que viene ahora es Pa´ Adulterio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1708-f5b760b7ec.mp3",
+          "texto": "Esta salió en 2023. Pa´ Adulterio, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintitrés. Pa´ Adulterio, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1709,
+      "pista": 1,
+      "titulo": "DevilMayCry",
+      "artista": "Wildberry On",
+      "album": "devilmaycry",
+      "archivo": "music/sencillos/devilmaycry.mp3",
+      "duracion": 162.299,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1709-7dabf6e3c7.mp3",
+          "texto": "Lo que viene ahora es DevilMayCry.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1709-6db0136610.mp3",
+          "texto": "Sube el volumen para esta: DevilMayCry.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1710,
+      "pista": 1,
+      "titulo": "HyperLove (feat. Z Slayer)",
+      "artista": "Wildberry On",
+      "album": "hyperlove",
+      "archivo": "music/sencillos/hyperlove.mp3",
+      "duracion": 154.932,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1710-6151f313bf.mp3",
+          "texto": "Sube el volumen para esta: HyperLove.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1710-843ecd601d.mp3",
+          "texto": "Esta salió en 2023. HyperLove, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintitrés. HyperLove, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1201,
+      "pista": 1,
+      "titulo": "TFS2k22",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/tfs2k22.mp3",
+      "duracion": 109.531,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1201-bade8ceca5.mp3",
+          "texto": "Suena TFS2k22, del álbum TFS2k22.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1201-ac1a7ddbcf.mp3",
+          "texto": "Ahora, TFS2k22. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, TFS2k22. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1202,
+      "pista": 2,
+      "titulo": "Idooo",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/idooo.mp3",
+      "duracion": 101.381,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1202-0d7c0e41c6.mp3",
+          "texto": "Seguimos con Idooo. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1202-2bb1a64c26.mp3",
+          "texto": "Suena Idooo, del álbum TFS2k22.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1203,
+      "pista": 3,
+      "titulo": "Flexeo (feat. Z Slayer)",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/flexeo.mp3",
+      "duracion": 153.287,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1203-2b2a381580.mp3",
+          "texto": "Esta salió en 2022. Flexeo, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintidós. Flexeo, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1203-9a5990491a.mp3",
+          "texto": "Lo que viene ahora es Flexeo.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1204,
+      "pista": 4,
+      "titulo": "SoBad",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/sobad.mp3",
+      "duracion": 110.028,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1204-06a42918d0.mp3",
+          "texto": "Lo que viene ahora es SoBad.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1204-3afd624e29.mp3",
+          "texto": "Suena SoBad, del álbum TFS2k22.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1205,
+      "pista": 5,
+      "titulo": "Bailar",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/bailar.mp3",
+      "duracion": 120.033,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1205-1cbb61438f.mp3",
+          "texto": "Ahora, Bailar. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Bailar. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1205-5e11557fe9.mp3",
+          "texto": "Esta salió en 2022. Bailar, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintidós. Bailar, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1206,
+      "pista": 6,
+      "titulo": "ILYA",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": null,
+      "duracion": null
+    },
+    {
+      "id": 1207,
+      "pista": 7,
+      "titulo": "Aquella Noche (feat. Z Slayer)",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/aquella-noche.mp3",
+      "duracion": 197.016,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1207-7532897841.mp3",
+          "texto": "Lo que viene ahora es Aquella Noche.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1207-901bc809b1.mp3",
+          "texto": "Ahora, Aquella Noche. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Aquella Noche. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1208,
+      "pista": 8,
+      "titulo": "BadMan",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": null,
+      "duracion": null
+    },
+    {
+      "id": 1209,
+      "pista": 9,
+      "titulo": "M.A.L.A",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/m-a-l-a.mp3",
+      "duracion": 148.219,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1209-dcd4d4222f.mp3",
+          "texto": "Del álbum TFS2k22, esto es M.A.L.A.",
+          "dicho": "Del álbum TFS2k22, esto es Mala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1209-5308fd0bc9.mp3",
+          "texto": "Ahora, M.A.L.A. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Mala. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1210,
+      "pista": 10,
+      "titulo": "Sola",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/sola.mp3",
+      "duracion": 178.39,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1210-bbd69e2fdd.mp3",
+          "texto": "Ahora, Sola. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Sola. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1210-fc24fb3779.mp3",
+          "texto": "Sube el volumen para esta: Sola.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1211,
+      "pista": 11,
+      "titulo": "Chocolisto (feat. Z Slayer)",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/chocolisto.mp3",
+      "duracion": 156.891,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1211-57e21e1baa.mp3",
+          "texto": "Lo que viene ahora es Chocolisto.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1211-0698be3674.mp3",
+          "texto": "Esta salió en 2022. Chocolisto, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintidós. Chocolisto, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1212,
+      "pista": 12,
+      "titulo": "Sxrry vs Sxrryn't (feat. RULZ & Z Slayer)",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/sxrry-vs-sxrryn-t.mp3",
+      "duracion": 178.547,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1212-362c455b2e.mp3",
+          "texto": "Sube el volumen para esta: Sxrry vs Sxrryn't.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1212-fa197d07ad.mp3",
+          "texto": "Una de mis favoritas. Sxrry vs Sxrryn't.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1213,
+      "pista": 13,
+      "titulo": "Señorita",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/senorita.mp3",
+      "duracion": 147.775,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1213-b30bc22155.mp3",
+          "texto": "Lo que viene ahora es Señorita.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1213-6f42caa586.mp3",
+          "texto": "Ahora, Señorita. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Señorita. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1214,
+      "pista": 14,
+      "titulo": "Suaverifico",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/suaverifico.mp3",
+      "duracion": 149.159,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1214-3a477ba509.mp3",
+          "texto": "Del álbum TFS2k22, esto es Suaverifico.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1214-ab32e1f246.mp3",
+          "texto": "Seguimos con Suaverifico. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1215,
+      "pista": 15,
+      "titulo": "ChillyWilly (Bonus Track)",
+      "artista": "Wildberry On",
+      "album": "tfs2k22",
+      "archivo": "music/tfs2k22/chillywilly.mp3",
+      "duracion": 105.091,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1215-014a1b860a.mp3",
+          "texto": "Del álbum TFS2k22, esto es ChillyWilly.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1215-3c1d952e01.mp3",
+          "texto": "Sube el volumen para esta: ChillyWilly.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1301,
+      "pista": 1,
+      "titulo": "FrezKo",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/frezko.mp3",
+      "duracion": 173.61,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1301-b3885a7a4f.mp3",
+          "texto": "Suena FrezKo, del álbum FrezKo Gold.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1301-e427e42fa5.mp3",
+          "texto": "Una de mis favoritas. FrezKo.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1302,
+      "pista": 2,
+      "titulo": "ThoseBoyz",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/thoseboyz.mp3",
+      "duracion": 127.504,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1302-baba8be760.mp3",
+          "texto": "Del álbum FrezKo Gold, esto es ThoseBoyz.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1302-b0103273dd.mp3",
+          "texto": "Lo que viene ahora es ThoseBoyz.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1303,
+      "pista": 3,
+      "titulo": "3B",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/3b.mp3",
+      "duracion": 203.468,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1303-d17d92e10f.mp3",
+          "texto": "Del álbum FrezKo Gold, esto es 3B.",
+          "dicho": "Del álbum FrezKo Gold, esto es tres be.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1303-84c5e4b395.mp3",
+          "texto": "Ahora, 3B. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, tres be. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1304,
+      "pista": 4,
+      "titulo": "Yasuke",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/yasuke.mp3",
+      "duracion": 116.062,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1304-c59e737a8a.mp3",
+          "texto": "Ahora, Yasuke. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Yasuke. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1304-43640e3ff3.mp3",
+          "texto": "Una de mis favoritas. Yasuke.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1305,
+      "pista": 5,
+      "titulo": "LowFi prt2",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/lowfi-prt2.mp3",
+      "duracion": 152.268,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1305-316a383000.mp3",
+          "texto": "Esta salió en 2022. LowFi prt2, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintidós. Lo fai parte dos, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1305-3f5db75ad9.mp3",
+          "texto": "Sube el volumen para esta: LowFi prt2.",
+          "dicho": "Sube el volumen para esta: Lo fai parte dos.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1306,
+      "pista": 6,
+      "titulo": "LowFi prt3",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/lowfi-prt3.mp3",
+      "duracion": 160.47,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1306-2b36766463.mp3",
+          "texto": "Suena LowFi prt3, del álbum FrezKo Gold.",
+          "dicho": "Suena Lo fai parte tres, del álbum FrezKo Gold.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1306-27913156e0.mp3",
+          "texto": "Ahora, LowFi prt3. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Lo fai parte tres. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1307,
+      "pista": 7,
+      "titulo": "Candela",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/candela.mp3",
+      "duracion": 230.975,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1307-291fdd78c3.mp3",
+          "texto": "Ahora, Candela. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Candela. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1307-31c345f7ae.mp3",
+          "texto": "Esta salió en 2022. Candela, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintidós. Candela, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1308,
+      "pista": 8,
+      "titulo": "Atlanta",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/atlanta.mp3",
+      "duracion": 139.337,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1308-e5b5344ee6.mp3",
+          "texto": "Esta salió en 2022. Atlanta, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintidós. Atlanta, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1308-7150a24fed.mp3",
+          "texto": "Seguimos con Atlanta. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1309,
+      "pista": 9,
+      "titulo": "NeoTokyo",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/neotokyo.mp3",
+      "duracion": 156.865,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1309-a80a72f241.mp3",
+          "texto": "Suena NeoTokyo, del álbum FrezKo Gold.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1309-2887e1a12c.mp3",
+          "texto": "Sube el volumen para esta: NeoTokyo.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1310,
+      "pista": 10,
+      "titulo": "Algare",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/algare.mp3",
+      "duracion": 199.367,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1310-565ff02bbd.mp3",
+          "texto": "Del álbum FrezKo Gold, esto es Algare.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1310-1de0526f38.mp3",
+          "texto": "Una de mis favoritas. Algare.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1311,
+      "pista": 11,
+      "titulo": "Saturao",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/saturao.mp3",
+      "duracion": 126.145,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1311-9d8ff07bab.mp3",
+          "texto": "Seguimos con Saturao. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1311-b18683c04c.mp3",
+          "texto": "Suena Saturao, del álbum FrezKo Gold.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1312,
+      "pista": 12,
+      "titulo": "Dicen",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/dicen.mp3",
+      "duracion": 206.89,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1312-38ad07b785.mp3",
+          "texto": "Seguimos con Dicen. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1312-00f8097367.mp3",
+          "texto": "Una de mis favoritas. Dicen.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1313,
+      "pista": 13,
+      "titulo": "Verano",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/verano.mp3",
+      "duracion": 144.222,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1313-67a37c948c.mp3",
+          "texto": "Sube el volumen para esta: Verano.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1313-cbc620b887.mp3",
+          "texto": "Seguimos con Verano. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1314,
+      "pista": 14,
+      "titulo": "Me Gusta una Chica (Remix)",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/me-gusta-una-chica-remix.mp3",
+      "duracion": 216.686,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1314-0baeb845ff.mp3",
+          "texto": "Del álbum FrezKo Gold, esto es Me Gusta una Chica.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1314-14bdfa5223.mp3",
+          "texto": "Sube el volumen para esta: Me Gusta una Chica.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1315,
+      "pista": 15,
+      "titulo": "Vetero",
+      "artista": "Wildberry On",
+      "album": "frezko-gold",
+      "archivo": "music/frezko-gold/vetero.mp3",
+      "duracion": 129.855,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1315-bee9976ff6.mp3",
+          "texto": "Suena Vetero, del álbum FrezKo Gold.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1315-494e84395c.mp3",
+          "texto": "Lo que viene ahora es Vetero.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1711,
+      "pista": 1,
+      "titulo": "Money",
+      "artista": "Wildberry On",
+      "album": "money",
+      "archivo": "music/sencillos/money.mp3",
+      "duracion": 155.899,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1711-0290223209.mp3",
+          "texto": "Sube el volumen para esta: Money.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1711-a367f0fd86.mp3",
+          "texto": "Seguimos con Money. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1712,
+      "pista": 1,
+      "titulo": "Rocky (feat. Z Slayer)",
+      "artista": "Wildberry On",
+      "album": "rocky",
+      "archivo": "music/sencillos/rocky.mp3",
+      "duracion": 184.842,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1712-a878e88a84.mp3",
+          "texto": "Una de mis favoritas. Rocky.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1712-f44f491d94.mp3",
+          "texto": "Ahora, Rocky. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Rocky. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1713,
+      "pista": 1,
+      "titulo": "Relajao (feat. RULZ)",
+      "artista": "Wildberry On",
+      "album": "relajao",
+      "archivo": "music/sencillos/relajao.mp3",
+      "duracion": 148.872,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1713-d19b18ed81.mp3",
+          "texto": "Sube el volumen para esta: Relajao.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1713-bcb9cbf13c.mp3",
+          "texto": "Una de mis favoritas. Relajao.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1714,
+      "pista": 1,
+      "titulo": "NINJA (feat. RULZ)",
+      "artista": "Wildberry On",
+      "album": "ninja",
+      "archivo": "music/sencillos/ninja.mp3",
+      "duracion": 120.869,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1714-401b7072dc.mp3",
+          "texto": "Ahora, NINJA. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Ninja. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1714-6b42e6d23a.mp3",
+          "texto": "Una de mis favoritas. NINJA.",
+          "dicho": "Una de mis favoritas. Ninja.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1715,
+      "pista": 1,
+      "titulo": "3T",
+      "artista": "Wildberry On",
+      "album": "3t",
+      "archivo": "music/sencillos/3t.mp3",
+      "duracion": 225.306,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1715-ae1b27fa67.mp3",
+          "texto": "Seguimos con 3T. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1715-f04302e04a.mp3",
+          "texto": "Esta salió en 2022. 3T, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintidós. 3T, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1716,
+      "pista": 1,
+      "titulo": "Ella Tiene un Flow",
+      "artista": "Wildberry On",
+      "album": "ella-tiene-un-flow",
+      "archivo": "music/sencillos/ella-tiene-un-flow.mp3",
+      "duracion": 199.027,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1716-9315f5b755.mp3",
+          "texto": "Seguimos con Ella Tiene un Flow. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1716-acb42a3de5.mp3",
+          "texto": "Sube el volumen para esta: Ella Tiene un Flow.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1717,
+      "pista": 1,
+      "titulo": "DISKO (feat. RULZ)",
+      "artista": "Wildberry On",
+      "album": "disko",
+      "archivo": "music/sencillos/disko.mp3",
+      "duracion": 150.909,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1717-ab6f30509c.mp3",
+          "texto": "Una de mis favoritas. DISKO.",
+          "dicho": "Una de mis favoritas. Disko.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1717-408d7cf067.mp3",
+          "texto": "Seguimos con DISKO. Disfrútala.",
+          "dicho": "Seguimos con Disko. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1718,
+      "pista": 1,
+      "titulo": "Hi Fi (feat. RULZ)",
+      "artista": "Wildberry On",
+      "album": "hi-fi",
+      "archivo": "music/sencillos/hi-fi.mp3",
+      "duracion": 113.998,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1718-3eb1a8d177.mp3",
+          "texto": "Una de mis favoritas. Hi Fi.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1718-d21078df53.mp3",
+          "texto": "Esta salió en 2022. Hi Fi, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintidós. Hi Fi, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1401,
+      "pista": 1,
+      "titulo": "Tb2a Intro",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/tb2a-intro.mp3",
+      "duracion": 198.504,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1401-7879ea9e1e.mp3",
+          "texto": "Suena Tb2a Intro, del álbum TB2A.",
+          "dicho": "Suena te be dos a Intro, del álbum te be dos a.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1401-3960686a36.mp3",
+          "texto": "Seguimos con Tb2a Intro. Disfrútala.",
+          "dicho": "Seguimos con te be dos a Intro. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1402,
+      "pista": 2,
+      "titulo": "Wonderboy",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/wonderboy.mp3",
+      "duracion": 150.491,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1402-25ae694e94.mp3",
+          "texto": "Suena Wonderboy, del álbum TB2A.",
+          "dicho": "Suena Wonderboy, del álbum te be dos a.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1402-7fbdb6c0dd.mp3",
+          "texto": "Ahora, Wonderboy. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Wonderboy. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1403,
+      "pista": 3,
+      "titulo": "Walking On Da Street",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/walking-on-da-street.mp3",
+      "duracion": 189.309,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1403-965e1e5136.mp3",
+          "texto": "Ahora, Walking On Da Street. Wildberry On, en KeNnyga Radio.",
+          "dicho": "Ahora, Walking On Da Street. Wildberry On, en Keniga Radio.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1403-ae6f08ae55.mp3",
+          "texto": "Seguimos con Walking On Da Street. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1404,
+      "pista": 4,
+      "titulo": "Traveling (feat. Zhecho)",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/traveling.mp3",
+      "duracion": 165.669,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1404-8ac64bcc88.mp3",
+          "texto": "Una de mis favoritas. Traveling.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1404-b220a5fe1d.mp3",
+          "texto": "Esta salió en 2021. Traveling, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintiuno. Traveling, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1405,
+      "pista": 5,
+      "titulo": "Arigatou",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/arigatou.mp3",
+      "duracion": 181.577,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1405-3e4183d4a4.mp3",
+          "texto": "Una de mis favoritas. Arigatou.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1405-cb3b616637.mp3",
+          "texto": "Seguimos con Arigatou. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1406,
+      "pista": 6,
+      "titulo": "Bastard",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/bastard.mp3",
+      "duracion": 171.729,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1406-2dd14a3680.mp3",
+          "texto": "Del álbum TB2A, esto es Bastard.",
+          "dicho": "Del álbum te be dos a, esto es Bastard.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1406-e044df7f34.mp3",
+          "texto": "Seguimos con Bastard. Disfrútala.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1407,
+      "pista": 7,
+      "titulo": "Drill Urvbv",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/drill-urvbv.mp3",
+      "duracion": 142.184,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1407-965b4e0496.mp3",
+          "texto": "Una de mis favoritas. Drill Urvbv.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1407-49509be88c.mp3",
+          "texto": "Lo que viene ahora es Drill Urvbv.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1408,
+      "pista": 8,
+      "titulo": "I Do (feat. RobinRozo)",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/i-do.mp3",
+      "duracion": 147.618,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1408-e963b66488.mp3",
+          "texto": "Lo que viene ahora es I Do.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1408-d60e2c44ad.mp3",
+          "texto": "Sube el volumen para esta: I Do.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1409,
+      "pista": 9,
+      "titulo": "Killer",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/killer.mp3",
+      "duracion": 147.696,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1409-f1d6936015.mp3",
+          "texto": "Una de mis favoritas. Killer.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1409-832831944c.mp3",
+          "texto": "Esta salió en 2021. Killer, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintiuno. Killer, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1410,
+      "pista": 10,
+      "titulo": "Me Gusta Una Chica",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/me-gusta-una-chica.mp3",
+      "duracion": 151.641,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1410-0d81efa996.mp3",
+          "texto": "Lo que viene ahora es Me Gusta Una Chica.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1410-c9d407cf70.mp3",
+          "texto": "Del álbum TB2A, esto es Me Gusta Una Chica.",
+          "dicho": "Del álbum te be dos a, esto es Me Gusta Una Chica.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1411,
+      "pista": 11,
+      "titulo": "Kuro",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/kuro.mp3",
+      "duracion": 160.052,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1411-89b156e2ce.mp3",
+          "texto": "Esta salió en 2021. Kuro, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintiuno. Kuro, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1411-2652913e70.mp3",
+          "texto": "Sube el volumen para esta: Kuro.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1412,
+      "pista": 12,
+      "titulo": "Berr's Wave",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/berr-s-wave.mp3",
+      "duracion": 157.675,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1412-9ade9d8ff2.mp3",
+          "texto": "Lo que viene ahora es Berr's Wave.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1412-b37de4ac4d.mp3",
+          "texto": "Del álbum TB2A, esto es Berr's Wave.",
+          "dicho": "Del álbum te be dos a, esto es Berr's Wave.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1413,
+      "pista": 13,
+      "titulo": "Vietnam",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/vietnam.mp3",
+      "duracion": 157.858,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1413-9895164bdb.mp3",
+          "texto": "Esta salió en 2021. Vietnam, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintiuno. Vietnam, de Wildberry On.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1413-324d387396.mp3",
+          "texto": "Una de mis favoritas. Vietnam.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1414,
+      "pista": 14,
+      "titulo": "Elesede",
+      "artista": "Wildberry On",
+      "album": "tb2a",
+      "archivo": "music/tb2a/elesede.mp3",
+      "duracion": 215.04,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1414-42b5143287.mp3",
+          "texto": "Seguimos con Elesede. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1414-ef61de4b06.mp3",
+          "texto": "Suena Elesede, del álbum TB2A.",
+          "dicho": "Suena Elesede, del álbum te be dos a.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1719,
+      "pista": 1,
+      "titulo": "Wave Girl (feat. Prisma G)",
+      "artista": "Wildberry On",
+      "album": "wave-girl",
+      "archivo": "music/sencillos/wave-girl.mp3",
+      "duracion": 150.047,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1719-af473b8565.mp3",
+          "texto": "Seguimos con Wave Girl. Disfrútala.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1719-176b6b43a2.mp3",
+          "texto": "Lo que viene ahora es Wave Girl.",
+          "duracion": null
+        }
+      ]
+    },
+    {
+      "id": 1720,
+      "pista": 1,
+      "titulo": "Flow Masoquista (feat. Munive)",
+      "artista": "Wildberry On",
+      "album": "flow-masoquista",
+      "archivo": "music/sencillos/flow-masoquista.mp3",
+      "duracion": 177.11,
+      "presentaciones": [
+        {
+          "archivo": "locutor/presenta-1720-91aa645c42.mp3",
+          "texto": "Sube el volumen para esta: Flow Masoquista.",
+          "duracion": null
+        },
+        {
+          "archivo": "locutor/presenta-1720-b1586d7dc3.mp3",
+          "texto": "Esta salió en 2021. Flow Masoquista, de Wildberry On.",
+          "dicho": "Esta salió en dos mil veintiuno. Flow Masoquista, de Wildberry On.",
+          "duracion": null
+        }
+      ]
+    }
+  ],
+  "ocultasActivas": false,
+  "ocultas": [
+    {
+      "id": 111,
+      "titulo": "Bienvenido",
+      "artista": "El Director",
+      "archivo": "music/ED/ED1.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        1
+      ],
+      "probabilidad": 0.5,
+      "duracion": 40.568
+    },
+    {
+      "id": 112,
+      "titulo": "Intruso",
+      "artista": "El Director",
+      "archivo": "music/ED/ED2.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        5
+      ],
+      "probabilidad": 0.3,
+      "duracion": 50.547
+    },
+    {
+      "id": 113,
+      "titulo": "Disfrutas?",
+      "artista": "El Director",
+      "archivo": "music/ED/ED3.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        9
+      ],
+      "probabilidad": 0.3,
+      "duracion": 57.208
+    },
+    {
+      "id": 114,
+      "titulo": "Control",
+      "artista": "El Director",
+      "archivo": "music/ED/ED4.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        14
+      ],
+      "probabilidad": 0.3,
+      "duracion": 45.401
+    },
+    {
+      "id": 115,
+      "titulo": "Consecuencias",
+      "artista": "El Director",
+      "archivo": "music/ED/ED5.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        17
+      ],
+      "probabilidad": 0.5,
+      "duracion": 57.339
+    },
+    {
+      "id": 116,
+      "titulo": "El Director",
+      "artista": "El Director",
+      "archivo": "music/ED/ED100.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "probabilidad": 0.05,
+      "duracion": 4.075
+    },
+    {
+      "id": 131,
+      "titulo": "Hijo mio",
+      "artista": "El Director",
+      "archivo": "music/ED/ED101.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "probabilidad": 0.05,
+      "duracion": 5.59
+    },
+    {
+      "id": 117,
+      "titulo": "A que le temes?",
+      "artista": "El Director",
+      "archivo": "music/ED/ED6.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        5
+      ],
+      "probabilidad": 0.3,
+      "duracion": 53.76
+    },
+    {
+      "id": 118,
+      "titulo": "Dentro de ti",
+      "artista": "El Director",
+      "archivo": "music/ED/ED7.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        9
+      ],
+      "probabilidad": 0.3,
+      "duracion": 87.092
+    },
+    {
+      "id": 119,
+      "titulo": "Que te trajo aqui?",
+      "artista": "El Director",
+      "archivo": "music/ED/ED8.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        14
+      ],
+      "probabilidad": 0.3,
+      "duracion": 47.83
+    },
+    {
+      "id": 120,
+      "titulo": "Ahi estas",
+      "artista": "El Director",
+      "archivo": "music/ED/ED9.mp3",
+      "portada": "cover/ED.png",
+      "despuesDe": [
+        17
+      ],
+      "probabilidad": 0.3,
+      "duracion": 61.884
+    },
+    {
+      "id": 121,
+      "titulo": "Hola",
+      "artista": "Desconocido",
+      "archivo": "music/H/H1.mp3",
+      "portada": "cover/H.png",
+      "despuesDe": [
+        1
+      ],
+      "probabilidad": 0.3,
+      "duracion": 18.233
+    },
+    {
+      "id": 122,
+      "titulo": "Control mental",
+      "artista": "Desconocido",
+      "archivo": "music/H/H2.mp3",
+      "portada": "cover/H.png",
+      "despuesDe": [
+        3
+      ],
+      "probabilidad": 0.3,
+      "duracion": 42.344
+    },
+    {
+      "id": 123,
+      "titulo": "Estas seguro?",
+      "artista": "Desconocido",
+      "archivo": "music/H/H3.mp3",
+      "portada": "cover/H.png",
+      "despuesDe": [
+        10
+      ],
+      "probabilidad": 0.3,
+      "duracion": 13.871
+    },
+    {
+      "id": 124,
+      "titulo": "Paranoia",
+      "artista": "Desconocido",
+      "archivo": "music/H/H4.mp3",
+      "portada": "cover/H.png",
+      "despuesDe": [
+        15
+      ],
+      "probabilidad": 0.3,
+      "duracion": 39.784
+    },
+    {
+      "id": 125,
+      "titulo": "Despedida",
+      "artista": "Desconocido",
+      "archivo": "music/H/H5.mp3",
+      "portada": "cover/H.png",
+      "despuesDe": [
+        16
+      ],
+      "probabilidad": 0.3,
+      "duracion": 38.4
+    },
+    {
+      "id": 126,
+      "titulo": "Gracias",
+      "artista": "Desconocido",
+      "archivo": "music/H/H6.mp3",
+      "portada": "cover/H.png",
+      "despuesDe": [
+        17
+      ],
+      "probabilidad": 0.3,
+      "duracion": 36.65
+    }
+  ],
+  "ticker": [
+    {
+      "texto": "Mensajes del Director",
+      "url": "https://youtu.be/gf_zn_39nfQ"
+    },
+    {
+      "texto": "Transmisión perdida #1",
+      "url": "https://youtu.be/ryq0dus6IkU"
+    },
+    {
+      "texto": "Grabación inédita",
+      "url": "https://youtu.be/1IefJeGjRNk"
+    }
+  ],
+  "mensajesRaros": [
+    "EEUS SGEB TUEI ARSE SOTN SQA?",
+    "BSAAS OILNS NEOP EE N SLOR T AQCR A E VUAR LR EE MU A NNNB E T A TOID RX UCAE AX RANE NX AME L SX DBLL M XOIC OIX",
+    "SIRQ NRO, EFVOV Z NR B OYVEVXVNV"
+  ],
+  "imagenesOcultas": [
+    "cover/ktv23-cover.webp",
+    "cover/ED.png"
+  ],
+  "archivos": {
+    "clave": "conectateKTV23",
+    "descripcion": "Aquí se guardan las transmisiones perdidas, grabaciones inéditas y mensajes del Director nunca emitidos.",
+    "items": [
+      {
+        "texto": "🎞️ Transmisión perdida #1",
+        "url": "https://youtu.be/jjG8fzOjwVk"
+      },
+      {
+        "texto": "🔊 Grabación inédita: “El Director Habla”",
+        "url": "https://youtu.be/fjCjrngerEM"
+      },
+      {
+        "texto": "🕳️ Mensajes del Director",
+        "url": "https://youtu.be/zgqxu_FaLVA"
+      }
+    ]
+  }
+}

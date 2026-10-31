@@ -1,0 +1,15 @@
+{
+  "titulo": "Sobre mí",
+  "nombre": "Wilber Hinestroza",
+  "alias": "Wildberry",
+  "foto": "cover/ktv23-cover.webp",
+  "bio": [
+    "Músico y programador. Hago canciones como Wildberry y construyo juegos, apps y herramientas.",
+    "Edita este texto en public/contenido/perfil.json."
+  ],
+  "habilidades": ["JavaScript", "React", "Python", "C#", "Java", "Godot", "Producción musical"],
+  "enlaces": [
+    { "texto": "GitHub", "url": "https://github.com/WilberHinestroza" },
+    { "texto": "YouTube", "url": "https://youtu.be/0oYSh7HUDng" }
+  ]
+}
