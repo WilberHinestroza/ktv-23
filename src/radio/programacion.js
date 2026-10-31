@@ -71,7 +71,7 @@ export function crearProgramacion(radio) {
     ...c,
     id: `${tipo}-${i}`,
     titulo: c.titulo || radio.nombre,
-    artista: `Locutor · ${loc.nombre || radio.nombre}`,
+    artista: `Locutor · ${c.locutor || loc.nombre || radio.nombre}`,
     portada: c.portada || radio.portada,
     esLocutor: true,
   });

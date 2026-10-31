@@ -1,5 +1,10 @@
 {
-  "_ayuda": "Textos del locutor. Edita aquí y corre: npm run locutor -- --voz. Comodines en presentaciones: {titulo} {album} {tipo} {anio} {artista}. En saludos, una frase puede ser {\"texto\": \"...\", \"dias\": [5]} (0 = domingo ... 6 = sábado) para que solo suene ese día.",
+  "_ayuda": "Textos del locutor. Edita aquí y corre: npm run locutor -- --voz. Comodines en presentaciones: {titulo} {album} {tipo} {anio} {artista}. En saludos, una frase puede ser {\"texto\": \"...\", \"dias\": [5]} (0 = domingo ... 6 = sábado) para que solo suene ese día. Las frases se reparten solas entre las voces; para elegir quién dice una, usa {\"texto\": \"...\", \"voz\": \"sabina\"}.",
+
+  "voces": {
+    "raul": { "nombre": "Raúl", "vozWindows": "Raul", "velocidad": 0.9, "tono": -3 },
+    "sabina": { "nombre": "Sabina", "vozWindows": "Sabina", "velocidad": 1.0, "tono": 0 }
+  },
 
   "pronunciar": {
     "112.3 FM": "ciento doce punto tres efe eme",

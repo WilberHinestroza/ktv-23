@@ -104,7 +104,7 @@ export default function RadioPagina() {
           <p className="locutor-hablando" aria-live="polite">
             <Mic size={16} className="pulso" />
             <span>
-              <strong>{radio.locutor?.nombre || radio.nombre}:</strong> “{r.hablando}”
+              <strong>{r.hablando.nombre || radio.nombre}:</strong> “{r.hablando.texto}”
             </span>
           </p>
         )}

@@ -83,8 +83,8 @@ las mismas apariciones.
 
 Se configura en la sección `locutor` de `radio.json` (`"activo": false` lo apaga). Hay dos tipos de clips:
 
-- **Para todos (en la programación):** `cunas` suenan cada `cadaCanciones` canciones, y una
-  canción puede tener `"presentacion": { "archivo": "...", "texto": "..." }`, que suena justo antes de ella.
+- **Para todos (en la programación):** `cunas` suenan cada `cadaCanciones` canciones, y y a
+  veces (`presentaciones.probabilidad`) el locutor presenta la canción que viene.
   Todos los oyentes los escuchan al mismo tiempo.
 - **Para cada visitante:** al sintonizar, el locutor saluda según la hora de quien escucha
   (`saludos.madrugada`, `manana`, `tarde`, `noche`) o con `saludos.regreso` si ya había entrado
@@ -96,17 +96,22 @@ a mano: se regeneran). Ahí están los saludos, la compañía, las cuñas, las p
 presentar canciones (`{titulo}`, `{album}`, `{tipo}`, `{anio}`, `{artista}`) y `pronunciar`,
 para decir bien nombres como KTV23.
 
-Tu voz clonada se genera en tu PC con [Chatterbox](https://github.com/resemble-ai/chatterbox)
-(gratis, licencia MIT). Vive en la carpeta `../voz` (fuera del repo):
-`voz/.venv` es el entorno de Python y `voz/muestras/voz.wav` tu grabación de referencia.
+Hay dos locutores, **Raúl** y **Sabina** (voces de IA de Windows, gratis y sin internet). Se
+configuran en `voces` de las plantillas: `velocidad` (1 = normal) y `tono` (semitonos; Raúl usa -3
+para sonar más grave). Las frases se reparten solas entre los dos; para que una la diga alguien
+en particular, escríbela como `{ "texto": "...", "voz": "sabina" }`. La página muestra quién habla.
 
 ```bash
-npm run locutor -- --voz       # crea con tu voz los audios que falten (≈1 min por frase en procesador)
+npm run locutor -- --ia        # crea con Raúl y Sabina los audios que falten (≈1 min para todo)
 npm run locutor -- --limpiar   # borra audios que ya no se usan
 ```
 
-Cada audio se llama según su texto: si cambias una frase o agregas canciones, solo se generan las nuevas.
-`npm run locutor -- --demo` usa la voz de Windows en vez de la tuya, para probar rápido.
+Cada audio se llama según su texto y su voz: si cambias una frase o agregas canciones, solo se
+generan las nuevas.
+
+También se puede usar tu voz clonada con [Chatterbox](https://github.com/resemble-ai/chatterbox)
+(gratis, licencia MIT, ≈1 min por frase en procesador) con `npm run locutor -- --voz`. Vive en
+`../voz` (fuera del repo): `voz/.venv` es el entorno de Python y `voz/muestras/voz.wav` la grabación de referencia.
 
 ### Agregar una sección nueva
 

@@ -18,7 +18,7 @@ export default function MiniRadio() {
         <span className="en-vivo-chip">EN VIVO</span>
         <strong>{cancion.oculta ? "▒▒▒▒▒" : cancion.titulo}</strong>
         <span className="mini-artista">
-          {hablando ? `🎙 ${radio.locutor?.nombre || "Locutor"} te está hablando…` : cancion.artista}
+          {hablando ? `🎙 ${hablando.nombre || "Locutor"} te está hablando…` : cancion.artista}
         </span>
       </a>
       <button

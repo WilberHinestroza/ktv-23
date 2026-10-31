@@ -33,7 +33,7 @@ export function RadioProvider({ children }) {
   const vozRef = useRef(null); // canal del locutor personal (solo lo oye este visitante)
   const volumenRef = useRef(leerVolumen());
   const saludadoRef = useRef(false);
-  const [hablando, setHablando] = useState(null); // texto que está diciendo el locutor
+  const [hablando, setHablando] = useState(null); // { texto, nombre } de lo que está diciendo el locutor
 
   // Cargar la programación
   useEffect(() => {
@@ -156,7 +156,7 @@ export function RadioProvider({ children }) {
     audio.volume = volumenRef.current * (loc.musicaAlHablar ?? 0.25);
     voz.volume = volumenRef.current;
     voz.src = ruta(clip.archivo);
-    setHablando(clip.texto || "…");
+    setHablando({ texto: clip.texto || "…", nombre: clip.locutor || loc.nombre });
     voz.play().catch(() => {
       audio.volume = volumenRef.current;
       setHablando(null);

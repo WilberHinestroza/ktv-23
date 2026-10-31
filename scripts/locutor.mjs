@@ -3,10 +3,10 @@
 //   npm run locutor               → actualiza radio.json y LOCUTOR-GUION.md con los textos
 //   npm run locutor -- --voz      → además crea con tu voz clonada los audios que falten
 //   npm run locutor -- --limpiar  → borra audios de public/locutor/ que ya no se usan
-//   npm run locutor -- --demo     → crea los que falten con la voz de Windows (para probar)
+//   npm run locutor -- --ia       → crea los que falten con las voces de IA de Windows (Raúl y Sabina)
 //
 // Cada audio se llama según su texto: si cambias una frase, solo se regenera esa.
-import { readFileSync, writeFileSync, existsSync, mkdirSync, unlinkSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, mkdtempSync, rmSync, unlinkSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { execFileSync, spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
@@ -55,11 +55,16 @@ if (existsSync(PLANTILLAS)) {
   (viejo.cunas?.archivos || []).forEach(recordar);
   radio.canciones.forEach((c) => (c.presentaciones || []).forEach(recordar));
 
+  // Varias voces: cada frase la dice una, elegida siempre igual según el texto
+  const voces = pl.voces || {};
+  const idsVoz = Object.keys(voces);
   const clip = (grupo, entrada) => {
-    const { texto, dias } = typeof entrada === "string" ? { texto: entrada } : entrada;
+    const { texto, dias, voz: vozPedida } = typeof entrada === "string" ? { texto: entrada } : entrada;
     const dicho = paraDecir(texto, pronunciar);
-    const archivo = `locutor/${grupo}-${hash(dicho)}.mp3`;
+    const voz = voces[vozPedida] ? vozPedida : idsVoz[parseInt(hash(grupo + texto).slice(0, 8), 16) % idsVoz.length];
+    const archivo = `locutor/${grupo}-${voz ? voz + "-" : ""}${hash(dicho)}.mp3`;
     const c = { archivo, texto };
+    if (voz) Object.assign(c, { voz, locutor: voces[voz].nombre });
     if (dicho !== texto) c.dicho = dicho;
     if (dias?.length) c.dias = dias;
     c.duracion = duraciones.get(archivo) ?? null;
@@ -104,7 +109,7 @@ if (existsSync(PLANTILLAS)) {
 
   radio.locutor = {
     activo: viejo.activo ?? true,
-    nombre: viejo.nombre || "Wildberry",
+    nombre: idsVoz.length ? idsVoz.map((v) => voces[v].nombre).join(" y ") : viejo.nombre || "Wildberry",
     musicaAlHablar: viejo.musicaAlHablar ?? 0.25,
     saludos,
     compania: {
@@ -180,32 +185,50 @@ if (args.includes("--voz")) {
   }
 }
 
-// ---- Audios de prueba (voz de Windows) ----
-if (args.includes("--demo")) {
+// ---- Voces de IA de Windows (Raúl, Sabina…) ----
+const IA = args.includes("--ia") || args.includes("--demo");
+if (IA) {
   if (process.platform !== "win32") {
-    console.log("Los audios de prueba solo se pueden generar en Windows.");
+    console.log("Las voces de Windows solo se pueden generar en Windows.");
     process.exit(0);
   }
-  let creados = 0;
-  for (const c of faltan()) {
-    const destino = join("public", c.archivo);
-    mkdirSync(dirname(destino), { recursive: true });
-    const wav = join(tmpdir(), `locutor-${Date.now()}.wav`);
-    const ps =
-      "Add-Type -AssemblyName System.Speech; $s = New-Object System.Speech.Synthesis.SpeechSynthesizer;" +
-      " $v = $s.GetInstalledVoices() | Where-Object { $_.VoiceInfo.Culture.Name -like 'es*' } | Select-Object -First 1;" +
-      " if ($v) { $s.SelectVoice($v.VoiceInfo.Name) }; $s.SetOutputToWaveFile($env:LOC_WAV); $s.Speak($env:LOC_TEXTO); $s.Dispose()";
-    execFileSync("powershell.exe", ["-NoProfile", "-Command", ps], {
-      env: { ...process.env, LOC_WAV: wav, LOC_TEXTO: c.dicho || c.texto },
+  const voces = existsSync(PLANTILLAS) ? JSON.parse(readFileSync(PLANTILLAS, "utf8")).voces || {} : {};
+  const xml = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const tmp = mkdtempSync(join(tmpdir(), "locutor-"));
+  const pendientes = faltan().map((c, i) => {
+    const v = voces[c.voz] || Object.values(voces)[0] || { vozWindows: "Raul", velocidad: 1, tono: 0 };
+    const ssml =
+      `<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='es-MX'>` +
+      `<prosody rate='${v.velocidad ?? 1}'>${xml(c.dicho || c.texto)}</prosody></speak>`;
+    return { c, v, voz: v.vozWindows, ssml, wav: join(tmp, `${i}.wav`) };
+  });
+  if (pendientes.length) {
+    console.log(`… generando ${pendientes.length} audio(s) con las voces de Windows`);
+    const lista = join(tmp, "lista.json");
+    writeFileSync(lista, JSON.stringify(pendientes.map(({ voz, ssml, wav }) => ({ voz, ssml, wav }))));
+    execFileSync("powershell.exe", ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", resolve("scripts/voz_windows.ps1"), lista], {
+      stdio: "inherit",
     });
-    execFileSync("ffmpeg", ["-v", "error", "-y", "-i", wav, "-codec:a", "libmp3lame", "-b:a", "128k", "-ar", "44100", destino]);
-    unlinkSync(wav);
-    creados++;
+    for (const { c, v, wav } of pendientes) {
+      const destino = join("public", c.archivo);
+      mkdirSync(dirname(destino), { recursive: true });
+      // Tono más grave sin cambiar la velocidad, cuerpo de radio y volumen parejo
+      const filtro = [
+        v.tono ? `rubberband=pitch=${(2 ** (v.tono / 12)).toFixed(4)}:pitchq=quality:transients=smooth` : null,
+        "highpass=f=60,equalizer=f=140:t=q:w=1:g=3",
+        "acompressor=threshold=-22dB:ratio=2:attack=10:release=150:makeup=1.5",
+        "apad=pad_dur=0.25,loudnorm=I=-16:TP=-1.5",
+      ].filter(Boolean).join(",");
+      execFileSync("ffmpeg", ["-v", "error", "-y", "-i", wav, "-af", filtro, "-ar", "44100", "-codec:a", "libmp3lame", "-b:a", "128k", destino]);
+    }
+    console.log(`✔ ${pendientes.length} audio(s) creados`);
+  } else {
+    console.log("✔ Todos los textos ya tienen audio");
   }
-  console.log(`✔ ${creados} audio(s) de prueba creados con la voz de Windows`);
+  rmSync(tmp, { recursive: true, force: true });
 }
 
-if (args.includes("--voz") || args.includes("--demo")) {
+if (args.includes("--voz") || IA) {
   console.log("… actualizando duraciones");
   spawnSync(process.execPath, ["scripts/duraciones.mjs"], { stdio: "inherit" });
 }
