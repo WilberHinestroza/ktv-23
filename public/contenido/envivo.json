@@ -1,13 +1,13 @@
 {
   "_ayuda": "Funciones en vivo (oyentes, reacciones, chat, pedidos, muro, contacto). Pega aquí la configuración web de Firebase y pon activo en true. Las reglas de seguridad están en database.rules.json.",
-  "activo": false,
+  "activo": true,
   "firebase": {
-    "apiKey": "",
-    "authDomain": "",
-    "databaseURL": "",
-    "projectId": "",
-    "storageBucket": "",
-    "messagingSenderId": "",
-    "appId": ""
+    "apiKey": "AIzaSyCu5xXM8tZ1zaSfVeUVEOV2WuLR4NCwUrQ",
+    "authDomain": "ktv23-de7ea.firebaseapp.com",
+    "databaseURL": "https://ktv23-de7ea-default-rtdb.firebaseio.com",
+    "projectId": "ktv23-de7ea",
+    "storageBucket": "ktv23-de7ea.firebasestorage.app",
+    "messagingSenderId": "114312312758",
+    "appId": "1:114312312758:web:c843c073163f486258b317"
   }
 }
