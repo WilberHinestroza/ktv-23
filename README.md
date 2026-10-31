@@ -66,7 +66,12 @@ cada visitante las ve convertidas a su hora.
 ```
 
 - `dias` (opcional): 0 = domingo … 6 = sábado. Sin `dias`, es todos los días.
-- Qué suena: `albumes`, `generos` o una lista exacta de ids en `canciones`. Sin nada, suena todo.
+- Qué suena: `albumes`, `generos`, `temas` o una lista exacta de ids en `canciones`. Sin nada, suena todo.
+- `temas`: cada canción puede tener `"temas": ["Amor", "Malandreo"]`, y el programa pone las que
+  tengan alguno de los suyos. Si ninguna canción tiene esos temas, el programa no sale al aire y
+  suena la programación general.
+- La intro que dice el locutor al empezar cada programa se escribe en `programas` de
+  `scripts/locutor-plantillas.json` (por id del programa) y se genera con `npm run locutor -- --ia`.
 - `orden`: `"lista"` (en orden) o `"mezcla"` (aleatorio, pero igual para todos).
 - `intro` (opcional): un audio que suena al empezar el programa (jingle o locutor).
 - Las horas sin programa usan `programaGeneral`.

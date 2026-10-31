@@ -74,6 +74,8 @@ for (const p of radio.programas || []) {
   if (!hora.test(p.desde) || !hora.test(p.hasta)) avisar(`Programa "${p.titulo}": usa horas como "06:00" en desde/hasta`);
   for (const a of p.albumes || []) if (!idsAlbum.has(a)) avisar(`Programa "${p.titulo}": el álbum "${a}" no existe`);
   for (const g of p.generos || []) if (!generos.has(g)) avisar(`Programa "${p.titulo}": ninguna canción tiene el género "${g}"`);
+  const temas = new Set(radio.canciones.flatMap((c) => c.temas || []));
+  for (const t of p.temas || []) if (!temas.has(t)) console.log(`ℹ  Programa "${p.titulo}": ninguna canción tiene el tema "${t}" todavía (no sale al aire)`);
   for (const id of p.canciones || []) if (!idsCancion.has(id)) avisar(`Programa "${p.titulo}": la canción ${id} no existe`);
 }
 

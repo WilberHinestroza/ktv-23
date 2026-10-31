@@ -98,6 +98,16 @@
     ]
   },
 
+  "programas": {
+    "madrugada": { "texto": "Son pasadas las doce. Arranca Madrugada KeNnyga: mezcla aleatoria para los que no duermen.", "voz": "raul" },
+    "manana-chill": { "texto": "Buenos días. Esto es Mañana Chill en KeNnyga Radio. Sin afán, música para ir arrancando.", "voz": "sabina" },
+    "hora-malandreo": { "texto": "Atención, que empieza La Hora del Malandreo. Calle, flow y flexeo. Sube eso.", "voz": "raul" },
+    "noches-de-amor": { "texto": "Bienvenidos a Noches de Amor. Para los enamorados, y para los que ya no lo están.", "voz": "sabina" },
+    "fiesta-kennyga": { "texto": "Es fin de semana y esto es Fiesta KeNnyga. Fiesta y perreo hasta la madrugada.", "voz": "raul" },
+    "ktv23-estreno": { "texto": "Llegó la hora del estreno. KTV23, el álbum nuevo, completo y en orden.", "voz": "sabina" },
+    "album-completo": { "texto": "Ahora, el álbum completo. KeNnyga Radio 112.3 FM, de principio a fin.", "voz": "raul" }
+  },
+
   "presentaciones": {
     "probabilidad": 0.35,
     "porCancion": 2,

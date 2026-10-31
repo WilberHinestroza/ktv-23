@@ -94,7 +94,8 @@ export function crearProgramacion(radio) {
     return canciones.filter(
       (c) =>
         (!p.albumes?.length || p.albumes.includes(c.album)) &&
-        (!p.generos?.length || p.generos.includes(c.genero))
+        (!p.generos?.length || p.generos.includes(c.genero)) &&
+        (!p.temas?.length || (c.temas || []).some((t) => p.temas.includes(t)))
     );
   }
 
@@ -123,6 +124,7 @@ export function crearProgramacion(radio) {
     hasta: "00:00",
     albumes: null,
     generos: null,
+    temas: null,
   });
   general.items = general.canciones?.length ? general.items : canciones;
   const programas = (radio.programas || []).map(prepararPrograma).filter((p) => p.items.length);

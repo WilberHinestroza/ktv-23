@@ -54,6 +54,7 @@ if (existsSync(PLANTILLAS)) {
   (viejo.compania?.archivos || []).forEach(recordar);
   (viejo.cunas?.archivos || []).forEach(recordar);
   radio.canciones.forEach((c) => (c.presentaciones || []).forEach(recordar));
+  (radio.programas || []).forEach((p) => recordar(p.intro));
 
   // Varias voces: cada frase la dice una, elegida siempre igual según el texto
   const voces = pl.voces || {};
@@ -107,6 +108,13 @@ if (existsSync(PLANTILLAS)) {
     if (!c.presentaciones.length) delete c.presentaciones;
   }
 
+  // Intro de cada programa: el locutor lo anuncia al empezar
+  for (const p of radio.programas || []) {
+    const entrada = pl.programas?.[p.id];
+    if (entrada) p.intro = { ...clip(`programa-${p.id}`, entrada), titulo: p.titulo };
+    else if (p.intro?.archivo?.startsWith("locutor/")) delete p.intro;
+  }
+
   radio.locutor = {
     activo: viejo.activo ?? true,
     nombre: idsVoz.length ? idsVoz.map((v) => voces[v].nombre).join(" y ") : viejo.nombre || "Wildberry",
@@ -131,6 +139,7 @@ const grupos = [
   ...Object.entries(loc.saludos || {}).map(([momento, clips]) => [`Saludo · ${momento}`, clips]),
   [`Compañía (cada ${loc.compania?.cadaMinutos || 20} min)`, loc.compania?.archivos || []],
   [`Cuñas (cada ${loc.cunas?.cadaCanciones || 4} canciones)`, loc.cunas?.archivos || []],
+  ["Intros de programas", (radio.programas || []).map((p) => p.intro).filter((i) => i?.archivo?.startsWith("locutor/"))],
   ["Presentaciones de canciones", radio.canciones.flatMap((c) => c.presentaciones || [])],
 ].filter(([, clips]) => clips.length);
 const todos = grupos.flatMap(([, c]) => c);

@@ -89,6 +89,18 @@ Se genera desde `scripts/locutor-plantillas.json`: edita los textos allá y corr
 | `locutor/cuna-sabina-0d5a78a05f.mp3` | Aquí no hay comerciales. Solo música. KeNnyga Radio. | hay audio |
 | `locutor/cuna-sabina-fe49d47bcb.mp3` | Si alguien te pregunta qué estás escuchando, dile: KeNnyga Radio. | hay audio |
 
+## Intros de programas
+
+| Archivo | Texto | Estado |
+| --- | --- | --- |
+| `locutor/programa-madrugada-raul-4064f440fa.mp3` | Son pasadas las doce. Arranca Madrugada KeNnyga: mezcla aleatoria para los que no duermen. | falta |
+| `locutor/programa-album-completo-raul-19ccc49b49.mp3` | Ahora, el álbum completo. KeNnyga Radio 112.3 FM, de principio a fin. | falta |
+| `locutor/programa-ktv23-estreno-sabina-b23706be22.mp3` | Llegó la hora del estreno. KTV23, el álbum nuevo, completo y en orden. | falta |
+| `locutor/programa-manana-chill-sabina-09808272e3.mp3` | Buenos días. Esto es Mañana Chill en KeNnyga Radio. Sin afán, música para ir arrancando. | falta |
+| `locutor/programa-hora-malandreo-raul-42b8959c3a.mp3` | Atención, que empieza La Hora del Malandreo. Calle, flow y flexeo. Sube eso. | falta |
+| `locutor/programa-noches-de-amor-sabina-f4bef90d97.mp3` | Bienvenidos a Noches de Amor. Para los enamorados, y para los que ya no lo están. | falta |
+| `locutor/programa-fiesta-kennyga-raul-bc863d81a6.mp3` | Es fin de semana y esto es Fiesta KeNnyga. Fiesta y perreo hasta la madrugada. | falta |
+
 ## Presentaciones de canciones
 
 | Archivo | Texto | Estado |
@@ -293,12 +305,12 @@ Se genera desde `scripts/locutor-plantillas.json`: edita los textos allá y corr
 | `locutor/presenta-1204-sabina-3afd624e29.mp3` | Suena SoBad, del álbum TFS2k22. | hay audio |
 | `locutor/presenta-1205-raul-1cbb61438f.mp3` | Ahora, Bailar. Wildberry On, en KeNnyga Radio. | hay audio |
 | `locutor/presenta-1205-sabina-5e11557fe9.mp3` | Esta salió en 2022. Bailar, de Wildberry On. | hay audio |
-| `locutor/presenta-1206-sabina-dc8e75c9d0.mp3` | Esta salió en 2022. ILYA, de Wildberry On. | falta |
-| `locutor/presenta-1206-sabina-c1f02edfc4.mp3` | Seguimos con ILYA. Disfrútala. | falta |
+| `locutor/presenta-1206-sabina-dc8e75c9d0.mp3` | Esta salió en 2022. ILYA, de Wildberry On. | hay audio |
+| `locutor/presenta-1206-sabina-c1f02edfc4.mp3` | Seguimos con ILYA. Disfrútala. | hay audio |
 | `locutor/presenta-1207-sabina-7532897841.mp3` | Lo que viene ahora es Aquella Noche. | hay audio |
 | `locutor/presenta-1207-sabina-901bc809b1.mp3` | Ahora, Aquella Noche. Wildberry On, en KeNnyga Radio. | hay audio |
-| `locutor/presenta-1208-sabina-b6aab83f31.mp3` | Del álbum TFS2k22, esto es BadMan. | falta |
-| `locutor/presenta-1208-sabina-51bb0e2a0a.mp3` | Suena BadMan, del álbum TFS2k22. | falta |
+| `locutor/presenta-1208-sabina-b6aab83f31.mp3` | Del álbum TFS2k22, esto es BadMan. | hay audio |
+| `locutor/presenta-1208-sabina-51bb0e2a0a.mp3` | Suena BadMan, del álbum TFS2k22. | hay audio |
 | `locutor/presenta-1209-raul-dcd4d4222f.mp3` | Del álbum TFS2k22, esto es M.A.L.A. | hay audio |
 | `locutor/presenta-1209-sabina-5308fd0bc9.mp3` | Ahora, M.A.L.A. Wildberry On, en KeNnyga Radio. | hay audio |
 | `locutor/presenta-1210-sabina-bbd69e2fdd.mp3` | Ahora, Sola. Wildberry On, en KeNnyga Radio. | hay audio |
