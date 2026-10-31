@@ -3,6 +3,7 @@ import { Check, Gamepad2, RotateCcw, Share2, Volume2, X } from "lucide-react";
 import { useRadio } from "../radio/RadioContext";
 import { ruta } from "../contenido";
 import { guardar, leer } from "../radio/oyente";
+import Interferencia from "./Interferencia";
 
 const RONDAS = 10;
 const SEGUNDOS = 6;
@@ -16,8 +17,34 @@ const barajar = (lista) => {
   return c;
 };
 
+// La sección Juego: un selector arriba y el juego elegido abajo.
+const JUEGOS = [
+  ["interferencia", "📡 Interferencia"],
+  ["adivina", "🎵 Adivina la canción"],
+];
+
+export default function Juego(props) {
+  const [cual, setCual] = useState(() => leer("juego-elegido", "interferencia"));
+  const elegir = (id) => {
+    setCual(id);
+    guardar("juego-elegido", id);
+  };
+  return (
+    <>
+      <div className="pestanas selector-juegos" role="tablist">
+        {JUEGOS.map(([id, texto]) => (
+          <button key={id} role="tab" aria-selected={cual === id} className={cual === id ? "activo" : ""} onClick={() => elegir(id)}>
+            {texto}
+          </button>
+        ))}
+      </div>
+      {cual === "adivina" ? <AdivinaCancion {...props} /> : <Interferencia />}
+    </>
+  );
+}
+
 // Adivina la canción: suena un pedazo y eliges el título entre 4.
-export default function Juego({ seccion }) {
+function AdivinaCancion({ seccion }) {
   const { canciones, sintonizado, apagar, notificar, desbloquear } = useRadio();
   const [fase, setFase] = useState("inicio"); // inicio | jugando | fin
   const [rondas, setRondas] = useState([]);

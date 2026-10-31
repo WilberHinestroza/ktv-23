@@ -370,3 +370,24 @@ body.modo-interferencia .scanlines { background: repeating-linear-gradient(0deg,
 .contacto form { display: grid; gap: 8px; max-width: 520px; }
 .contacto textarea { resize: vertical; }
 .contacto-listo { color: var(--acento-1); }
+
+/* ===== Interferencia (juego de naves) ===== */
+.selector-juegos { max-width: 420px; margin: 12px auto 8px; }
+.naves { padding-bottom: 70px; }
+.naves { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 12px; }
+.naves-lienzo {
+  display: block; width: min(100%, 480px, calc((100vh - 230px) * 0.75)); width: min(100%, 480px, calc((100dvh - 230px) * 0.75)); aspect-ratio: 3 / 4; height: auto;
+  border-radius: var(--radio); border: 1px solid var(--borde); background: #06060c;
+  touch-action: none; user-select: none; -webkit-user-select: none; outline: none;
+  box-shadow: 0 0 40px var(--brillo);
+}
+.naves-controles { display: flex; gap: 8px; }
+.naves-ayuda { margin: 0; font-size: 0.78rem; color: var(--texto-suave); text-align: center; }
+.naves-portada { display: flex; align-items: flex-end; gap: 14px; height: 70px; font-size: 2.2rem; }
+.naves-ruido {
+  width: 28px; height: 20px; align-self: flex-start; background: var(--cian);
+  background-image: repeating-linear-gradient(90deg, rgba(0,0,0,.5) 0 4px, transparent 4px 8px);
+  animation: ruido-flota 1.6s ease-in-out infinite alternate;
+}
+.naves-ruido.chispa { background-color: #ff2d6f; animation-delay: -0.8s; }
+@keyframes ruido-flota { to { transform: translateY(14px); } }

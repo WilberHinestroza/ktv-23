@@ -153,6 +153,11 @@ La configuración web de Firebase es pública por diseño; lo que protege los da
 - Para probar en local sin cuenta: `npx firebase-tools emulators:start --only auth,database --project demo-kennyga`
   y en envivo.json `"emulador": true` con `databaseURL` `http://127.0.0.1:9000?ns=demo-kennyga-default-rtdb`.
 
+### Juegos
+
+En la sección **Juego** hay un selector: **Interferencia** (naves: ← → y Espacio, o arrastrar el dedo en el celular;
+el código está en `src/pages/Interferencia.jsx`) y **Adivina la canción**. Los récords se guardan en el navegador.
+
 ### Canciones, letras y lanzamientos
 
 - Cada canción tiene su página (`#/cancion/<id>`) y cada álbum la suya (`#/album/<id>`).

@@ -337,6 +337,7 @@ export function Atajos() {
     let secuencia = [];
     const alTeclear = (e) => {
       const destino = e.target;
+      if (document.body.classList.contains("jugando-naves")) return; // las teclas son del juego
       if (destino.closest?.("input, textarea, select, [contenteditable]") || e.ctrlKey || e.metaKey || e.altKey) return;
       const { sintonizado, sintonizar, apagar, volumen, setVolumen, enVivo, alternarFavorito, desbloquear } = rRef.current;
 

@@ -37,6 +37,7 @@
 - ✅ **Logros** (14, con 3 secretos): primera sintonía, horas escuchando, búho, madrugador, fan, coleccionista…
 - ✅ **Código Konami** (↑↑↓↓←→←→BA): la página entra en interferencia.
 - ✅ Logro **Detective** al encontrar el botón invisible.
+- ✅ **Interferencia**: juego de naves original; defiendes la antena disparando notas contra olas de ruido, con jefe (Ruido Blanco) cada 5 olas, mejoras y récord.
 - ✅ **Adivina la canción**: suena un pedazo de 5 s y eliges entre 4 títulos. Con récord personal.
 - **ARG / misterio**: pistas escondidas en la cinta de noticias, los "Archivos del Canal" y las canciones ocultas, que llevan a un contenido secreto.
 - **Dial de frecuencias**: una perilla; entre emisoras hay estática y en ciertas frecuencias suenan cosas raras.

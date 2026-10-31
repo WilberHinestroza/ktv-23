@@ -32,6 +32,7 @@ export const LOGROS = [
   { id: "cartero", icono: "💌", titulo: "Cartero", texto: "Enviaste una dedicatoria." },
   { id: "dormilon", icono: "😴", titulo: "Dormilón", texto: "Dejaste la radio con temporizador para dormir." },
   { id: "oido", icono: "👂", titulo: "Oído de oro", texto: "Sacaste 8 o más en Adivina la canción." },
+  { id: "senal-limpia", icono: "📡", titulo: "Señal limpia", texto: "Venciste al Ruido Blanco en Interferencia." },
   { id: "perfecto", icono: "💯", titulo: "Perfecto", texto: "10 de 10 en Adivina la canción." },
   { id: "temporada", icono: "🎃", titulo: "De temporada", texto: "Escuchaste la radio en una fecha especial." },
   { id: "konami", icono: "👾", titulo: "↑↑↓↓←→←→BA", texto: "Ya sabes lo que hiciste." },
