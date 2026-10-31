@@ -132,6 +132,10 @@ img { max-width: 100%; display: block; }
 .estado { margin: 14px 0 0; font-size: 0.85rem; color: var(--texto-suave); min-height: 1.3em; }
 .estado-sonando { color: var(--cian); }
 .estado-sin-senal { color: var(--rojo); }
+.version-nueva {
+  margin: 10px auto 0; display: block; padding: 8px 14px; border-radius: 999px; cursor: pointer;
+  background: transparent; color: var(--cian); border: 1px solid var(--cian); font: inherit; font-size: 14px;
+}
 .locutor-hablando {
   display: flex; align-items: flex-start; gap: 8px; margin: 10px auto 0; max-width: 420px;
   padding: 8px 12px; border: 1px solid var(--cian); border-radius: 12px;

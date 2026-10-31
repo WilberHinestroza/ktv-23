@@ -34,6 +34,9 @@ export function RadioProvider({ children }) {
   const volumenRef = useRef(leerVolumen());
   const saludadoRef = useRef(false);
   const [hablando, setHablando] = useState(null); // { texto, nombre } de lo que está diciendo el locutor
+  const [versionNueva, setVersionNueva] = useState(false);
+  const datosRef = useRef(null); // radio.json cargado, para saber si cambió
+  const sincronizarRef = useRef(null);
 
   // Cargar la programación
   useEffect(() => {
@@ -41,9 +44,43 @@ export function RadioProvider({ children }) {
       .then((datos) => {
         progRef.current = crearProgramacion(datos);
         radioRef.current = datos;
+        datosRef.current = JSON.stringify(datos);
         setRadio(datos);
       })
       .catch((e) => setError(e.message));
+  }, []);
+
+  // Si se publica una versión nueva, todos deben pasarse a ella o dejarían de oír lo mismo:
+  // los datos nuevos se cargan solos; si cambió el código, se avisa para recargar.
+  useEffect(() => {
+    const scriptActual = document.querySelector('script[src*="/static/js/main."]')?.getAttribute("src");
+    const revisar = async () => {
+      try {
+        const datos = await cargarJSON("radio.json");
+        const texto = JSON.stringify(datos);
+        if (datosRef.current && texto !== datosRef.current) {
+          progRef.current = crearProgramacion(datos);
+          radioRef.current = datos;
+          datosRef.current = texto;
+          setRadio(datos);
+          sincronizarRef.current?.();
+        }
+        if (scriptActual) {
+          const r = await fetch(`${process.env.PUBLIC_URL}/asset-manifest.json`, { cache: "no-store" });
+          const main = r.ok ? (await r.json()).files?.["main.js"] : null;
+          if (main && main !== scriptActual) setVersionNueva(true);
+        }
+      } catch {
+        // sin conexión: se intenta en la próxima revisión
+      }
+    };
+    const id = setInterval(revisar, 3 * 60000);
+    const alVolver = () => document.visibilityState === "visible" && revisar();
+    document.addEventListener("visibilitychange", alVolver);
+    return () => {
+      clearInterval(id);
+      document.removeEventListener("visibilitychange", alVolver);
+    };
   }, []);
 
   // El reloj de la radio: actualiza la pantalla aunque nadie esté escuchando
@@ -93,6 +130,7 @@ export function RadioProvider({ children }) {
       });
     }
   }, []); // sincronizar se referencia a sí misma vía setTimeout; es estable
+  sincronizarRef.current = sincronizar;
 
   // Crear el elemento de audio una sola vez
   useEffect(() => {
@@ -254,6 +292,7 @@ export function RadioProvider({ children }) {
     volumen,
     setVolumen,
     hablando,
+    versionNueva,
   };
 
   return <RadioContext.Provider value={valor}>{children}</RadioContext.Provider>;

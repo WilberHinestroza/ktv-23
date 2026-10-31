@@ -100,6 +100,11 @@ export default function RadioPagina() {
         <p className={`estado estado-${estado}`} aria-live="polite">
           {TEXTO_ESTADO[estado]}
         </p>
+        {r.versionNueva && (
+          <button className="version-nueva" onClick={() => window.location.reload()}>
+            Hay una versión nueva de la radio · Toca para actualizar
+          </button>
+        )}
         {r.hablando && (
           <p className="locutor-hablando" aria-live="polite">
             <Mic size={16} className="pulso" />
